@@ -1,0 +1,4 @@
+[submodule "miraca-book/workpackages/miraca-template"]
+	path = miraca-book/workpackages/miraca-template
+	url = https://github.com/miracaEU/miraca-template/
+

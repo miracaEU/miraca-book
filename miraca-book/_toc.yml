@@ -3,5 +3,14 @@
 
 format: jb-book
 root: intro
-chapters:
-  - file: about
+
+parts:
+  - caption: Work package template
+    chapters:
+      - title: Introduction
+        file: workpackages/miraca-template/book/introduction
+      - title: Use case 1
+        file: workpackages/miraca-template/book/use_case_1
+  - caption: About
+    chapters:
+      - file: about
