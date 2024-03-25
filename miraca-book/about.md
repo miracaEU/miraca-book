@@ -1,6 +1,7 @@
-# Miraca Book
+# About Miraca
 
-Jupyter book for the Miraca project
+Multi-hazard Infrastructure Risk Assessment for Climate Adaptation is an evidence-base decision support toolkit
+that meets real world demands.
 
 ## Funding Note
 
