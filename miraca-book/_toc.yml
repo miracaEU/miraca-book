@@ -6,7 +6,10 @@ root: intro
 
 parts:
   - caption: Work package template
+
     chapters:
+      - title: Workpackages
+        file: workpackages/workpackages
       - title: Introduction
         file: workpackages/miraca-template/book/introduction
       - title: Use case 1
