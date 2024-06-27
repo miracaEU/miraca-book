@@ -5,15 +5,30 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: Work package template
+  - caption: The MIRACA technical approach
+      chapters:
+      - title: Asset-level risk assessment
+      - title: Network-level risk assessment
+      - title: Systemic risk assessment
+      - title: Cost-benefit appraisal of multi-hazard adaptation
 
-    chapters:
-      - title: Workpackages
-        file: workpackages/workpackages
-      - title: Introduction
-        file: workpackages/miraca-template/book/introduction
-      - title: Use case 1
-        file: workpackages/miraca-template/book/use_case_1
+  - caption: Use Cases
+      chapters:
+      - title: Use Case 1
+      - title: Use Case 2
+      - title: Use Case 3
+      - title: Use Case 4 
+      - title: Use Case 5
+
+
+  - caption: Background material
+      chapters:
+      - title: Exposure database
+      - title: Vulnerability database
+      - title: Network modelling
+      - title: Macroeconomic impacts
+      - title: Cost-benefit analysis
+
   - caption: About
     chapters:
       - file: about
