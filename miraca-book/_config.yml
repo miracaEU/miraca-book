@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Miraca Book
-author: Miraca Org
+title: MIRACA Technical Workbench
+author: MIRACA
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
