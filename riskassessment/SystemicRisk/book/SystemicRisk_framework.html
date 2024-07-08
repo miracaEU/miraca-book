@@ -1,0 +1,1842 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Systemic risk assessment &#8212; MIRACA Technical Workbench</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'riskassessment/SystemicRisk/book/SystemicRisk_framework';</script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Work packages" href="../../CBAMultiHazard.html" />
+    <link rel="prev" title="Work packages" href="../../NetworkRisk.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="MIRACA Technical Workbench - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="MIRACA Technical Workbench - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Welcome to the Miraca Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">The MIRACA approach</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../AssetRisk.html">Asset-level risk assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NetworkRisk.html">Network-level risk assessment</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Systemic risk assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CBAMultiHazard.html">Cost-benefit appraisal of multi-hazard adaptation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/usecase1.html">Use Case 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/usecase2.html">Use Case 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/usecase3.html">Use Case 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/usecase4.html">Use Case 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/usecase5.html">Use Case 5</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Background material</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../background/ExposureDatabase.html">Exposure database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/VulDatabase.html">Vulnerability database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/NetworkModelling.html">Network modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/MacroImpacts.html">Macroeconomic impacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/CBAAnalysis.html">Cost-benefit analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About Miraca</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book/issues/new?title=Issue%20on%20page%20%2Friskassessment/SystemicRisk/book/SystemicRisk_framework.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/riskassessment/SystemicRisk/book/SystemicRisk_framework.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Systemic risk assessment</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-inputs">Reading the inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-input-preparation">Step 1: Input preparation.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unified-exposure-dataframe">Unified exposure dataframe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#area-distribution-array">Area distribution array</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-estimate-damages-functionality-loss">Step 2: Estimate damages / functionality loss</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flood-depths-at-the-exposure-locations-and-substations">Flood depths at the exposure locations and substations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-damage-ratios-for-agri-and-probability-of-being-functional-foexpsoure-and-substations">Estimating damage ratios (for Agri) and probability of being functional foexpsoure and substations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-linking-the-exposure-and-substations-from-which-they-receive-power">Step 3: Linking the exposure and substations from which they receive power</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-revising-the-functional-states-based-on-the-functional-state-of-the-substation">Step 4: Revising the functional states based on the functional state of the substation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-estimating-sector-specific-production-after-disruption">Step 5: Estimating sector specific production after disruption</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-baselinemodel-mria">Step 6: Baselinemodel - MRIA</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="systemic-risk-assessment">
+<h1>Systemic risk assessment<a class="headerlink" href="#systemic-risk-assessment" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importing packages</span>
+
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">rioxarray</span> <span class="k">as</span> <span class="nn">rio</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">rasterstats</span> <span class="kn">import</span> <span class="n">zonal_stats</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>
+<span class="kn">from</span> <span class="nn">table</span> <span class="kn">import</span> <span class="n">sut_basic</span>
+<span class="kn">from</span> <span class="nn">mria_new_SUT</span> <span class="kn">import</span> <span class="n">MRIA_SUT</span> <span class="k">as</span> <span class="n">MRIAnew</span>
+<span class="kn">from</span> <span class="nn">pyomo.environ</span> <span class="kn">import</span> <span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Importing packages</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">os</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;geopandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<section id="reading-the-inputs">
+<h2>Reading the inputs<a class="headerlink" href="#reading-the-inputs" title="Permalink to this heading">#</a></h2>
+<p>The first step of the analysis is to read the inputs to the required input data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">input_path</span> <span class="o">=</span> <span class="s2">&quot;C:/Users/sva100/OneDrive - Vrije Universiteit Amsterdam/PhD/Codes and Methods/Paper1/Codes/Misc/06_Complete_framework_Zuid Holland/data&quot;</span>
+
+<span class="c1"># Critical Infrastructure - Substations</span>
+<span class="n">substations</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="s2">&quot;substaions_nl33.shp&quot;</span><span class="p">))</span>
+
+<span class="c1"># Industrial Sites</span>
+<span class="n">industries</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="s2">&quot;is_nl33.shp&quot;</span><span class="p">))</span>
+
+<span class="c1"># Agricultural sites</span>
+<span class="n">agri</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="s2">&quot;agri_zh.shp&quot;</span><span class="p">))</span>
+
+<span class="c1"># Commercial sectors from places API</span>
+<span class="n">commercial</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="s2">&quot;I_H53.shp&quot;</span><span class="p">))</span>
+
+<span class="c1">#### Industrial sectors from places API</span>
+<span class="n">industrial</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="s2">&quot;C19_C20_C24.shp&quot;</span><span class="p">))</span>
+
+<span class="c1"># shape file</span>
+<span class="n">nl_nuts</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="s2">&quot;nutsnl_roe.shp&quot;</span><span class="p">))</span>
+
+<span class="c1"># damage model</span>
+<span class="n">dam_model</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="s2">&quot;Dam_Fun_models.xlsx&quot;</span><span class="p">))</span>
+
+<span class="c1"># Hazard map</span>
+<span class="n">flood_map</span> <span class="o">=</span> <span class="n">rio</span><span class="o">.</span><span class="n">open_rasterio</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="s2">&quot;rotterdam_event.tif&quot;</span><span class="p">))</span>
+
+<span class="c1"># List of sectors</span>
+<span class="n">sectors</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="s2">&quot;sectors.xlsx&quot;</span><span class="p">))</span>
+
+<span class="c1"># region of disaster</span>
+<span class="n">rod</span> <span class="o">=</span> <span class="s2">&quot;NL33&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-1-input-preparation">
+<h2>Step 1: Input preparation.<a class="headerlink" href="#step-1-input-preparation" title="Permalink to this heading">#</a></h2>
+<p>a. Creating a unified exposure dataframe, containing the following columns:</p>
+<ul class="simple">
+<li><p>Sector code</p></li>
+<li><p>Damage model</p></li>
+<li><p>Geometry</p></li>
+</ul>
+<p>For industrial sites sector code will be given as ADA - refering to the area distribution array</p>
+<p>b. Creating the area distribution array for industrial sectors</p>
+<section id="unified-exposure-dataframe">
+<h3>Unified exposure dataframe<a class="headerlink" href="#unified-exposure-dataframe" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">data_prep_agri</span><span class="p">(</span><span class="n">agri</span><span class="p">,</span> <span class="n">damage_model</span><span class="p">,</span> <span class="n">sector_code</span><span class="p">):</span>
+    <span class="n">agri_geom</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">agri</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">])</span>
+    <span class="n">agri_geom</span><span class="p">[</span><span class="s2">&quot;dam_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">damage_model</span>
+    <span class="n">agri_geom</span><span class="p">[</span><span class="s2">&quot;sector_code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sector_code</span>
+    <span class="n">agri_geom</span><span class="p">[</span><span class="s2">&quot;osmid&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;N/A&quot;</span>
+    <span class="k">return</span> <span class="n">agri_geom</span>
+
+
+<span class="k">def</span> <span class="nf">data_prep_ind</span><span class="p">(</span><span class="n">agri</span><span class="p">,</span> <span class="n">damage_model</span><span class="p">,</span> <span class="n">sector_code</span><span class="p">):</span>
+    <span class="n">agri_geom</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">agri</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">])</span>
+    <span class="n">agri_geom</span><span class="p">[</span><span class="s2">&quot;dam_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">damage_model</span>
+    <span class="n">agri_geom</span><span class="p">[</span><span class="s2">&quot;sector_code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sector_code</span>
+    <span class="n">agri_geom</span><span class="p">[</span><span class="s2">&quot;osmid&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">agri</span><span class="p">[</span><span class="s2">&quot;osmid&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">agri_geom</span>
+
+
+<span class="k">def</span> <span class="nf">data_prep_com</span><span class="p">(</span><span class="n">commercial</span><span class="p">):</span>
+    <span class="n">commercial_geom</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">commercial</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">])</span>
+    <span class="n">commercial_geom</span><span class="p">[</span><span class="s2">&quot;dam_model&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Commercial&quot;</span>
+    <span class="n">commercial_geom</span><span class="p">[</span><span class="s2">&quot;sector_code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">commercial</span><span class="p">[</span><span class="s2">&quot;Sector_id&quot;</span><span class="p">]</span>
+    <span class="n">commercial_geom</span><span class="p">[</span><span class="s2">&quot;osmid&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;N/A&quot;</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">commercial_geom</span><span class="p">)):</span>
+        <span class="c1"># For hotels, buffer radius of 50 m</span>
+        <span class="k">if</span> <span class="n">commercial_geom</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;sector_code&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;I&quot;</span><span class="p">:</span>
+            <span class="n">commercial_geom</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">commercial_geom</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+                <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="mi">50</span> <span class="o">*</span> <span class="mf">0.000009090</span><span class="p">)</span>
+
+        <span class="c1"># For postal and courier services , buffer radisu of 15 m</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">commercial_geom</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">commercial_geom</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
+                <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span>
+            <span class="p">]</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="mi">20</span> <span class="o">*</span> <span class="mf">0.000009090</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">commercial_geom</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agri_new</span> <span class="o">=</span> <span class="n">data_prep_agri</span><span class="p">(</span><span class="n">agri</span><span class="p">,</span> <span class="s2">&quot;Agricultural&quot;</span><span class="p">,</span> <span class="s2">&quot;A01&quot;</span><span class="p">)</span>
+<span class="n">industries_new</span> <span class="o">=</span> <span class="n">data_prep_ind</span><span class="p">(</span><span class="n">industries</span><span class="p">,</span> <span class="s2">&quot;Industrial&quot;</span><span class="p">,</span> <span class="s2">&quot;ADA&quot;</span><span class="p">)</span>
+<span class="n">commercial_new</span> <span class="o">=</span> <span class="n">data_prep_com</span><span class="p">(</span><span class="n">commercial</span><span class="p">)</span>
+
+<span class="n">exposure</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">agri_new</span><span class="p">,</span> <span class="n">commercial_new</span><span class="p">,</span> <span class="n">industries_new</span><span class="p">])</span>
+<span class="n">exposure</span> <span class="o">=</span> <span class="n">exposure</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="area-distribution-array">
+<h3>Area distribution array<a class="headerlink" href="#area-distribution-array" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_area_df</span><span class="p">(</span><span class="n">industries</span><span class="p">,</span> <span class="n">industrial</span><span class="p">):</span>
+    <span class="c1"># Intersection polygons b/w OSM industrial sites and places api industries</span>
+    <span class="n">intersected_polygons</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span><span class="n">industrial</span><span class="p">,</span> <span class="n">industries</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;intersection&quot;</span><span class="p">)</span>
+
+    <span class="n">ind_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">industrial</span><span class="o">.</span><span class="n">Sector_id</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+    <span class="n">ind_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Other&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Iniitalising some numpy arrays</span>
+    <span class="n">count_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">industries</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">ind_list</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">area_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">industries</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">ind_list</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="c1"># COunting the number of industries of each sectors in each site</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">industries</span><span class="p">)):</span>
+        <span class="n">osmid</span> <span class="o">=</span> <span class="n">industries</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;osmid&quot;</span><span class="p">]</span>
+        <span class="n">count_array</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">osmid</span>
+        <span class="n">ip</span> <span class="o">=</span> <span class="n">intersected_polygons</span><span class="p">[</span><span class="n">intersected_polygons</span><span class="p">[</span><span class="s2">&quot;osmid&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">osmid</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ind_list</span><span class="p">)):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">ip</span><span class="p">[</span><span class="n">ip</span><span class="p">[</span><span class="s2">&quot;Sector_id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">ind_list</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span>
+            <span class="n">count_array</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="c1"># Distributing the area of an industrial site based on the number of idnustries each scetor has</span>
+    <span class="c1"># If an industrial site is unoccupied, the area is distributed equally among all sectors</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">industries</span><span class="p">)):</span>
+        <span class="n">osmid</span> <span class="o">=</span> <span class="n">industries</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;osmid&quot;</span><span class="p">]</span>
+        <span class="n">area_array</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">osmid</span>
+        <span class="n">ip</span> <span class="o">=</span> <span class="n">industries</span><span class="p">[</span><span class="n">industries</span><span class="p">[</span><span class="s2">&quot;osmid&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">osmid</span><span class="p">]</span>
+        <span class="n">area</span> <span class="o">=</span> <span class="n">ip</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">area</span>
+        <span class="n">row_sum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">count_array</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">:])</span>
+
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ind_list</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">row_sum</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">area_array</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">count_array</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">row_sum</span><span class="p">))</span> <span class="o">*</span> <span class="n">area</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">area_array</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="c1"># area_array[i,j+1] = area / len(ind_list)</span>
+
+    <span class="c1"># Creating a datafrtame of area array</span>
+    <span class="n">area_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">area_array</span><span class="p">)</span>
+    <span class="n">col_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;osmid&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ind_list</span><span class="p">)):</span>
+        <span class="n">col_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ind_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">area_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">col_list</span>
+
+    <span class="k">return</span> <span class="n">area_df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">area_df</span> <span class="o">=</span> <span class="n">create_area_df</span><span class="p">(</span><span class="n">industries</span><span class="p">,</span> <span class="n">industrial</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="step-2-estimate-damages-functionality-loss">
+<h2>Step 2: Estimate damages / functionality loss<a class="headerlink" href="#step-2-estimate-damages-functionality-loss" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inputs</span>
+<span class="c1"># vector = geodataframe of substations, industrial sites etc.</span>
+<span class="c1"># raster =  floodmaps</span>
+<span class="c1"># org_crs = the initial crs of the vector</span>
+
+
+<span class="k">def</span> <span class="nf">depth_calculator</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">raster</span><span class="p">):</span>
+    <span class="c1"># CRS consistency between the vector and the raster</span>
+    <span class="n">vector</span> <span class="o">=</span> <span class="n">vector</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">raster</span><span class="o">.</span><span class="n">rio</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+
+    <span class="c1"># Converting no data (i.e., no inundationvalues) to zero</span>
+    <span class="n">raster</span> <span class="o">=</span> <span class="n">raster</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">flood_map</span> <span class="o">!=</span> <span class="n">flood_map</span><span class="o">.</span><span class="n">rio</span><span class="o">.</span><span class="n">nodata</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># Calucate the maximum inundation depth within each polygon</span>
+    <span class="n">stats</span> <span class="o">=</span> <span class="n">zonal_stats</span><span class="p">(</span>
+        <span class="n">vector</span><span class="p">,</span> <span class="n">raster</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">affine</span><span class="o">=</span><span class="n">raster</span><span class="o">.</span><span class="n">rio</span><span class="o">.</span><span class="n">transform</span><span class="p">(),</span> <span class="n">stats</span><span class="o">=</span><span class="s2">&quot;mean&quot;</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Create a new column depth and if the stat is None (i.e., the polygon is outside the raster extent) we make the depth zero</span>
+    <span class="n">vector</span><span class="p">[</span><span class="s2">&quot;depth&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">stat</span><span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">stat</span><span class="p">[</span><span class="s2">&quot;mean&quot;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">stat</span> <span class="ow">in</span> <span class="n">stats</span>
+    <span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">vector</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="flood-depths-at-the-exposure-locations-and-substations">
+<h3>Flood depths at the exposure locations and substations<a class="headerlink" href="#flood-depths-at-the-exposure-locations-and-substations" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exposure</span> <span class="o">=</span> <span class="n">depth_calculator</span><span class="p">(</span><span class="n">exposure</span><span class="p">,</span> <span class="n">flood_map</span><span class="p">)</span>
+<span class="n">substations</span> <span class="o">=</span> <span class="n">depth_calculator</span><span class="p">(</span><span class="n">substations</span><span class="p">,</span> <span class="n">flood_map</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\sva100\AppData\Local\miniforge3\envs\mria\Lib\site-packages\rasterstats\io.py:328: NodataWarning: Setting nodata to -999; specify nodata explicitly
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="estimating-damage-ratios-for-agri-and-probability-of-being-functional-foexpsoure-and-substations">
+<h3>Estimating damage ratios (for Agri) and probability of being functional foexpsoure and substations<a class="headerlink" href="#estimating-damage-ratios-for-agri-and-probability-of-being-functional-foexpsoure-and-substations" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">damage_functionalityloss_exposure</span><span class="p">(</span><span class="n">exposure</span><span class="p">,</span> <span class="n">dam_model</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">exposure</span><span class="p">)):</span>
+        <span class="n">depth</span> <span class="o">=</span> <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;depth&quot;</span><span class="p">]</span>
+        <span class="n">dam_class</span> <span class="o">=</span> <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;dam_model&quot;</span><span class="p">]</span>
+
+        <span class="n">interp_func</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span>
+            <span class="n">dam_model</span><span class="p">[</span><span class="s2">&quot;Depth&quot;</span><span class="p">],</span>
+            <span class="n">dam_model</span><span class="p">[</span><span class="n">dam_class</span><span class="p">],</span>
+            <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span>
+            <span class="n">fill_value</span><span class="o">=</span><span class="s2">&quot;extrapolate&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">ratio</span> <span class="o">=</span> <span class="n">interp_func</span><span class="p">(</span><span class="n">depth</span><span class="p">)</span>
+        <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;dr/pf&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ratio</span>
+
+        <span class="k">if</span> <span class="n">dam_class</span> <span class="o">==</span> <span class="s2">&quot;Agricultural&quot;</span><span class="p">:</span>
+            <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ratio</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Random number 1</span>
+            <span class="c1"># if ratio &lt;= np.random.uniform(0,1):</span>
+            <span class="k">if</span> <span class="n">ratio</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">:</span>
+                <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">exposure</span>
+
+
+<span class="k">def</span> <span class="nf">functionalityloss_substations</span><span class="p">(</span><span class="n">exposure</span><span class="p">,</span> <span class="n">dam_model</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">exposure</span><span class="p">)):</span>
+        <span class="n">depth</span> <span class="o">=</span> <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;depth&quot;</span><span class="p">]</span>
+        <span class="n">dam_class</span> <span class="o">=</span> <span class="s2">&quot;Substations&quot;</span>
+
+        <span class="n">interp_func</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span>
+            <span class="n">dam_model</span><span class="p">[</span><span class="s2">&quot;Depth&quot;</span><span class="p">],</span>
+            <span class="n">dam_model</span><span class="p">[</span><span class="n">dam_class</span><span class="p">],</span>
+            <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span>
+            <span class="n">fill_value</span><span class="o">=</span><span class="s2">&quot;extrapolate&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">ratio</span> <span class="o">=</span> <span class="n">interp_func</span><span class="p">(</span><span class="n">depth</span><span class="p">)</span>
+        <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;dr/pf&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ratio</span>
+
+        <span class="c1"># Random number 2</span>
+        <span class="c1"># if ratio &lt;= np.random.uniform(0,1):</span>
+        <span class="k">if</span> <span class="n">ratio</span> <span class="o">&lt;=</span> <span class="mf">0.5</span><span class="p">:</span>
+            <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">exposure</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exposure</span> <span class="o">=</span> <span class="n">damage_functionalityloss_exposure</span><span class="p">(</span><span class="n">exposure</span><span class="p">,</span> <span class="n">dam_model</span><span class="p">)</span>
+<span class="n">substations</span> <span class="o">=</span> <span class="n">functionalityloss_substations</span><span class="p">(</span><span class="n">substations</span><span class="p">,</span> <span class="n">dam_model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="step-3-linking-the-exposure-and-substations-from-which-they-receive-power">
+<h2>Step 3: Linking the exposure and substations from which they receive power<a class="headerlink" href="#step-3-linking-the-exposure-and-substations-from-which-they-receive-power" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The function to sort the substations based on closet proximity to the sites of interest</span>
+<span class="k">def</span> <span class="nf">sort_df</span><span class="p">(</span><span class="n">gdf_polygon</span><span class="p">,</span> <span class="n">gdf_points</span><span class="p">):</span>
+    <span class="n">nearest_points_series</span> <span class="o">=</span> <span class="n">gdf_points</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">gdf_polygon</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">sorted_points_df</span> <span class="o">=</span> <span class="n">gdf_points</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+        <span class="n">distance_to_polygon</span><span class="o">=</span><span class="n">nearest_points_series</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;distance_to_polygon&quot;</span><span class="p">)</span>
+    <span class="n">sorted_points_df</span><span class="p">[</span><span class="s2">&quot;rank&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sorted_points_df</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">sorted_points_df</span>
+
+
+<span class="k">def</span> <span class="nf">substation_assignemnet</span><span class="p">(</span><span class="n">expsoure</span><span class="p">,</span> <span class="n">substations</span><span class="p">,</span> <span class="n">p</span><span class="p">):</span>
+    <span class="c1"># Conevrting the substtions to a points dataframe</span>
+    <span class="n">ss_pts</span> <span class="o">=</span> <span class="n">substations</span>
+    <span class="n">ss_pts</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">substations</span><span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">centroid</span>
+
+    <span class="k">for</span> <span class="n">sr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">expsoure</span><span class="p">)):</span>
+        <span class="n">soi</span> <span class="o">=</span> <span class="n">exposure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">sr</span><span class="p">]</span>
+        <span class="n">soi</span> <span class="o">=</span> <span class="n">soi</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">soi</span> <span class="o">=</span> <span class="n">soi</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">soi</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;dam_model&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Agricultural&quot;</span><span class="p">:</span>
+            <span class="n">expsoure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sr</span><span class="p">,</span> <span class="s2">&quot;substation_osm&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Sorting the substations based on closest proximity to the site</span>
+            <span class="n">sorted_df</span> <span class="o">=</span> <span class="n">sort_df</span><span class="p">(</span><span class="n">soi</span><span class="p">,</span> <span class="n">ss_pts</span><span class="p">)</span>
+            <span class="n">sorted_df</span> <span class="o">=</span> <span class="n">sorted_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sorted_df</span><span class="p">)):</span>
+                <span class="n">rank</span> <span class="o">=</span> <span class="n">sorted_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;rank&quot;</span><span class="p">]</span>
+                <span class="n">prob_new</span> <span class="o">=</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">p</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="n">rank</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="n">p</span>
+                <span class="n">sorted_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;probability&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob_new</span>
+
+            <span class="c1"># Multiplying probability with voltage as weights</span>
+            <span class="n">sorted_df</span><span class="p">[</span><span class="s2">&quot;probxweight&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">sorted_df</span><span class="p">[</span><span class="s2">&quot;probability&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">sorted_df</span><span class="p">[</span><span class="s2">&quot;voltage_kv&quot;</span><span class="p">]</span>
+            <span class="p">)</span>
+
+            <span class="c1"># Calculating weighted probabilities</span>
+            <span class="n">sorted_df</span><span class="p">[</span><span class="s2">&quot;weigh_prob&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">sorted_df</span><span class="p">[</span><span class="s2">&quot;probxweight&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">sorted_df</span><span class="p">[</span><span class="s2">&quot;probxweight&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+            <span class="p">)</span>
+
+            <span class="c1"># Deriving cumulative probabilities</span>
+            <span class="n">sorted_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;cum_prob&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sorted_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;weigh_prob&quot;</span><span class="p">]</span>
+
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sorted_df</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">sorted_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;cum_prob&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">sorted_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;weigh_prob&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">sorted_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;cum_prob&quot;</span><span class="p">]</span>
+                <span class="p">)</span>
+
+            <span class="c1"># Selecting a substation based on a uniformly distributed random number</span>
+            <span class="c1"># Random number - 2</span>
+            <span class="c1"># r = np.random.rand()</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="mf">0.5</span>
+            <span class="n">selected_row</span> <span class="o">=</span> <span class="n">sorted_df</span><span class="p">[</span><span class="n">sorted_df</span><span class="p">[</span><span class="s2">&quot;cum_prob&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">r</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">expsoure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">sr</span><span class="p">,</span> <span class="s2">&quot;substation_osm&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">selected_row</span><span class="o">.</span><span class="n">osmid</span>
+
+    <span class="k">return</span> <span class="n">expsoure</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The parameter p = 0.8 is the parameter of the geometric distribuion used in the assignment</span>
+<span class="n">exposure</span> <span class="o">=</span> <span class="n">substation_assignemnet</span><span class="p">(</span><span class="n">exposure</span><span class="p">,</span> <span class="n">substations</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-4-revising-the-functional-states-based-on-the-functional-state-of-the-substation">
+<h2>Step 4: Revising the functional states based on the functional state of the substation<a class="headerlink" href="#step-4-revising-the-functional-states-based-on-the-functional-state-of-the-substation" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">substations</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>osmid</th>
+      <th>voltage_kv</th>
+      <th>geometry</th>
+      <th>depth</th>
+      <th>dr/pf</th>
+      <th>fun_state</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>23135620</td>
+      <td>50.0</td>
+      <td>POINT (73217.138 418220.725)</td>
+      <td>0.865419</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>921069367</td>
+      <td>50.0</td>
+      <td>POINT (82164.613 433185.430)</td>
+      <td>0.000000</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>146901292</td>
+      <td>150.0</td>
+      <td>POINT (77728.298 428458.544)</td>
+      <td>0.038460</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>920938651</td>
+      <td>50.0</td>
+      <td>POINT (78855.868 431086.334)</td>
+      <td>0.000000</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>23135699</td>
+      <td>50.0</td>
+      <td>POINT (78919.962 431108.331)</td>
+      <td>0.023571</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">functionality_modifier</span><span class="p">(</span><span class="n">exposure</span><span class="p">,</span> <span class="n">substations</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">exposure</span><span class="p">)):</span>
+        <span class="c1"># Filtering the expsoure site of interest</span>
+        <span class="n">soi</span> <span class="o">=</span> <span class="n">exposure</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">soi</span> <span class="o">=</span> <span class="n">soi</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">soi</span> <span class="o">=</span> <span class="n">soi</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">soi</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;dam_model&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Agricultural&quot;</span><span class="p">:</span>
+            <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state_re&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;dr/pf&quot;</span><span class="p">]</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Osm id of the connected substation</span>
+            <span class="n">osm_ss</span> <span class="o">=</span> <span class="n">soi</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;substation_osm&quot;</span><span class="p">]</span>
+
+            <span class="c1"># Functionality state of the substation</span>
+            <span class="n">ss_i</span> <span class="o">=</span> <span class="n">substations</span><span class="p">[</span><span class="n">substations</span><span class="p">[</span><span class="s2">&quot;osmid&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">osm_ss</span><span class="p">]</span>
+            <span class="n">ss_i</span> <span class="o">=</span> <span class="n">ss_i</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">new_fun</span> <span class="o">=</span> <span class="n">ss_i</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;fun_state&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">soi</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;fun_state&quot;</span><span class="p">]</span>
+            <span class="n">exposure</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state_re&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_fun</span>
+
+    <span class="k">return</span> <span class="n">exposure</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exposure</span> <span class="o">=</span> <span class="n">functionality_modifier</span><span class="p">(</span><span class="n">exposure</span><span class="p">,</span> <span class="n">substations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exposure</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>geometry</th>
+      <th>dam_model</th>
+      <th>sector_code</th>
+      <th>osmid</th>
+      <th>depth</th>
+      <th>dr/pf</th>
+      <th>fun_state</th>
+      <th>substation_osm</th>
+      <th>fun_state_re</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>POLYGON ((88729.433 415611.611, 89030.707 4156...</td>
+      <td>Agricultural</td>
+      <td>A01</td>
+      <td>N/A</td>
+      <td>0.962088</td>
+      <td>0.40711</td>
+      <td>0.40711</td>
+      <td>0.0</td>
+      <td>0.40711</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>POLYGON ((104019.310 420612.951, 104041.389 42...</td>
+      <td>Agricultural</td>
+      <td>A01</td>
+      <td>N/A</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>POLYGON ((106726.610 421939.862, 106541.554 42...</td>
+      <td>Agricultural</td>
+      <td>A01</td>
+      <td>N/A</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>POLYGON ((116336.538 423646.615, 116263.008 42...</td>
+      <td>Agricultural</td>
+      <td>A01</td>
+      <td>N/A</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>POLYGON ((110388.815 424149.455, 110909.941 42...</td>
+      <td>Agricultural</td>
+      <td>A01</td>
+      <td>N/A</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.00000</td>
+      <td>0.0</td>
+      <td>0.00000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="step-5-estimating-sector-specific-production-after-disruption">
+<h2>Step 5: Estimating sector specific production after disruption<a class="headerlink" href="#step-5-estimating-sector-specific-production-after-disruption" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sector_production_level</span><span class="p">(</span><span class="n">expsoure</span><span class="p">,</span> <span class="n">soi</span><span class="p">,</span> <span class="n">area_df</span><span class="p">):</span>
+    <span class="c1"># Identify the damage model of the sector</span>
+    <span class="n">damagemodel</span> <span class="o">=</span> <span class="n">soi</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;dam_model&quot;</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">damagemodel</span> <span class="o">==</span> <span class="s2">&quot;Agricultural&quot;</span><span class="p">:</span>
+        <span class="c1"># FIltering only the exposure related to the sector</span>
+        <span class="n">exp_sector</span> <span class="o">=</span> <span class="n">exposure</span><span class="p">[</span><span class="n">exposure</span><span class="p">[</span><span class="s2">&quot;sector_code&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">soi</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Sector&quot;</span><span class="p">]]</span>
+        <span class="n">exp_sector</span> <span class="o">=</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">dis_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">exp_sector</span><span class="p">),</span> <span class="mi">3</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">exp_sector</span><span class="p">)):</span>
+            <span class="n">dis_area</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">area</span>
+            <span class="n">dis_area</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">area</span> <span class="o">*</span> <span class="p">(</span>
+                <span class="mi">1</span> <span class="o">-</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state&quot;</span><span class="p">]</span>
+            <span class="p">)</span>
+            <span class="n">dis_area</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">area</span> <span class="o">*</span> <span class="p">(</span>
+                <span class="mi">1</span> <span class="o">-</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state_re&quot;</span><span class="p">]</span>
+            <span class="p">)</span>
+
+        <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dis_area</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dis_area</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="n">x3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dis_area</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">/</span> <span class="n">x1</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">x3</span> <span class="o">/</span> <span class="n">x1</span>
+
+    <span class="k">if</span> <span class="n">damagemodel</span> <span class="o">==</span> <span class="s2">&quot;Commercial&quot;</span><span class="p">:</span>
+        <span class="c1"># FIltering only the exposure related to the sector</span>
+        <span class="n">exp_sector</span> <span class="o">=</span> <span class="n">exposure</span><span class="p">[</span><span class="n">exposure</span><span class="p">[</span><span class="s2">&quot;sector_code&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">soi</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Sector&quot;</span><span class="p">]]</span>
+        <span class="n">exp_sector</span> <span class="o">=</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">dis_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">exp_sector</span><span class="p">),</span> <span class="mi">3</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">exp_sector</span><span class="p">)):</span>
+            <span class="n">dis_area</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">area</span>
+            <span class="n">dis_area</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">area</span> <span class="o">*</span> <span class="p">(</span><span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state&quot;</span><span class="p">])</span>
+            <span class="p">)</span>
+            <span class="n">dis_area</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;geometry&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">area</span> <span class="o">*</span> <span class="p">(</span><span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state_re&quot;</span><span class="p">])</span>
+            <span class="p">)</span>
+
+        <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dis_area</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dis_area</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>
+        <span class="n">x3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dis_area</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">])</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">/</span> <span class="n">x1</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">x3</span> <span class="o">/</span> <span class="n">x1</span>
+
+    <span class="k">if</span> <span class="n">damagemodel</span> <span class="o">==</span> <span class="s2">&quot;Industrial&quot;</span><span class="p">:</span>
+        <span class="c1"># FIltering only the exposure related to the sector</span>
+        <span class="n">exp_sector</span> <span class="o">=</span> <span class="n">exposure</span><span class="p">[</span><span class="n">exposure</span><span class="p">[</span><span class="s2">&quot;dam_model&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">soi</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;dam_model&quot;</span><span class="p">]]</span>
+        <span class="n">exp_sector</span> <span class="o">=</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">x1</span> <span class="o">=</span> <span class="n">area_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">soi</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Sector&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">x3</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">exp_sector</span><span class="p">)):</span>
+            <span class="n">osmid</span> <span class="o">=</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;osmid&quot;</span><span class="p">]</span>
+            <span class="n">fun_state</span> <span class="o">=</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state&quot;</span><span class="p">]</span>
+            <span class="n">fun_state_re</span> <span class="o">=</span> <span class="n">exp_sector</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;fun_state_re&quot;</span><span class="p">]</span>
+
+            <span class="n">area_df_filtered</span> <span class="o">=</span> <span class="n">area_df</span><span class="p">[</span><span class="n">area_df</span><span class="p">[</span><span class="s2">&quot;osmid&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">osmid</span><span class="p">]</span>
+            <span class="n">area_df_filtered</span> <span class="o">=</span> <span class="n">area_df_filtered</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="n">x2</span> <span class="o">+=</span> <span class="n">area_df_filtered</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">soi</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Sector&quot;</span><span class="p">]]</span> <span class="o">*</span> <span class="n">fun_state</span>
+            <span class="n">x3</span> <span class="o">+=</span> <span class="n">area_df_filtered</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">soi</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Sector&quot;</span><span class="p">]]</span> <span class="o">*</span> <span class="n">fun_state_re</span>
+
+        <span class="n">a</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">/</span> <span class="n">x1</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">x3</span> <span class="o">/</span> <span class="n">x1</span>
+
+    <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sectors</span><span class="p">)):</span>
+    <span class="c1"># A dataframe only with the sector of interst</span>
+    <span class="n">soi</span> <span class="o">=</span> <span class="n">sectors</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">soi</span> <span class="o">=</span> <span class="n">soi</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">soi</span> <span class="o">=</span> <span class="n">soi</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># a - current production level without CI failure considered</span>
+    <span class="c1"># b - current production level with CI failure considered</span>
+
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">sector_production_level</span><span class="p">(</span><span class="n">exposure</span><span class="p">,</span> <span class="n">soi</span><span class="p">,</span> <span class="n">area_df</span><span class="p">)</span>
+
+    <span class="n">sectors</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;prod&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="n">sectors</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;prod_ci&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sectors</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sector</th>
+      <th>dam_model</th>
+      <th>prod</th>
+      <th>prod_ci</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A01</td>
+      <td>Agricultural</td>
+      <td>0.941690</td>
+      <td>0.941690</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>I</td>
+      <td>Commercial</td>
+      <td>0.956296</td>
+      <td>0.894422</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>H53</td>
+      <td>Commercial</td>
+      <td>0.948665</td>
+      <td>0.862539</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>C19</td>
+      <td>Industrial</td>
+      <td>0.957624</td>
+      <td>0.948813</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C20</td>
+      <td>Industrial</td>
+      <td>0.931777</td>
+      <td>0.821383</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C24</td>
+      <td>Industrial</td>
+      <td>0.907065</td>
+      <td>0.850255</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating a disruption dicitonary to act as input to the MRIA</span>
+
+<span class="n">dis_dict1</span> <span class="o">=</span> <span class="p">{(</span><span class="n">rod</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Sector&quot;</span><span class="p">]):</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;prod&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">sectors</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()}</span>
+<span class="n">dis_dict2</span> <span class="o">=</span> <span class="p">{(</span><span class="n">rod</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Sector&quot;</span><span class="p">]):</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;prod_ci&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">sectors</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">dis_dict1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dis_dict2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{(&#39;NL33&#39;, &#39;A01&#39;): 0.9416895844006983, (&#39;NL33&#39;, &#39;I&#39;): 0.9562957330808471, (&#39;NL33&#39;, &#39;H53&#39;): 0.948665473295758, (&#39;NL33&#39;, &#39;C19&#39;): 0.9576241234459725, (&#39;NL33&#39;, &#39;C20&#39;): 0.9317773819009608, (&#39;NL33&#39;, &#39;C24&#39;): 0.9070654174848276}
+{(&#39;NL33&#39;, &#39;A01&#39;): 0.9416895844006983, (&#39;NL33&#39;, &#39;I&#39;): 0.8944217994170435, (&#39;NL33&#39;, &#39;H53&#39;): 0.8625390753608366, (&#39;NL33&#39;, &#39;C19&#39;): 0.9488130209159482, (&#39;NL33&#39;, &#39;C20&#39;): 0.8213829527770194, (&#39;NL33&#39;, &#39;C24&#39;): 0.8502546570683864}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-6-baselinemodel-mria">
+<h2>Step 6: Baselinemodel - MRIA<a class="headerlink" href="#step-6-baselinemodel-mria" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">)</span>
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="s2">&quot;MRIO&quot;</span><span class="p">,</span> <span class="s2">&quot;mria_nl_sut.xlsx&quot;</span><span class="p">)</span>
+<span class="n">regions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;NL11&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NL12&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NL13&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NL21&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NL22&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NL23&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NL31&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NL32&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NL33&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NL34&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NL41&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NL42&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ROE&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;nl_sut&quot;</span>
+<span class="n">DATA</span> <span class="o">=</span> <span class="n">sut_basic</span><span class="p">(</span><span class="s2">&quot;nl_sut&quot;</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="n">regions</span><span class="p">)</span>
+<span class="n">DATA</span><span class="o">.</span><span class="n">prep_data</span><span class="p">()</span>
+<span class="n">data_source</span> <span class="o">=</span> <span class="s2">&quot;nl_sut&quot;</span>
+
+<span class="n">MRIA_RUN1</span> <span class="o">=</span> <span class="n">MRIAnew</span><span class="p">(</span><span class="n">DATA</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">DATA</span><span class="o">.</span><span class="n">countries</span><span class="p">,</span> <span class="n">DATA</span><span class="o">.</span><span class="n">sectors</span><span class="p">,</span> <span class="n">DATA</span><span class="o">.</span><span class="n">products</span><span class="p">)</span>
+<span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">create_sets</span><span class="p">()</span>
+<span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">create_alias</span><span class="p">()</span>
+<span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">baseline_data</span><span class="p">(</span><span class="n">DATA</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">disr_dict_dem</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">op_factor</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">imp_flex</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">all_disimp</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">create_disaster_data</span><span class="p">(</span>
+    <span class="n">dis_dict1</span><span class="p">,</span> <span class="n">disr_dict_dem</span><span class="p">,</span> <span class="n">op_factor</span><span class="p">,</span> <span class="n">all_disimp</span><span class="p">,</span> <span class="n">imp_flex</span>
+<span class="p">)</span>
+<span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">run_impactmodel</span><span class="p">(</span><span class="n">solver</span><span class="o">=</span><span class="s2">&quot;gams&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nl_nuts</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NUTS_ID</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NL13</td>
+      <td>POLYGON ((6.31577 53.09402, 6.34598 53.09237, ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NL11</td>
+      <td>MULTIPOLYGON (((6.87469 53.40789, 6.90147 53.3...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NL12</td>
+      <td>MULTIPOLYGON (((6.31508 53.09402, 6.31027 53.0...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NL21</td>
+      <td>POLYGON ((6.12007 52.85421, 6.19766 52.79446, ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NL23</td>
+      <td>POLYGON ((5.79529 52.80650, 5.82001 52.78657, ...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mria_sec</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">Sb</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mria_sec</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;A01&#39;, &#39;A02-03&#39;, &#39;B&#39;, &#39;C10T12&#39;, &#39;C13T15&#39;, &#39;C16&#39;, &#39;C17&#39;, &#39;C18&#39;, &#39;C19&#39;, &#39;C20&#39;, &#39;C21&#39;, &#39;C22&#39;, &#39;C23&#39;, &#39;C24&#39;, &#39;C25&#39;, &#39;C26&#39;, &#39;C27&#39;, &#39;C28&#39;, &#39;C29&#39;, &#39;C30&#39;, &#39;C31_32&#39;, &#39;C33&#39;, &#39;D35&#39;, &#39;E36&#39;, &#39;E37T39&#39;, &#39;F&#39;, &#39;G45&#39;, &#39;G46&#39;, &#39;G47&#39;, &#39;H49&#39;, &#39;H50&#39;, &#39;H51&#39;, &#39;H52&#39;, &#39;H53&#39;, &#39;I&#39;, &#39;J58&#39;, &#39;J59_60&#39;, &#39;J61&#39;, &#39;J62_63&#39;, &#39;K&#39;, &#39;L68&#39;, &#39;M69_70&#39;, &#39;M71&#39;, &#39;M72&#39;, &#39;M73&#39;, &#39;M74_75&#39;, &#39;N77&#39;, &#39;N78&#39;, &#39;N79&#39;, &#39;N80T82&#39;, &#39;O84&#39;, &#39;P85&#39;, &#39;Q86&#39;, &#39;Q87_88&#39;, &#39;R-U&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mria_sec</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">Sb</span><span class="p">))</span>
+<span class="n">Xbase_values</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span> <span class="n">value</span><span class="p">(</span><span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">Xbase</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">r</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">S</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nl_nuts</span><span class="p">)):</span>
+    <span class="n">x_sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">xbase_sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mria_sec</span><span class="p">)):</span>
+        <span class="n">x_sum</span> <span class="o">+=</span> <span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">Xdis</span><span class="o">.</span><span class="n">get_values</span><span class="p">()[</span><span class="n">nl_nuts</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;NUTS_ID&quot;</span><span class="p">],</span> <span class="n">mria_sec</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span>
+        <span class="n">xbase_sum</span> <span class="o">+=</span> <span class="n">Xbase_values</span><span class="o">.</span><span class="n">get</span><span class="p">((</span><span class="n">nl_nuts</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;NUTS_ID&quot;</span><span class="p">],</span> <span class="n">mria_sec</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span>
+
+    <span class="n">nl_nuts</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;Xbase&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xbase_sum</span>
+    <span class="n">nl_nuts</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x_sum</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nl_nuts</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NUTS_ID</th>
+      <th>geometry</th>
+      <th>Xbase</th>
+      <th>X</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NL13</td>
+      <td>POLYGON ((6.31577 53.09402, 6.34598 53.09237, ...</td>
+      <td>2.859679e+04</td>
+      <td>2.835252e+04</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NL11</td>
+      <td>MULTIPOLYGON (((6.87469 53.40789, 6.90147 53.3...</td>
+      <td>4.698450e+04</td>
+      <td>4.671165e+04</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NL12</td>
+      <td>MULTIPOLYGON (((6.31508 53.09402, 6.31027 53.0...</td>
+      <td>3.752439e+04</td>
+      <td>3.724583e+04</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NL21</td>
+      <td>POLYGON ((6.12007 52.85421, 6.19766 52.79446, ...</td>
+      <td>8.198458e+04</td>
+      <td>8.162250e+04</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NL23</td>
+      <td>POLYGON ((5.79529 52.80650, 5.82001 52.78657, ...</td>
+      <td>2.581482e+04</td>
+      <td>2.551011e+04</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>NL22</td>
+      <td>POLYGON ((6.10977 52.44053, 6.11664 52.43132, ...</td>
+      <td>1.447773e+05</td>
+      <td>1.444976e+05</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>NL31</td>
+      <td>POLYGON ((5.02144 52.30260, 5.02556 52.28832, ...</td>
+      <td>1.165418e+05</td>
+      <td>1.162706e+05</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NL32</td>
+      <td>MULTIPOLYGON (((5.37712 52.76497, 5.36133 52.6...</td>
+      <td>2.973824e+05</td>
+      <td>2.972219e+05</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>NL41</td>
+      <td>POLYGON ((5.59822 51.82814, 5.63736 51.81795, ...</td>
+      <td>2.281565e+05</td>
+      <td>2.277745e+05</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>NL42</td>
+      <td>POLYGON ((5.95322 51.74786, 5.95940 51.73936, ...</td>
+      <td>8.578962e+04</td>
+      <td>8.564480e+04</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>NL33</td>
+      <td>POLYGON ((4.49409 52.32821, 4.55795 52.31100, ...</td>
+      <td>3.090517e+05</td>
+      <td>3.061699e+05</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>NL34</td>
+      <td>MULTIPOLYGON (((4.24278 51.64700, 4.23523 51.6...</td>
+      <td>2.840769e+04</td>
+      <td>2.813612e+04</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>ROE</td>
+      <td>POLYGON ((6.65000 51.00000, 6.65000 51.50000, ...</td>
+      <td>2.749916e+07</td>
+      <td>2.749892e+07</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nl_nuts</span><span class="p">[</span><span class="s2">&quot;Loss/gain&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nl_nuts</span><span class="p">[</span><span class="s2">&quot;Xbase&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">nl_nuts</span><span class="p">[</span><span class="s2">&quot;X&quot;</span><span class="p">]</span>
+<span class="n">nl_nuts</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NUTS_ID</th>
+      <th>geometry</th>
+      <th>Xbase</th>
+      <th>X</th>
+      <th>Loss/gain</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NL13</td>
+      <td>POLYGON ((6.31577 53.09402, 6.34598 53.09237, ...</td>
+      <td>2.859679e+04</td>
+      <td>2.835252e+04</td>
+      <td>244.271289</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NL11</td>
+      <td>MULTIPOLYGON (((6.87469 53.40789, 6.90147 53.3...</td>
+      <td>4.698450e+04</td>
+      <td>4.671165e+04</td>
+      <td>272.850970</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NL12</td>
+      <td>MULTIPOLYGON (((6.31508 53.09402, 6.31027 53.0...</td>
+      <td>3.752439e+04</td>
+      <td>3.724583e+04</td>
+      <td>278.559264</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NL21</td>
+      <td>POLYGON ((6.12007 52.85421, 6.19766 52.79446, ...</td>
+      <td>8.198458e+04</td>
+      <td>8.162250e+04</td>
+      <td>362.082259</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>NL23</td>
+      <td>POLYGON ((5.79529 52.80650, 5.82001 52.78657, ...</td>
+      <td>2.581482e+04</td>
+      <td>2.551011e+04</td>
+      <td>304.715225</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>NL22</td>
+      <td>POLYGON ((6.10977 52.44053, 6.11664 52.43132, ...</td>
+      <td>1.447773e+05</td>
+      <td>1.444976e+05</td>
+      <td>279.653110</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>NL31</td>
+      <td>POLYGON ((5.02144 52.30260, 5.02556 52.28832, ...</td>
+      <td>1.165418e+05</td>
+      <td>1.162706e+05</td>
+      <td>271.224427</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>NL32</td>
+      <td>MULTIPOLYGON (((5.37712 52.76497, 5.36133 52.6...</td>
+      <td>2.973824e+05</td>
+      <td>2.972219e+05</td>
+      <td>160.485799</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>NL41</td>
+      <td>POLYGON ((5.59822 51.82814, 5.63736 51.81795, ...</td>
+      <td>2.281565e+05</td>
+      <td>2.277745e+05</td>
+      <td>381.956895</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>NL42</td>
+      <td>POLYGON ((5.95322 51.74786, 5.95940 51.73936, ...</td>
+      <td>8.578962e+04</td>
+      <td>8.564480e+04</td>
+      <td>144.824875</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>NL33</td>
+      <td>POLYGON ((4.49409 52.32821, 4.55795 52.31100, ...</td>
+      <td>3.090517e+05</td>
+      <td>3.061699e+05</td>
+      <td>2881.839234</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>NL34</td>
+      <td>MULTIPOLYGON (((4.24278 51.64700, 4.23523 51.6...</td>
+      <td>2.840769e+04</td>
+      <td>2.813612e+04</td>
+      <td>271.562509</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>ROE</td>
+      <td>POLYGON ((6.65000 51.00000, 6.65000 51.50000, ...</td>
+      <td>2.749916e+07</td>
+      <td>2.749892e+07</td>
+      <td>243.498518</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Use the &#39;loss_gain&#39; column to color the polygons</span>
+<span class="n">nl_nuts</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s2">&quot;Loss/gain&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+</pre></div>
+</div>
+<img alt="../../../_images/444b2830939314be0516e25703604bf74c3107a51d731360f3db936b67b4e9e7.png" src="../../../_images/444b2830939314be0516e25703604bf74c3107a51d731360f3db936b67b4e9e7.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Xbase_values</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span> <span class="n">value</span><span class="p">(</span><span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">Xbase</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">r</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">m</span><span class="o">.</span><span class="n">S</span>
+<span class="p">}</span>
+<span class="n">Xbase_values</span><span class="o">.</span><span class="n">get</span><span class="p">((</span><span class="s2">&quot;NL33&quot;</span><span class="p">,</span> <span class="s2">&quot;A01&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7624.697078092194
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xbase</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">Xbase</span><span class="p">)</span>
+<span class="n">xbase_val</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">MRIA_RUN1</span><span class="o">.</span><span class="n">Xbase</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./riskassessment/SystemicRisk/book"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../NetworkRisk.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Work packages</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../CBAMultiHazard.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Work packages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-the-inputs">Reading the inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-input-preparation">Step 1: Input preparation.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unified-exposure-dataframe">Unified exposure dataframe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#area-distribution-array">Area distribution array</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-estimate-damages-functionality-loss">Step 2: Estimate damages / functionality loss</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flood-depths-at-the-exposure-locations-and-substations">Flood depths at the exposure locations and substations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimating-damage-ratios-for-agri-and-probability-of-being-functional-foexpsoure-and-substations">Estimating damage ratios (for Agri) and probability of being functional foexpsoure and substations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-linking-the-exposure-and-substations-from-which-they-receive-power">Step 3: Linking the exposure and substations from which they receive power</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-revising-the-functional-states-based-on-the-functional-state-of-the-substation">Step 4: Revising the functional states based on the functional state of the substation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-estimating-sector-specific-production-after-disruption">Step 5: Estimating sector specific production after disruption</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-baselinemodel-mria">Step 6: Baselinemodel - MRIA</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MIRACA
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
