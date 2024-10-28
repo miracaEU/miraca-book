@@ -32,7 +32,7 @@ parts:
   - caption: Background material
     chapters:
       - title: Exposure database
-        file: background/ExposureDatabase
+        file: background/Exposure_Miraca/book/Exposure_Miraca
       - title: Vulnerability database
         file: background/VulDatabase
       - title: Network modelling

@@ -1,3 +1,7 @@
 [submodule "miraca-book/riskassessment/SystemicRisk"]
 	path = miraca-book/riskassessment/SystemicRisk
 	url = https://github.com/miracaEU/SystemicRisk
+
+[submodule "miraca-book/background/Exposure_Miraca"]
+	path = miraca-book/background/Exposure_Miraca
+	url = https://github.com/miracaEU/Exposure_Miraca
