@@ -1,0 +1,1211 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>MIRACA - Exposure database &#8212; MIRACA Technical Workbench</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'background/Exposure_Miraca/book/Exposure_Miraca';</script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Work packages" href="../../VulDatabase.html" />
+    <link rel="prev" title="Work packages" href="../../../usecases/usecase5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="MIRACA Technical Workbench - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="MIRACA Technical Workbench - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Welcome to the Miraca Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">The MIRACA approach</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/AssetRisk.html">Asset-level risk assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/NetworkRisk.html">Network-level risk assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/SystemicRisk/book/SystemicRisk_framework.html">Systemic risk assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/CBAMultiHazard.html">Cost-benefit appraisal of multi-hazard adaptation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/usecase1.html">Use Case 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/usecase2.html">Use Case 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/usecase3.html">Use Case 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/usecase4.html">Use Case 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/usecase5.html">Use Case 5</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Background material</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exposure database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VulDatabase.html">Vulnerability database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../NetworkModelling.html">Network modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MacroImpacts.html">Macroeconomic impacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CBAAnalysis.html">Cost-benefit analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About Miraca</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book/issues/new?title=Issue%20on%20page%20%2Fbackground/Exposure_Miraca/book/Exposure_Miraca.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/background/Exposure_Miraca/book/Exposure_Miraca.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>MIRACA - Exposure database</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-using-pydeck"><strong>Visualize using pydeck</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-download-and-save-geospatial-data-using-osmnx"><strong>Select, download and save geospatial data using osmnx</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-street-network-using-osmnx"><strong>Working with street network using osmnx</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-selected-network-on-a-map"><strong>Plot selected network on a map</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="miraca-exposure-database">
+<h1><strong>MIRACA - Exposure database</strong><a class="headerlink" href="#miraca-exposure-database" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">@author: Aristotle University of Thessaloniki (AUTH)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n@author: Aristotle University of Thessaloniki (AUTH)\n&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">gc</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">osmnx</span> <span class="k">as</span> <span class="nn">ox</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">mapclassify</span>
+<span class="kn">import</span> <span class="nn">pydeck</span> <span class="k">as</span> <span class="nn">pdk</span>
+<span class="kn">import</span> <span class="nn">pydeck</span> <span class="k">as</span> <span class="nn">pdk</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">IFrame</span>
+<span class="kn">from</span> <span class="nn">shapely.geometry</span> <span class="kn">import</span> <span class="n">Point</span><span class="p">,</span> <span class="n">LineString</span><span class="p">,</span> <span class="n">Polygon</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ox</span><span class="o">.</span><span class="n">__version__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1.9.2&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the folder where the database will be stored </span>
+<span class="n">Miraca_Exposure_Database_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;D:\OneDrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Miraca_Exposure_Database&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set logging level</span>
+<span class="n">ox</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">log_console</span><span class="o">=</span><span class="kc">False</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;osmnx&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ignore all warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This dictionary maps the names of European countries to their respective ISO 3166-1 alpha-2 codes.</span>
+<span class="sd">These codes are two-letter country codes defined in the ISO 3166-1 standard.</span>
+
+<span class="sd">Returns:</span>
+<span class="sd">A dictionary where keys are country names (str) and values are their ISO 3166-1 alpha-2 codes (str).</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">EU_code</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Albania&#39;</span><span class="p">:</span> <span class="s1">&#39;AL&#39;</span><span class="p">,</span> <span class="s1">&#39;Austria&#39;</span><span class="p">:</span> <span class="s1">&#39;AT&#39;</span><span class="p">,</span> <span class="s1">&#39;Belgium&#39;</span><span class="p">:</span> <span class="s1">&#39;BE&#39;</span><span class="p">,</span> <span class="s1">&#39;Bulgaria&#39;</span><span class="p">:</span> <span class="s1">&#39;BG&#39;</span><span class="p">,</span> <span class="s1">&#39;Croatia&#39;</span><span class="p">:</span> <span class="s1">&#39;HR&#39;</span><span class="p">,</span> <span class="s1">&#39;Cyprus&#39;</span><span class="p">:</span> <span class="s1">&#39;CY&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Czechia&#39;</span><span class="p">:</span> <span class="s1">&#39;CZ&#39;</span><span class="p">,</span> <span class="s1">&#39;Denmark&#39;</span><span class="p">:</span> <span class="s1">&#39;DK&#39;</span><span class="p">,</span> <span class="s1">&#39;Estonia&#39;</span><span class="p">:</span> <span class="s1">&#39;EE&#39;</span><span class="p">,</span> <span class="s1">&#39;Finland&#39;</span><span class="p">:</span> <span class="s1">&#39;FI&#39;</span><span class="p">,</span> <span class="s1">&#39;France&#39;</span><span class="p">:</span> <span class="s1">&#39;FR&#39;</span><span class="p">,</span> <span class="s1">&#39;Germany&#39;</span><span class="p">:</span> <span class="s1">&#39;DE&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Greece&#39;</span><span class="p">:</span> <span class="s1">&#39;GR&#39;</span><span class="p">,</span> <span class="s1">&#39;Hungary&#39;</span><span class="p">:</span> <span class="s1">&#39;HU&#39;</span><span class="p">,</span> <span class="s1">&#39;Iceland&#39;</span><span class="p">:</span> <span class="s1">&#39;IS&#39;</span><span class="p">,</span> <span class="s1">&#39;Ireland&#39;</span><span class="p">:</span> <span class="s1">&#39;IE&#39;</span><span class="p">,</span><span class="s1">&#39;Italy&#39;</span><span class="p">:</span> <span class="s1">&#39;IT&#39;</span><span class="p">,</span><span class="s1">&#39;Latvia&#39;</span><span class="p">:</span> <span class="s1">&#39;LV&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Liechtenstein&#39;</span><span class="p">:</span> <span class="s1">&#39;LI&#39;</span><span class="p">,</span> <span class="s1">&#39;Lithuania&#39;</span><span class="p">:</span> <span class="s1">&#39;LT&#39;</span><span class="p">,</span><span class="s1">&#39;Luxembourg&#39;</span><span class="p">:</span> <span class="s1">&#39;LU&#39;</span><span class="p">,</span> <span class="s1">&#39;Malta&#39;</span><span class="p">:</span> <span class="s1">&#39;MT&#39;</span><span class="p">,</span><span class="s1">&#39;Montenegro&#39;</span><span class="p">:</span> <span class="s1">&#39;ME&#39;</span><span class="p">,</span> <span class="s1">&#39;Netherlands&#39;</span><span class="p">:</span> <span class="s1">&#39;NL&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;North_Macedonia&#39;</span><span class="p">:</span> <span class="s1">&#39;MK&#39;</span><span class="p">,</span> <span class="s1">&#39;Norway&#39;</span><span class="p">:</span> <span class="s1">&#39;NO&#39;</span><span class="p">,</span> <span class="s1">&#39;Poland&#39;</span><span class="p">:</span> <span class="s1">&#39;PL&#39;</span><span class="p">,</span> <span class="s1">&#39;Portugal&#39;</span><span class="p">:</span> <span class="s1">&#39;PT&#39;</span><span class="p">,</span><span class="s1">&#39;Romania&#39;</span><span class="p">:</span> <span class="s1">&#39;RO&#39;</span><span class="p">,</span> <span class="s1">&#39;Serbia&#39;</span><span class="p">:</span> <span class="s1">&#39;RS&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Slovakia&#39;</span><span class="p">:</span> <span class="s1">&#39;SK&#39;</span><span class="p">,</span> <span class="s1">&#39;Slovenia&#39;</span><span class="p">:</span> <span class="s1">&#39;SI&#39;</span><span class="p">,</span> <span class="s1">&#39;Spain&#39;</span><span class="p">:</span> <span class="s1">&#39;ES&#39;</span><span class="p">,</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">:</span> <span class="s1">&#39;SE&#39;</span><span class="p">,</span> <span class="s1">&#39;Switzerland&#39;</span><span class="p">:</span> <span class="s1">&#39;CH&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;United_Kingdom&#39;</span><span class="p">:</span> <span class="s1">&#39;UK&#39;</span><span class="p">,</span> <span class="s1">&#39;Svalbard_and_Jan_Mayen&#39;</span><span class="p">:</span> <span class="s1">&#39;SJ&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This dictionary maps the names of European countries to the cost from GEM.</span>
+
+<span class="sd">Returns:</span>
+<span class="sd">A dictionary where keys are country names (str) and values are the GEM costs  (float).</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="n">Gem_cost</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Austria&#39;</span><span class="p">:</span> <span class="mf">1454.26</span><span class="p">,</span> <span class="s1">&#39;Belgium&#39;</span><span class="p">:</span> <span class="mf">1349.35</span><span class="p">,</span> <span class="s1">&#39;Bulgaria&#39;</span><span class="p">:</span> <span class="mf">530.44</span><span class="p">,</span> <span class="s1">&#39;Cyprus&#39;</span><span class="p">:</span> <span class="mf">1221.97</span><span class="p">,</span>
+            <span class="s1">&#39;Czech_Republic&#39;</span><span class="p">:</span> <span class="mf">1167.68</span><span class="p">,</span><span class="s1">&#39;Denmark&#39;</span><span class="p">:</span> <span class="mf">2629.95</span><span class="p">,</span><span class="s1">&#39;Estonia&#39;</span><span class="p">:</span> <span class="mf">953.19</span><span class="p">,</span> <span class="s1">&#39;Finland&#39;</span><span class="p">:</span> <span class="mf">2005.17</span><span class="p">,</span>
+            <span class="s1">&#39;France&#39;</span><span class="p">:</span> <span class="mf">2225.00</span><span class="p">,</span> <span class="s1">&#39;Germany&#39;</span><span class="p">:</span> <span class="mf">1869.00</span><span class="p">,</span><span class="s1">&#39;Greece&#39;</span><span class="p">:</span> <span class="mf">954.97</span><span class="p">,</span><span class="s1">&#39;Hungary&#39;</span><span class="p">:</span> <span class="mf">534.89</span><span class="p">,</span>
+            <span class="s1">&#39;Ireland&#39;</span><span class="p">:</span> <span class="mf">1640.27</span><span class="p">,</span><span class="s1">&#39;Italy&#39;</span><span class="p">:</span> <span class="mf">1424.00</span><span class="p">,</span><span class="s1">&#39;Latvia&#39;</span><span class="p">:</span> <span class="mf">937.17</span><span class="p">,</span><span class="s1">&#39;Lithuania&#39;</span><span class="p">:</span> <span class="mf">962.09</span><span class="p">,</span>
+            <span class="s1">&#39;Luxembourg&#39;</span><span class="p">:</span> <span class="mf">1418.66</span><span class="p">,</span><span class="s1">&#39;Malta&#39;</span><span class="p">:</span> <span class="mf">931.83</span><span class="p">,</span><span class="s1">&#39;Netherlands&#39;</span><span class="p">:</span> <span class="mf">1401.43</span><span class="p">,</span><span class="s1">&#39;Poland&#39;</span><span class="p">:</span> <span class="mf">1440.02</span><span class="p">,</span>
+            <span class="s1">&#39;Portugal&#39;</span><span class="p">:</span> <span class="mf">801.00</span><span class="p">,</span><span class="s1">&#39;Romania&#39;</span><span class="p">:</span> <span class="mf">775.19</span><span class="p">,</span><span class="s1">&#39;Slovakia&#39;</span><span class="p">:</span> <span class="mf">849.95</span><span class="p">,</span><span class="s1">&#39;Slovenia&#39;</span><span class="p">:</span> <span class="mf">1110.72</span><span class="p">,</span>
+            <span class="s1">&#39;Spain&#39;</span><span class="p">:</span> <span class="mf">747.60</span><span class="p">,</span><span class="s1">&#39;Sweden&#39;</span><span class="p">:</span> <span class="mf">3528.85</span>
+            <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">map_network_to_code</span><span class="p">(</span><span class="n">network</span><span class="p">):</span>
+
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function maps network names to shorter codes according to a predefined mapping.</span>
+
+<span class="sd">    Arguments:</span>
+<span class="sd">    network (str): The network name to be mapped.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    str: The corresponding code for the network, or the original network if not found in the mapping.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">network_mapping</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;Education&#39;</span><span class="p">,</span> <span class="s1">&#39;Edu&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Healthcare&#39;</span><span class="p">,</span> <span class="s1">&#39;Health&#39;</span><span class="p">),</span> 
+        <span class="p">(</span><span class="s1">&#39;Airports&#39;</span><span class="p">,</span> <span class="s1">&#39;Airport&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Ports&#39;</span><span class="p">,</span> <span class="s1">&#39;Port&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Roadway&#39;</span><span class="p">,</span> <span class="s1">&#39;Road&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Railway&#39;</span><span class="p">,</span> <span class="s1">&#39;Rail&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Telecommunication&#39;</span><span class="p">,</span> <span class="s1">&#39;Telecom&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Electricity&#39;</span><span class="p">,</span><span class="s1">&#39;Elec&#39;</span><span class="p">),</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">network_name</span><span class="p">,</span> <span class="n">network_code</span> <span class="ow">in</span> <span class="n">network_mapping</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">network</span> <span class="o">==</span> <span class="n">network_name</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">network_code</span>
+    <span class="k">return</span> <span class="n">network</span>  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_network_tags</span><span class="p">(</span><span class="n">network</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function takes an network type and returns the corresponding OpenStreetMap tags.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    network (str): The type of network for which OSM tags are required.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    dict: A dictionary containing OSM tags associated with the specified network type.</span>
+<span class="sd">    Returns an empty dictionary if the network type is not found.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">network_tags</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;Education&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;amenity&#39;</span><span class="p">:</span> <span class="s1">&#39;school&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;Healthcare&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;amenity&#39;</span><span class="p">:</span> <span class="s1">&#39;hospital&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;Airports&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;aeroway&#39;</span><span class="p">:</span> <span class="s1">&#39;aerodrome&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;Ports&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;waterway&#39;</span><span class="p">:</span> <span class="s1">&#39;harbour&#39;</span><span class="p">,</span> <span class="s1">&#39;landuse&#39;</span><span class="p">:</span> <span class="s1">&#39;harbour&#39;</span><span class="p">,</span> <span class="s1">&#39;man_made&#39;</span><span class="p">:</span> <span class="s1">&#39;pier&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;Roadway&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;highway&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;motorway&#39;</span><span class="p">,</span><span class="s1">&#39;primary&#39;</span><span class="p">,</span><span class="s1">&#39;secondary&#39;</span><span class="p">,</span><span class="s1">&#39;tertiary&#39;</span><span class="p">,</span><span class="s1">&#39;motorway_link&#39;</span><span class="p">,</span><span class="s1">&#39;primary_link&#39;</span><span class="p">,</span><span class="s1">&#39;secondary_link&#39;</span><span class="p">,</span><span class="s1">&#39;tertiary_link&#39;</span><span class="p">]},</span>
+        <span class="s1">&#39;Railway&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;railway&#39;</span><span class="p">:</span> <span class="s1">&#39;rail&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;Telecommunication&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;man_made&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;communications_tower&#39;</span><span class="p">,</span> <span class="s1">&#39;mast&#39;</span><span class="p">]},</span>
+        <span class="s1">&#39;Electricity&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;power&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="s1">&#39;cable&#39;</span><span class="p">,</span> <span class="s1">&#39;plant&#39;</span><span class="p">,</span> <span class="s1">&#39;pole&#39;</span><span class="p">,</span> <span class="s1">&#39;substation&#39;</span><span class="p">,</span><span class="s1">&#39;tower&#39;</span><span class="p">,</span> <span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="s1">&#39;minor_line&#39;</span><span class="p">]},</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">network_tags</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">network</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_network_columns</span><span class="p">(</span><span class="n">network</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function returns the list of columns associated with a particular network type.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters:</span>
+<span class="sd">    network (str): The type of network for which column names are required.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">    list: A list of column names associated with the specified network type.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">network_columns</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;Education&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">,</span> <span class="s1">&#39;amenity&#39;</span><span class="p">,</span> <span class="s1">&#39;building:levels&#39;</span><span class="p">,</span> <span class="s1">&#39;material&#39;</span><span class="p">,</span> <span class="s1">&#39;height&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Healthcare&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">,</span> <span class="s1">&#39;amenity&#39;</span><span class="p">,</span> <span class="s1">&#39;emergency&#39;</span><span class="p">,</span> <span class="s1">&#39;building:levels&#39;</span><span class="p">,</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;beds&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Airports&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">,</span> <span class="s1">&#39;aeroway&#39;</span><span class="p">,</span> <span class="s1">&#39;ref&#39;</span><span class="p">,</span> <span class="s1">&#39;int_name&#39;</span><span class="p">,</span> <span class="s1">&#39;ele&#39;</span><span class="p">,</span> <span class="s1">&#39;operator&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;iata&#39;</span><span class="p">,</span> <span class="s1">&#39;icao&#39;</span><span class="p">,</span> <span class="s1">&#39;passengers&#39;</span><span class="p">,</span> <span class="s1">&#39;landuse&#39;</span><span class="p">,</span> <span class="s1">&#39;layer&#39;</span> <span class="p">],</span>
+        <span class="s1">&#39;Ports&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">,</span> <span class="s1">&#39;waterway&#39;</span><span class="p">,</span> <span class="s1">&#39;man_made&#39;</span><span class="p">,</span><span class="s1">&#39;landuse&#39;</span><span class="p">,</span> <span class="s1">&#39;ele&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;tracktype&#39;</span><span class="p">,</span> <span class="s1">&#39;material&#39;</span><span class="p">,</span> <span class="s1">&#39;incline&#39;</span><span class="p">,</span> <span class="s1">&#39;layer&#39;</span><span class="p">,</span> <span class="s1">&#39;smoothness&#39;</span><span class="p">,</span> <span class="s1">&#39;bridge&#39;</span><span class="p">,</span> <span class="s1">&#39;oneway&#39;</span><span class="p">,</span> <span class="s1">&#39;maxspeed&#39;</span><span class="p">,</span> <span class="s1">&#39;maxweight&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Roadway&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;geometry&quot;</span><span class="p">,</span> <span class="s1">&#39;highway&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;int_name&#39;</span><span class="p">,</span> <span class="s1">&#39;int_ref&#39;</span><span class="p">,</span><span class="s1">&#39;maxspeed&#39;</span><span class="p">,</span> <span class="s1">&#39;lanes&#39;</span><span class="p">,</span> <span class="s1">&#39;oneway&#39;</span><span class="p">,</span> <span class="s1">&#39;bridge&#39;</span><span class="p">,</span> <span class="s1">&#39;sidewalk&#39;</span><span class="p">,</span> <span class="s1">&#39;surface&#39;</span><span class="p">,</span> <span class="s1">&#39;smoothness&#39;</span><span class="p">,</span> <span class="s1">&#39;maxheight&#39;</span> <span class="p">,</span><span class="s1">&#39;tunnel&#39;</span><span class="p">,</span> <span class="s1">&#39;layer&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Railway&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">,</span> <span class="s1">&#39;maxspeed&#39;</span><span class="p">,</span> <span class="s1">&#39;voltage&#39;</span><span class="p">,</span> <span class="s1">&#39;bridge&#39;</span><span class="p">,</span> <span class="s1">&#39;layer&#39;</span><span class="p">,</span> <span class="s1">&#39;tunnel&#39;</span><span class="p">,</span><span class="s1">&#39;cutting&#39;</span><span class="p">,</span><span class="s1">&#39;electrified&#39;</span><span class="p">,</span><span class="s1">&#39;usage&#39;</span><span class="p">,</span><span class="s1">&#39;embankment&#39;</span><span class="p">,</span><span class="s1">&#39;frequency&#39;</span><span class="p">,</span> <span class="s1">&#39;tracks&#39;</span><span class="p">,</span> <span class="s1">&#39;gauge&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Telecommunication&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="s1">&#39;geometry&#39;</span><span class="p">,</span> <span class="s1">&#39;man_made&#39;</span><span class="p">,</span> <span class="s1">&#39;tower_type&#39;</span><span class="p">,</span><span class="s1">&#39;mast_type&#39;</span><span class="p">,</span><span class="s1">&#39;height&#39;</span><span class="p">,</span><span class="s1">&#39;ele&#39;</span><span class="p">,</span> <span class="s1">&#39;material&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Electricity&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">,</span> <span class="s1">&#39;power&#39;</span><span class="p">,</span> <span class="s1">&#39;cables&#39;</span><span class="p">,</span> <span class="s1">&#39;voltage&#39;</span><span class="p">,</span> <span class="s1">&#39;location&#39;</span><span class="p">,</span> <span class="s1">&#39;frequency&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;wires&#39;</span><span class="p">,</span> <span class="s1">&#39;layer&#39;</span><span class="p">,</span> <span class="s1">&#39;disused&#39;</span><span class="p">,</span> <span class="s1">&#39;operator&#39;</span><span class="p">,</span><span class="s1">&#39;circuits&#39;</span><span class="p">,</span> <span class="s1">&#39;usage&#39;</span> <span class="p">],</span>
+    <span class="p">}</span>  
+    <span class="k">return</span> <span class="n">network_columns</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">replace_nan_values</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">column_name</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function replaces NaN values in a specified column of a GeoDataFrame.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    gdf (GeoDataFrame): The GeoDataFrame to process.</span>
+<span class="sd">    column_name (str): The name of the column in which to replace NaN values.</span>
+<span class="sd">    value (str): The value to use as a replacement.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    GeoDataFrame: The processed GeoDataFrame.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">gdf</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">gdf</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="visualize-using-pydeck">
+<h2><strong>Visualize using pydeck</strong><a class="headerlink" href="#visualize-using-pydeck" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">visualize_with_pydeck</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">geom_type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Visualizes geospatial data using Pydeck.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    gdf (GeoDataFrame): The GeoDataFrame containing the geospatial data to visualize.</span>
+<span class="sd">    geom_type (str): The type of geometry (&#39;Point&#39;, &#39;LineString&#39;, or &#39;Polygon&#39;).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Extract latitude and longitude from the geometry column</span>
+    <span class="k">if</span> <span class="n">geom_type</span> <span class="o">==</span> <span class="s1">&#39;Point&#39;</span><span class="p">:</span>
+        <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">],</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">y</span>
+    <span class="k">elif</span> <span class="n">geom_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;LineString&#39;</span><span class="p">,</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">]:</span>
+        <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">],</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">y</span>
+
+    <span class="c1"># Define a layer to display on a map</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="s1">&#39;Point&#39;</span> <span class="ow">in</span> <span class="n">geom_type</span><span class="p">:</span>
+        <span class="n">point_gdf</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">geom_type</span> <span class="o">==</span> <span class="s1">&#39;Point&#39;</span><span class="p">]</span>
+        <span class="n">point_layer</span> <span class="o">=</span> <span class="n">create_layer</span><span class="p">(</span><span class="n">point_gdf</span><span class="p">,</span> <span class="s1">&#39;Point&#39;</span><span class="p">)</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">point_layer</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;LineString&#39;</span> <span class="ow">in</span> <span class="n">geom_type</span><span class="p">:</span>
+        <span class="n">line_gdf</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">geom_type</span> <span class="o">==</span> <span class="s1">&#39;LineString&#39;</span><span class="p">]</span>
+        <span class="n">line_layer</span> <span class="o">=</span> <span class="n">create_layer</span><span class="p">(</span><span class="n">line_gdf</span><span class="p">,</span> <span class="s1">&#39;LineString&#39;</span><span class="p">)</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line_layer</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;Polygon&#39;</span> <span class="ow">in</span> <span class="n">geom_type</span><span class="p">:</span>
+        <span class="n">polygon_gdf</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">geom_type</span> <span class="o">==</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">]</span>
+        <span class="n">polygon_layer</span> <span class="o">=</span> <span class="n">create_layer</span><span class="p">(</span><span class="n">polygon_gdf</span><span class="p">,</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">)</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">polygon_layer</span><span class="p">)</span>
+
+    <span class="c1"># Set the viewport location</span>
+    <span class="n">view_state</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">ViewState</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">longitude</span><span class="o">=</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+    <span class="c1"># Render</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">Deck</span><span class="p">(</span><span class="n">layers</span><span class="o">=</span><span class="n">layers</span><span class="p">,</span> <span class="n">initial_view_state</span><span class="o">=</span><span class="n">view_state</span><span class="p">)</span>
+    <span class="n">html_filename</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">network_type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">geom_type</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s2">.html&quot;</span>
+    <span class="n">r</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">html_filename</span><span class="p">)</span>
+    <span class="c1"># display(IFrame(src=html_filename, width=1000, height=700))  # Display HTML inline in Jupyter Notebook</span>
+    <span class="k">return</span> <span class="n">r</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_color_based_on_attribute</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+    <span class="n">attribute_value</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;bridge&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">attribute_value</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>  <span class="c1"># Red color for &#39;Value1&#39;</span>
+    <span class="k">elif</span> <span class="n">attribute_value</span> <span class="o">==</span> <span class="s1">&#39;no&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">]</span>  <span class="c1"># Green color for &#39;Value2&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_layer</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">geom_type</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates a Pydeck layer based on the geometry type.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    gdf (GeoDataFrame): The GeoDataFrame containing the geospatial data to visualize.</span>
+<span class="sd">    geom_type (str): The type of geometry (&#39;Point&#39;, &#39;LineString&#39;, or &#39;Polygon&#39;).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    layer: A Pydeck layer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># gdf[&#39;color&#39;] = gdf.apply(get_color_based_on_attribute, axis=1)</span>
+    
+    <span class="k">if</span> <span class="n">geom_type</span> <span class="o">==</span> <span class="s1">&#39;Point&#39;</span><span class="p">:</span>
+        <span class="n">layer</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">Layer</span><span class="p">(</span>
+            <span class="s2">&quot;ScatterplotLayer&quot;</span><span class="p">,</span>
+            <span class="n">gdf</span><span class="p">,</span>
+            <span class="n">get_position</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Longitude&quot;</span><span class="p">,</span> <span class="s2">&quot;Latitude&quot;</span><span class="p">],</span>
+            <span class="n">get_radius</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>  <span class="c1"># Radius is in meters</span>
+            <span class="n">get_fill_color</span><span class="o">=</span><span class="p">[</span><span class="mi">161</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">140</span><span class="p">],</span>  <span class="c1"># Set color and opacity</span>
+            <span class="n">pickable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">auto_highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">tooltip</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{Country}</span><span class="s2">, </span><span class="si">{Country_code}</span><span class="s2">, </span><span class="si">{Geometry}</span><span class="s2">&quot;</span><span class="p">},</span>
+            <span class="n">opacity</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+            <span class="n">stroked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">get_line_color</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">geom_type</span> <span class="o">==</span> <span class="s1">&#39;LineString&#39;</span><span class="p">:</span>
+        <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;coordinates&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">coords</span><span class="p">))</span>
+        <span class="n">layer</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">Layer</span><span class="p">(</span>
+            <span class="s2">&quot;PathLayer&quot;</span><span class="p">,</span>
+            <span class="n">gdf</span><span class="p">,</span>
+            <span class="n">get_path</span><span class="o">=</span><span class="s2">&quot;coordinates&quot;</span><span class="p">,</span>
+            <span class="n">get_color</span><span class="o">=</span><span class="p">[</span><span class="mi">255</span><span class="p">,</span> <span class="mi">195</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">250</span><span class="p">],</span>
+            <span class="c1"># get_color=&quot;color&quot;,  # Use the color column for the color</span>
+            <span class="n">get_width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+            <span class="n">pickable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">auto_highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">tooltip</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{Country}</span><span class="s2">, </span><span class="si">{Country_code}</span><span class="s2">, </span><span class="si">{Geometry}</span><span class="s2">&quot;</span><span class="p">},</span>
+        <span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">geom_type</span> <span class="o">==</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">:</span>
+        <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;coordinates&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">exterior</span><span class="o">.</span><span class="n">coords</span><span class="p">[:])</span>
+        <span class="n">layer</span> <span class="o">=</span> <span class="n">pdk</span><span class="o">.</span><span class="n">Layer</span><span class="p">(</span>
+            <span class="s2">&quot;PolygonLayer&quot;</span><span class="p">,</span>
+            <span class="n">gdf</span><span class="p">,</span>
+            <span class="n">get_polygon</span><span class="o">=</span><span class="s2">&quot;coordinates&quot;</span><span class="p">,</span>
+            <span class="n">get_fill_color</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">239</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">140</span><span class="p">],</span>
+            <span class="n">pickable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">auto_highlight</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">tooltip</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{Country}</span><span class="s2">, </span><span class="si">{Country_code}</span><span class="s2">, </span><span class="si">{Geometry}</span><span class="s2">&quot;</span><span class="p">},</span>
+            <span class="n">stroked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">get_line_color</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">layer</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="select-download-and-save-geospatial-data-using-osmnx">
+<h2><strong>Select, download and save geospatial data using osmnx</strong><a class="headerlink" href="#select-download-and-save-geospatial-data-using-osmnx" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">select_data_osmnx</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">network</span><span class="p">,</span> <span class="n">database</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fetches and processes geospatial data for a specific network type in a given country using OSMnx.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters:</span>
+<span class="sd">    country (str): The name of the country for which data is being fetched.</span>
+<span class="sd">    network (str): The type of network for which data is being fetched.</span>
+<span class="sd">    database (str): The name of the database.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">    GeoDataFrame or None: A GeoDataFrame containing the processed data if successful,</span>
+<span class="sd">                          None if there was an error fetching the data.</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">    Exception: Re-raises any unexpected exceptions encountered during data retrieval.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Get the abbreviation for the country</span>
+        <span class="n">country_abbr</span> <span class="o">=</span> <span class="n">EU_code</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">country</span><span class="p">,</span><span class="n">country</span><span class="p">)</span>
+        
+        <span class="c1"># Get the tags for the given network type</span>
+        <span class="n">tags</span> <span class="o">=</span> <span class="n">get_network_tags</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">tags</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No tags defined for network type &#39;</span><span class="si">{</span><span class="n">network</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        
+        <span class="n">network_code</span> <span class="o">=</span> <span class="n">map_network_to_code</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">features_from_place</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">)</span>
+    
+        <span class="c1"># Define a dictionary that maps each network to the preferred geometry types</span>
+        <span class="n">network_geometry</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;Education&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Healthcare&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Airports&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Ports&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Roadway&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;LineString&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Railway&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;LineString&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Telecommunication&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Point&#39;</span><span class="p">],</span>
+            <span class="s1">&#39;Electricity&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="s1">&#39;LineString&#39;</span><span class="p">],</span>
+        
+        <span class="p">}</span>
+        <span class="n">preferred_geometries</span> <span class="o">=</span> <span class="n">network_geometry</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">preferred_geometries</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No preferred geometries defined for network type &#39;</span><span class="si">{</span><span class="n">network</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="c1"># Initialize gdf as an empty GeoDataFrame</span>
+        <span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">()</span>
+
+        <span class="c1"># Keep only the features with the preferred geometries</span>
+        <span class="k">for</span> <span class="n">geom_type</span> <span class="ow">in</span> <span class="n">preferred_geometries</span><span class="p">:</span>
+            <span class="n">geom_features</span> <span class="o">=</span> <span class="n">features</span><span class="p">[</span><span class="n">features</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">geom_type</span> <span class="o">==</span> <span class="n">geom_type</span><span class="p">]</span>
+            <span class="n">geom_features</span> <span class="o">=</span> <span class="n">geom_features</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">])</span>
+
+            <span class="k">if</span> <span class="s1">&#39;geometry&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">geom_features</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+                <span class="n">geom_features</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+            <span class="n">columns</span> <span class="o">=</span> <span class="n">get_network_columns</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
+
+            <span class="c1"># Explicitly create GeoDataFrame</span>
+            <span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">geom_features</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+            
+            <span class="c1"># Add columns for country name and abbreviation</span>
+            <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">country</span>
+            <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;Country_code&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">country_abbr</span>
+            <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;Geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">geom_type</span>
+            
+            <span class="c1"># Set the CRS for the GeoDataFrame</span>
+            <span class="n">gdf</span><span class="o">.</span><span class="n">crs</span> <span class="o">=</span> <span class="s1">&#39;EPSG:4326&#39;</span>
+            
+            <span class="k">if</span> <span class="n">network</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Roadway&quot;</span><span class="p">,</span> <span class="s2">&quot;Railway&quot;</span><span class="p">]:</span>
+                <span class="c1"># Call the function to replace NaN values</span>
+                <span class="n">gdf</span> <span class="o">=</span> <span class="n">replace_nan_values</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="s1">&#39;bridge&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">)</span>
+                <span class="n">gdf</span> <span class="o">=</span> <span class="n">replace_nan_values</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="s1">&#39;tunnel&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">)</span>
+                <span class="n">gdf</span> <span class="o">=</span> <span class="n">replace_nan_values</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="s1">&#39;layer&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="c1"># Convert &#39;layer&#39; column to numeric, handling errors by setting them to NaN</span>
+                <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;layer&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;layer&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+                
+      
+            <span class="k">if</span> <span class="n">network</span> <span class="o">==</span> <span class="s2">&quot;Education&quot;</span> <span class="ow">and</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">Gem_cost</span><span class="p">:</span>
+                <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;Cost_per_area&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Gem_cost</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">))</span>
+                
+            <span class="c1"># Save to Geoparquet</span>
+            <span class="n">output_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">Miraca_Exposure_Database_path</span><span class="p">,</span> <span class="n">network</span><span class="p">,</span> <span class="n">database</span><span class="p">,</span> <span class="n">country_abbr</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_directory</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">geom_type_to_letter</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s1">&#39;Point&#39;</span><span class="p">:</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;LineString&#39;</span><span class="p">:</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Polygon&#39;</span><span class="p">:</span> <span class="s1">&#39;Α&#39;</span>
+                <span class="c1"># Add more geometry types as needed</span>
+            <span class="p">}</span>
+            <span class="c1"># Get the specific letter for the current geometry type</span>
+            <span class="n">geom_type_letter</span> <span class="o">=</span> <span class="n">geom_type_to_letter</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">geom_type</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+            
+            <span class="n">output_filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_directory</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">network_code</span><span class="si">}{</span><span class="n">geom_type_letter</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">country_abbr</span><span class="si">}</span><span class="s2">.parquet&quot;</span><span class="p">)</span>
+            <span class="n">gdf</span><span class="o">.</span><span class="n">to_parquet</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;pyarrow&#39;</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s1">&#39;snappy&#39;</span><span class="p">)</span>
+            <span class="n">plot_selected_features</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> <span class="n">network</span><span class="p">)</span>
+
+
+            <span class="c1"># Pydeck visualization</span>
+            <span class="k">if</span> <span class="n">geom_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="s1">&#39;LineString&#39;</span><span class="p">,</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">]:</span>
+                <span class="n">visualize_with_pydeck</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span><span class="n">geom_type</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">gdf</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">error_message</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;No data elements in server response&quot;</span> <span class="ow">in</span> <span class="n">error_message</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error fetching data for </span><span class="si">{</span><span class="n">network</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">error_message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span>  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="working-with-street-network-using-osmnx">
+<h2><strong>Working with street network using osmnx</strong><a class="headerlink" href="#working-with-street-network-using-osmnx" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_street_network</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">network</span><span class="p">,</span> <span class="n">database</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Download, model, and save a street network for a specified country and network type.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    country (str): The name of the country for which the street network is to be modeled.</span>
+<span class="sd">    network (str): The type of network for which the street network is to be modeled.</span>
+<span class="sd">    database (str): The name of the database where the output files will be saved.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Get the abbreviation for the country</span>
+    <span class="n">country_abbr</span> <span class="o">=</span> <span class="n">EU_code</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">country</span><span class="p">)</span>
+    
+    <span class="c1"># Get the tags for the given network type</span>
+    <span class="n">tags</span> <span class="o">=</span> <span class="n">get_network_tags</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">tags</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No tags defined for network type &#39;</span><span class="si">{</span><span class="n">network</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    
+    <span class="n">network_code</span> <span class="o">=</span> <span class="n">map_network_to_code</span><span class="p">(</span><span class="n">network</span><span class="p">)</span>
+
+    <span class="c1"># Define the types of roadways you want to include</span>
+    <span class="n">road_types</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;motorway&#39;</span><span class="p">,</span> <span class="s1">&#39;primary&#39;</span><span class="p">,</span> <span class="s1">&#39;secondary&#39;</span><span class="p">,</span> <span class="s1">&#39;tertiary&#39;</span><span class="p">,</span> <span class="s1">&#39;motorway_link&#39;</span><span class="p">,</span> <span class="s1">&#39;primary_link&#39;</span><span class="p">,</span> <span class="s1">&#39;secondary_link&#39;</span><span class="p">,</span> <span class="s1">&#39;tertiary_link&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Download/model a street network for the specified country, including only specified road types</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">graph_from_place</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">network_type</span><span class="o">=</span><span class="s2">&quot;drive&quot;</span><span class="p">,</span><span class="n">custom_filter</span> <span class="o">=</span> <span class="s1">&#39;[&quot;highway&quot;~&quot;</span><span class="si">{}</span><span class="s1">&quot;]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">road_types</span><span class="p">)),</span><span class="n">retain_all</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">simplify</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># explore nodes and edges together in a single map</span>
+    <span class="n">gdf_nodes</span><span class="p">,</span> <span class="n">gdf_edges</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">graph_to_gdfs</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">gdf_edges</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;skyblue&quot;</span><span class="p">,</span> <span class="n">tiles</span><span class="o">=</span><span class="s2">&quot;cartodbdarkmatter&quot;</span><span class="p">)</span>
+    <span class="n">gdf_nodes</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;pink&quot;</span><span class="p">,</span> <span class="n">marker_kwds</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;radius&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">})</span>
+    <span class="n">m</span>
+    
+    <span class="n">place_boundaries</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">geocode_to_gdf</span><span class="p">(</span><span class="n">country</span><span class="p">)</span>
+    <span class="n">place_boundaries</span><span class="o">.</span><span class="n">crs</span> <span class="o">=</span> <span class="s1">&#39;EPSG:4326&#39;</span>  <span class="c1"># Set the CRS to WGS84</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    <span class="n">place_boundaries</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;whitesmoke&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+    <span class="n">gdf_edges</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+    <span class="n">gdf_nodes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    
+    <span class="c1"># save graph as a shapefile</span>
+    <span class="n">output_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">Miraca_Exposure_Database_path</span><span class="p">,</span> <span class="n">network</span><span class="p">,</span> <span class="n">database</span><span class="p">,</span> <span class="n">country_abbr</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_directory</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">output_filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_directory</span><span class="p">,</span>  <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">network_code</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">country_abbr</span><span class="si">}</span><span class="s2">.shp&quot;</span><span class="p">)</span>
+    <span class="n">ox</span><span class="o">.</span><span class="n">save_graph_shapefile</span><span class="p">(</span><span class="n">features</span><span class="p">,</span><span class="n">output_filename</span><span class="p">)</span>
+
+    <span class="c1"># convert shp to parquet</span>
+    
+    <span class="c1"># Read the edges using GeoPandas</span>
+    <span class="n">gdf_L</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="s2">&quot;edges.shp&quot;</span><span class="p">))</span>
+    <span class="c1"># Add columns for country name and abbreviation</span>
+    <span class="n">gdf_L</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">country</span>
+    <span class="n">gdf_L</span><span class="p">[</span><span class="s1">&#39;Country_code&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">country_abbr</span>
+    <span class="n">gdf_L</span><span class="p">[</span><span class="s1">&#39;Geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Linestring&#39;</span>
+    <span class="c1"># Define the path for the output GeoParquet file</span>
+    <span class="n">geoparquet_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_directory</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">network_code</span><span class="si">}</span><span class="s2">L_</span><span class="si">{</span><span class="n">country_abbr</span><span class="si">}</span><span class="s2">.parquet&quot;</span><span class="p">)</span> 
+    <span class="c1"># Write the GeoDataFrame to GeoParquet format</span>
+    <span class="n">gdf_L</span><span class="o">.</span><span class="n">to_parquet</span><span class="p">(</span><span class="n">geoparquet_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    
+    <span class="c1"># Read the nodes using GeoPandas</span>
+    <span class="n">gdf_P</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_filename</span><span class="p">,</span> <span class="s2">&quot;nodes.shp&quot;</span> <span class="p">))</span>
+    <span class="c1"># Add columns for country name and abbreviation</span>
+    <span class="n">gdf_P</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">country</span>
+    <span class="n">gdf_P</span><span class="p">[</span><span class="s1">&#39;Country_code&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">country_abbr</span>
+    <span class="n">gdf_P</span><span class="p">[</span><span class="s1">&#39;Geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Point&#39;</span>
+    <span class="c1"># Define the path for the output GeoParquet file</span>
+    <span class="n">geoparquet_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_directory</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">network_code</span><span class="si">}</span><span class="s2">P_</span><span class="si">{</span><span class="n">country_abbr</span><span class="si">}</span><span class="s2">.parquet&quot;</span><span class="p">)</span> 
+    <span class="c1"># Write the GeoDataFrame to GeoParquet format</span>
+    <span class="n">gdf_P</span><span class="o">.</span><span class="n">to_parquet</span><span class="p">(</span><span class="n">geoparquet_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">output_filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-selected-network-on-a-map">
+<h2><strong>Plot selected network on a map</strong><a class="headerlink" href="#plot-selected-network-on-a-map" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_selected_features</span><span class="p">(</span><span class="n">geodataframe</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> <span class="n">network</span><span class="p">):</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Plot selected features on a map.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters:</span>
+<span class="sd">    geodataframe (GeoDataFrame): The GeoDataFrame containing the selected features to be plotted.</span>
+<span class="sd">    country (str): The name of the country for which the features are being plotted.</span>
+<span class="sd">    network (str): The type of network being plotted.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">    None. The function directly displays the plot.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">place_boundaries</span> <span class="o">=</span> <span class="n">ox</span><span class="o">.</span><span class="n">geocode_to_gdf</span><span class="p">(</span><span class="n">country</span><span class="p">)</span>
+    <span class="n">place_boundaries</span><span class="o">.</span><span class="n">crs</span> <span class="o">=</span> <span class="s1">&#39;EPSG:4326&#39;</span>  <span class="c1"># Set the CRS to WGS84</span>
+    
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">network</span><span class="si">}</span><span class="s1"> in </span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+    <span class="n">place_boundaries</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;whitesmoke&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Define a dictionary to map network types to colors and markers</span>
+    <span class="n">network_colors</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;Education&#39;</span><span class="p">:</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Healthcare&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Airports&#39;</span><span class="p">:</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Ports&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Roadway&#39;</span><span class="p">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Railway&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Telecommunication&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Electricity&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">network_markers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;Education&#39;</span><span class="p">:</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Healthcare&#39;</span><span class="p">:</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Airports&#39;</span><span class="p">:</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Ports&#39;</span><span class="p">:</span> <span class="s1">&#39;p&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Roadway&#39;</span><span class="p">:</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Railway&#39;</span><span class="p">:</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Telecommunication&#39;</span><span class="p">:</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Electricity&#39;</span><span class="p">:</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Loop over the geometries in the GeoDataFrame</span>
+    <span class="k">for</span> <span class="n">geom_type</span> <span class="ow">in</span> <span class="n">geodataframe</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">geom_type</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+        <span class="c1"># Filter the GeoDataFrame by the current geometry type</span>
+        <span class="n">gdf_geom</span> <span class="o">=</span> <span class="n">geodataframe</span><span class="p">[</span><span class="n">geodataframe</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">geom_type</span> <span class="o">==</span> <span class="n">geom_type</span><span class="p">]</span>
+        
+        <span class="c1"># Get the color and marker for the current network type</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="n">network_colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">network</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">)</span>
+        <span class="n">marker</span> <span class="o">=</span> <span class="n">network_markers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">network</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># Plot the geometries with the corresponding color and marker</span>
+        <span class="n">gdf_geom</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="n">marker</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># List of networks </span>
+<span class="n">network_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Education&quot;</span><span class="p">,</span> <span class="s2">&quot;Healthcare&quot;</span><span class="p">,</span> <span class="s2">&quot;Airports&quot;</span><span class="p">,</span> <span class="s2">&quot;Ports&quot;</span><span class="p">,</span> <span class="s2">&quot;Railway&quot;</span><span class="p">,</span> <span class="s2">&quot;Telecommunication&quot;</span><span class="p">,</span> <span class="s2">&quot;Electricity&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inside your loop for processing countries and networks, you can call this function</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">EU_code</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span><span class="n">mininterval</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">dynamic_ncols</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">network_type</span> <span class="ow">in</span> <span class="n">network_list</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Running for </span><span class="si">{</span><span class="n">network_type</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">gdf</span> <span class="o">=</span> <span class="n">select_data_osmnx</span><span class="p">(</span><span class="n">country</span><span class="p">,</span> <span class="n">network_type</span><span class="p">,</span> <span class="s1">&#39;OSM&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">gdf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">del</span> <span class="n">gdf</span>  <span class="c1"># Delete the variable after use</span>
+            <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>  <span class="c1"># Collect garbage</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Skipping to the next network type for </span><span class="si">{</span><span class="n">network_type</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+<span class="c1"># Inside your loop for processing countries and networks, you can call this function</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">EU_code</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+    <span class="c1"># Fetch and process the street network for the current country</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Running for Roadway in </span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">street_network</span> <span class="o">=</span> <span class="n">get_street_network</span><span class="p">(</span><span class="n">country</span><span class="p">,</span><span class="s2">&quot;Roadway&quot;</span><span class="p">,</span> <span class="s1">&#39;OSM&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "miraca"
+        },
+        kernelOptions: {
+            name: "miraca",
+            path: "./background/Exposure_Miraca/book"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'miraca'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../../usecases/usecase5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Work packages</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../VulDatabase.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Work packages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-using-pydeck"><strong>Visualize using pydeck</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#select-download-and-save-geospatial-data-using-osmnx"><strong>Select, download and save geospatial data using osmnx</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-street-network-using-osmnx"><strong>Working with street network using osmnx</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-selected-network-on-a-map"><strong>Plot selected network on a map</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MIRACA
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
