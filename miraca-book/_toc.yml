@@ -7,40 +7,32 @@ root: intro
 parts:
   - caption: The MIRACA approach
     chapters:
-      - title: Asset-level risk assessment
+      - title: "Pending: Asset-level risk assessment"
         file: riskassessment/AssetRisk
-      - title: Network-level risk assessment
+      - title: "Pending: Network-level risk assessment"
         file: riskassessment/NetworkRisk
       - file: riskassessment/SystemicRisk/book/SystemicRisk_framework
         title: Systemic risk assessment
-      - title: Cost-benefit appraisal of multi-hazard adaptation
+      - title: "Pending: Cost-benefit appraisal of multi-hazard adaptation"
         file: riskassessment/CBAMultiHazard
 
-  - caption: Use Cases
+  - caption: "Pending: Use Cases"
     chapters:
       - title: Use Case 1
         file: usecases/usecase1
-      - title: Use Case 2
-        file: usecases/usecase2
-      - title: Use Case 3
-        file: usecases/usecase3
-      - title: Use Case 4
-        file: usecases/usecase4
-      - title: Use Case 5
-        file: usecases/usecase5
 
   - caption: Background material
     chapters:
-      - title: Exposure database
+      - title: Exposure databases
         file: background/Exposure_Miraca/book/Exposure_Miraca
-      - title: Vulnerability database
+      - title: "Pending: Vulnerability database"
         file: background/VulDatabase
       - title: Network modelling
-        file: background/NetworkModelling
-      - title: Macroeconomic impacts
+        file: background/RoadFlowModelling/book/miraca_roads
+      - title: "Pending: Macroeconomic impacts"
         file: background/MacroImpacts
       - title: Cost-benefit analysis
-        file: background/CBAAnalysis
+        file: background/CBAmodelling/book/miraca_cba
 
   - caption: About
     chapters:
