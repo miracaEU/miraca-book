@@ -1,0 +1,1742 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>MIRACA Road Flow Model &#8212; MIRACA Technical Workbench</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'background/RoadFlowModelling/book/miraca_roads';</script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Work packages" href="../../MacroImpacts.html" />
+    <link rel="prev" title="Work packages" href="../../VulDatabase.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="MIRACA Technical Workbench - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="MIRACA Technical Workbench - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Welcome to the Miraca Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">The MIRACA approach</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/AssetRisk.html">Pending: Asset-level risk assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/NetworkRisk.html">Pending: Network-level risk assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/SystemicRisk/book/SystemicRisk_framework.html">Systemic risk assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/CBAMultiHazard.html">Pending: Cost-benefit appraisal of multi-hazard adaptation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Pending: Use Cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/usecase1.html">Use Case 1</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Background material</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Exposure_Miraca/book/Exposure_Miraca.html">Exposure databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../VulDatabase.html">Pending: Vulnerability database</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Network modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MacroImpacts.html">Pending: Macroeconomic impacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">MIRACA CBA Model</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About Miraca</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book/issues/new?title=Issue%20on%20page%20%2Fbackground/RoadFlowModelling/book/miraca_roads.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/background/RoadFlowModelling/book/miraca_roads.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>MIRACA Road Flow Model</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-model-parameters">Read model parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-network-components-motorways-only">Read network components (motorways only)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-od-file-1000-samples-from-etis2010-dataset">Read od file (1000 samples from ETIS2010 dataset)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-admin-boundary-file">Read admin boundary file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-od-from-local-zones-to-network-nodes">Assign OD from local zones to network nodes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-flow-modelling">Network flow modelling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#export-results-flow-patterns-isolated-trips-cost-matrix">Export results: flow patterns, isolated trips, cost matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-demonstration">Results demonstration</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="miraca-road-flow-model">
+<h1>MIRACA Road Flow Model<a class="headerlink" href="#miraca-road-flow-model" title="Permalink to this heading">#</a></h1>
+<p>In this example, we developed a process-based network flow model to simulate passenger car flows across the EU road network. For demonstration purposes and to minimise computational requirements, we randomly sampled 1,000 travel records from ETIS2010, using NUTS-3 regions to represent the origins and destinations of local trips. To simplify the road network, only motorways were included.</p>
+<p>The model employs an iterative method to simulate the congested equilibrium flow assignment process, accounting for road capacities. A speed-flow relationship is embedded to predict variations in traffic speeds as vehicle volumes increase, incorporating maximum and minimum speed limits.</p>
+<p>The model outputs flow patterns and associated travel costs, including tolls, vehicle operational costs, and time-equivalent costs. It also identifies trip isolations caused by network disconnectivity. While the observed disconnectivity in this demonstration results from the limited inclusion of motorways, the model can be adapted to assess disruptions caused by extreme hazards. This extension could support the analysis of network damage and connectivity loss due to climate-induced disruptions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span> 
+<span class="kn">import</span> <span class="nn">src.roads</span> <span class="k">as</span> <span class="nn">func</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">islice</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+<span class="n">base_path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;inputs&quot;</span>
+<span class="n">outpath</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="o">/</span> <span class="s2">&quot;outputs&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="read-model-parameters">
+<h2>Read model parameters<a class="headerlink" href="#read-model-parameters" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;flow_breakpoint_dict.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># breakpoint of flow speed</span>
+    <span class="n">flow_breakpoint_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;flow_cap_dict.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># edge capacity</span>
+    <span class="n">flow_capacity_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;free_flow_speed_dict.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># free-flow speed</span>
+    <span class="n">free_flow_speed_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span>  <span class="s2">&quot;min_speed_cap.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># minimum speed limit</span>
+    <span class="n">min_speed_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;urban_speed_cap.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># urban speed limit</span>
+    <span class="n">urban_speed_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="read-network-components-motorways-only">
+<h2>Read network components (motorways only)<a class="headerlink" href="#read-network-components-motorways-only" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">road_node_file</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;etisplus_road_nodes.pq&quot;</span><span class="p">)</span>
+<span class="n">road_link_file</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;etisplus_road_links.pq&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add/initialise key columns</span>
+<span class="c1"># road nodes</span>
+<span class="n">road_node_file</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">road_node_file</span><span class="p">[</span><span class="s2">&quot;Network_Node_ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">road_node_file</span><span class="p">[</span><span class="s2">&quot;nd_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">road_node_file</span><span class="p">[</span><span class="s2">&quot;Network_Node_ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="c1"># road links</span>
+<span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;Network_Edge_ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;e_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;Network_Edge_ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;from_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;Network_Node_A_ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;to_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;Network_Node_B_ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;road_classification&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Motorway&quot;</span> 
+<span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;form_of_way&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Dual Carriageway&quot;</span>
+<span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;urban&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># suburban roads</span>
+<span class="n">road_link_file</span><span class="p">[</span><span class="s2">&quot;average_toll_cost&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># ignore tolls</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">road_link_file</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(18449, 16)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">road_link_file</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Network_Edge_ID                int64
+Manually_Added                 int64
+Distance                     float64
+Network_Node_A_ID              int64
+Network_Node_B_ID              int64
+Traffic_flow_trucks_2019       int64
+Traffic_flow_trucks_2030       int64
+geometry                    geometry
+id                            object
+e_id                          object
+from_id                       object
+to_id                         object
+road_classification           object
+form_of_way                   object
+urban                          int64
+average_toll_cost              int64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">road_link_file</span> <span class="o">=</span> <span class="n">road_link_file</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span> <span class="o">=</span> <span class="s2">&quot;e_id&quot;</span><span class="p">)</span> <span class="c1"># drop duplicates</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">road_link_file</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">road_link_file</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(18446, 16)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="read-od-file-1000-samples-from-etis2010-dataset">
+<h2>Read od file (1000 samples from ETIS2010 dataset)<a class="headerlink" href="#read-od-file-1000-samples-from-etis2010-dataset" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">car</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;sample_p_transport_car.csv&quot;</span><span class="p">)</span> <span class="c1"># ETIS2010 passenger travels by roads</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">car</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1000, 6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">car</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>ORIGINZONE_3_ID</th>
+      <th>DEST_ZONE_3_ID</th>
+      <th>TRIP_PURPOSE_ID</th>
+      <th>p_transport_car_trips</th>
+      <th>p_transport_car_vehicles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11020703</td>
+      <td>107070304</td>
+      <td>118120401</td>
+      <td>1</td>
+      <td>21</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>11382550</td>
+      <td>107160002</td>
+      <td>124030304</td>
+      <td>1</td>
+      <td>13</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>19030088</td>
+      <td>107100105</td>
+      <td>113030000</td>
+      <td>3</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>13026287</td>
+      <td>153010200</td>
+      <td>101010202</td>
+      <td>1</td>
+      <td>43</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>12501576</td>
+      <td>133170102</td>
+      <td>118120101</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">od_cars</span> <span class="o">=</span> <span class="n">car</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">car</span><span class="o">.</span><span class="n">p_transport_car_trips</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">od_cars</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>ORIGINZONE_3_ID</th>
+      <th>DEST_ZONE_3_ID</th>
+      <th>TRIP_PURPOSE_ID</th>
+      <th>p_transport_car_trips</th>
+      <th>p_transport_car_vehicles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11020703</td>
+      <td>107070304</td>
+      <td>118120401</td>
+      <td>1</td>
+      <td>21</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>11382550</td>
+      <td>107160002</td>
+      <td>124030304</td>
+      <td>1</td>
+      <td>13</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>19030088</td>
+      <td>107100105</td>
+      <td>113030000</td>
+      <td>3</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>13026287</td>
+      <td>153010200</td>
+      <td>101010202</td>
+      <td>1</td>
+      <td>43</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>12501576</td>
+      <td>133170102</td>
+      <td>118120101</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="read-admin-boundary-file">
+<h2>Read admin boundary file<a class="headerlink" href="#read-admin-boundary-file" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuts3_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;02_NUTS-3-Regions.csv&quot;</span><span class="p">)</span> <span class="c1"># NUT3 admin units</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuts3</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">nuts3_df</span><span class="p">,</span> <span class="n">geometry</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">nuts3_df</span><span class="o">.</span><span class="n">Geometric_center_X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">nuts3_df</span><span class="o">.</span><span class="n">Geometric_center_Y</span><span class="p">),</span> <span class="n">crs</span><span class="o">=</span><span class="s2">&quot;epsg:4326&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuts3</span> <span class="o">=</span> <span class="n">nuts3</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s2">&quot;epsg:3035&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuts3</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+</pre></div>
+</div>
+<img alt="../../../_images/b57c74679b9c9d75668e2c0fae31d58d8332ad44d5f63d4d09052ded6b7111d8.png" src="../../../_images/b57c74679b9c9d75668e2c0fae31d58d8332ad44d5f63d4d09052ded6b7111d8.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuts3</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>ETISPlus_Zone_ID</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Geometric_center</th>
+      <th>Geometric_center_X</th>
+      <th>Geometric_center_Y</th>
+      <th>Network_Node_ID</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1097</td>
+      <td>101010101</td>
+      <td>Mittelburgenland</td>
+      <td>AT</td>
+      <td>POINT (16.4982 47.5051)</td>
+      <td>16.4982</td>
+      <td>47.5051</td>
+      <td>106388</td>
+      <td>POINT (4810164.702 2731655.251)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1107</td>
+      <td>101010102</td>
+      <td>Nordburgenland</td>
+      <td>AT</td>
+      <td>POINT (16.7154 47.8762)</td>
+      <td>16.7154</td>
+      <td>47.8762</td>
+      <td>106379</td>
+      <td>POINT (4822830.889 2774214.407)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1085</td>
+      <td>101010103</td>
+      <td>Sudburgenland</td>
+      <td>AT</td>
+      <td>POINT (16.2631 47.1438)</td>
+      <td>16.2631</td>
+      <td>47.1438</td>
+      <td>106399</td>
+      <td>POINT (4795802.349 2690104.34)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1042</td>
+      <td>101010201</td>
+      <td>Mostviertel-Eisenwurzen</td>
+      <td>AT</td>
+      <td>POINT (14.9922 48.0445)</td>
+      <td>14.9922</td>
+      <td>48.0445</td>
+      <td>106408</td>
+      <td>POINT (4693093.26 2782679.348)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1069</td>
+      <td>101010202</td>
+      <td>Niederosterreich-Sud</td>
+      <td>AT</td>
+      <td>POINT (15.776 47.7563)</td>
+      <td>15.7760</td>
+      <td>47.7563</td>
+      <td>106439</td>
+      <td>POINT (4753819.691 2754988.848)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="assign-od-from-local-zones-to-network-nodes">
+<h2>Assign OD from local zones to network nodes<a class="headerlink" href="#assign-od-from-local-zones-to-network-nodes" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nearest_node_dict</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">find_nearest_node</span><span class="p">(</span><span class="n">nuts3</span><span class="p">,</span> <span class="n">road_node_file</span><span class="p">)</span> <span class="c1"># zone_idx: node_idx</span>
+<span class="n">zone_to_node</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">zidx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nuts3</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">nuts3</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">zidx</span><span class="p">,</span> <span class="s2">&quot;ETISPlus_Zone_ID&quot;</span><span class="p">]</span>
+    <span class="n">nidx</span> <span class="o">=</span> <span class="n">nearest_node_dict</span><span class="p">[</span><span class="n">zidx</span><span class="p">]</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">road_node_file</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">nidx</span><span class="p">,</span> <span class="s2">&quot;Network_Node_ID&quot;</span><span class="p">]</span>
+    <span class="n">zone_to_node</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">z</span><span class="p">)]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">islice</span><span class="p">(</span><span class="n">zone_to_node</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>101010101: 123694
+101010102: 106379
+101010103: 201937
+101010201: 106408
+101010202: 106439
+101010203: 106431
+101010204: 106474
+101010205: 106500
+101010206: 123711
+101010207: 106567
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">od_cars_node_dict</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">))</span>
+<span class="n">error</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># identify idx of invalid od flows</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">od_cars</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">from_zone</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;ORIGINZONE_3_ID&quot;</span><span class="p">]</span>
+    <span class="n">to_zone</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;DEST_ZONE_3_ID&quot;</span><span class="p">]</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">from_node</span> <span class="o">=</span> <span class="n">zone_to_node</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">from_zone</span><span class="p">)]</span>
+        <span class="n">to_node</span> <span class="o">=</span> <span class="n">zone_to_node</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">to_zone</span><span class="p">)]</span>
+        <span class="n">trip</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;p_transport_car_trips&quot;</span><span class="p">]</span>
+        <span class="n">od_cars_node_dict</span><span class="p">[</span><span class="n">from_node</span><span class="p">][</span><span class="n">to_node</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trip</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+        <span class="n">error</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+        <span class="k">continue</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">od_cars_node</span> <span class="o">=</span> <span class="n">od_cars</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">error</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">origins</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">destinations</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">pflows</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">o</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">od_cars_node_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">d</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">k</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">origins</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+        <span class="n">destinations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+        <span class="n">pflows</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">od_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;origin_node&quot;</span><span class="p">:</span> <span class="n">origins</span><span class="p">,</span> <span class="s2">&quot;destination_node&quot;</span><span class="p">:</span> <span class="n">destinations</span><span class="p">,</span> <span class="s2">&quot;Car21&quot;</span><span class="p">:</span> <span class="n">pflows</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">od_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>origin_node</th>
+      <th>destination_node</th>
+      <th>Car21</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>261026</td>
+      <td>104733</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>261026</td>
+      <td>261026</td>
+      <td>6213266</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>113361</td>
+      <td>196040</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>113361</td>
+      <td>115447</td>
+      <td>820</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>112471</td>
+      <td>104420</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">od_df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(992, 3)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="network-flow-modelling">
+<h2>Network flow modelling<a class="headerlink" href="#network-flow-modelling" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate OD pairs</span>
+<span class="n">list_of_origin_nodes</span><span class="p">,</span> <span class="n">dict_of_destination_nodes</span><span class="p">,</span> <span class="n">dict_of_origin_supplies</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">func</span><span class="o">.</span><span class="n">extract_od_pairs</span><span class="p">(</span><span class="n">od_df</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># flow simulation</span>
+<span class="p">(</span>
+    <span class="n">road_link_file</span><span class="p">,</span>  <span class="c1"># edge flow results</span>
+    <span class="n">isolated_od_dict</span><span class="p">,</span>  <span class="c1"># isolated trips</span>
+    <span class="n">odpfc</span><span class="p">,</span> <span class="c1"># od-path-flow-cost matrix</span>
+<span class="p">)</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">network_flow_model</span><span class="p">(</span>
+    <span class="n">road_link_file</span><span class="p">,</span>  <span class="c1"># road</span>
+    <span class="n">road_node_file</span><span class="p">,</span>  <span class="c1"># road</span>
+    <span class="n">list_of_origin_nodes</span><span class="p">,</span>  <span class="c1"># od</span>
+    <span class="n">dict_of_origin_supplies</span><span class="p">,</span>  <span class="c1"># od</span>
+    <span class="n">dict_of_destination_nodes</span><span class="p">,</span>  <span class="c1"># od</span>
+    <span class="n">free_flow_speed_dict</span><span class="p">,</span>  <span class="c1"># net</span>
+    <span class="n">flow_breakpoint_dict</span><span class="p">,</span>  <span class="c1"># net</span>
+    <span class="n">flow_capacity_dict</span><span class="p">,</span>  <span class="c1"># net</span>
+    <span class="n">min_speed_dict</span><span class="p">,</span>  <span class="c1"># net</span>
+    <span class="n">urban_speed_dict</span><span class="p">,</span>  <span class="c1"># net</span>
+    <span class="n">max_flow_speed_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  <span class="c1"># disruption analysis</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The initial total supply is 115371404
+The initial number of edges in the network: 18446
+The initial number of origins: 696
+The initial number of destinations: 992
+No.1 iteration starts:
+The least-cost path flow allocation time: 8.73763632774353.
+The od travel costs computational time: 4.499748229980469.
+Non_allocated_flow: 112250267
+The remaining number of origins: 695
+The remaining number of destinations: 989
+The maximum amount of edge overflow: 177724.0
+r = 0.5364382818450238
+The total remaining supply (after flow adjustment) is: 1446839.6303170677
+The remaining number of edges in the network: 18444
+No.2 iteration starts:
+The least-cost path flow allocation time: 8.29844069480896.
+The od travel costs computational time: 4.713049650192261.
+Non_allocated_flow: 0
+The remaining number of origins: 695
+The remaining number of destinations: 989
+The maximum amount of edge overflow: 156040.0
+r = 0.06937424760360315
+The total remaining supply (after flow adjustment) is: 1346466.2195607459
+The remaining number of edges in the network: 18439
+No.3 iteration starts:
+The least-cost path flow allocation time: 7.744178056716919.
+The od travel costs computational time: 4.524125337600708.
+Non_allocated_flow: 156040.0
+The remaining number of origins: 694
+The remaining number of destinations: 988
+The maximum amount of edge overflow: 32116.320104081155
+r = 0.8282439055412792
+The total remaining supply (after flow adjustment) is: 204387.97305710937
+The remaining number of edges in the network: 18433
+No.4 iteration starts:
+The least-cost path flow allocation time: 8.007894039154053.
+The od travel costs computational time: 4.284921646118164.
+Non_allocated_flow: 0
+The remaining number of origins: 529
+The remaining number of destinations: 707
+The maximum amount of edge overflow: 27352.059200985484
+r = 0.03294435564173756
+The total remaining supply (after flow adjustment) is: 197654.54298382206
+The remaining number of edges in the network: 18427
+No.5 iteration starts:
+The least-cost path flow allocation time: 8.63037657737732.
+The od travel costs computational time: 3.3760955333709717.
+Non_allocated_flow: 0
+The remaining number of origins: 529
+The remaining number of destinations: 707
+The maximum amount of edge overflow: 17530.562716480992
+r = 0.33059040709331183
+The total remaining supply (after flow adjustment) is: 132275.8243008636
+The remaining number of edges in the network: 18426
+No.6 iteration starts:
+The least-cost path flow allocation time: 8.03418254852295.
+The od travel costs computational time: 3.152698278427124.
+Non_allocated_flow: 0
+The remaining number of origins: 486
+The remaining number of destinations: 616
+The maximum amount of edge overflow: 17525.69923943471
+r = 0.00031572268117825085
+The total remaining supply (after flow adjustment) is: 132234.06182296027
+The remaining number of edges in the network: 18422
+No.7 iteration starts:
+The least-cost path flow allocation time: 7.30399489402771.
+The od travel costs computational time: 2.7834348678588867.
+Non_allocated_flow: 0
+The remaining number of origins: 486
+The remaining number of destinations: 616
+The maximum amount of edge overflow: 17041.484332240805
+r = 0.025503824010015115
+The total remaining supply (after flow adjustment) is: 128861.58758209804
+The remaining number of edges in the network: 18420
+No.8 iteration starts:
+The least-cost path flow allocation time: 8.744504928588867.
+The od travel costs computational time: 2.798133134841919.
+Non_allocated_flow: 0
+The remaining number of origins: 486
+The remaining number of destinations: 616
+The maximum amount of edge overflow: -4848.073034527359
+Iteration stops: there is no edge overflow!
+The flow simulation is completed!
+total travel cost is (£): 1344327369.8309672
+total time-equiv cost is (£): 1091575503.5443285
+total operating cost is (£): 252751866.28663865
+total toll cost is (£): 0.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="export-results-flow-patterns-isolated-trips-cost-matrix">
+<h2>Export results: flow patterns, isolated trips, cost matrix<a class="headerlink" href="#export-results-flow-patterns-isolated-trips-cost-matrix" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">road_link_file</span><span class="o">.</span><span class="n">to_parquet</span><span class="p">(</span>
+    <span class="n">outpath</span> <span class="o">/</span> <span class="s2">&quot;gb_edge_flows.pq&quot;</span>
+<span class="p">)</span>
+<span class="n">odpfc</span><span class="o">.</span><span class="n">to_parquet</span><span class="p">(</span><span class="n">outpath</span><span class="o">/</span> <span class="s2">&quot;odpfc.pq&quot;</span><span class="p">)</span>
+<span class="n">isolated_od_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">isolated_od_dict</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">isolated_od_df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># in case of empty df</span>
+    <span class="n">isolated_od_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;origin_node&quot;</span><span class="p">,</span> <span class="s2">&quot;destination_node&quot;</span><span class="p">,</span> <span class="s2">&quot;isolated_flows&quot;</span><span class="p">]</span>
+    <span class="n">isolated_od_df</span><span class="o">.</span><span class="n">to_parquet</span><span class="p">(</span>
+        <span class="n">outpath</span><span class="o">/</span> <span class="s2">&quot;isolated_od_flows.pq&quot;</span><span class="p">,</span>
+        <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="results-demonstration">
+<h2>Results demonstration<a class="headerlink" href="#results-demonstration" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">out_net_flows</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">outpath</span><span class="o">/</span> <span class="s2">&quot;edge_flows.pq&quot;</span><span class="p">)</span>
+<span class="n">out_net_flows</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Network_Edge_ID</th>
+      <th>Manually_Added</th>
+      <th>Distance</th>
+      <th>Network_Node_A_ID</th>
+      <th>Network_Node_B_ID</th>
+      <th>Traffic_flow_trucks_2019</th>
+      <th>Traffic_flow_trucks_2030</th>
+      <th>geometry</th>
+      <th>id</th>
+      <th>e_id</th>
+      <th>...</th>
+      <th>form_of_way</th>
+      <th>urban</th>
+      <th>average_toll_cost</th>
+      <th>combined_label</th>
+      <th>free_flow_speeds</th>
+      <th>min_flow_speeds</th>
+      <th>initial_flow_speeds</th>
+      <th>acc_flow</th>
+      <th>acc_capacity</th>
+      <th>acc_speed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2604457</td>
+      <td>0</td>
+      <td>5.980</td>
+      <td>262914</td>
+      <td>260432</td>
+      <td>0</td>
+      <td>0</td>
+      <td>LINESTRING (3482019.891 2730859.556, 3476692.4...</td>
+      <td>2604457</td>
+      <td>2604457</td>
+      <td>...</td>
+      <td>Dual Carriageway</td>
+      <td>0</td>
+      <td>0</td>
+      <td>M</td>
+      <td>67.0</td>
+      <td>1.0</td>
+      <td>67.0</td>
+      <td>0</td>
+      <td>205664</td>
+      <td>67.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1013364</td>
+      <td>0</td>
+      <td>18.559</td>
+      <td>262914</td>
+      <td>109845</td>
+      <td>0</td>
+      <td>0</td>
+      <td>LINESTRING (3482019.891 2730859.556, 3494854.6...</td>
+      <td>1013364</td>
+      <td>1013364</td>
+      <td>...</td>
+      <td>Dual Carriageway</td>
+      <td>0</td>
+      <td>0</td>
+      <td>M</td>
+      <td>67.0</td>
+      <td>1.0</td>
+      <td>67.0</td>
+      <td>0</td>
+      <td>205664</td>
+      <td>67.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2604243</td>
+      <td>0</td>
+      <td>2.012</td>
+      <td>262911</td>
+      <td>109968</td>
+      <td>1871252</td>
+      <td>2513351</td>
+      <td>LINESTRING (3393293.534 2897688.227, 3391385.3...</td>
+      <td>2604243</td>
+      <td>2604243</td>
+      <td>...</td>
+      <td>Dual Carriageway</td>
+      <td>0</td>
+      <td>0</td>
+      <td>M</td>
+      <td>67.0</td>
+      <td>1.0</td>
+      <td>67.0</td>
+      <td>0</td>
+      <td>205664</td>
+      <td>67.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1013595</td>
+      <td>0</td>
+      <td>4.728</td>
+      <td>262911</td>
+      <td>122766</td>
+      <td>1871252</td>
+      <td>2513351</td>
+      <td>LINESTRING (3393293.534 2897688.227, 3397490.3...</td>
+      <td>1013595</td>
+      <td>1013595</td>
+      <td>...</td>
+      <td>Dual Carriageway</td>
+      <td>0</td>
+      <td>0</td>
+      <td>M</td>
+      <td>67.0</td>
+      <td>1.0</td>
+      <td>67.0</td>
+      <td>0</td>
+      <td>205664</td>
+      <td>67.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2604354</td>
+      <td>0</td>
+      <td>15.028</td>
+      <td>262909</td>
+      <td>260001</td>
+      <td>1038691</td>
+      <td>1449368</td>
+      <td>LINESTRING (3725858.237 2258765.019, 3740417.8...</td>
+      <td>2604354</td>
+      <td>2604354</td>
+      <td>...</td>
+      <td>Dual Carriageway</td>
+      <td>0</td>
+      <td>0</td>
+      <td>M</td>
+      <td>67.0</td>
+      <td>1.0</td>
+      <td>67.0</td>
+      <td>10059</td>
+      <td>195604</td>
+      <td>67.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 23 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">out_net_flows</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;acc_flow&#39;</span><span class="p">,</span> 
+              <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span>  
+              <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>    
+              <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> 
+
+<span class="c1"># Optionally, you can adjust the color scale range (e.g., for better visualization)</span>
+<span class="c1"># You can also adjust axis, labels, etc.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Spatial passenger flows by car (2010)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/cf767b900b0855ddbf9d2f0ea9ea57a7622207928458bf96e5d0d8d80aee0bf3.png" src="../../../_images/cf767b900b0855ddbf9d2f0ea9ea57a7622207928458bf96e5d0d8d80aee0bf3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trip_isolation</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">outpath</span><span class="o">/</span> <span class="s2">&quot;isolated_od_flows.pq&quot;</span><span class="p">)</span>
+<span class="n">trip_isolation</span><span class="o">.</span><span class="n">isolated_flows</span> <span class="o">=</span> <span class="n">trip_isolation</span><span class="o">.</span><span class="n">isolated_flows</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trip_isolation</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>origin_node</th>
+      <th>destination_node</th>
+      <th>isolated_flows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>101166</td>
+      <td>101166</td>
+      <td>80776620</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>190533</td>
+      <td>190533</td>
+      <td>25260381</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>261026</td>
+      <td>261026</td>
+      <td>6213266</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>104438</td>
+      <td>104441</td>
+      <td>156040</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">odpfc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">outpath</span> <span class="o">/</span> <span class="s2">&quot;odpfc.pq&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">odpfc</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>origin</th>
+      <th>destination</th>
+      <th>path</th>
+      <th>flow</th>
+      <th>unit_od_voc</th>
+      <th>unit_od_vot</th>
+      <th>unit_od_toll</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>100282</td>
+      <td>125366</td>
+      <td>[1000218, 1035423, 1000221, 2608035, 2616054, ...</td>
+      <td>56.767398</td>
+      <td>90.327400</td>
+      <td>119.437947</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>100282</td>
+      <td>196790</td>
+      <td>[1000218, 1035423, 1000221, 2608035, 1009604, ...</td>
+      <td>506.539862</td>
+      <td>52.885416</td>
+      <td>69.929229</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100310</td>
+      <td>107533</td>
+      <td>[1034850, 2608082, 1000240, 1000232, 1000235, ...</td>
+      <td>72.050929</td>
+      <td>67.360513</td>
+      <td>89.069334</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>100368</td>
+      <td>116743</td>
+      <td>[1301165, 1000287, 1000296, 1301265, 1034885, ...</td>
+      <td>5.684893</td>
+      <td>103.550058</td>
+      <td>136.921978</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>100368</td>
+      <td>116957</td>
+      <td>[1301165, 1000287, 1000296, 1301265, 1034885, ...</td>
+      <td>15.000000</td>
+      <td>103.942621</td>
+      <td>137.441055</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1244</th>
+      <td>261697</td>
+      <td>148954</td>
+      <td>[1055748, 2615425, 2615424, 2616179, 1055642, ...</td>
+      <td>12331.625595</td>
+      <td>25.074252</td>
+      <td>33.155135</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1245</th>
+      <td>261801</td>
+      <td>251940</td>
+      <td>[2615531, 2615530, 2615268, 1055753, 1309249, ...</td>
+      <td>3.789928</td>
+      <td>196.977869</td>
+      <td>260.459531</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1246</th>
+      <td>261816</td>
+      <td>251845</td>
+      <td>[2615440, 2615439, 2615438, 2615437, 1055641, ...</td>
+      <td>9.474821</td>
+      <td>269.101039</td>
+      <td>355.826421</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1247</th>
+      <td>261938</td>
+      <td>250906</td>
+      <td>[1005452, 1004960, 1005458, 1005457, 2615191, ...</td>
+      <td>11.369785</td>
+      <td>151.614662</td>
+      <td>200.476753</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1248</th>
+      <td>261938</td>
+      <td>251347</td>
+      <td>[1005452, 1004960, 1005458, 1005457, 2615191, ...</td>
+      <td>100.434628</td>
+      <td>84.843444</td>
+      <td>112.186631</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1249 rows × 7 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./background/RoadFlowModelling/book"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../VulDatabase.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Work packages</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../MacroImpacts.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Work packages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-model-parameters">Read model parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-network-components-motorways-only">Read network components (motorways only)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-od-file-1000-samples-from-etis2010-dataset">Read od file (1000 samples from ETIS2010 dataset)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-admin-boundary-file">Read admin boundary file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-od-from-local-zones-to-network-nodes">Assign OD from local zones to network nodes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-flow-modelling">Network flow modelling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#export-results-flow-patterns-isolated-trips-cost-matrix">Export results: flow patterns, isolated trips, cost matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-demonstration">Results demonstration</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MIRACA
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
