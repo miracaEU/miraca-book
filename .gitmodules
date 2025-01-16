@@ -5,3 +5,9 @@
 [submodule "miraca-book/background/Exposure_Miraca"]
 	path = miraca-book/background/Exposure_Miraca
 	url = https://github.com/miracaEU/Exposure_Miraca
+[submodule "miraca-book/background/CBAmodelling"]
+	path = miraca-book/background/CBAmodelling
+	url = https://github.com/miracaEU/CBAmodelling
+[submodule "miraca-book/background/RoadFlowModelling"]
+	path = miraca-book/background/RoadFlowModelling
+	url = https://github.com/miracaEU/RoadFlowModelling
