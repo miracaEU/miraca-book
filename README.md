@@ -4,6 +4,10 @@ Jupyter book for the Miraca project
 
 ## Building this book
 
+After cloning this repo, you need to initialize the submodule by running: 
+```bash
+git submodule update --init --recursive
+```
 You can build the pages of the book by running `jupyter-book build miraca-book`. Before consecutive builds, clean the build folder with `jupyter-book clean miraca-book/`. As recommended in the [jupyter-book docs](https://jupyterbook.org/en/stable/start/build.html#aside-source-vs-build-files), the built HTML pages are gitignored on the main branch but can be committed to the `gh-pages` branch by running
 
 ```bash
