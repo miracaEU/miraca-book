@@ -1,0 +1,14 @@
+name: miraca
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - osmnx
+  - geopandas
+  - networkx
+  - tqdm
+  - pydeck
+  - pyarrow
+  - python-igraph=0.11.*
+  - snkit

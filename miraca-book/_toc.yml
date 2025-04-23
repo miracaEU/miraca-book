@@ -23,8 +23,7 @@ parts:
 
   - caption: Background material
     chapters:
-      - title: Exposure databases
-        file: background/Exposure_Miraca/book/Exposure_Miraca
+      - file: background/Exposure_Miraca/book/Exposure_Miraca
       - title: "Pending: Vulnerability database"
         file: background/VulDatabase
       - title: Network modelling
