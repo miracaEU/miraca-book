@@ -11,3 +11,6 @@
 [submodule "miraca-book/background/RoadFlowModelling"]
 	path = miraca-book/background/RoadFlowModelling
 	url = https://github.com/miracaEU/RoadFlowModelling
+[submodule "miraca-book/usecases/UC4"]
+	path = miraca-book/usecases/UC4
+	url = https://github.com/miracaEU/UC4.git

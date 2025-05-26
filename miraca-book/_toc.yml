@@ -16,10 +16,10 @@ parts:
       - title: "Pending: Cost-benefit appraisal of multi-hazard adaptation"
         file: riskassessment/CBAMultiHazard
 
-  - caption: "Pending: Use Cases"
+  - caption: "Use Cases"
     chapters:
-      - title: Use Case 1
-        file: usecases/usecase1
+      - title: UC4
+        file: usecases/UC4/book/E_E+L_ESRM20+Elsus
 
   - caption: Background material
     chapters:
