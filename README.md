@@ -13,7 +13,7 @@ git submodule update --init --recursive
 You can build the pages of the book by running `jupyter-book build miraca-book`. Before consecutive builds, clean the build folder with `jupyter-book clean miraca-book/`. As recommended in the [jupyter-book docs](https://jupyterbook.org/en/stable/start/build.html#aside-source-vs-build-files), the built HTML pages are gitignored on the main branch but can be committed to the `gh-pages` branch by running
 
 ```bash
-ghp-import -n -p -f miraka-book/_build/html
+ghp-import -n -p -f miraca-book/_build/html
 ```
 
 To add custom jupyter-book tags e.g. to toggle code cells run `python add_tags.py`
@@ -28,7 +28,7 @@ To add a new submodule you can run something like this
 git submodule add <url to repo> <path inside book>
 ```
 
-For update an already added submodule, simply checkout or pull the commit of interest e.g. the latest main version inside the miraca-book repo and commit the change.
+To update an already added submodule, simply checkout or pull the commit of interest e.g. the latest main version inside the miraca-book repo and commit the change.
 
 ## Funding Note
 
