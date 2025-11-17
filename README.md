@@ -28,7 +28,7 @@ To add a new submodule you can run something like this
 git submodule add <url to repo> <path inside book>
 ```
 
-For update an already added submodule, simply checkout or pull the commit of interest e.g. the latest main version inside the miraca-book repo and commit the change.
+To update an already added submodule, simply checkout or pull the commit of interest e.g. the latest main version inside the miraca-book repo and commit the change.
 
 ## Funding Note
 

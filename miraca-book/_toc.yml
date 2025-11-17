@@ -11,8 +11,10 @@ parts:
         file: riskassessment/AssetRisk
       - title: "Pending: Network-level risk assessment"
         file: riskassessment/NetworkRisk
-      - file: riskassessment/SystemicRisk/book/SystemicRisk_framework
-        title: Systemic risk assessment
+      - title: Systemic risk assessment
+        file: riskassessment/SystemicRisk/book/intro
+        sections:
+          - file: riskassessment/SystemicRisk/book/SystemicRisk_framework
       - title: "Pending: Cost-benefit appraisal of multi-hazard adaptation"
         file: riskassessment/CBAMultiHazard
 
