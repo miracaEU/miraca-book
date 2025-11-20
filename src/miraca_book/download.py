@@ -17,7 +17,8 @@ def download(url: str):
     """
     miraca_folder = Path('~/.miraca').expanduser()
     miraca_folder.mkdir(parents=True, exist_ok=True)
-    local_file = miraca_folder / url.split('/')[-1]
+    # Zenodo URLs have '?download=1' at the end, for cleaner filenames we remove it
+    local_file = miraca_folder / url.split('/')[-1].replace('?download=1', '')
     response = requests.get(url, stream=True)
 
     with tqdm.wrapattr(
