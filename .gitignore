@@ -1,2 +1,4 @@
 miraca-book/_build/
 **/.DS_Store
+**.egg-info
+**.pyc
