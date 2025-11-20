@@ -1,0 +1,10 @@
+[project]
+authors = [{ name = "Miraca EU", email = "developer@lobelia.earth" }]
+dependencies = ["tqdm", "requests"]
+description = "Jupyter book for the Miraca project"
+name = "miraca-book"
+requires-python = ">= 3.10"
+version = "0.1.0"
+
+[tool.setuptools.packages.find]
+where = ["."]
