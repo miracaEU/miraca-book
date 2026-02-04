@@ -203,6 +203,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../MacroImpacts.html">Pending: Macroeconomic impacts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../EnergyModelling/book/ElectricModel.html">Modelling of electric power system (transmission or distribution)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Transport-Flows-Allocation/book/intro.html">Transport Flows</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Air_Flow_Assignment.html">Air Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/IWW_Flow_Assignment.html">Inland Waterways Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Maritime_Flow_Assignment.html">Maritime Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Rail_Flow_Assignment.html">Railway Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Road_Flow_Assignment.html">Road Flow Visualization by Country</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
@@ -407,7 +416,12 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="exposure-database">
 <h1>Exposure database<a class="headerlink" href="#exposure-database" title="Permalink to this heading">#</a></h1>
 <p>This notebook provides a systematic approach for analyzing and visualizing infrastructure networks across different European countries. It iterates through a list of countries and network types, retrieves the relevant geographic data, processes it to handle missing values, and generates visualizations to provide insights into the infrastructure distribution and characteristics within each country. Raw geospatial data is sourced from multiple databases, including OSM. Integration with OSM data is achieved using the OSMnx Python library, which simplifies downloading, modeling, analyzing, and visualizing OSM data. The integrated data is associated with EU codes representing all European countries (e.g., FR for France, NL for Netherlands).</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
 <span class="c1"># Import necessary libraries</span>
@@ -428,6 +442,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

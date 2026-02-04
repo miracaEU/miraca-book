@@ -1,0 +1,1043 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Railway Flow Visualization by Country &#8212; MIRACA Technical Workbench</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'background/Transport-Flows-Allocation/book/Rail_Flow_Assignment';</script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Road Flow Visualization by Country" href="Road_Flow_Assignment.html" />
+    <link rel="prev" title="Maritime Flow Visualization by Country" href="Maritime_Flow_Assignment.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="MIRACA Technical Workbench - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="MIRACA Technical Workbench - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Welcome to the Miraca Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">The MIRACA approach</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/AssetRisk.html">Pending: Asset-level risk assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/NetworkRisk.html">Pending: Network-level risk assessment</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/SystemicRisk/book/intro.html">Systemic risk assessment</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/SystemicRisk/book/SystemicRisk_framework.html">Systemic risk assessment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/CBAMultiHazard.html">Pending: Cost-benefit appraisal of multi-hazard adaptation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC3/book/Use_Case_template.html">Use case 3 - Flooding in Zuid-Holland</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC4/book/E_E%2BL_ESRM20%2BElsus.html">UC4</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Background material</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Exposure_Miraca/book/intro.html">Exposure database</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Exposure_Miraca/book/Exposure_Miraca.html">Exposure database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Vulnerability/book/Vulnerability_workbench.html">Vulnerability database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../MacroImpacts.html">Pending: Macroeconomic impacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../EnergyModelling/book/ElectricModel.html">Modelling of electric power system (transmission or distribution)</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Transport Flows</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Air_Flow_Assignment.html">Air Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IWW_Flow_Assignment.html">Inland Waterways Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Maritime_Flow_Assignment.html">Maritime Flow Visualization by Country</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Railway Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Road_Flow_Assignment.html">Road Flow Visualization by Country</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About Miraca</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book/issues/new?title=Issue%20on%20page%20%2Fbackground/Transport-Flows-Allocation/book/Rail_Flow_Assignment.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/background/Transport-Flows-Allocation/book/Rail_Flow_Assignment.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Railway Flow Visualization by Country</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports-and-configuration">1. Imports and Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-and-prepare-od-matrices">2. Load data and prepare OD matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-capacities-and-plot-them">3. Compute Capacities and plot them</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-network">4. Create network</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-flows-to-the-network">5. Assign flows to the network</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-flow-visualization">7. Create Flow Visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">5. Summary Statistics</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="railway-flow-visualization-by-country">
+<h1>Railway Flow Visualization by Country<a class="headerlink" href="#railway-flow-visualization-by-country" title="Permalink to this heading">#</a></h1>
+<p>This notebook analyzes and visualizes railway passenger and freight flows for a selected country. It integrates train station and railway infrastructure data, OD (Origin-Destination) matrices, and the railway network to provide insights into the distribution and magnitude of flows through each railway segment. The workflow includes data loading, network construction, OD matrix preparation, capacity estimation, flow assignment, visualization, and summary statistics. The output includes maps and tables summarizing flows for each railway, with a focus on the selected country.</p>
+<section id="imports-and-configuration">
+<h2>1. Imports and Configuration<a class="headerlink" href="#imports-and-configuration" title="Permalink to this heading">#</a></h2>
+<p>This section imports all necessary Python libraries and utility functions, and loads the country boundaries dataset. It ensures the spatial data is in the correct coordinate reference system and filters the boundaries to the European region, preparing the context for subsequent railway flow analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">igraph</span> <span class="k">as</span> <span class="nn">ig</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span><span class="p">,</span> <span class="n">deque</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span>
+<span class="kn">import</span> <span class="nn">matplotlib.lines</span> <span class="k">as</span> <span class="nn">mlines</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="p">()</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span>
+
+<span class="kn">from</span> <span class="nn">utils.miraca_flow_utils</span> <span class="kn">import</span> <span class="n">compute_travel_time_kh</span><span class="p">,</span> <span class="n">pick_col</span><span class="p">,</span> <span class="n">map_stations_to_nodes</span><span class="p">,</span> <span class="n">compute_edge_capacity</span><span class="p">,</span> <span class="n">ensure_series</span><span class="p">,</span> <span class="n">find_minimal_flows_along_overcapacity_paths</span><span class="p">,</span> <span class="n">get_path_indexes_for_edges</span><span class="p">,</span> <span class="n">od_flow_allocation_capacity_constrained</span>
+<span class="kn">from</span> <span class="nn">utils.miraca_flow_utils</span> <span class="kn">import</span> <span class="n">get_flow_paths_indexes_of_edges</span><span class="p">,</span> <span class="n">get_flow_on_edges</span><span class="p">,</span> <span class="n">update_flow_and_overcapacity</span><span class="p">,</span> <span class="n">create_igraph_from_dataframe</span><span class="p">,</span> <span class="n">network_od_path_estimations_multiattribute</span><span class="p">,</span> <span class="n">network_od_paths_assembly_multiattributes</span>
+<span class="kn">from</span> <span class="nn">utils.miraca_flow_utils</span> <span class="kn">import</span> <span class="n">plot_edges_by_flow_thickness</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="n">base_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span> <span class="o">+</span> <span class="s2">&quot;/data&quot;</span><span class="p">)</span>
+<span class="n">outpath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span> <span class="o">+</span> <span class="s2">&quot;/output&quot;</span><span class="p">)</span>
+
+<span class="c1"># Load country boundaries</span>
+<span class="n">countries_gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;helpers&quot;</span> <span class="o">/</span> <span class="s2">&quot;ne_10m_admin_0_countries.shp&quot;</span><span class="p">)</span>
+
+<span class="c1"># Ensure CRS is WGS84</span>
+<span class="k">if</span> <span class="n">countries_gdf</span><span class="o">.</span><span class="n">crs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">countries_gdf</span> <span class="o">=</span> <span class="n">countries_gdf</span><span class="o">.</span><span class="n">set_crs</span><span class="p">(</span><span class="mi">4326</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">countries_gdf</span><span class="o">.</span><span class="n">crs</span><span class="o">.</span><span class="n">to_epsg</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">4326</span><span class="p">:</span>
+    <span class="n">countries_gdf</span> <span class="o">=</span> <span class="n">countries_gdf</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="mi">4326</span><span class="p">)</span>
+
+<span class="c1"># Filter to Europe region</span>
+<span class="n">europe_bounds</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;xmin&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;xmax&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="s2">&quot;ymin&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span> <span class="s2">&quot;ymax&quot;</span><span class="p">:</span> <span class="mi">72</span><span class="p">}</span>
+<span class="n">europe_countries</span> <span class="o">=</span> <span class="n">countries_gdf</span><span class="o">.</span><span class="n">cx</span><span class="p">[</span>
+    <span class="n">europe_bounds</span><span class="p">[</span><span class="s2">&quot;xmin&quot;</span><span class="p">]:</span><span class="n">europe_bounds</span><span class="p">[</span><span class="s2">&quot;xmax&quot;</span><span class="p">],</span> 
+    <span class="n">europe_bounds</span><span class="p">[</span><span class="s2">&quot;ymin&quot;</span><span class="p">]:</span><span class="n">europe_bounds</span><span class="p">[</span><span class="s2">&quot;ymax&quot;</span><span class="p">]</span>
+<span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">europe_countries</span><span class="p">)</span><span class="si">}</span><span class="s2"> countries in Europe region&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded 54 countries in Europe region
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-data-and-prepare-od-matrices">
+<h2>2. Load data and prepare OD matrices<a class="headerlink" href="#load-data-and-prepare-od-matrices" title="Permalink to this heading">#</a></h2>
+<p>This section loads the railway network data, including edges, nodes, stations, and OD (Origin-Destination) matrices for both passengers and freight. It prepares the OD data for further analysis by cleaning and formatting the relevant columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Loading rail data...&#39;</span><span class="p">)</span>
+<span class="n">edges_gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;Infra_BE/belgium_railway_edges.parquet&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
+<span class="n">nodes_gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;Infra_BE/belgium_railway_nodes.parquet&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
+<span class="n">stations_df</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;Infra_BE/belgium_railway_stations.parquet&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
+<span class="n">od_flows_pass</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;ODs_BE/belgium_rail_passenger_OD.parquet&quot;</span><span class="p">)</span>
+<span class="n">od_flows_freight</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">base_path</span> <span class="o">/</span> <span class="s2">&quot;ODs_BE/belgium_rail_freight_OD.parquet&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">edges_gdf</span><span class="o">.</span><span class="n">crs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">edges_gdf</span><span class="o">.</span><span class="n">set_crs</span><span class="p">(</span><span class="s1">&#39;EPSG:4326&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">allow_override</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">nodes_gdf</span><span class="o">.</span><span class="n">crs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span> <span class="n">nodes_gdf</span><span class="o">.</span><span class="n">set_crs</span><span class="p">(</span><span class="s1">&#39;EPSG:4326&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">allow_override</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data loaded.&#39;</span><span class="p">)</span>
+
+<span class="n">edges_gdf</span> <span class="o">=</span> <span class="n">compute_travel_time_kh</span><span class="p">(</span><span class="n">edges_gdf</span><span class="p">,</span> <span class="n">speed_col</span><span class="o">=</span><span class="s1">&#39;tag_maxspeed&#39;</span><span class="p">)</span>
+<span class="n">edge_src</span> <span class="o">=</span> <span class="n">pick_col</span><span class="p">(</span><span class="n">edges_gdf</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;from_id&#39;</span><span class="p">])</span>
+<span class="n">edge_dst</span> <span class="o">=</span> <span class="n">pick_col</span><span class="p">(</span><span class="n">edges_gdf</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;to_id&#39;</span><span class="p">])</span>
+<span class="n">node_id_col</span> <span class="o">=</span> <span class="n">pick_col</span><span class="p">(</span><span class="n">nodes_gdf</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+<span class="n">station_id_col</span> <span class="o">=</span> <span class="n">pick_col</span><span class="p">(</span><span class="n">stations_df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span>
+
+
+<span class="c1"># Prepare OD data</span>
+<span class="n">od_pass</span> <span class="o">=</span> <span class="n">od_flows_pass</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">od_freight</span> <span class="o">=</span> <span class="n">od_flows_freight</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;from_node&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;origin_node&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;to_node&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;dest_node&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">od_pass</span> <span class="o">=</span> <span class="n">od_pass</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;from_node&#39;</span><span class="p">,</span><span class="s1">&#39;to_node&#39;</span><span class="p">])</span>
+<span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;from_node&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;from_node&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;to_node&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;to_node&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;trips&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;trips&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="c1"># Drop original node columns to avoid confusion</span>
+<span class="n">od_pass</span> <span class="o">=</span> <span class="n">od_pass</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;origin_node&#39;</span><span class="p">,</span> <span class="s1">&#39;dest_node&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+<span class="n">od_pass</span> <span class="o">=</span> <span class="n">od_pass</span><span class="p">[</span><span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;trips&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;from_node&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;from_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;to_node&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;to_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">od_freight</span> <span class="o">=</span> <span class="n">od_freight</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;from_node&#39;</span><span class="p">,</span><span class="s1">&#39;to_node&#39;</span><span class="p">])</span>
+<span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;from_node&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;from_node&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;to_node&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;to_node&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">]</span>     <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">od_freight</span> <span class="o">=</span> <span class="n">od_freight</span><span class="p">[</span><span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading rail data...
+Data loaded.
+Data loaded.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-capacities-and-plot-them">
+<h2>3. Compute Capacities and plot them<a class="headerlink" href="#compute-capacities-and-plot-them" title="Permalink to this heading">#</a></h2>
+<p>This section estimates per-edge capacities for both passenger and freight trains based on operational assumptions. It visualizes the number of trains per edge and sets up the network for flow assignment.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">edges_gdf</span> <span class="o">=</span> <span class="n">edges_gdf</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">edges_gdf</span><span class="p">[</span><span class="s1">&#39;edge_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">edges_gdf</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+
+<span class="n">network_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;from_node&#39;</span><span class="p">:</span> <span class="n">edges_gdf</span><span class="p">[</span><span class="n">edge_src</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="s1">&#39;to_node&#39;</span><span class="p">:</span>   <span class="n">edges_gdf</span><span class="p">[</span><span class="n">edge_dst</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="s1">&#39;edge_id&#39;</span><span class="p">:</span>   <span class="n">edges_gdf</span><span class="p">[</span><span class="s1">&#39;edge_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="s1">&#39;travel_time&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">edges_gdf</span><span class="p">[</span><span class="s1">&#39;travel_time&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="s1">&#39;CORRIDORS&#39;</span><span class="p">:</span> <span class="n">edges_gdf</span><span class="p">[</span><span class="s1">&#39;CORRIDORS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="p">})</span>
+
+<span class="n">network_df</span><span class="p">[</span><span class="s1">&#39;trips&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">network_df</span><span class="p">[</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">train_draw_tons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">700.0</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="mf">35.0</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">edges_gdf</span><span class="p">)),</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">occ_draw_tons</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">0.90</span><span class="p">,</span> <span class="mf">0.09</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">edges_gdf</span><span class="p">)),</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">eff_tons</span>   <span class="o">=</span> <span class="n">train_draw_tons</span> <span class="o">*</span> <span class="n">occ_draw_tons</span>
+<span class="n">cap_tons</span> <span class="o">=</span> <span class="n">compute_edge_capacity</span><span class="p">(</span><span class="n">edges_gdf</span><span class="p">,</span> <span class="n">tt_col</span><span class="o">=</span><span class="s1">&#39;travel_time&#39;</span><span class="p">,</span> <span class="n">train_tons</span><span class="o">=</span><span class="n">eff_tons</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;Freight&#39;</span><span class="p">)</span>
+<span class="n">cap_arr_tons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">cap_tons</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">cap_arr_tons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">cap_arr_tons</span><span class="p">),</span> <span class="n">cap_arr_tons</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">network_df</span><span class="p">[</span><span class="s1">&#39;capacity_ths_tons&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cap_arr_tons</span>
+
+<span class="n">train_draw_pass</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">300.0</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">edges_gdf</span><span class="p">)),</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">occ_draw_pass</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mf">0.50</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">edges_gdf</span><span class="p">)),</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">eff_pass</span>   <span class="o">=</span> <span class="n">train_draw_pass</span> <span class="o">*</span> <span class="n">occ_draw_pass</span>
+<span class="n">cap_pass</span> <span class="o">=</span> <span class="n">compute_edge_capacity</span><span class="p">(</span><span class="n">edges_gdf</span><span class="p">,</span> <span class="n">tt_col</span><span class="o">=</span><span class="s1">&#39;travel_time&#39;</span><span class="p">,</span> <span class="n">train_tons</span><span class="o">=</span><span class="n">eff_pass</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;Passenger&#39;</span><span class="p">)</span>
+<span class="n">cap_arr_pass</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">cap_pass</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">cap_arr_pass</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">cap_arr_pass</span><span class="p">),</span> <span class="n">cap_arr_pass</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">network_df</span><span class="p">[</span><span class="s1">&#39;capacity_pass&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cap_arr_pass</span>
+
+<span class="c1"># Plot the number of trains per edge based on cap_arr_pass / eff_pass and cap_arr_tons / eff_tons</span>
+<span class="n">num_trains_pass</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">eff_pass</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cap_arr_pass</span> <span class="o">/</span> <span class="n">eff_pass</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">num_trains_freight</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">eff_tons</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">cap_arr_tons</span> <span class="o">/</span> <span class="n">eff_tons</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">edges_gdf_copy</span> <span class="o">=</span> <span class="n">edges_gdf</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">edges_gdf_copy</span><span class="p">[</span><span class="s1">&#39;num_trains_pass&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_trains_pass</span><span class="o">/</span><span class="mi">300</span>
+<span class="n">edges_gdf_copy</span><span class="p">[</span><span class="s1">&#39;num_trains_freight&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_trains_freight</span><span class="o">/</span><span class="mi">300</span>
+
+<span class="c1"># Get Belgium geometry and bounds</span>
+<span class="n">belgium_row</span> <span class="o">=</span> <span class="n">europe_countries</span><span class="p">[</span><span class="n">europe_countries</span><span class="p">[</span><span class="s1">&#39;NAME&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;belgium&#39;</span><span class="p">]</span>
+<span class="n">minx</span><span class="p">,</span> <span class="n">miny</span><span class="p">,</span> <span class="n">maxx</span><span class="p">,</span> <span class="n">maxy</span> <span class="o">=</span> <span class="n">belgium_row</span><span class="o">.</span><span class="n">total_bounds</span>
+<span class="n">margin_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">maxx</span> <span class="o">-</span> <span class="n">minx</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.05</span>
+<span class="n">margin_y</span> <span class="o">=</span> <span class="p">(</span><span class="n">maxy</span> <span class="o">-</span> <span class="n">miny</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.05</span>
+<span class="n">xlim</span> <span class="o">=</span> <span class="p">(</span><span class="n">minx</span> <span class="o">-</span> <span class="n">margin_x</span><span class="p">,</span> <span class="n">maxx</span> <span class="o">+</span> <span class="n">margin_x</span><span class="p">)</span>
+<span class="n">ylim</span> <span class="o">=</span> <span class="p">(</span><span class="n">miny</span> <span class="o">-</span> <span class="n">margin_y</span><span class="p">,</span> <span class="n">maxy</span> <span class="o">+</span> <span class="n">margin_y</span><span class="p">)</span>
+
+<span class="c1"># Plot Passenger Trains</span>
+<span class="n">edges_gdf_copy</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;num_trains_pass&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cividis&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">europe_countries</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Railway Passenger Trains Capacity per day&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Latitude&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xlim</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ylim</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Plot Freight Trains</span>
+<span class="n">edges_gdf_copy</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;num_trains_freight&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cividis&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">europe_countries</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Railway Freight Trains Capacity per day&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Latitude&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xlim</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ylim</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/249cc9e49b3b38fb078427a04017860099e081252ecb4e5d68e11efa278e26dd.png" src="../../../_images/249cc9e49b3b38fb078427a04017860099e081252ecb4e5d68e11efa278e26dd.png" />
+</div>
+</div>
+</section>
+<section id="create-network">
+<h2>4. Create network<a class="headerlink" href="#create-network" title="Permalink to this heading">#</a></h2>
+<p>This section builds the railway network graph, filters edges by capacity, and prepares the network for flow assignment and further analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thr_capacity</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="c1"># Filter out edges with capacity below threshold</span>
+<span class="n">network_df_filtered</span> <span class="o">=</span> <span class="n">network_df</span><span class="p">[(</span><span class="n">network_df</span><span class="p">[</span><span class="s1">&#39;capacity_ths_tons&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">thr_capacity</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">network_df</span><span class="p">[</span><span class="s1">&#39;capacity_pass&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">thr_capacity</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">edges_gdf_copy</span> <span class="o">=</span> <span class="n">edges_gdf</span><span class="p">[</span><span class="n">edges_gdf</span><span class="p">[</span><span class="s1">&#39;edge_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">network_df_filtered</span><span class="p">[</span><span class="s1">&#39;edge_id&#39;</span><span class="p">])]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">edges_gdf_copy</span> <span class="o">=</span> <span class="n">edges_gdf_copy</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">network_df_filtered</span><span class="p">[[</span><span class="s1">&#39;edge_id&#39;</span><span class="p">,</span> <span class="s1">&#39;capacity_ths_tons&#39;</span><span class="p">,</span> <span class="s1">&#39;capacity_pass&#39;</span><span class="p">]],</span>
+    <span class="n">on</span><span class="o">=</span><span class="s1">&#39;edge_id&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span>
+    <span class="p">)</span>
+
+<span class="n">base_graph</span> <span class="o">=</span> <span class="n">ig</span><span class="o">.</span><span class="n">Graph</span><span class="o">.</span><span class="n">TupleList</span><span class="p">(</span>
+    <span class="n">network_df_filtered</span><span class="p">[[</span><span class="s1">&#39;from_node&#39;</span><span class="p">,</span> <span class="s1">&#39;to_node&#39;</span><span class="p">,</span> <span class="s1">&#39;edge_id&#39;</span><span class="p">,</span> <span class="s1">&#39;travel_time&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">),</span>
+    <span class="n">edge_attrs</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;edge_id&#39;</span><span class="p">,</span> <span class="s1">&#39;travel_time&#39;</span><span class="p">],</span>
+    <span class="n">directed</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Network: </span><span class="si">{</span><span class="n">base_graph</span><span class="o">.</span><span class="n">vcount</span><span class="p">()</span><span class="si">}</span><span class="s2"> nodes, </span><span class="si">{</span><span class="n">base_graph</span><span class="o">.</span><span class="n">ecount</span><span class="p">()</span><span class="si">}</span><span class="s2"> edges in igraph object.&quot;</span><span class="p">)</span>
+
+<span class="c1"># total capacities</span>
+<span class="n">total_cap_freight</span> <span class="o">=</span> <span class="n">network_df_filtered</span><span class="p">[</span><span class="s1">&#39;capacity_ths_tons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">total_cap_passenger</span> <span class="o">=</span> <span class="n">network_df_filtered</span><span class="p">[</span><span class="s1">&#39;capacity_pass&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total Freight Capacity (ths tons): </span><span class="si">{</span><span class="n">total_cap_freight</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total Passenger Capacity: </span><span class="si">{</span><span class="n">total_cap_passenger</span><span class="si">:</span><span class="s2">,.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Network: 26196 nodes, 30741 edges in igraph object.
+Total Freight Capacity (ths tons): 343,659,613.69
+Total Passenger Capacity: 67,087,462,445.50
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="assign-flows-to-the-network">
+<h2>5. Assign flows to the network<a class="headerlink" href="#assign-flows-to-the-network" title="Permalink to this heading">#</a></h2>
+<p>This section assigns passenger and freight flows to the railway network using a capacity-constrained allocation algorithm. It aggregates the assigned flows per edge and merges the results into the network dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prepare OD flows for allocation</span>
+<span class="n">flow_ods_pass</span> <span class="o">=</span> <span class="p">(</span><span class="n">od_pass</span><span class="p">[[</span><span class="s1">&#39;from_node&#39;</span><span class="p">,</span> <span class="s1">&#39;to_node&#39;</span><span class="p">,</span> <span class="s1">&#39;trips&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;from_node&#39;</span><span class="p">,</span> <span class="s1">&#39;to_node&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;trips&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">flow_ods_freight</span> <span class="o">=</span> <span class="p">(</span><span class="n">od_freight</span><span class="p">[[</span><span class="s1">&#39;from_node&#39;</span><span class="p">,</span> <span class="s1">&#39;to_node&#39;</span><span class="p">,</span> <span class="s1">&#39;ths_tons&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;from_node&#39;</span><span class="p">,</span> <span class="s1">&#39;to_node&#39;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+
+<span class="c1"># Run capacity-constrained allocation for passenger trains</span>
+<span class="n">capacity_ods_pass</span><span class="p">,</span> <span class="n">unassigned_paths_pass</span><span class="p">,</span> <span class="n">filtered_network_df</span><span class="p">,</span> <span class="n">progress_df</span> <span class="o">=</span> <span class="n">od_flow_allocation_capacity_constrained</span><span class="p">(</span>
+    <span class="n">flow_ods</span><span class="o">=</span><span class="n">flow_ods_pass</span><span class="p">,</span>
+    <span class="n">network_dataframe</span><span class="o">=</span><span class="n">network_df_filtered</span><span class="p">,</span>
+    <span class="n">flow_column</span><span class="o">=</span><span class="s1">&#39;trips&#39;</span><span class="p">,</span>
+    <span class="n">cost_column</span><span class="o">=</span><span class="s1">&#39;travel_time&#39;</span><span class="p">,</span>
+    <span class="n">path_id_column</span><span class="o">=</span><span class="s1">&#39;edge_id&#39;</span><span class="p">,</span>
+    <span class="n">attribute_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">origin_id_column</span><span class="o">=</span><span class="s1">&#39;from_node&#39;</span><span class="p">,</span>
+    <span class="n">destination_id_column</span><span class="o">=</span><span class="s1">&#39;to_node&#39;</span><span class="p">,</span>
+    <span class="n">network_capacity_column</span><span class="o">=</span><span class="s1">&#39;capacity_pass&#39;</span><span class="p">,</span>
+    <span class="n">directed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">store_edge_path</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">graph_base</span><span class="o">=</span><span class="n">base_graph</span><span class="p">,</span>
+    <span class="n">track_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">early_stop_share</span><span class="o">=</span><span class="mf">0.95</span>
+<span class="p">)</span>
+
+<span class="c1"># Run capacity-constrained allocation for freiht trains</span>
+<span class="n">capacity_ods_freight</span><span class="p">,</span> <span class="n">unassigned_paths_freight</span><span class="p">,</span> <span class="n">filtered_network_df</span><span class="p">,</span> <span class="n">progress_df</span> <span class="o">=</span> <span class="n">od_flow_allocation_capacity_constrained</span><span class="p">(</span>
+    <span class="n">flow_ods</span><span class="o">=</span><span class="n">flow_ods_freight</span><span class="p">,</span>
+    <span class="n">network_dataframe</span><span class="o">=</span><span class="n">network_df_filtered</span><span class="p">,</span>
+    <span class="n">flow_column</span><span class="o">=</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">,</span>
+    <span class="n">cost_column</span><span class="o">=</span><span class="s1">&#39;travel_time&#39;</span><span class="p">,</span>
+    <span class="n">path_id_column</span><span class="o">=</span><span class="s1">&#39;edge_id&#39;</span><span class="p">,</span>
+    <span class="n">attribute_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">origin_id_column</span><span class="o">=</span><span class="s1">&#39;from_node&#39;</span><span class="p">,</span>
+    <span class="n">destination_id_column</span><span class="o">=</span><span class="s1">&#39;to_node&#39;</span><span class="p">,</span>
+    <span class="n">network_capacity_column</span><span class="o">=</span><span class="s1">&#39;capacity_ths_tons&#39;</span><span class="p">,</span>
+    <span class="n">directed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">simple</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">store_edge_path</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">graph_base</span><span class="o">=</span><span class="n">base_graph</span><span class="p">,</span>
+    <span class="n">track_progress</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">early_stop_share</span><span class="o">=</span><span class="mf">0.95</span>
+<span class="p">)</span>
+
+<span class="c1"># Aggregate assigned flows per edge</span>
+<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">capacity_ods_pass</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="n">assigned_passenger_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">capacity_ods_pass</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">assigned_passenger_df</span> <span class="o">=</span> <span class="n">capacity_ods_pass</span>
+
+<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">capacity_ods_freight</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="n">assigned_freight_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">capacity_ods_freight</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">assigned_freight_df</span> <span class="o">=</span> <span class="n">capacity_ods_freight</span>
+
+<span class="c1"># Get total assigned trips per edge</span>
+<span class="n">assigned_passenger_on_edges</span> <span class="o">=</span> <span class="n">get_flow_on_edges</span><span class="p">(</span><span class="n">assigned_passenger_df</span><span class="p">,</span> <span class="s1">&#39;edge_id&#39;</span><span class="p">,</span> <span class="s1">&#39;edge_path&#39;</span><span class="p">,</span> <span class="s1">&#39;trips&#39;</span><span class="p">)</span>
+<span class="n">assigned_freight_on_edges</span> <span class="o">=</span> <span class="n">get_flow_on_edges</span><span class="p">(</span><span class="n">assigned_freight_df</span><span class="p">,</span> <span class="s1">&#39;edge_id&#39;</span><span class="p">,</span> <span class="s1">&#39;edge_path&#39;</span><span class="p">,</span> <span class="s1">&#39;ths_tons&#39;</span><span class="p">)</span>
+
+<span class="c1"># Merge back into filtered_network_df</span>
+<span class="n">filtered_network_df</span> <span class="o">=</span> <span class="n">filtered_network_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">assigned_passenger_on_edges</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;trips&#39;</span><span class="p">:</span> <span class="s1">&#39;assigned_passenger_trips&#39;</span><span class="p">}),</span>
+    <span class="n">on</span><span class="o">=</span><span class="s1">&#39;edge_id&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span>
+<span class="p">)</span>
+<span class="n">filtered_network_df</span> <span class="o">=</span> <span class="n">filtered_network_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">assigned_freight_on_edges</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">:</span> <span class="s1">&#39;assigned_ths_tons&#39;</span><span class="p">}),</span>
+    <span class="n">on</span><span class="o">=</span><span class="s1">&#39;edge_id&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Fill NaN with 0 for assigned flows</span>
+<span class="n">filtered_network_df</span><span class="p">[</span><span class="s1">&#39;assigned_passenger_trips&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">filtered_network_df</span><span class="p">[</span><span class="s1">&#39;assigned_passenger_trips&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">filtered_network_df</span><span class="p">[</span><span class="s1">&#39;assigned_ths_tons&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">filtered_network_df</span><span class="p">[</span><span class="s1">&#39;assigned_ths_tons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+
+<span class="c1"># Ensure filtered_network_df has geometry</span>
+<span class="n">filtered_network_df</span> <span class="o">=</span> <span class="n">filtered_network_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">edges_gdf</span><span class="p">[[</span><span class="s1">&#39;edge_id&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">]],</span>
+    <span class="n">on</span><span class="o">=</span><span class="s1">&#39;edge_id&#39;</span><span class="p">,</span>
+    <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[progress] iter=0 assigned_iter=100673230.000 cum=100673230.000 (0.9021) remaining=10924472.000 overcap_edges=0 next_flows=0
+[progress] iter=0 assigned_iter=31209.418 cum=31209.418 (0.9999) remaining=4.067 overcap_edges=0 next_flows=0
+Early stop triggered at share 1.000 (threshold 0.950).
+[progress] iter=0 assigned_iter=31209.418 cum=31209.418 (0.9999) remaining=4.067 overcap_edges=0 next_flows=0
+Early stop triggered at share 1.000 (threshold 0.950).
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-flow-visualization">
+<h2>7. Create Flow Visualization<a class="headerlink" href="#create-flow-visualization" title="Permalink to this heading">#</a></h2>
+<p>This section visualizes the assigned passenger and freight flows on the railway network using maps, where line thickness and color represent flow magnitude and corridor, respectively. The maps are zoomed to the selected country and saved as images.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the selected country</span>
+<span class="n">SELECTED_COUNTRY</span> <span class="o">=</span> <span class="s2">&quot;Belgium&quot;</span>
+
+<span class="c1"># Create figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+
+<span class="n">plot_edges_by_flow_thickness</span><span class="p">(</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">filtered_network_df</span><span class="p">,</span> <span class="n">flow_col</span><span class="o">=</span><span class="s1">&#39;assigned_passenger_trips&#39;</span><span class="p">,</span> <span class="n">corridors_col</span><span class="o">=</span><span class="s1">&#39;CORRIDORS&#39;</span><span class="p">,</span>
+    <span class="n">lw_min</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">lw_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">scale_div</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">legend_ticks</span><span class="o">=</span><span class="p">[</span><span class="mi">10000</span><span class="p">,</span><span class="mi">25000</span><span class="p">,</span><span class="mi">50000</span><span class="p">,</span><span class="mi">100000</span><span class="p">]</span>
+ <span class="p">)</span>
+<span class="n">europe_countries</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Railway Passenger trips per year&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Latitude&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xlim</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ylim</span><span class="p">)</span>
+
+
+<span class="n">plot_edges_by_flow_thickness</span><span class="p">(</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">filtered_network_df</span><span class="p">,</span> <span class="n">flow_col</span><span class="o">=</span><span class="s1">&#39;assigned_ths_tons&#39;</span><span class="p">,</span> <span class="n">corridors_col</span><span class="o">=</span><span class="s1">&#39;CORRIDORS&#39;</span><span class="p">,</span>
+    <span class="n">lw_min</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">lw_max</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">scale_div</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">legend_ticks</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">2500</span><span class="p">,</span><span class="mi">5000</span><span class="p">]</span>
+ <span class="p">)</span>
+<span class="n">europe_countries</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Railway Freight thousand tons per year&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Latitude&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xlim</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ylim</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">outpath</span> <span class="o">/</span> <span class="sa">f</span><span class="s1">&#39;rail_network_</span><span class="si">{</span><span class="n">SELECTED_COUNTRY</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;_&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/180b9b704918f5a01e031161cbb6370fbccbf450ee4e29ef359db7f8f0a042b4.png" src="../../../_images/180b9b704918f5a01e031161cbb6370fbccbf450ee4e29ef359db7f8f0a042b4.png" />
+</div>
+</div>
+</section>
+<section id="summary-statistics">
+<h2>5. Summary Statistics<a class="headerlink" href="#summary-statistics" title="Permalink to this heading">#</a></h2>
+<p>This section provides summary statistics for the selected country’s rail infrastructure and flows. It reports the total freight and passenger flows, and net flows, offering a concise overview of the country’s railway activity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># --- Summary Statistics for Passengers and Freight ---</span>
+<span class="c1"># Passenger OD summary</span>
+<span class="n">total_passenger_ods</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">od_pass</span><span class="p">)</span>
+<span class="n">total_passenger_trips</span> <span class="o">=</span> <span class="n">od_pass</span><span class="p">[</span><span class="s1">&#39;trips&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="c1"># capacity_ods_pass is a list of DataFrames, so concatenate first if needed</span>
+<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">capacity_ods_pass</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="n">assigned_passenger_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">capacity_ods_pass</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="n">capacity_ods_pass</span> <span class="k">else</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">assigned_passenger_df</span> <span class="o">=</span> <span class="n">capacity_ods_pass</span> <span class="k">if</span> <span class="s1">&#39;capacity_ods_pass&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">()</span> <span class="k">else</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">assigned_passenger_trips</span> <span class="o">=</span> <span class="n">assigned_passenger_df</span><span class="p">[</span><span class="s1">&#39;trips&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">assigned_passenger_df</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="mf">0.0</span>
+<span class="n">max_passenger_edge_flow</span> <span class="o">=</span> <span class="n">assigned_passenger_df</span><span class="p">[</span><span class="s1">&#39;trips&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">assigned_passenger_df</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="mf">0.0</span>
+<span class="n">min_passenger_edge_flow</span> <span class="o">=</span> <span class="n">assigned_passenger_df</span><span class="p">[</span><span class="s1">&#39;trips&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">assigned_passenger_df</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="mf">0.0</span>
+<span class="n">mean_passenger_edge_flow</span> <span class="o">=</span> <span class="n">assigned_passenger_df</span><span class="p">[</span><span class="s1">&#39;trips&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">assigned_passenger_df</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="mf">0.0</span>
+<span class="n">unassigned_passenger_trips</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">if</span> <span class="s1">&#39;unassigned_paths_pass&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">()</span> <span class="ow">and</span> <span class="n">unassigned_paths_pass</span><span class="p">:</span>
+    <span class="n">unassigned_df_pass</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">unassigned_paths_pass</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">unassigned_passenger_trips</span> <span class="o">=</span> <span class="n">unassigned_df_pass</span><span class="p">[</span><span class="s1">&#39;trips&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">unassigned_passenger_trips</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PASSENGER FLOW SUMMARY&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total OD pairs: </span><span class="si">{</span><span class="n">total_passenger_ods</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total trips: </span><span class="si">{</span><span class="n">total_passenger_trips</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># print(f&quot;Assigned trips: {assigned_passenger_trips:,.0f}&quot;)</span>
+<span class="c1"># print(f&quot;Unassigned trips: {unassigned_passenger_trips:,.0f}&quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Max edge flow (passenger): </span><span class="si">{</span><span class="n">max_passenger_edge_flow</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean edge flow (passenger): </span><span class="si">{</span><span class="n">mean_passenger_edge_flow</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># if total_passenger_trips &gt; 0:</span>
+<span class="c1">#     print(f&quot;% Assigned: {100*assigned_passenger_trips/total_passenger_trips:.2f}%&quot;)</span>
+<span class="c1">#     print(f&quot;% Unassigned: {100*unassigned_passenger_trips/total_passenger_trips:.2f}%&quot;)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="c1"># Freight OD summary</span>
+<span class="n">total_freight_ods</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">od_freight</span><span class="p">)</span>
+<span class="n">total_freight_tons</span> <span class="o">=</span> <span class="n">od_freight</span><span class="p">[</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="s1">&#39;capacity_ods_freight&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">capacity_ods_freight</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="n">assigned_freight_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">capacity_ods_freight</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="n">capacity_ods_freight</span> <span class="k">else</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">assigned_freight_df</span> <span class="o">=</span> <span class="n">capacity_ods_freight</span>
+    <span class="n">assigned_freight_tons</span> <span class="o">=</span> <span class="n">assigned_freight_df</span><span class="p">[</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">assigned_freight_df</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="mf">0.0</span>
+    <span class="n">max_freight_edge_flow</span> <span class="o">=</span> <span class="n">assigned_freight_df</span><span class="p">[</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">assigned_freight_df</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="mf">0.0</span>
+    <span class="n">min_freight_edge_flow</span> <span class="o">=</span> <span class="n">assigned_freight_df</span><span class="p">[</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">assigned_freight_df</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="mf">0.0</span>
+    <span class="n">mean_freight_edge_flow</span> <span class="o">=</span> <span class="n">assigned_freight_df</span><span class="p">[</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">assigned_freight_df</span><span class="o">.</span><span class="n">empty</span> <span class="k">else</span> <span class="mf">0.0</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">assigned_freight_tons</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">max_freight_edge_flow</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">min_freight_edge_flow</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">mean_freight_edge_flow</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">if</span> <span class="s1">&#39;unassigned_paths_freight&#39;</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">()</span> <span class="ow">and</span> <span class="n">unassigned_paths_freight</span><span class="p">:</span>
+    <span class="n">unassigned_df_freight</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">unassigned_paths_freight</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">unassigned_freight_tons</span> <span class="o">=</span> <span class="n">unassigned_df_freight</span><span class="p">[</span><span class="s1">&#39;ths_tons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">unassigned_freight_tons</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FREIGHT FLOW SUMMARY&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total OD pairs: </span><span class="si">{</span><span class="n">total_freight_ods</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total tons: </span><span class="si">{</span><span class="n">total_freight_tons</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> ths tons&quot;</span><span class="p">)</span>
+<span class="c1"># if assigned_freight_tons is not None:</span>
+<span class="c1">#     print(f&quot;Assigned tons: {assigned_freight_tons:,.0f} ths tons&quot;)</span>
+<span class="c1"># if unassigned_freight_tons is not None:</span>
+<span class="c1">#     print(f&quot;Unassigned tons: {unassigned_freight_tons:,.0f} ths tons&quot;)</span>
+<span class="k">if</span> <span class="n">max_freight_edge_flow</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Max edge flow (freight): </span><span class="si">{</span><span class="n">max_freight_edge_flow</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> ths tons&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">mean_freight_edge_flow</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mean edge flow (freight): </span><span class="si">{</span><span class="n">mean_freight_edge_flow</span><span class="si">:</span><span class="s2">,.0f</span><span class="si">}</span><span class="s2"> ths tons&quot;</span><span class="p">)</span>
+<span class="c1"># if total_freight_tons &gt; 0 and assigned_freight_tons is not None:</span>
+<span class="c1">#     print(f&quot;% Assigned: {100*assigned_freight_tons/total_freight_tons:.2f}%&quot;)</span>
+<span class="c1"># if total_freight_tons &gt; 0 and unassigned_freight_tons is not None:</span>
+<span class="c1">#     print(f&quot;% Unassigned: {100*unassigned_freight_tons/total_freight_tons:.2f}%&quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>================================================================================
+PASSENGER FLOW SUMMARY
+================================================================================
+Total OD pairs: 39,650
+Total trips: 111,597,702
+Max edge flow (passenger): 1,026,446
+Mean edge flow (passenger): 2,622
+
+================================================================================
+FREIGHT FLOW SUMMARY
+================================================================================
+Total OD pairs: 15,382
+Total tons: 31,213 ths tons
+Max edge flow (freight): 3,639 ths tons
+Mean edge flow (freight): 3 ths tons
+================================================================================
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./background/Transport-Flows-Allocation/book"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Maritime_Flow_Assignment.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Maritime Flow Visualization by Country</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Road_Flow_Assignment.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Road Flow Visualization by Country</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports-and-configuration">1. Imports and Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data-and-prepare-od-matrices">2. Load data and prepare OD matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-capacities-and-plot-them">3. Compute Capacities and plot them</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-network">4. Create network</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assign-flows-to-the-network">5. Assign flows to the network</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-flow-visualization">7. Create Flow Visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-statistics">5. Summary Statistics</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MIRACA
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
