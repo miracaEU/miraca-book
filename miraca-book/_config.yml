@@ -3,7 +3,7 @@
 
 title: MIRACA Technical Workbench
 author: MIRACA
-logo: logo.png
+logo: figures/logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
