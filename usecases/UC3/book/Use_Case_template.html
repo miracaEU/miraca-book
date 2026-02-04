@@ -1,0 +1,1940 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Use case 3 - Flooding in Zuid-Holland &#8212; MIRACA Technical Workbench</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usecases/UC3/book/Use_Case_template';</script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="UC4" href="../../UC4/book/E_E%2BL_ESRM20%2BElsus.html" />
+    <link rel="prev" title="Work packages" href="../../../riskassessment/CBAMultiHazard.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="MIRACA Technical Workbench - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="MIRACA Technical Workbench - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Welcome to the Miraca Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">The MIRACA approach</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/AssetRisk.html">Pending: Asset-level risk assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/NetworkRisk.html">Pending: Network-level risk assessment</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/SystemicRisk/book/intro.html">Systemic risk assessment</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/SystemicRisk/book/SystemicRisk_framework.html">Systemic risk assessment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/CBAMultiHazard.html">Pending: Cost-benefit appraisal of multi-hazard adaptation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Use case 3 - Flooding in Zuid-Holland</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC4/book/E_E%2BL_ESRM20%2BElsus.html">UC4</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Background material</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../background/Exposure_Miraca/book/intro.html">Exposure database</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Exposure_Miraca/book/Exposure_Miraca.html">Exposure database</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/Vulnerability/book/Vulnerability_workbench.html">Vulnerability database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/MacroImpacts.html">Pending: Macroeconomic impacts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About Miraca</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book/issues/new?title=Issue%20on%20page%20%2Fusecases/UC3/book/Use_Case_template.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/usecases/UC3/book/Use_Case_template.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Use case 3 - Flooding in Zuid-Holland</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-comments">General Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-subsection">Introduction [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure-subsection">Directory structure [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-characterisation-subsection">Hazard characterisation [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure-assessment-subsection">Exposure Assessment [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-assessment-subsection">Vulnerability Assessment [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-assessment-subsection">Risk Assessment [subsection]</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-simulation-is-not-enough">A single simulation is not enough</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation">Adaptation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-adaptation-options">Comparison of adaptation options</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="use-case-3-flooding-in-zuid-holland">
+<h1>Use case 3 - Flooding in Zuid-Holland<a class="headerlink" href="#use-case-3-flooding-in-zuid-holland" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="c1"># Imports</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">rasterio</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">contextily</span> <span class="k">as</span> <span class="nn">ctx</span>
+
+<span class="kn">from</span> <span class="nn">src.adaptation</span> <span class="kn">import</span> <span class="n">simulate_asset_damage_recovery_access_breakdown_ema</span>
+<span class="kn">from</span> <span class="nn">config</span> <span class="kn">import</span> <span class="n">get_config</span><span class="p">,</span> <span class="n">get_development_config</span><span class="p">,</span> <span class="n">setup_dev_directories</span><span class="p">,</span> <span class="n">get_simulation_params</span>
+<span class="kn">from</span> <span class="nn">src.simulation</span> <span class="kn">import</span> <span class="n">simulate_asset_damage_recovery_access_breakdown</span> 
+<span class="kn">from</span> <span class="nn">src.data_loader</span> <span class="kn">import</span> <span class="n">load_hazard_maps</span><span class="p">,</span> <span class="n">load_electricity_assets</span>
+<span class="kn">from</span> <span class="nn">src.caching</span> <span class="kn">import</span> <span class="n">load_simulation_caches</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">src.impacts</span> <span class="kn">import</span> <span class="n">create_voronoi_for_asset_type</span><span class="p">,</span> <span class="n">prepare_population_impact_data</span><span class="p">,</span> <span class="n">prepare_land_use_impact_data</span><span class="p">,</span> <span class="n">update_voll_rates</span><span class="p">,</span> <span class="n">prepare_land_use_impact_data</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">from</span> <span class="nn">src.visualization</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">ema_workbench</span> <span class="kn">import</span> <span class="n">Model</span><span class="p">,</span> <span class="n">RealParameter</span><span class="p">,</span> <span class="n">IntegerParameter</span><span class="p">,</span> <span class="n">Constant</span><span class="p">,</span> <span class="n">TimeSeriesOutcome</span><span class="p">,</span> <span class="n">SequentialEvaluator</span><span class="p">,</span> <span class="n">Samplers</span><span class="p">,</span> <span class="n">ema_logging</span><span class="p">,</span> <span class="n">Policy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\peregrin\AppData\Local\miniforge3\envs\miraca_template\Lib\site-packages\ema_workbench\em_framework\__init__.py:101: UserWarning: ipyparallel not installed - IpyparalleEvaluator not available
+  warnings.warn(&quot;ipyparallel not installed - IpyparalleEvaluator not available&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<section id="general-comments">
+<h2>General Comments<a class="headerlink" href="#general-comments" title="Permalink to this heading">#</a></h2>
+<p>Note: Hazard, exposure, population, and land use data are too heavy. A sample of the data is provided instead.</p>
+</section>
+<section id="introduction-subsection">
+<h2>Introduction [subsection]<a class="headerlink" href="#introduction-subsection" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Using pluvial flood data for South Holland, in the Netherlands, we estimate the disruptions on medium-low voltage substations, considering a set number of repair crews to carry out repairs on broken down substations. We availability of the road network is used to determine whether a substation can be reached.</p></li>
+<li><p>This use case is most relevant for electricity distribution network operators</p></li>
+<li><p>The focus of this use case is adaptation under uncertainty in interdependent CI</p></li>
+</ul>
+</section>
+<section id="directory-structure-subsection">
+<h2>Directory structure [subsection]<a class="headerlink" href="#directory-structure-subsection" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up configuration</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">get_development_config</span><span class="p">()</span> <span class="c1">#get_config() gets parameters directly from config.py in root, development config uses sample data</span>
+<span class="n">setup_dev_directories</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">remove_cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">HAZARD_EXTRACTION_METHOD</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;analysis_config&#39;</span><span class="p">][</span><span class="s1">&#39;hazard_extraction_method&#39;</span><span class="p">]</span>
+
+<span class="c1"># Configure simulation parameters from config</span>
+<span class="n">simulation_params</span> <span class="o">=</span> <span class="n">get_simulation_params</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> 
+<span class="n">accessibility_model</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">simulation_params</span><span class="p">[</span><span class="s1">&#39;accessibility_model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">accessibility_model</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Simulation configuration:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">simulation_params</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;config&#39;</span><span class="p">:</span>  <span class="c1"># Don&#39;t print the entire config</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Directory structure:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Interim: </span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;interim_dir&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Output: </span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;output_dir&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Cache will be organized by hazard directory: </span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;hazard_dir&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">config</span><span class="p">[</span><span class="s1">&#39;simulation_config&#39;</span><span class="p">][</span><span class="s1">&#39;major_timestep&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="n">config</span><span class="p">[</span><span class="s1">&#39;simulation_config&#39;</span><span class="p">][</span><span class="s1">&#39;verbose&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">max_days</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">caches</span> <span class="o">=</span> <span class="n">load_simulation_caches</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;interim_dir&#39;</span><span class="p">],</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;hazard_dir&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loaded caches: </span><span class="si">{</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">caches</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">caches</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="ow">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="kc">None</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">root_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;root_dir&#39;</span><span class="p">])</span>
+<span class="n">study_area_path</span> <span class="o">=</span> <span class="n">root_dir</span> <span class="o">/</span> <span class="s1">&#39;data&#39;</span> <span class="o">/</span> <span class="s1">&#39;utilities&#39;</span> <span class="o">/</span> <span class="s1">&#39;stedin_area.geojson&#39;</span>
+<span class="n">land_use_path</span> <span class="o">=</span> <span class="n">root_dir</span> <span class="o">/</span> <span class="s1">&#39;data&#39;</span> <span class="o">/</span> <span class="s1">&#39;land_use&#39;</span> <span class="o">/</span> <span class="s1">&#39;CBS_Publicatiebestand_BBG2017_v1_sample.gpkg&#39;</span>
+<span class="n">population_data_path</span> <span class="o">=</span> <span class="n">root_dir</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;population&quot;</span> <span class="o">/</span> <span class="s2">&quot;cbs_vk100_2024_v1_sample.gpkg&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WARNING! Values of lost load should be calculated with country-wide VOLL rates, not sample data!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Cache path for asset_to_lu (the complete pre-computed lookup)</span>
+<span class="n">asset_to_lu_cache_path</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;interim_dir&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">land_use_path</span><span class="o">.</span><span class="n">stem</span><span class="si">}</span><span class="s2">_asset_to_lu.pkl&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Created directories: c:\repos\UC3\data\interim\interim_test_hazard_timesteps, c:\repos\UC3\data\output\output_test_hazard_timesteps
+
+Simulation configuration:
+  flood_threshold: 0.2
+  number_repair_crews: 5
+  repair_crew_assignment_method: islands
+  verbose: True
+  recovery_parameters: {&#39;repair_time_coefficients&#39;: [702.72, 3.14, 1.9891], &#39;damage_ratio_coefficients&#39;: (0.0468, 0.0077), &#39;damage_threshold&#39;: 0.01, &#39;repair_threshold&#39;: 2.0}
+  accessibility_model: None
+
+Directory structure:
+  Interim: c:\repos\UC3\data\interim\interim_test_hazard_timesteps
+  Output: c:\repos\UC3\data\output\output_test_hazard_timesteps
+  Cache will be organized by hazard directory: test_hazard_timesteps
+Loading simulation caches...
+No accessibility cache found at c:\repos\UC3\data\interim\interim_test_hazard_timesteps\accessibility_cache_test_hazard_timesteps.pkl
+No hazard extraction cache found at c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+No island cache found at c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Loaded caches: [&#39;accessibility_cache&#39;, &#39;hazard_extraction_cache&#39;, &#39;overlap_cache&#39;, &#39;island_cache&#39;]
+WARNING! Values of lost load should be calculated with country-wide VOLL rates, not sample data!
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="hazard-characterisation-subsection">
+<h2>Hazard characterisation [subsection]<a class="headerlink" href="#hazard-characterisation-subsection" title="Permalink to this heading">#</a></h2>
+<p>Data description - Pluvial flooding</p>
+<p>The flood considered in this use case is produced by excess rainfall.
+To produce this data, the assumption of 200 mm of rainfall on previously wet soil over the whole province of South Holland, the Netherlands was considered.</p>
+<p>The data consists of time explicity flooding depth maps at a daily timestep. The aggregated flood maps for this model can be found in the Open Data Portal of Zuid Holland: <a class="reference external" href="https://opendata.zuid-holland.nl/geonetwork/srv/api/records/6cb97102-f3b3-421e-a37e-c90615118e6d">https://opendata.zuid-holland.nl/geonetwork/srv/api/records/6cb97102-f3b3-421e-a37e-c90615118e6d</a></p>
+<p>While this case considers a single hazard type (pluvial flooding), it looks into consecutive days of flooding with the cascading effects of disrupted roads on the electricity network repairs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hazard_maps</span> <span class="o">=</span> <span class="n">load_hazard_maps</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;hazard_dir&#39;</span><span class="p">],</span> <span class="n">max_days</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>  
+<span class="n">hazard_map_03</span> <span class="o">=</span> <span class="n">hazard_maps</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">hazard_map_03</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+    <span class="n">hazard_data_03</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">hazard_transform_03</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">transform</span>
+    <span class="n">crs</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">crs</span>
+
+
+<span class="kn">from</span> <span class="nn">rasterio.plot</span> <span class="kn">import</span> <span class="n">plotting_extent</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">extent</span> <span class="o">=</span> <span class="n">plotting_extent</span><span class="p">(</span><span class="n">hazard_data_03</span><span class="p">,</span> <span class="n">hazard_transform_03</span><span class="p">)</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">hazard_data_03</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="n">extent</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;upper&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Hazard Map at Timestep 03&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Flood Depth (m)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set axis to Web Mercator for contextily</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">extent</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">extent</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;auto&#39;</span><span class="p">)</span>
+<span class="n">ctx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">OpenStreetMap</span><span class="o">.</span><span class="n">Mapnik</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 10 hazard map files
+</pre></div>
+</div>
+<img alt="../../../_images/6aec9b413eacb8cc1bfe62d48539493c430cc57e3db416ab9ba59d62a27d48b3.png" src="../../../_images/6aec9b413eacb8cc1bfe62d48539493c430cc57e3db416ab9ba59d62a27d48b3.png" />
+</div>
+</div>
+</section>
+<section id="exposure-assessment-subsection">
+<h2>Exposure Assessment [subsection]<a class="headerlink" href="#exposure-assessment-subsection" title="Permalink to this heading">#</a></h2>
+<p>The electricity substation data is provided by Stedin, the local DSO, openly.
+The street data used is retrieved from OpenStreetMap</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdf_assets</span> <span class="o">=</span> <span class="n">load_electricity_assets</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;electricity_dir&#39;</span><span class="p">],</span> <span class="n">asset_types</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;msls&#39;</span><span class="p">])</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">gdf_assets</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">epsg</span><span class="o">=</span><span class="mi">4326</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ctx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">ctx</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">OpenStreetMap</span><span class="o">.</span><span class="n">Mapnik</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Medium-low voltage substations in sample area&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 1 electricity station files matching types [&#39;msls&#39;]
+All .shp files in directory: [&#39;ls_stations_test_samples.shp&#39;, &#39;msls_stations_test_samples.shp&#39;, &#39;ms_stations_test_samples.shp&#39;]
+Files with &#39;station&#39;: [&#39;ls_stations_test_samples.shp&#39;, &#39;msls_stations_test_samples.shp&#39;, &#39;ms_stations_test_samples.shp&#39;]
+Final matched files: [&#39;msls_stations_test_samples.shp&#39;]
+Loading electricity assets from msls_stations_test_samples.shp
+Loaded 245 msls assets
+Combined total: 245 electricity assets
+Asset types: {&#39;msls&#39;: 245}
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\peregrin\AppData\Local\Temp\ipykernel_34156\2282920993.py:3: UserWarning: Geometry is in a geographic CRS. Results from &#39;centroid&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
+
+  gdf_assets.centroid.to_crs(epsg=4326).plot(ax=ax, color=&#39;green&#39;, markersize=20)
+</pre></div>
+</div>
+<img alt="../../../_images/945770339de4a545f63d71f5b190418739eb7a1ba8bd2427ace4c65c38b0ddf9.png" src="../../../_images/945770339de4a545f63d71f5b190418739eb7a1ba8bd2427ace4c65c38b0ddf9.png" />
+</div>
+</div>
+</section>
+<section id="vulnerability-assessment-subsection">
+<h2>Vulnerability Assessment [subsection]<a class="headerlink" href="#vulnerability-assessment-subsection" title="Permalink to this heading">#</a></h2>
+<p>We estimate the damage to substations by intersecting the footprints of the substations with flooding depth data and taking the maximum value.</p>
+<p>This value is then related to substation damage using a linearized depth-damage (vulnerability) curve (FEMA, 2003; Sánchez-Muñoz et al., 2020). Substation damage is expressed as a damage ratio between 0 (undamaged) and 1 (fully damaged). Finally, the damage ratio is used to estimate the repair time in hours through a repair time function (Movahednia et al., 2022; Sánchez-Muñoz et al., 2020).</p>
+<p>FEMA. (2003). Multi-hazard Loss Estimation Methodology Earthquake Model HAZUS®MH MR4 Techni cal Manual. http: <a class="reference external" href="//www.civil.ist.utl.pt/%E2%88%BCmlopes/conteudos/DamageStates/hazus_mr4_">//www.civil.ist.utl.pt/∼mlopes/conteudos/DamageStates/hazus_mr4_</a> earthquake_tech_manual.pdf</p>
+<p>Movahednia, M., Kargarian, A., Ozdemir, C. E., &amp; Hagen, S. C. (2022). Power Grid Resilience Enhancement via Protecting Electrical Substations Against Flood Hazards: A Stochastic Framework. IEEE Transactions on Industrial Informatics, 18(3), 2132–2143. <a class="reference external" href="https://doi.org/10.1109/TII.2021.3100079">https://doi.org/10.1109/TII.2021.3100079</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">src.damage_recovery</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">default_damage_ratio_function</span><span class="p">,</span>
+    <span class="n">default_repair_time_function</span><span class="p">,</span>
+    <span class="n">vectorized_damage_ratio_solver</span><span class="p">,</span>
+    <span class="n">default_fragility_function</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Example coefficients for curves</span>
+<span class="n">damage_coeffs</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>  <span class="c1"># m, n for damage ratio</span>
+<span class="n">repair_coeffs</span> <span class="o">=</span> <span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>  <span class="c1"># a, b, c for repair time</span>
+
+<span class="n">hazard_depths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">damage_ratios</span> <span class="o">=</span> <span class="n">default_damage_ratio_function</span><span class="p">(</span><span class="n">hazard_depths</span><span class="p">,</span> <span class="n">damage_coeffs</span><span class="p">)</span>
+<span class="n">damage_ratios</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">damage_ratios</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Ensure damage ratio does not exceed 1</span>
+
+<span class="c1"># Recovery functions in range [0, 1]</span>
+<span class="n">damage_ratios_recovery</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">repair_times</span> <span class="o">=</span> <span class="n">default_repair_time_function</span><span class="p">(</span><span class="n">damage_ratios_recovery</span><span class="p">,</span> <span class="n">repair_coeffs</span><span class="p">)</span>
+
+<span class="c1"># Fragility curves for different positive slopes</span>
+<span class="n">slopes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">fragility_curves</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">k</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="p">(</span><span class="n">hazard_depths</span> <span class="o">-</span> <span class="mf">0.6</span><span class="p">)))</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">slopes</span>
+<span class="p">}</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># 1. Fragility curves with multiple slopes</span>
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">curve</span> <span class="ow">in</span> <span class="n">fragility_curves</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hazard_depths</span><span class="p">,</span> <span class="n">curve</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;k=</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Fragility Curves (msls)&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Flood Depth (m)&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Failure Probability&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># 2. Depth-Damage curve</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hazard_depths</span><span class="p">,</span> <span class="n">damage_ratios</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Damage Ratio&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Depth-Damage Curve&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Flood Depth (m)&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Damage Ratio&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1"># 3. Recovery curve in [0,1]</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">damage_ratios_recovery</span><span class="p">,</span> <span class="n">repair_times</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Repair Time&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Recovery Curve&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Damage Ratio&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Repair Time (hours)&#39;</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/bff61d43820ad42c8ba6f06c0971891999a999e9934b426204e889c041b90ae0.png" src="../../../_images/bff61d43820ad42c8ba6f06c0971891999a999e9934b426204e889c041b90ae0.png" />
+</div>
+</div>
+</section>
+<section id="risk-assessment-subsection">
+<h2>Risk Assessment [subsection]<a class="headerlink" href="#risk-assessment-subsection" title="Permalink to this heading">#</a></h2>
+<p>The time explicit breakdown and recovery simulation is done iteratively to explore the uncertainty space, with all the deterministic results (e.g. flood overlays, road isolations, etc) being computed once, and catched for future runs.</p>
+<section id="a-single-simulation-is-not-enough">
+<h3>A single simulation is not enough<a class="headerlink" href="#a-single-simulation-is-not-enough" title="Permalink to this heading">#</a></h3>
+<p>The results from a single simulation give some indication of the stations that get flooded, the duration of the flood, and the extent of the damage. Here we set the slope of the fragility curve at 6.0, and assume there are 5 repair crews available for the area</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_results</span><span class="p">,</span> <span class="n">final_state</span><span class="p">,</span> <span class="n">cache_updated</span> <span class="o">=</span> <span class="n">simulate_asset_damage_recovery_access_breakdown</span><span class="p">(</span>
+    <span class="n">gdf_assets</span><span class="p">,</span>
+    <span class="n">hazard_maps</span><span class="p">,</span>
+    <span class="n">number_repair_crews</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="n">repair_crew_assignment_method</span> <span class="o">=</span> <span class="n">simulation_params</span><span class="p">[</span><span class="s1">&#39;repair_crew_assignment_method&#39;</span><span class="p">],</span>
+    <span class="n">flood_threshold</span> <span class="o">=</span> <span class="n">simulation_params</span><span class="p">[</span><span class="s1">&#39;flood_threshold&#39;</span><span class="p">],</span>
+    <span class="n">recovery_parameters</span> <span class="o">=</span> <span class="n">simulation_params</span><span class="p">[</span><span class="s1">&#39;recovery_parameters&#39;</span><span class="p">],</span>
+    <span class="n">root_dir</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;root_dir&#39;</span><span class="p">],</span>
+    <span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">timestep_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">execution_id</span> <span class="o">=</span> <span class="s2">&quot;test_run_breakdown&quot;</span><span class="p">,</span>
+    <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+    <span class="n">major_timestep</span><span class="o">=</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;simulation_config&#39;</span><span class="p">][</span><span class="s1">&#39;major_timestep&#39;</span><span class="p">],</span>
+    <span class="n">accessibility_cache</span><span class="o">=</span><span class="n">caches</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;accessibility_cache&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="n">hazard_extraction_cache</span><span class="o">=</span><span class="n">caches</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;hazard_extraction_cache&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="n">overlap_cache</span><span class="o">=</span><span class="n">caches</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;overlap_cache&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+    <span class="n">island_cache</span><span class="o">=</span><span class="n">caches</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;island_cache&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span> 
+    <span class="n">fragility_param_k</span><span class="o">=</span><span class="mf">6.0</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Simulation completed. Cache updated&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Identified 16 boundary assets out of 245 total assets.
+Extracting hazard values using method: max
+Saved hazard extraction cache: 1 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+Cached hazard extraction results for map 0 from GHG_timesteps_test0.tif
+Cache miss for island_assignment_EV0_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 1 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV0_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31
+Extracting hazard values using method: max
+Saved hazard extraction cache: 2 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+Cached hazard extraction results for map 1 from GHG_timesteps_test1.tif
+Cache miss for island_assignment_EV1_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 2 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV1_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31
+Computing island lengths...
+Saved overlap cache: 1 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Extracting hazard values using method: max
+Saved hazard extraction cache: 3 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+Cached hazard extraction results for map 2 from GHG_timesteps_test2.tif
+Cache miss for island_assignment_EV2_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 3 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV2_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31
+Computing island lengths...
+Saved overlap cache: 2 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Extracting hazard values using method: max
+Saved hazard extraction cache: 4 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+Cached hazard extraction results for map 3 from GHG_timesteps_test3.tif
+Cache miss for island_assignment_EV3_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 4 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV3_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31
+Computing island lengths...
+Saved overlap cache: 3 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Extracting hazard values using method: max
+Saved hazard extraction cache: 5 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+Cached hazard extraction results for map 4 from GHG_timesteps_test4.tif
+Cache miss for island_assignment_EV4_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 5 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV4_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31
+Computing island lengths...
+Saved overlap cache: 4 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Extracting hazard values using method: max
+Saved hazard extraction cache: 6 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+Cached hazard extraction results for map 5 from GHG_timesteps_test5.tif
+Cache miss for island_assignment_EV5_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 6 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV5_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31
+Computing island lengths...
+Saved overlap cache: 5 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Extracting hazard values using method: max
+Saved hazard extraction cache: 7 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+Cached hazard extraction results for map 6 from GHG_timesteps_test6.tif
+Cache miss for island_assignment_EV6_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 7 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV6_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31
+Computing island lengths...
+Saved overlap cache: 6 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Extracting hazard values using method: max
+Saved hazard extraction cache: 8 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+Cached hazard extraction results for map 7 from GHG_timesteps_test7.tif
+Cache miss for island_assignment_EV7_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 8 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV7_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31
+Computing island lengths...
+Saved overlap cache: 7 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Extracting hazard values using method: max
+Saved hazard extraction cache: 9 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+Cached hazard extraction results for map 8 from GHG_timesteps_test8.tif
+Cache miss for island_assignment_EV8_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 9 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV8_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31
+Computing island lengths...
+Saved overlap cache: 8 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Extracting hazard values using method: max
+Saved hazard extraction cache: 10 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+Cached hazard extraction results for map 9 from GHG_timesteps_test9.tif
+Cache miss for island_assignment_EV9_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 10 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV9_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31
+Computing island lengths...
+Saved overlap cache: 9 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+
+Simulation completed. Cache updated
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_df_x</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">all_results</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">print_simulation_summary</span><span class="p">(</span><span class="n">results_df_x</span><span class="p">,</span> <span class="n">gdf_assets</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>======================================================================
+SIMULATION RESULTS SUMMARY
+======================================================================
+Total assets: 245
+Simulation duration: 240 hours (10 days)
+Final operational rate: 100.0%
+Peak damaged assets: 6
+Peak flooded assets: 6
+Total crew assignments: 16
+
+RECOVERY TIMELINE (Daily Summary)
+========================================
+Day 0: 100.0% operational, 0 flooded, 0 unreachable, 0 damaged.
+Day 1: 99.6% operational, 5 flooded, 0 unreachable, 5 damaged.
+Day 2: 98.4% operational, 6 flooded, 0 unreachable, 6 damaged.
+Day 3: 98.8% operational, 5 flooded, 0 unreachable, 5 damaged.
+Day 4: 99.6% operational, 2 flooded, 0 unreachable, 2 damaged.
+Day 5: 99.6% operational, 2 flooded, 0 unreachable, 2 damaged.
+Day 6: 100.0% operational, 0 flooded, 0 unreachable, 0 damaged.
+Day 7: 100.0% operational, 0 flooded, 0 unreachable, 0 damaged.
+Day 8: 100.0% operational, 0 flooded, 0 unreachable, 0 damaged.
+Day 9: 100.0% operational, 0 flooded, 0 unreachable, 0 damaged.
+
+======================================================================
+REPAIR BACKLOG ANALYSIS
+======================================================================
+Hour | Flooded | Damaged | Crews | Backlog | Effective?
+-------------------------------------------------------
+ 0.0 |     0.0 |     0.0 |   0.0 |     0.0 | No
+24.0 |     5.0 |     5.0 |   0.0 |    14.7 | No
+48.0 |     6.0 |     6.0 |   0.0 |    18.1 | No
+72.0 |     5.0 |     6.0 |   1.0 |    17.1 | No
+96.0 |     2.0 |     5.0 |   3.0 |    12.7 | No
+120.0 |     2.0 |     2.0 |   0.0 |     6.6 | No
+144.0 |     0.0 |     2.0 |   2.0 |     4.6 | Yes
+168.0 |     0.0 |     0.0 |   0.0 |     0.0 | No
+192.0 |     0.0 |     0.0 |   0.0 |     0.0 | No
+216.0 |     0.0 |     0.0 |   0.0 |     0.0 | No
+
+SUMMARY:
+During flooding (120 hours): 0.1 crews assigned on average
+During clear periods (120 hours): 0.1 crews assigned on average
+Repair backlog: Start=0.0hrs, Peak=18.1hrs, End=0.0hrs
+</pre></div>
+</div>
+</div>
+</div>
+<p>To understand the extent of the impact, it is necessary to map the population and the value of lost load to each substations. In other words, when a substation fails, it is necessary to understand how many people live in the area it services, and the economic activity that takes place in the area.</p>
+<p>For that, population and land-use information can be of use. The Central Bureau voor de Statistiek (CBS) of the Netherlands provides this information - <a class="reference external" href="https://www.cbs.nl/en-gb">https://www.cbs.nl/en-gb</a></p>
+<p>In this case, a sample of the data is used.</p>
+<p>First, the population data is mapped to service areas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">study_area</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">study_area_path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;GeoJSON&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:28992&quot;</span><span class="p">)</span>
+
+<span class="n">buffer_distance_meters</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">population_buffer</span> <span class="o">=</span> <span class="n">study_area</span><span class="o">.</span><span class="n">buffer</span><span class="p">(</span><span class="n">buffer_distance_meters</span><span class="p">)</span>
+<span class="n">population_buffer</span><span class="o">.</span><span class="n">set_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:28992&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create Voronoi polygons for service areas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating Voronoi polygons for service areas...&quot;</span><span class="p">)</span>
+<span class="n">voronoi_polygons_by_type</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">asset_type</span> <span class="ow">in</span> <span class="n">gdf_assets</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">voronoi_gdf</span> <span class="o">=</span> <span class="n">create_voronoi_for_asset_type</span><span class="p">(</span>
+        <span class="n">gdf_assets</span><span class="p">,</span> 
+        <span class="n">asset_type</span><span class="p">,</span> 
+        <span class="n">boundary</span><span class="o">=</span><span class="n">study_area</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">unary_union</span>
+    <span class="p">)</span>
+    <span class="n">voronoi_polygons_by_type</span><span class="p">[</span><span class="n">asset_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">voronoi_gdf</span>
+
+<span class="c1"># Load and prepare population data</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading population data...&quot;</span><span class="p">)</span>
+<span class="n">population_data</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span>
+    <span class="n">population_data_path</span><span class="p">,</span>
+    <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;GPKG&#39;</span><span class="p">,</span>
+    <span class="n">bbox</span><span class="o">=</span><span class="nb">tuple</span><span class="p">(</span><span class="n">voronoi_gdf</span><span class="o">.</span><span class="n">total_bounds</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:28992&quot;</span><span class="p">)</span>
+
+<span class="c1"># Filter out zero population and invalid geometries</span>
+<span class="n">population_data</span> <span class="o">=</span> <span class="n">population_data</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">population_data</span><span class="p">[</span><span class="s1">&#39;aantal_inwoners&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="o">~</span><span class="n">population_data</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">isna</span><span class="p">())</span>
+<span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">])</span>
+
+<span class="c1"># Clip to study area</span>
+<span class="n">population_study_area</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">population_data</span><span class="p">,</span> <span class="n">population_buffer</span><span class="p">)</span>
+<span class="n">population_above_0</span> <span class="o">=</span> <span class="n">population_study_area</span><span class="p">[[</span><span class="s1">&#39;aantal_inwoners&#39;</span><span class="p">,</span> <span class="s1">&#39;geometry&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:28992&quot;</span><span class="p">)</span>
+
+<span class="c1"># Prepare population impact mapping</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Preparing population impact data...&quot;</span><span class="p">)</span>
+<span class="n">asset_population_map</span> <span class="o">=</span> <span class="n">prepare_population_impact_data</span><span class="p">(</span>
+    <span class="n">population_data</span><span class="o">=</span><span class="n">population_above_0</span><span class="p">,</span>
+    <span class="n">voronoi_gdf</span><span class="o">=</span><span class="n">voronoi_polygons_by_type</span><span class="p">[</span><span class="s1">&#39;msls&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Population data prepared for </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">asset_population_map</span><span class="p">)</span><span class="si">}</span><span class="s2"> assets&quot;</span><span class="p">)</span>
+
+<span class="n">voronoi_gdf</span><span class="p">[</span><span class="s1">&#39;pop_map&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">asset_population_map</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">voronoi_gdf</span><span class="p">[</span><span class="s1">&#39;asset_id&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\peregrin\AppData\Local\miniforge3\envs\miraca_template\Lib\site-packages\pyogrio\raw.py:198: RuntimeWarning: driver GeoJSON does not support open option DRIVER
+  return ogr_read(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating Voronoi polygons for service areas...
+Loading population data...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\peregrin\AppData\Local\Temp\ipykernel_34156\3309938487.py:14: DeprecationWarning: The &#39;unary_union&#39; attribute is deprecated, use the &#39;union_all()&#39; method instead.
+  boundary=study_area.geometry.unary_union
+c:\Users\peregrin\AppData\Local\miniforge3\envs\miraca_template\Lib\site-packages\pyogrio\raw.py:198: RuntimeWarning: driver GPKG does not support open option DRIVER
+  return ogr_read(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Preparing population impact data...
+Population assignment: 221/229 polygons with impact values
+Total assigned population: 41969
+Population data prepared for 229 assets
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then, the same is done for Values of Lost Load per land use:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Try to load pre-computed asset_to_lu</span>
+<span class="k">if</span> <span class="n">asset_to_lu_cache_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loading asset_to_lu from cache: </span><span class="si">{</span><span class="n">asset_to_lu_cache_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">asset_to_lu_cache_path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">asset_to_lu</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loaded asset_to_lu for </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">asset_to_lu</span><span class="p">)</span><span class="si">}</span><span class="s2"> assets from cache&quot;</span><span class="p">)</span>
+
+    <span class="n">asset_land_use_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">aid</span><span class="p">:</span> <span class="p">{</span><span class="n">lu_type</span><span class="p">:</span> <span class="n">area</span> <span class="k">for</span> <span class="n">lu_type</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">voll_rate</span> <span class="ow">in</span> <span class="n">lu_entries</span><span class="p">}</span>
+        <span class="k">for</span> <span class="n">aid</span><span class="p">,</span> <span class="n">lu_entries</span> <span class="ow">in</span> <span class="n">asset_to_lu</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="p">}</span>
+    
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Computing asset_to_lu from scratch...&quot;</span><span class="p">)</span>
+       
+    <span class="c1"># Load land use data</span>
+    <span class="n">land_use_data</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">land_use_path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;GPKG&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Calculate VOLL rates (populates VOLL_PER_SQM)</span>
+    <span class="n">consumption_per_sqm</span><span class="p">,</span> <span class="n">voll_per_sqm</span> <span class="o">=</span> <span class="n">update_voll_rates</span><span class="p">(</span><span class="n">land_use_data</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;VOLL rates calculated for </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">voll_per_sqm</span><span class="p">)</span><span class="si">}</span><span class="s2"> categories&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Compute asset-land use intersections (the expensive operation)</span>
+    <span class="n">asset_land_use_map</span> <span class="o">=</span> <span class="n">prepare_land_use_impact_data</span><span class="p">(</span>
+        <span class="n">land_use_data</span><span class="p">,</span> 
+        <span class="n">voronoi_gdf</span><span class="o">=</span><span class="n">voronoi_polygons_by_type</span><span class="p">[</span><span class="s1">&#39;msls&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Computed intersections for </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">asset_land_use_map</span><span class="p">)</span><span class="si">}</span><span class="s2"> assets&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Build asset_to_lu with VOLL rates included</span>
+    <span class="n">asset_to_lu</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">aid</span><span class="p">,</span> <span class="n">lu_dict</span> <span class="ow">in</span> <span class="n">asset_land_use_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">asset_to_lu</span><span class="p">[</span><span class="n">aid</span><span class="p">]</span> <span class="o">=</span> <span class="p">[(</span><span class="n">lu_type</span><span class="p">,</span> <span class="n">area</span><span class="p">,</span> <span class="n">voll_per_sqm</span><span class="p">[</span><span class="n">lu_type</span><span class="p">])</span> 
+                             <span class="k">for</span> <span class="n">lu_type</span><span class="p">,</span> <span class="n">area</span> <span class="ow">in</span> <span class="n">lu_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> 
+                             <span class="k">if</span> <span class="n">lu_type</span> <span class="ow">in</span> <span class="n">voll_per_sqm</span><span class="p">]</span>
+    
+    <span class="c1"># Cache the complete lookup</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">asset_to_lu_cache_path</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">asset_to_lu</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved asset_to_lu to cache: </span><span class="si">{</span><span class="n">asset_to_lu_cache_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Output</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">asset_to_lu ready with </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">asset_to_lu</span><span class="p">)</span><span class="si">}</span><span class="s2"> assets&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Computing asset_to_lu from scratch...
+Consumption per square meter by land use [MWh/h/m²]:
+  commercial: 0.0023797518
+  industrial: 0.0066238837
+  public_sector: 0.0024542763
+  transport: 0.0010109956
+  residential: 0.0035054641
+  other: 0.0000023999
+
+VOLL per square meter by land use [€/h/m²]:
+  commercial: 202.115201
+  industrial: 511.113373
+  public_sector: 246.235459
+  transport: 107.078586
+  residential: 121.293896
+  other: 0.000002
+VOLL rates calculated for 6 categories
+Consumption per square meter by land use [MWh/h/m²]:
+  commercial: 0.0023797518
+  industrial: 0.0066238837
+  public_sector: 0.0024542763
+  transport: 0.0010109956
+  residential: 0.0035054641
+  other: 0.0000023999
+
+VOLL per square meter by land use [€/h/m²]:
+  commercial: 202.115201
+  industrial: 511.113373
+  public_sector: 246.235459
+  transport: 107.078586
+  residential: 121.293896
+  other: 0.000002
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\peregrin\AppData\Local\miniforge3\envs\miraca_template\Lib\site-packages\pyogrio\raw.py:198: RuntimeWarning: driver GPKG does not support open option DRIVER
+  return ogr_read(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Computed intersections for 229 assets
+Saved asset_to_lu to cache: c:\repos\UC3\data\interim\interim_test_hazard_timesteps\CBS_Publicatiebestand_BBG2017_v1_sample_asset_to_lu.pkl
+
+asset_to_lu ready with 229 assets
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we visualise the data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plot_population_and_landuse</span><span class="p">(</span>
+    <span class="n">population_above_0</span><span class="p">,</span>
+    <span class="n">sizes</span><span class="o">=</span><span class="n">population_above_0</span><span class="p">[</span><span class="s1">&#39;aantal_inwoners&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">voronoi_gdf</span><span class="o">=</span><span class="n">voronoi_gdf</span><span class="p">,</span>
+    <span class="n">gdf_assets</span><span class="o">=</span><span class="n">gdf_assets</span><span class="p">,</span>
+    <span class="n">asset_land_use_map</span><span class="o">=</span><span class="n">asset_land_use_map</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">voronoi_gdf</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;interim_dir&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="s1">&#39;voronoi_service_areas.geojson&#39;</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;GeoJSON&#39;</span><span class="p">)</span>
+<span class="n">gdf_assets</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;interim_dir&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="s1">&#39;assets_with_voronoi.geojson&#39;</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;GeoJSON&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Land Use Visualization Statistics:
+  Total voronoi polygons: 229
+  Assets with land use data: 227
+  Assets without land use data: 2
+  Assets not in mapping: 0
+  Total in asset_land_use_map: 229
+</pre></div>
+</div>
+<img alt="../../../_images/f80d5a8262dfc346f40c4ec851016eef348aa104ea7317d6734d20760e8b7817.png" src="../../../_images/f80d5a8262dfc346f40c4ec851016eef348aa104ea7317d6734d20760e8b7817.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="adaptation">
+<h2>Adaptation<a class="headerlink" href="#adaptation" title="Permalink to this heading">#</a></h2>
+<p>There are multiple uncertainty sources that should be accounted for: how many repair crews are there actually available? What is the maintenance condition of the substations and how does that affect their probability of breakdown? And perhaps most importantly, what adaptation measures can we adopt in this case?</p>
+<p>As an operational measure, different repair schemes are considered, for example, prioritising repairs for substations that service the most population, or those that service the areas of highest monetary impacts.</p>
+<p>We identify two structural adaptation options</p>
+<ul class="simple">
+<li><p>Elevating substations</p></li>
+<li><p>Increasing drainage for certain areas to reduce the inundation depth</p></li>
+</ul>
+<p>In both cases, the depth of water that the adaptation measure reduces is subtracted from the affected assets. In the case of increasing drainage, the effect on both, substations and roads is considered.</p>
+<p>We use the Exploratory Modelling Analysis (EMA) workbench for this process: <a class="github reference external" href="https://github.com/quaquel/EMAworkbench">quaquel/EMAworkbench</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ema_logging</span><span class="o">.</span><span class="n">log_to_stderr</span><span class="p">(</span><span class="n">ema_logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+
+<span class="c1"># Load caches</span>
+<span class="n">caches</span> <span class="o">=</span> <span class="n">load_simulation_caches</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;interim_dir&#39;</span><span class="p">],</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;hazard_dir&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loaded caches: </span><span class="si">{</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">caches</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">caches</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="ow">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="kc">None</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">max_days</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">execution_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+
+<span class="c1"># Set up EMA model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="s1">&#39;ElectricitySimulation&#39;</span><span class="p">,</span> <span class="n">function</span><span class="o">=</span><span class="n">simulate_asset_damage_recovery_access_breakdown_ema</span><span class="p">)</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">uncertainties</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">IntegerParameter</span><span class="p">(</span><span class="s1">&#39;number_repair_crews&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="n">RealParameter</span><span class="p">(</span><span class="s1">&#39;fragility_param_k&#39;</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">keep_3d_vars</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># No per-asset arrays</span>
+<span class="n">keep_2d_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;flooded&#39;</span><span class="p">,</span> <span class="s1">&#39;operational&#39;</span><span class="p">,</span> <span class="s1">&#39;damage_ratio&#39;</span><span class="p">,</span> <span class="s1">&#39;repair_time&#39;</span><span class="p">]</span>  <span class="c1"># Aggregated</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">constants</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;flood_threshold&#39;</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;gdf_assets&#39;</span><span class="p">,</span> <span class="n">gdf_assets</span><span class="p">),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;hazard_maps&#39;</span><span class="p">,</span> <span class="n">hazard_maps</span><span class="p">[:</span><span class="n">max_days</span><span class="p">]),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;recovery_parameters&#39;</span><span class="p">,</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;recovery_parameters&#39;</span><span class="p">]),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;root_dir&#39;</span><span class="p">,</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;root_dir&#39;</span><span class="p">]),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;verbose&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;timestep_output&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;execution_id&#39;</span><span class="p">,</span> <span class="n">execution_id</span><span class="p">),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;config&#39;</span><span class="p">,</span> <span class="n">config</span><span class="p">),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;major_timestep&#39;</span><span class="p">,</span> <span class="mi">24</span><span class="p">),</span>
+    <span class="c1"># Cache parameters</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;accessibility_cache&#39;</span><span class="p">,</span> <span class="n">caches</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;accessibility_cache&#39;</span><span class="p">)),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;hazard_extraction_cache&#39;</span><span class="p">,</span> <span class="n">caches</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;hazard_extraction_cache&#39;</span><span class="p">)),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;overlap_cache&#39;</span><span class="p">,</span> <span class="n">caches</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;overlap_cache&#39;</span><span class="p">)),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;island_cache&#39;</span><span class="p">,</span> <span class="n">caches</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;island_cache&#39;</span><span class="p">)),</span>
+    <span class="c1"># Impact data</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;asset_population_map&#39;</span><span class="p">,</span> <span class="n">asset_population_map</span><span class="p">),</span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;asset_to_lu&#39;</span><span class="p">,</span> <span class="n">asset_to_lu</span><span class="p">),</span>
+    <span class="c1"># Dimensionality control </span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;keep_3d_vars&#39;</span><span class="p">,</span> <span class="p">[]),</span>  <span class="c1"># </span>
+    <span class="n">Constant</span><span class="p">(</span><span class="s1">&#39;keep_2d_vars&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;flooded&#39;</span><span class="p">,</span> <span class="s1">&#39;operational&#39;</span><span class="p">,</span> <span class="s1">&#39;damage_ratio&#39;</span><span class="p">,</span> <span class="s1">&#39;repair_time&#39;</span><span class="p">])</span> 
+<span class="p">]</span>
+
+
+
+<span class="c1"># Build outcomes list</span>
+<span class="n">outcomes_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Add 3D outcomes (none in this case)</span>
+<span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">keep_3d_vars</span><span class="p">:</span>
+    <span class="n">outcomes_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="n">var</span><span class="p">))</span>
+
+<span class="c1"># Add 2D outcomes (aggregated across assets)</span>
+<span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">keep_2d_vars</span><span class="p">:</span>
+    <span class="n">outcomes_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="n">var</span><span class="p">))</span>
+
+<span class="c1"># Add mandatory 1D outcomes (always present)</span>
+<span class="n">outcomes_list</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span>
+    <span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="s1">&#39;timesteps&#39;</span><span class="p">),</span>
+    <span class="c1"># Population impact outcomes</span>
+    <span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="s1">&#39;affected_population&#39;</span><span class="p">),</span>
+    <span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="s1">&#39;served_population&#39;</span><span class="p">),</span>
+    <span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="s1">&#39;affected_population_ratio&#39;</span><span class="p">),</span>
+    <span class="c1"># Monetary impacts</span>
+    <span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="s1">&#39;monetary_impact_total&#39;</span><span class="p">),</span>
+    <span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="s1">&#39;monetary_impact_residential&#39;</span><span class="p">),</span>
+    <span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="s1">&#39;monetary_impact_commercial&#39;</span><span class="p">),</span>
+    <span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="s1">&#39;monetary_impact_industrial&#39;</span><span class="p">),</span>
+    <span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="s1">&#39;monetary_impact_transport&#39;</span><span class="p">),</span>
+    <span class="n">TimeSeriesOutcome</span><span class="p">(</span><span class="s1">&#39;monetary_impact_public_sector&#39;</span><span class="p">),</span>
+<span class="p">])</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">outcomes</span> <span class="o">=</span> <span class="n">outcomes_list</span>
+
+<span class="c1"># Set up policies</span>
+<span class="n">l1_pumping_area</span> <span class="o">=</span> <span class="n">root_dir</span> <span class="o">/</span> <span class="s1">&#39;data&#39;</span> <span class="o">/</span> <span class="s1">&#39;test_samples&#39;</span> <span class="o">/</span> <span class="s1">&#39;adaptation&#39;</span> <span class="o">/</span> <span class="s1">&#39;l1_adapt_polygon.geojson&#39;</span>
+<span class="n">l2_asset_barriers</span> <span class="o">=</span> <span class="n">root_dir</span> <span class="o">/</span> <span class="s1">&#39;data&#39;</span> <span class="o">/</span> <span class="s1">&#39;test_samples&#39;</span> <span class="o">/</span> <span class="s1">&#39;adaptation&#39;</span> <span class="o">/</span> <span class="s1">&#39;l2_adapt_polygon.geojson&#39;</span>
+
+
+<span class="n">policies</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Policy</span><span class="p">(</span><span class="s1">&#39;population_impacts_policy&#39;</span><span class="p">,</span> <span class="n">repair_crew_assignment_method</span><span class="o">=</span><span class="s1">&#39;population impacts islands&#39;</span><span class="p">),</span>
+    <span class="n">Policy</span><span class="p">(</span><span class="s1">&#39;monetary_impacts_policy&#39;</span><span class="p">,</span> <span class="n">repair_crew_assignment_method</span><span class="o">=</span><span class="s1">&#39;monetary impacts islands&#39;</span><span class="p">),</span>    
+    <span class="n">Policy</span><span class="p">(</span><span class="s1">&#39;lowest_repair_time_islands_policy&#39;</span><span class="p">,</span> <span class="n">repair_crew_assignment_method</span><span class="o">=</span><span class="s1">&#39;lowest repair time islands&#39;</span><span class="p">),</span>
+    <span class="n">Policy</span><span class="p">(</span><span class="s1">&#39;highest_repair_time_islands_policy&#39;</span><span class="p">,</span> <span class="n">repair_crew_assignment_method</span><span class="o">=</span><span class="s1">&#39;highest repair time islands&#39;</span><span class="p">),</span>
+    
+    <span class="c1"># Adaptation </span>
+    <span class="n">Policy</span><span class="p">(</span><span class="s1">&#39;baseline&#39;</span><span class="p">,</span> 
+           <span class="n">repair_crew_assignment_method</span><span class="o">=</span><span class="s1">&#39;monetary impacts islands&#39;</span><span class="p">),</span>
+    
+    <span class="n">Policy</span><span class="p">(</span><span class="s1">&#39;L1_area_pumping + monetary&#39;</span><span class="p">,</span> 
+           <span class="n">repair_crew_assignment_method</span><span class="o">=</span><span class="s1">&#39;monetary impacts islands&#39;</span><span class="p">,</span>
+           <span class="n">l1_area_geojson</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">l1_pumping_area</span><span class="p">),</span>
+           <span class="n">l1_active_timesteps</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">165</span><span class="p">))),</span>
+    
+    <span class="n">Policy</span><span class="p">(</span><span class="s1">&#39;L2_asset_protection + monetary&#39;</span><span class="p">,</span>
+           <span class="n">repair_crew_assignment_method</span><span class="o">=</span><span class="s1">&#39;monetary impacts islands&#39;</span><span class="p">,</span>
+           <span class="n">l2_asset_geojson</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">l2_asset_barriers</span><span class="p">),</span>
+           <span class="n">l2_active_timesteps</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">240</span><span class="p">))),</span>
+    
+    <span class="n">Policy</span><span class="p">(</span><span class="s1">&#39;L1_and_L2_combined + monetary&#39;</span><span class="p">,</span>
+           <span class="n">repair_crew_assignment_method</span><span class="o">=</span><span class="s1">&#39;monetary impacts islands&#39;</span><span class="p">,</span>
+           <span class="n">l1_area_geojson</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">l1_pumping_area</span><span class="p">),</span>
+           <span class="n">l1_active_timesteps</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">165</span><span class="p">)),</span>
+           <span class="n">l2_asset_geojson</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">l2_asset_barriers</span><span class="p">),</span>
+           <span class="n">l2_active_timesteps</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">240</span><span class="p">))),</span>
+<span class="p">]</span>
+
+<span class="k">with</span> <span class="n">SequentialEvaluator</span><span class="p">(</span><span class="n">model</span><span class="p">)</span> <span class="k">as</span> <span class="n">evaluator</span><span class="p">:</span>
+    <span class="n">experiments</span><span class="p">,</span> <span class="n">outcomes</span> <span class="o">=</span> <span class="n">evaluator</span><span class="o">.</span><span class="n">perform_experiments</span><span class="p">(</span>
+        <span class="n">scenarios</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+        <span class="n">policies</span><span class="o">=</span><span class="n">policies</span><span class="p">,</span>
+        <span class="n">uncertainty_sampling</span><span class="o">=</span><span class="n">Samplers</span><span class="o">.</span><span class="n">LHS</span>
+    <span class="p">)</span>
+    
+<span class="n">experiments_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">experiments</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Completed all experiments with execution id </span><span class="si">{</span><span class="n">execution_id</span><span class="si">}</span><span class="s2">. Total runs: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">experiments</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[MainProcess/INFO] performing 50 scenarios * 8 policies * 1 model(s) = 400 experiments
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading simulation caches...
+No accessibility cache found at c:\repos\UC3\data\interim\interim_test_hazard_timesteps\accessibility_cache_test_hazard_timesteps.pkl
+Loaded hazard extraction cache: 10 entries from c:\repos\UC3\data\interim\interim_test_hazard_timesteps\hazard_extraction_cache_test_hazard_timesteps.pkl
+Loaded overlap cache: 9 entries from c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Loaded island cache: 10 entries from c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Loaded caches: [&#39;accessibility_cache&#39;, &#39;hazard_extraction_cache&#39;, &#39;overlap_cache&#39;, &#39;island_cache&#39;]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                  | 0/400 [00:00&lt;?, ?it/s][MainProcess/INFO] performing experiments sequentially
+ 62%|█████████████████████████               | 250/400 [00:32&lt;00:19,  7.79it/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cache miss for island_assignment_EV0_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 11 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV0_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04
+Cache miss for island_assignment_EV1_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 12 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV1_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04
+Computing island lengths...
+Saved overlap cache: 10 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Cache miss for island_assignment_EV2_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 13 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV2_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04
+Computing island lengths...
+Saved overlap cache: 11 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Cache miss for island_assignment_EV3_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 14 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV3_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04
+Computing island lengths...
+Saved overlap cache: 12 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Cache miss for island_assignment_EV4_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 15 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV4_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04
+Computing island lengths...
+Saved overlap cache: 13 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Cache miss for island_assignment_EV5_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 16 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV5_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04
+Computing island lengths...
+Saved overlap cache: 14 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Cache miss for island_assignment_EV6_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 17 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV6_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04
+Computing island lengths...
+Saved overlap cache: 15 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Cache miss for island_assignment_EV7_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 18 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV7_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04
+Computing island lengths...
+Saved overlap cache: 16 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Cache miss for island_assignment_EV8_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+Saved island cache: 19 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV8_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04
+Computing island lengths...
+Saved overlap cache: 17 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+Cache miss for island_assignment_EV9_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
+Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 63%|█████████████████████████               | 251/400 [00:37&lt;03:35,  1.44s/it]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved island cache: 20 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+Successfully computed and cached islands for island_assignment_EV9_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04
+Computing island lengths...
+Saved overlap cache: 18 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████| 400/400 [00:57&lt;00:00,  6.98it/s]
+[MainProcess/INFO] experiments finished
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Completed all experiments with execution id 1764937208. Total runs: 400
+</pre></div>
+</div>
+</div>
+</div>
+<p>And then we visualise the results</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiments_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;policy&#39;</span><span class="p">,</span> <span class="s1">&#39;scenario&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">experiments_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>fragility_param_k</th>
+      <th>number_repair_crews</th>
+      <th>scenario</th>
+      <th>policy</th>
+      <th>model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>350</th>
+      <td>6.500834</td>
+      <td>2</td>
+      <td>0</td>
+      <td>L1_and_L2_combined + monetary</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>351</th>
+      <td>5.452702</td>
+      <td>2</td>
+      <td>1</td>
+      <td>L1_and_L2_combined + monetary</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>352</th>
+      <td>5.564706</td>
+      <td>4</td>
+      <td>2</td>
+      <td>L1_and_L2_combined + monetary</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>353</th>
+      <td>6.112133</td>
+      <td>3</td>
+      <td>3</td>
+      <td>L1_and_L2_combined + monetary</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>354</th>
+      <td>6.992902</td>
+      <td>5</td>
+      <td>4</td>
+      <td>L1_and_L2_combined + monetary</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>5.145508</td>
+      <td>1</td>
+      <td>45</td>
+      <td>population_impacts_policy</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>5.679073</td>
+      <td>3</td>
+      <td>46</td>
+      <td>population_impacts_policy</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>5.985470</td>
+      <td>5</td>
+      <td>47</td>
+      <td>population_impacts_policy</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>5.289725</td>
+      <td>2</td>
+      <td>48</td>
+      <td>population_impacts_policy</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>5.013340</td>
+      <td>5</td>
+      <td>49</td>
+      <td>population_impacts_policy</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+  </tbody>
+</table>
+<p>400 rows × 5 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="comparison-of-adaptation-options">
+<h2>Comparison of adaptation options<a class="headerlink" href="#comparison-of-adaptation-options" title="Permalink to this heading">#</a></h2>
+<p>Here we can see the summary of results for the runs, and the effect each adaptation policy has on the outcomes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">available_outcomes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">outcomes</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+<span class="c1"># Categorize outcomes</span>
+<span class="n">asset_outcomes_3d</span> <span class="o">=</span> <span class="n">keep_3d_vars</span>  
+<span class="n">asset_outcomes_2d</span> <span class="o">=</span> <span class="n">keep_2d_vars</span>  
+<span class="n">population_outcomes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;affected_population&#39;</span><span class="p">,</span> <span class="s1">&#39;served_population&#39;</span><span class="p">,</span> <span class="s1">&#39;affected_population_ratio&#39;</span><span class="p">]</span>
+<span class="n">monetary_outcomes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;monetary_impact_total&#39;</span><span class="p">,</span> <span class="s1">&#39;monetary_impact_residential&#39;</span><span class="p">,</span> 
+                    <span class="s1">&#39;monetary_impact_commercial&#39;</span><span class="p">,</span> <span class="s1">&#39;monetary_impact_industrial&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;monetary_impact_transport&#39;</span><span class="p">,</span> <span class="s1">&#39;monetary_impact_public_sector&#39;</span><span class="p">]</span>
+
+<span class="c1"># Select outcomes to plot</span>
+<span class="n">outcomes_to_show</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Add available asset outcomes (will be aggregated if 3D)</span>
+<span class="k">for</span> <span class="n">outcome</span> <span class="ow">in</span> <span class="n">asset_outcomes_3d</span> <span class="o">+</span> <span class="n">asset_outcomes_2d</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">outcome</span> <span class="ow">in</span> <span class="n">available_outcomes</span><span class="p">:</span>
+        <span class="n">outcomes_to_show</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+
+<span class="c1"># Add population outcomes (already 1D/2D)</span>
+<span class="k">for</span> <span class="n">outcome</span> <span class="ow">in</span> <span class="n">population_outcomes</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">outcome</span> <span class="ow">in</span> <span class="n">available_outcomes</span><span class="p">:</span>
+        <span class="n">outcomes_to_show</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+
+<span class="c1"># Add monetary outcomes (already 1D/2D, cumulative)</span>
+<span class="k">for</span> <span class="n">outcome</span> <span class="ow">in</span> <span class="n">monetary_outcomes</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">outcome</span> <span class="ow">in</span> <span class="n">available_outcomes</span><span class="p">:</span>
+        <span class="n">outcomes_to_show</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">outcome</span><span class="p">)</span>
+
+<span class="c1"># Aggregate only what needs aggregation</span>
+<span class="n">aggregation_info</span> <span class="o">=</span> <span class="n">aggregate_outcomes</span><span class="p">(</span><span class="n">outcomes</span><span class="p">,</span> <span class="n">outcomes_to_show</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aggregation summary:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">aggregation_info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">info</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aggregation summary:
+  flooded: already 2D
+  operational: already 2D
+  damage_ratio: already 2D
+  repair_time: already 2D
+  affected_population: already 2D
+  served_population: already 2D
+  affected_population_ratio: already 2D
+  monetary_impact_total: already 2D
+  monetary_impact_residential: already 2D
+  monetary_impact_commercial: already 2D
+  monetary_impact_industrial: already 2D
+  monetary_impact_transport: already 2D
+  monetary_impact_public_sector: already 2D
+</pre></div>
+</div>
+</div>
+</div>
+<p>And plot it using the lines function, part of the EMA workbench</p>
+<p>To explore the different outputs, some grouping and filtering functionalities are prepared.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configure grouping</span>
+<span class="n">group_by</span> <span class="o">=</span> <span class="s2">&quot;policy&quot;</span>
+<span class="c1"># Alternative groupings (uncomment to use):</span>
+
+<span class="c1"># group_by = &quot;number_repair_crews&quot;</span>
+<span class="c1"># bin_ranges = [(1, 1),(5, 5)]</span>
+<span class="c1"># bin_ranges = create_bins(1, 4, bin_size=1)</span>
+
+<span class="c1"># group_by = &quot;fragility_param_k&quot;</span>
+<span class="c1"># bin_ranges = create_float_bins(5.0, 7.5, 0.5)</span>
+
+<span class="c1"># Configure filters</span>
+<span class="n">var_val</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;number_repair_crews&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="c1"># Example: filter for 2 to 4 repair crews</span>
+           <span class="s1">&#39;policy&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;population_impacts_policy&#39;</span><span class="p">,</span> <span class="s1">&#39;monetary_impacts_policy&#39;</span><span class="p">]}</span>  <span class="c1"># Example: filter for specific policies</span>
+
+<span class="c1"># Filter experiments DataFrame for the desired value</span>
+<span class="n">experiments_sample</span> <span class="o">=</span> <span class="n">sample_experiments</span><span class="p">(</span><span class="n">var_val</span><span class="p">,</span> <span class="n">experiments_df</span><span class="p">)</span>
+<span class="n">sample_indices</span> <span class="o">=</span> <span class="n">experiments_sample</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Filter outcomes for these indices</span>
+<span class="n">outcomes_for_sample</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="n">sample_indices</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">outcomes</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+<span class="n">plot_grouped_outcomes</span><span class="p">(</span>
+    <span class="n">group_by</span><span class="o">=</span><span class="n">group_by</span><span class="p">,</span>
+    <span class="n">experiments_df</span><span class="o">=</span><span class="n">experiments_df</span><span class="p">,</span>
+    <span class="n">outcomes</span><span class="o">=</span><span class="n">outcomes</span><span class="p">,</span>
+    <span class="n">outcomes_to_show</span><span class="o">=</span><span class="n">outcomes_to_show</span><span class="p">,</span>
+    <span class="n">var_val</span><span class="o">=</span><span class="n">var_val</span><span class="p">,</span>
+    <span class="n">bin_ranges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">monetary_outcomes</span><span class="o">=</span><span class="n">monetary_outcomes</span><span class="p">,</span>
+    <span class="n">population_outcomes</span><span class="o">=</span><span class="n">population_outcomes</span><span class="p">,</span>
+    <span class="n">asset_outcomes_3d</span><span class="o">=</span><span class="n">asset_outcomes_3d</span><span class="p">,</span>
+    <span class="n">asset_outcomes_2d</span><span class="o">=</span><span class="n">asset_outcomes_2d</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Configure filters for adaptation policies given a number of repair crews</span>
+<span class="n">var_val</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;number_repair_crews&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="c1"># Example: filter for 3 repair crews</span>
+           <span class="s1">&#39;policy&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;baseline&#39;</span><span class="p">,</span> <span class="s1">&#39;L1_area_pumping + monetary&#39;</span><span class="p">,</span> <span class="s1">&#39;L2_asset_protection + monetary&#39;</span><span class="p">,</span> <span class="s1">&#39;L1_and_L2_combined + monetary&#39;</span><span class="p">]}</span>  <span class="c1"># Example: filter for specific policies</span>
+
+<span class="c1"># Filter experiments DataFrame for the desired value</span>
+<span class="n">experiments_sample</span> <span class="o">=</span> <span class="n">sample_experiments</span><span class="p">(</span><span class="n">var_val</span><span class="p">,</span> <span class="n">experiments_df</span><span class="p">)</span>
+<span class="n">sample_indices</span> <span class="o">=</span> <span class="n">experiments_sample</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Filter outcomes for these indices</span>
+<span class="n">outcomes_for_sample</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="n">sample_indices</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">outcomes</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+<span class="n">plot_grouped_outcomes</span><span class="p">(</span>
+    <span class="n">group_by</span><span class="o">=</span><span class="n">group_by</span><span class="p">,</span>
+    <span class="n">experiments_df</span><span class="o">=</span><span class="n">experiments_df</span><span class="p">,</span>
+    <span class="n">outcomes</span><span class="o">=</span><span class="n">outcomes</span><span class="p">,</span>
+    <span class="n">outcomes_to_show</span><span class="o">=</span><span class="n">outcomes_to_show</span><span class="p">,</span>
+    <span class="n">var_val</span><span class="o">=</span><span class="n">var_val</span><span class="p">,</span>
+    <span class="n">bin_ranges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">monetary_outcomes</span><span class="o">=</span><span class="n">monetary_outcomes</span><span class="p">,</span>
+    <span class="n">population_outcomes</span><span class="o">=</span><span class="n">population_outcomes</span><span class="p">,</span>
+    <span class="n">asset_outcomes_3d</span><span class="o">=</span><span class="n">asset_outcomes_3d</span><span class="p">,</span>
+    <span class="n">asset_outcomes_2d</span><span class="o">=</span><span class="n">asset_outcomes_2d</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Run comparison</span>
+<span class="n">experiments_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">experiments</span><span class="p">)</span>
+<span class="n">compare_adaptation_policies</span><span class="p">(</span><span class="n">experiments_df</span><span class="p">,</span> <span class="n">outcomes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\repos\UC3\src\visualization.py:716: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+  return experiments_df[mask]
+c:\repos\UC3\src\visualization.py:716: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+  return experiments_df[mask]
+</pre></div>
+</div>
+<img alt="../../../_images/97ac6ef1efca350063edbf299dfb12cb9f99ec7d653ba045def61169463ef9b4.png" src="../../../_images/97ac6ef1efca350063edbf299dfb12cb9f99ec7d653ba045def61169463ef9b4.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plot summary:
+
+Grouped by: policy
+Number of bins: N/A
+
+Outcomes plotted:
+  • flooded                                  Asset (2D pre-aggregated)      2D (400 experiments x 240 timesteps)
+  • operational                              Asset (2D pre-aggregated)      2D (400 experiments x 240 timesteps)
+  • damage_ratio                             Asset (2D pre-aggregated)      2D (400 experiments x 240 timesteps)
+  • repair_time                              Asset (2D pre-aggregated)      2D (400 experiments x 240 timesteps)
+  • affected_population                      Population                     2D (400 experiments x 240 timesteps)
+  • served_population                        Population                     2D (400 experiments x 240 timesteps)
+  • affected_population_ratio                Population                     2D (400 experiments x 240 timesteps)
+  • monetary_impact_total                    Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+  • monetary_impact_residential              Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+  • monetary_impact_commercial               Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+  • monetary_impact_industrial               Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+  • monetary_impact_transport                Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+  • monetary_impact_public_sector            Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+
+
+Monetary impact
+
+monetary_impact_total:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €1,865,497,648.75
+  Mean final value: €712,450,573.07
+  Non-zero scenarios: 396 / 400
+
+monetary_impact_residential:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €164,555,665.44
+  Mean final value: €31,778,318.64
+  Non-zero scenarios: 354 / 400
+
+monetary_impact_commercial:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €354,124,549.72
+  Mean final value: €78,215,375.30
+  Non-zero scenarios: 389 / 400
+
+monetary_impact_industrial:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €592,852,717.48
+  Mean final value: €395,297,574.86
+  Non-zero scenarios: 396 / 400
+
+monetary_impact_transport:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €40,388,474.92
+  Mean final value: €12,794,525.92
+  Non-zero scenarios: 338 / 400
+
+monetary_impact_public_sector:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €765,236,628.72
+  Mean final value: €194,364,777.94
+  Non-zero scenarios: 338 / 400
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\repos\UC3\src\visualization.py:716: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+  return experiments_df[mask]
+c:\repos\UC3\src\visualization.py:716: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+  return experiments_df[mask]
+</pre></div>
+</div>
+<img alt="../../../_images/fe0a30b8f4db4b6471021c61e2cf647a4ac8feeb6d401404b898bf403cae8fe4.png" src="../../../_images/fe0a30b8f4db4b6471021c61e2cf647a4ac8feeb6d401404b898bf403cae8fe4.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plot summary:
+
+Grouped by: policy
+Number of bins: N/A
+
+Outcomes plotted:
+  • flooded                                  Asset (2D pre-aggregated)      2D (400 experiments x 240 timesteps)
+  • operational                              Asset (2D pre-aggregated)      2D (400 experiments x 240 timesteps)
+  • damage_ratio                             Asset (2D pre-aggregated)      2D (400 experiments x 240 timesteps)
+  • repair_time                              Asset (2D pre-aggregated)      2D (400 experiments x 240 timesteps)
+  • affected_population                      Population                     2D (400 experiments x 240 timesteps)
+  • served_population                        Population                     2D (400 experiments x 240 timesteps)
+  • affected_population_ratio                Population                     2D (400 experiments x 240 timesteps)
+  • monetary_impact_total                    Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+  • monetary_impact_residential              Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+  • monetary_impact_commercial               Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+  • monetary_impact_industrial               Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+  • monetary_impact_transport                Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+  • monetary_impact_public_sector            Monetary (cumulative)          2D (400 experiments x 240 timesteps)
+
+
+Monetary impact
+
+monetary_impact_total:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €1,865,497,648.75
+  Mean final value: €712,450,573.07
+  Non-zero scenarios: 396 / 400
+
+monetary_impact_residential:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €164,555,665.44
+  Mean final value: €31,778,318.64
+  Non-zero scenarios: 354 / 400
+
+monetary_impact_commercial:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €354,124,549.72
+  Mean final value: €78,215,375.30
+  Non-zero scenarios: 389 / 400
+
+monetary_impact_industrial:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €592,852,717.48
+  Mean final value: €395,297,574.86
+  Non-zero scenarios: 396 / 400
+
+monetary_impact_transport:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €40,388,474.92
+  Mean final value: €12,794,525.92
+  Non-zero scenarios: 338 / 400
+
+monetary_impact_public_sector:
+  Shape: (400, 240)
+  Min final value: €0.00
+  Max final value: €765,236,628.72
+  Mean final value: €194,364,777.94
+  Non-zero scenarios: 338 / 400
+Impact results - all experiments (n=400):
+Number of policies: 8
+
+Monetary Impact Total:
+  - Peak hourly impact: €20,221,026.68
+  - Total impact (mean): €712,450,573.07
+  - Total impact (median): €543,323,380.59
+
+Monetary Impact Residential:
+  - Peak hourly impact: €3,333,248.44
+  - Total impact (mean): €31,778,318.64
+  - Total impact (median): €17,730,402.20
+
+Monetary Impact Commercial:
+  - Peak hourly impact: €3,284,463.09
+  - Total impact (mean): €78,215,375.30
+  - Total impact (median): €18,798,119.12
+
+Monetary Impact Industrial:
+  - Peak hourly impact: €7,163,561.93
+  - Total impact (mean): €395,297,574.86
+  - Total impact (median): €404,725,987.45
+
+Monetary Impact Transport:
+  - Peak hourly impact: €359,786.73
+  - Total impact (mean): €12,794,525.92
+  - Total impact (median): €8,288,186.39
+
+Monetary Impact Public Sector:
+  - Peak hourly impact: €6,079,966.49
+  - Total impact (mean): €194,364,777.94
+  - Total impact (median): €10,811,117.38
+
+
+Adaptation Policy Comparison
+  population_impacts_policy: €818,138,282.04 (±€444,505,204.91)
+  monetary_impacts_policy: €710,609,818.46 (±€388,187,860.82)
+  lowest_repair_time_islands_policy: €880,770,157.63 (±€437,511,254.09)
+  highest_repair_time_islands_policy: €830,065,431.62 (±€480,297,578.83)
+  baseline: €788,052,485.83 (±€433,724,880.03)
+  L1_area_pumping + monetary: €849,010,342.17 (±€443,702,090.83)
+  L2_asset_protection + monetary: €421,793,447.54 (±€123,741,966.37)
+  L1_and_L2_combined + monetary: €401,164,619.23 (±€130,057,322.34)
+
+Detailed results for policy: population_impacts_policy
+-- population_impacts_policy (n=50):
+  Total monetary impact: €818,138,282.04 (±€444,505,204.91)
+  Peak flooded assets: 6.0
+  Min operational assets: 241.3
+  Peak affected population: 408
+
+Detailed results for policy: monetary_impacts_policy
+-- monetary_impacts_policy (n=50):
+  Total monetary impact: €710,609,818.46 (±€388,187,860.82)
+  Peak flooded assets: 6.0
+  Min operational assets: 241.6
+  Peak affected population: 323
+
+Detailed results for policy: lowest_repair_time_islands_policy
+-- lowest_repair_time_islands_policy (n=50):
+  Total monetary impact: €880,770,157.63 (±€437,511,254.09)
+  Peak flooded assets: 6.0
+  Min operational assets: 241.3
+  Peak affected population: 411
+
+Detailed results for policy: highest_repair_time_islands_policy
+-- highest_repair_time_islands_policy (n=50):
+  Total monetary impact: €830,065,431.62 (±€480,297,578.83)
+  Peak flooded assets: 6.0
+  Min operational assets: 241.3
+  Peak affected population: 384
+
+Detailed results for policy: baseline
+-- baseline (n=50):
+  Total monetary impact: €788,052,485.83 (±€433,724,880.03)
+  Peak flooded assets: 6.0
+  Min operational assets: 241.5
+  Peak affected population: 366
+
+Detailed results for policy: L1_area_pumping + monetary
+-- L1_area_pumping + monetary (n=50):
+  Total monetary impact: €849,010,342.17 (±€443,702,090.83)
+  Peak flooded assets: 4.0
+  Min operational assets: 241.8
+  Peak affected population: 211
+
+Detailed results for policy: L2_asset_protection + monetary
+-- L2_asset_protection + monetary (n=50):
+  Total monetary impact: €421,793,447.54 (±€123,741,966.37)
+  Peak flooded assets: 4.0
+  Min operational assets: 242.1
+  Peak affected population: 203
+
+Detailed results for policy: L1_and_L2_combined + monetary
+-- L1_and_L2_combined + monetary (n=50):
+  Total monetary impact: €401,164,619.23 (±€130,057,322.34)
+  Peak flooded assets: 3.0
+  Min operational assets: 242.3
+  Peak affected population: 127
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./usecases/UC3/book"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../../riskassessment/CBAMultiHazard.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Work packages</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../UC4/book/E_E%2BL_ESRM20%2BElsus.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">UC4</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-comments">General Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-subsection">Introduction [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure-subsection">Directory structure [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-characterisation-subsection">Hazard characterisation [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure-assessment-subsection">Exposure Assessment [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-assessment-subsection">Vulnerability Assessment [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-assessment-subsection">Risk Assessment [subsection]</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-simulation-is-not-enough">A single simulation is not enough</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation">Adaptation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-adaptation-options">Comparison of adaptation options</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MIRACA
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
