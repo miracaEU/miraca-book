@@ -14,5 +14,9 @@ dependencies:
   - snkit
   - xarray
   - ipykernel
+  - contextily
+  - rtree
+
   - pip:
+      - ema_workbench
       - -e ./miraca-book/background/RoadFlowModelling
