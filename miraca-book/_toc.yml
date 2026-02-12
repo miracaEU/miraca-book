@@ -20,6 +20,8 @@ parts:
 
   - caption: "Use Cases"
     chapters:
+      - title: Introduction
+        file: /usecases/introduction.md
       - file: usecases/UC3/book/Use_Case_template
       - title: UC4
         file: usecases/UC4/book/E_E+L_ESRM20+Elsus
