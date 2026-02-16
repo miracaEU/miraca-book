@@ -20,7 +20,6 @@ parts:
 
   - caption: "Use Cases"
     chapters:
-      - file: usecases/UC3/book/Use_Case_template
       - title: UC4
         file: usecases/UC4/book/E_E+L_ESRM20+Elsus
 
@@ -37,7 +36,3 @@ parts:
         file: background/MacroImpacts
       - title: Cost-benefit analysis
         file: background/CBAmodelling/book/miraca_cba
-
-  - caption: About
-    chapters:
-      - file: about
