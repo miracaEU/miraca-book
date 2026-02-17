@@ -16,8 +16,11 @@ dependencies:
   - ipykernel
   - contextily
   - rtree
+<<<<<<< Updated upstream
   - rasterstats
   - openpyxl
+=======
+>>>>>>> Stashed changes
   - pip:
       - ema_workbench
       - -e ./miraca-book/background/RoadFlowModelling
