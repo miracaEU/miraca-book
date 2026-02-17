@@ -20,3 +20,9 @@
 [submodule "miraca-book/usecases/UC3"]
 	path = miraca-book/usecases/UC3
 	url = https://github.com/miracaEU/UC3
+[submodule "miraca-book/background/EnergyModelling"]
+	path = miraca-book/background/EnergyModelling
+	url = https://github.com/miracaEU/EnergyModelling
+[submodule "miraca-book/background/Transport-Flows-Allocation"]
+	path = miraca-book/background/Transport-Flows-Allocation
+	url = https://github.com/miracaEU/Transport-Flows-Allocation

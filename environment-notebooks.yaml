@@ -20,3 +20,4 @@ dependencies:
   - pip:
       - ema_workbench
       - -e ./miraca-book/background/RoadFlowModelling
+      - "-e ."

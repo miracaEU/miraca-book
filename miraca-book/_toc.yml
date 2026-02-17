@@ -37,6 +37,14 @@ parts:
         file: background/MacroImpacts
       - title: Cost-benefit analysis
         file: background/CBAmodelling/book/miraca_cba
+      - file: background/EnergyModelling/book/ElectricModel
+      - file: background/Transport-Flows-Allocation/book/intro
+        sections:
+          - file: background/Transport-Flows-Allocation/book/Air_Flow_Assignment
+          - file: background/Transport-Flows-Allocation/book/IWW_Flow_Assignment
+          - file: background/Transport-Flows-Allocation/book/Maritime_Flow_Assignment
+          - file: background/Transport-Flows-Allocation/book/Rail_Flow_Assignment
+          - file: background/Transport-Flows-Allocation/book/Road_Flow_Assignment
 
   - caption: About
     chapters:
