@@ -26,3 +26,9 @@
 [submodule "miraca-book/background/Transport-Flows-Allocation"]
 	path = miraca-book/background/Transport-Flows-Allocation
 	url = https://github.com/miracaEU/Transport-Flows-Allocation
+[submodule "miraca-book/usecases/UC5"]
+	path = miraca-book/usecases/UC5
+	url = https://github.com/miracaEU/UC5
+[submodule "miraca-book/riskassessment/AssetRiskModelling"]
+	path = miraca-book/riskassessment/AssetRiskModelling
+	url = https://github.com/miracaEU/AssetRiskModelling
