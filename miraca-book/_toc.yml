@@ -26,6 +26,8 @@ parts:
         file: usecases/UC3/book/Use_Case_template
       - title: Use Case 4 - Landslides & Earthquake in Greece
         file: usecases/UC4/book/E_E+L_ESRM20+Elsus
+      - title: Use Case 5 - Flooding and heat in Slovenia
+        file: usecases/UC5/Use_Case_5_v1
 
   - caption: Background material
     chapters:
