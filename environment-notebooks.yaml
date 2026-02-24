@@ -20,5 +20,5 @@ dependencies:
   - openpyxl
   - pip:
       - ema_workbench
-      - -e ./miraca-book/background/RoadFlowModelling
       - "-e ."
+      - git+https://github.com/nismod/DAFNI-NIRD.git
