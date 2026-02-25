@@ -32,3 +32,6 @@
 [submodule "miraca-book/riskassessment/AssetRiskModelling"]
 	path = miraca-book/riskassessment/AssetRiskModelling
 	url = https://github.com/miracaEU/AssetRiskModelling
+[submodule "miraca-book/background/AdaptationModelling"]
+	path = miraca-book/background/AdaptationModelling
+	url = https://github.com/miracaEU/AdaptationModelling.git
