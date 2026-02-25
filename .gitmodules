@@ -17,7 +17,7 @@
 [submodule "miraca-book/background/Vulnerability"]
 	path = miraca-book/background/Vulnerability
 	url = https://github.com/miracaEU/Vulnerability_Miraca.git
-[submodule "miraca-book/UC2"]
+[submodule "miraca-book/usecases/UC2"]
 	path = miraca-book/usecases/UC2
 	url = https://github.com/miracaEU/UC2.git
 [submodule "miraca-book/usecases/UC3"]
