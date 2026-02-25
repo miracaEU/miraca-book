@@ -5,23 +5,22 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: The MIRACA approach
+  - caption: The Miraca approach
     chapters:
-      - title: "Pending: Asset-level risk assessment"
-        file: riskassessment/AssetRisk
-      - title: "Pending: Network-level risk assessment"
+      - title: "Description of the framework"
+        file: riskassessment/miraca_approach
+      - title: "Asset-level climate risk assessment"
         file: riskassessment/NetworkRisk
-      - title: Systemic risk assessment
+      - title: "Systemic risk and macroeconomic assessment"
         file: riskassessment/SystemicRisk/book/intro
-        sections:
-          - file: riskassessment/SystemicRisk/book/SystemicRisk_framework
-      - title: "Pending: Cost-benefit appraisal of multi-hazard adaptation"
-        file: riskassessment/CBAMultiHazard
 
-  - caption: "Use Cases"
+
+  - caption: Use Cases
     chapters:
       - title: Introduction
-        file: usecases/introduction.md
+        file: usecases/introduction
+      - title: Use Case 1 - Flooding and windstorms in th TEN-T corridor
+      - title: Use Case 2 - Wildfires in Catalonia
       - title: Use case 3 - Flooding in Zuid-Holland
         file: usecases/UC3/book/Use_Case_template
       - title: Use Case 4 - Landslides & Earthquake in Greece
@@ -29,7 +28,7 @@ parts:
       - title: Use Case 5 - Flooding and heat in Slovenia
         file: usecases/UC5/Use_Case_5_v1
 
-  - caption: Background material
+  - caption: Technical background
     chapters:
       - file: background/Exposure_Miraca/book/intro
         sections:
@@ -50,6 +49,7 @@ parts:
           - file: background/Transport-Flows-Allocation/book/Maritime_Flow_Assignment
           - file: background/Transport-Flows-Allocation/book/Rail_Flow_Assignment
           - file: background/Transport-Flows-Allocation/book/Road_Flow_Assignment
+      - title: "Adaptation strategies to Critical Infrastructure"
 
   - caption: About
     chapters:
