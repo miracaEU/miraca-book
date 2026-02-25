@@ -1,0 +1,839 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Adaptation of CI - A multi-level approach &#8212; MIRACA Technical Workbench</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'background/AdaptationModelling/book/01_direct_damages_baseline';</script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Adaptation of CI - A multi-level approach" href="02_indirect_damages_baseline.html" />
+    <link rel="prev" title="MIRACA CBA Model" href="../../CBAmodelling/book/miraca_cba.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="MIRACA Technical Workbench - Home"/>
+    <img src="../../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="MIRACA Technical Workbench - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Welcome to the Miraca Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">The Miraca approach</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/miraca_approach.html">Description of the framework</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder1.html">Use Case 1 - Flooding and windstorms in the TEN-T corridor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../placeholder2.html">Use Case 2 - Wildfires in Catalonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC3/book/Use_Case_template.html">Use case 3 - Flooding in Zuid-Holland</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC4/book/E_E%2BL_ESRM20%2BElsus.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC5/Use_Case_5_v1.html">Use Case 5 - Flooding and heat in Slovenia</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical background</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Exposure_Miraca/book/intro.html">Exposure database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Exposure_Miraca/book/Exposure_Miraca.html">Exposure database</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Vulnerability/book/Vulnerability_workbench.html">Vulnerability database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Adaptation strategies to Critical Infrastructure</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_indirect_damages_baseline.html">Adaptation of CI - A multi-level approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_batch_process_adaptations.html">Adaptation of CI - A multi-level approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_results_summary.html">Adaptation of CI - A multi-level approach</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About Miraca</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book/issues/new?title=Issue%20on%20page%20%2Fbackground/AdaptationModelling/book/01_direct_damages_baseline.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/background/AdaptationModelling/book/01_direct_damages_baseline.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Adaptation of CI - A multi-level approach</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation-of-ci-direct-damages">Adaptation of CI - Direct damages</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="adaptation-of-ci-a-multi-level-approach">
+<h1>Adaptation of CI - A multi-level approach<a class="headerlink" href="#adaptation-of-ci-a-multi-level-approach" title="Link to this heading">#</a></h1>
+<p>In this example we demonstrate how adaptations of different levels (hazard-, asset-, network- and system-level) can be appraised based on their cost of adaptation, risk, and benefits of adaptation. This notebook covers the calculation of direct damage; subsequent notebooks cover indirect losses, and adaptation appraisal.</p>
+<section id="adaptation-of-ci-direct-damages">
+<h2>Adaptation of CI - Direct damages<a class="headerlink" href="#adaptation-of-ci-direct-damages" title="Link to this heading">#</a></h2>
+<p>The calculation of direct damages is based on the DamageScanner by Koks, et al (2023) <em>(DamageScanner: Python tool for natural hazard damage assessments. Zenodo. <a class="reference external" href="http://doi.org/10.5281/zenodo.2551015">http://doi.org/10.5281/zenodo.2551015</a>)</em></p>
+<p>Data of assets downloaded from OpenStreetMap (OSM) are overlayed with vectorised flood maps (BfG, 2019) and depth-damage functions (Kellerman, et al. 2015) are used to determine the damage to the railway. The direct risk is calculated by using the trapezoidal rule over the damages produced by 3 floods of different return periods. Future risk is calculated using results from the Transformed-Stationary methodology for non-stationary Extreme Value Analysis (Mentaschi et al., 2016). A sample of data is included in the data directory.</p>
+<p>In this demonstration only the rail track is considered, though damage to other asset types can also be calculated using the correct depth-damage functions (see Nirandjan, et al. (2024)).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="c1"># os.chdir(&#39;path/to/book/directory&#39;)</span>
+<span class="c1"># os.chdir(&#39;..&#39;)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">src</span><span class="w"> </span><span class="kn">import</span> <span class="n">damagescanner_rail_track</span> <span class="k">as</span> <span class="n">ds</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">src.ci_adapt_utilities</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/data&#39;</span><span class="p">)</span>
+<span class="n">interim_data_path</span> <span class="o">=</span> <span class="n">data_path</span> <span class="o">/</span> <span class="s1">&#39;interim&#39;</span> <span class="o">/</span> <span class="s1">&#39;collected_flood_runs&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Load default configuration and model parameters</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load configuration with ini file (created running config.py)</span>
+<span class="n">config_file</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/config_ci_adapt_test.ini&#39;</span><span class="p">)</span>
+<span class="n">hazard_type</span><span class="p">,</span> <span class="n">infra_type</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">country_name</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">vulnerability_data</span> <span class="o">=</span> <span class="n">load_config</span><span class="p">(</span><span class="n">config_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Read exposure (assets), vulnerability (depth-damage curves), and hazard data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load asset data (OpenStreetMap contributors. (2023). Germany country dump retrieved from OSM. https://www.openstreetmap.org)</span>
+<span class="n">assets</span><span class="p">,</span> <span class="n">geom_dict</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">rp_spec_priority</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">startup_ci_adapt</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">config_file</span><span class="p">)</span>
+<span class="n">asset_options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;bridge_design_rp&#39;</span><span class="p">:</span><span class="s1">&#39;M&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;tunnel_design_rp&#39;</span><span class="p">:</span><span class="s1">&#39;M&#39;</span><span class="p">}</span>
+
+<span class="c1"># Add buffer to assets to do area intersect and create dictionaries for quicker lookup</span>
+<span class="n">buffered_assets</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">buffer_assets</span><span class="p">(</span><span class="n">assets</span><span class="p">)</span>
+<span class="n">type_dict</span> <span class="o">=</span> <span class="n">assets</span><span class="p">[</span><span class="s1">&#39;asset&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>675 assets loaded.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read vulnerability and maximum damage data (Nirandjan, S., Koks, E. E., Ye, M., Pant, R., Van Ginkel, K. C. H., Aerts, J. C. J. H., &amp; Ward, P. J. (2024). Review article: Physical Vulnerability Database for Critical Infrastructure Multi-Hazard Risk Assessments – A systematic review and data collection. https://doi.org/10.5194/nhess-2023-208)</span>
+<span class="n">curve_types</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;rail&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;F8.1&#39;</span><span class="p">]}</span>
+<span class="n">infra_curves</span><span class="p">,</span> <span class="n">maxdams</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">read_vul_maxdam</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">hazard_type</span><span class="p">,</span> <span class="n">infra_type</span><span class="p">)</span>
+<span class="n">max_damage_tables</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="n">vulnerability_data</span> <span class="o">/</span> <span class="s1">&#39;Table_D3_Costs_V1.1.0.xlsx&#39;</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Cost_Database&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found matching infrastructure curves for: </span><span class="si">{</span><span class="n">infra_type</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found matching infrastructure curves for: rail
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read hazard data (BfG. (2019). BfG OpenData Dataset Überflutungstiefen (Hochwasserrisikomanagement-RL 2. Zyklus 2016-2021) [Dataset]. https://geoportal.bafg.de/download/opendata/ueberflutungstiefen-2019/servicefeed.xml)</span>
+<span class="n">test_haz_path</span> <span class="o">=</span> <span class="n">data_path</span> <span class="o">/</span> <span class="sa">r</span><span class="s1">&#39;Floods\Germany\basin_intersections&#39;</span>
+<span class="n">hazard_data_list</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">read_hazard_data</span><span class="p">(</span><span class="n">test_haz_path</span><span class="p">,</span> <span class="n">hazard_type</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="n">country_name</span><span class="p">,</span> <span class="n">subfolders</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">hazard_data_list</span><span class="p">)</span><span class="si">}</span><span class="s1"> hazard maps.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 9 hazard maps.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Overlay hazard and asset data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate direct damage by asset (Koks. E.E. (2023). DamageScanner: Python tool for natural hazard damage assessments. Zenodo. http://doi.org/10.5281/zenodo.2551015)</span>
+<span class="n">collect_output</span><span class="o">=</span><span class="p">{}</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">single_footprint</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">hazard_data_list</span><span class="p">):</span>
+    <span class="n">hazard_name</span> <span class="o">=</span> <span class="n">single_footprint</span><span class="o">.</span><span class="n">parts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s1"> - Reading hazard map </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1"> of </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">hazard_data_list</span><span class="p">)</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">hazard_name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">collect_output</span><span class="p">[</span><span class="n">hazard_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">process_hazard_data</span><span class="p">(</span><span class="n">single_footprint</span><span class="p">,</span> <span class="n">hazard_type</span><span class="p">,</span> <span class="n">assets</span><span class="p">,</span> <span class="n">interim_data_path</span><span class="p">,</span> <span class="n">infra_curves</span><span class="p">,</span> <span class="n">max_damage_tables</span><span class="p">,</span> <span class="n">curve_types</span><span class="p">,</span> <span class="n">infra_type</span><span class="p">,</span> <span class="n">type_dict</span><span class="p">,</span> <span class="n">geom_dict</span><span class="p">,</span> <span class="n">asset_options</span><span class="o">=</span><span class="n">asset_options</span><span class="p">,</span> <span class="n">rp_spec_priority</span><span class="o">=</span><span class="n">rp_spec_priority</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Error occurred in </span><span class="si">{</span><span class="n">hazard_name</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+<span class="c1"># save the data to pickle files</span>
+<span class="n">collect_output_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">interim_data_path</span><span class="si">}</span><span class="s1">/sample_collected_run.pkl&#39;</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">collect_output</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">collect_output_path</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">collect_output</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No output collected&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-01-06 16:20:07 - Reading hazard map 1 of 9: flood_DERP_RW_H_4326_2080428500
+2025-01-06 16:20:07 - Coarse overlay of hazard map with assets...
+2025-01-06 16:20:10 - Reading hazard map 2 of 9: flood_DERP_RW_H_4326_2080430240
+2025-01-06 16:20:11 - Coarse overlay of hazard map with assets...
+2025-01-06 16:20:57 - Reading hazard map 3 of 9: flood_DERP_RW_H_4326_2080430320
+2025-01-06 16:20:58 - Coarse overlay of hazard map with assets...
+2025-01-06 16:21:56 - Reading hazard map 4 of 9: flood_DERP_RW_L_4326_2080428500
+2025-01-06 16:21:56 - Coarse overlay of hazard map with assets...
+2025-01-06 16:22:13 - Reading hazard map 5 of 9: flood_DERP_RW_L_4326_2080430240
+2025-01-06 16:22:15 - Coarse overlay of hazard map with assets...
+2025-01-06 16:23:36 - Reading hazard map 6 of 9: flood_DERP_RW_L_4326_2080430320
+2025-01-06 16:23:39 - Coarse overlay of hazard map with assets...
+2025-01-06 16:26:48 - Reading hazard map 7 of 9: flood_DERP_RW_M_4326_2080428500
+2025-01-06 16:26:48 - Coarse overlay of hazard map with assets...
+2025-01-06 16:26:54 - Reading hazard map 8 of 9: flood_DERP_RW_M_4326_2080430240
+2025-01-06 16:26:55 - Coarse overlay of hazard map with assets...
+2025-01-06 16:27:59 - Reading hazard map 9 of 9: flood_DERP_RW_M_4326_2080430320
+2025-01-06 16:28:00 - Coarse overlay of hazard map with assets...
+</pre></div>
+</div>
+</div>
+</div>
+<p>Save overlay data to files for reuse in later stages of the analysis</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save the data to csv files</span>
+<span class="n">csv_output_path</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;collected_run_</span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">_%H%M%S&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">.csv&#39;</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">collect_output</span><span class="p">)</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">interim_data_path</span> <span class="o">/</span> <span class="n">csv_output_path</span><span class="p">)</span>
+
+<span class="c1"># Save the data to geojson files</span>
+<span class="n">dd_gdf</span><span class="o">=</span><span class="n">create_dd_gdf</span><span class="p">(</span><span class="n">assets</span><span class="p">,</span> <span class="n">collect_output</span><span class="p">,</span> <span class="n">rp_spec_priority</span><span class="p">,</span> <span class="n">average</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="c1"># dd_gdf.to_file(f&#39;{data_path}/output/impacts/direct_damages.geojson&#39;, driver=&#39;GeoJSON&#39;)</span>
+<span class="n">dd_gdf</span><span class="o">.</span><span class="n">to_parquet</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">data_path</span><span class="si">}</span><span class="s1">/output/impacts/direct_damages.pq&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Visualise direct damages and calculate risk</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot the gdf and color each feature by the value of flood_DERP_RW_L_4326_2080430320_avg or black if no value</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">dd_gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="c1"># If an average is produced, then hazard_map_avg is added as a column, else two columns _lower and _upper are added. Here average is used.</span>
+<span class="n">dd_gdf</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;flood_DERP_RW_L_4326_2080430320_avg&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/b5abd37ad982f788de870c42e667e0666848512fef6eaf95b8bbe11e93b9cd35.png" src="../../../_images/b5abd37ad982f788de870c42e667e0666848512fef6eaf95b8bbe11e93b9cd35.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sum the direct damages for each hazard map</span>
+<span class="n">summed_output</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="c1"># Iterate over the items in the collect_output dictionary</span>
+<span class="k">for</span> <span class="n">hazard_map</span><span class="p">,</span> <span class="n">asset_dict</span> <span class="ow">in</span> <span class="n">collect_output</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="c1"># If the hazard_map and hazard_curve combination is not already in the summed_output dictionary, add it with the sum of the current lower and upper bounds</span>
+    <span class="k">if</span> <span class="n">hazard_map</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">summed_output</span><span class="p">:</span>
+        <span class="n">summed_output</span><span class="p">[</span><span class="n">hazard_map</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">asset_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="nb">sum</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">asset_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>
+    <span class="c1"># If the hazard_map and hazard_curve combination is already in the summed_output dictionary, add the sum of the current lower and upper bounds to the existing ones</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">summed_output</span><span class="p">[</span><span class="n">hazard_map</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">asset_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">summed_output</span><span class="p">[</span><span class="n">hazard_map</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">asset_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the risk as expected annual damages (EAD) by basin</span>
+<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">interim_data_path</span><span class="p">)</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.pkl&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">file</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;overlay&#39;</span><span class="p">)]</span>
+<span class="n">basins_list</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">]))</span>
+<span class="c1"># summed_output  is a dicitonary of with keys as the hazard map names and values as a tuple of the lower and upper bounds of the total damage</span>
+<span class="c1"># example: {&#39;flood_DERP_RW_H_4326_2080411370&#39;: (3706407.631635442, 13355041.119988918),</span>
+
+<span class="c1"># create a dictionary of dictionaries with the basin number as the level 1 key, the category (eg &quot;H&quot;) as the level 2 key and the upper and lower bounds as the values</span>
+<span class="n">basin_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">basin</span> <span class="ow">in</span> <span class="n">basins_list</span><span class="p">:</span>
+    <span class="n">basin_dict</span><span class="p">[</span><span class="n">basin</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">summed_output</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">basin</span><span class="p">)</span> <span class="ow">in</span> <span class="n">key</span><span class="p">:</span>
+            <span class="n">basin_dict</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="n">key</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_RW&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]]</span> <span class="o">=</span> <span class="n">summed_output</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+<span class="n">aggregated_df_by_basin</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">ead_by_ts_by_basin</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Define the baseline return periods </span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Return period definitions for Rhineland Palatinate (DERP) based on the report by Rauthe M, et al. (2020):</span>
+<span class="sd">_H_=10-25y </span>
+<span class="sd">_M_=100y</span>
+<span class="sd">_L_=200y</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">rps_derp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;_H_&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span><span class="s1">&#39;_M_&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span><span class="s1">&#39;_L_&#39;</span><span class="p">:</span> <span class="mi">200</span><span class="p">}</span>
+
+<span class="c1"># Add climate change: calculate the dynamic return periods based on flat increase factors. This value is catchment-specific. </span>
+<span class="n">increase_factor</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;_H_&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s1">&#39;_M_&#39;</span><span class="p">:</span> <span class="mf">4.21</span><span class="p">,</span>
+    <span class="s1">&#39;_L_&#39;</span><span class="p">:</span> <span class="mf">5.86</span>
+<span class="p">}</span> <span class="c1"># Mentaschi et al. (2016)</span>
+<span class="n">num_years</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Define dictionary to relate return periods to regions, in this case Rheinland Palatinate is used</span>
+<span class="n">return_period_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">return_period_dict</span><span class="p">[</span><span class="s1">&#39;DERP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">calculate_dynamic_return_periods</span><span class="p">(</span><span class="n">rps_derp</span><span class="p">,</span> <span class="n">num_years</span><span class="p">,</span> <span class="n">increase_factor</span><span class="p">)</span> 
+
+<span class="k">for</span> <span class="n">basin</span><span class="p">,</span> <span class="n">damage_dict</span> <span class="ow">in</span> <span class="n">basin_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">damage_dict</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">damage_dict</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Total Damage Lower Bound&#39;</span><span class="p">,</span> <span class="s1">&#39;Total Damage Upper Bound&#39;</span><span class="p">])</span>
+    <span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Return Period&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">return_period_dict</span><span class="p">[</span><span class="s1">&#39;DERP&#39;</span><span class="p">][</span><span class="n">index</span><span class="p">]</span> <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+    <span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">]</span> <span class="o">=</span> <span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Return Period&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Probability&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span> <span class="o">/</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Return Period&#39;</span><span class="p">]]</span>
+    <span class="n">probabilities</span> <span class="o">=</span> <span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Probability&#39;</span><span class="p">]</span>
+    <span class="n">dmgs</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">ts</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">probabilities</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>    
+        <span class="n">dmgs_l</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">dmgs_u</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">rp</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">d_rp</span><span class="o">=</span> <span class="n">probabilities</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">rp</span><span class="p">][</span><span class="n">ts</span><span class="p">]</span> <span class="o">-</span> <span class="n">probabilities</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">rp</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="n">ts</span><span class="p">]</span>
+            <span class="n">trap_damage_l</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Total Damage Lower Bound&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">rp</span><span class="p">]</span> <span class="o">+</span> <span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Total Damage Lower Bound&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">rp</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+            <span class="n">trap_damage_u</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Total Damage Upper Bound&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">rp</span><span class="p">]</span> <span class="o">+</span> <span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Total Damage Upper Bound&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">rp</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+            <span class="n">dmgs_l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d_rp</span> <span class="o">*</span> <span class="n">trap_damage_l</span><span class="p">)</span>
+            <span class="n">dmgs_u</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d_rp</span> <span class="o">*</span> <span class="n">trap_damage_u</span><span class="p">)</span>
+        
+        <span class="c1"># Add the portion of damages corresponding to the tails of the distribution</span>
+        <span class="n">d0_rp</span> <span class="o">=</span> <span class="n">probabilities</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">ts</span><span class="p">]</span>
+        <span class="n">damage_l0</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Total Damage Lower Bound&#39;</span><span class="p">])</span>
+        <span class="n">damage_u0</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Total Damage Upper Bound&#39;</span><span class="p">])</span>
+        <span class="n">dmgs_l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d0_rp</span> <span class="o">*</span> <span class="n">damage_l0</span><span class="p">)</span>
+        <span class="n">dmgs_u</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d0_rp</span> <span class="o">*</span> <span class="n">damage_u0</span><span class="p">)</span>
+
+        <span class="n">d_end_rp</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">-</span><span class="n">probabilities</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">ts</span><span class="p">]</span>
+        <span class="n">damage_l_end</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="nb">min</span><span class="p">(</span><span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Total Damage Lower Bound&#39;</span><span class="p">])</span>
+        <span class="n">damage_u_end</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="nb">min</span><span class="p">(</span><span class="n">aggregated_df_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Total Damage Upper Bound&#39;</span><span class="p">])</span>
+        <span class="n">dmgs_l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d_end_rp</span> <span class="o">*</span> <span class="n">damage_l_end</span><span class="p">)</span>
+        <span class="n">dmgs_u</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">d_end_rp</span> <span class="o">*</span> <span class="n">damage_u_end</span><span class="p">)</span>
+
+        <span class="n">dmgs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">sum</span><span class="p">(</span><span class="n">dmgs_l</span><span class="p">),</span> <span class="nb">sum</span><span class="p">(</span><span class="n">dmgs_u</span><span class="p">)))</span>
+    
+    <span class="n">ead_by_ts_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dmgs</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Total Damage Lower Bound&#39;</span><span class="p">,</span> <span class="s1">&#39;Total Damage Upper Bound&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the number of rows and columns based on the number of basins</span>
+<span class="n">num_basins</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ead_by_ts_by_basin</span><span class="p">)</span>
+<span class="n">num_cols</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">num_basins</span><span class="p">)</span>
+<span class="n">num_rows</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">num_basins</span> <span class="o">/</span> <span class="n">num_cols</span><span class="p">))</span>
+
+<span class="c1"># Create subplots with shared x-axis, the calculated number of rows and columns</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">num_rows</span><span class="p">,</span> <span class="n">num_cols</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">num_cols</span><span class="p">,</span> <span class="mi">5</span><span class="o">*</span><span class="n">num_rows</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Flatten axs array for easy iteration</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">axs</span> <span class="o">=</span> <span class="n">axs</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">axs</span> <span class="o">=</span> <span class="p">[</span><span class="n">axs</span><span class="p">]</span>
+
+<span class="n">max_value</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="n">ead_by_ts_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Total Damage Upper Bound&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="k">for</span> <span class="n">basin</span> <span class="ow">in</span> <span class="n">ead_by_ts_by_basin</span><span class="o">.</span><span class="n">keys</span><span class="p">()])</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">basin</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ead_by_ts_by_basin</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">ead_by_ts_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">ead_by_ts_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Total Damage Lower Bound&#39;</span><span class="p">],</span> <span class="n">ead_by_ts_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">][</span><span class="s1">&#39;Total Damage Upper Bound&#39;</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Basin </span><span class="si">{</span><span class="n">basin</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_value</span><span class="p">)</span>  <span class="c1"># Set y-axis lower limit to 0 and upper limit to max_value</span>
+
+<span class="c1"># Hide any unused axes</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_basins</span><span class="p">,</span> <span class="n">num_rows</span> <span class="o">*</span> <span class="n">num_cols</span><span class="p">):</span>
+    <span class="n">axs</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Expected Annual Damages (EAD) over time for each basin&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/02cbbbab17f3b67b28dd5465758614e1c51c2a89158783b0023f77b2156d557a.png" src="../../../_images/02cbbbab17f3b67b28dd5465758614e1c51c2a89158783b0023f77b2156d557a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># with open(f&#39;{interim_data_path}/ead_by_ts_by_basin_direct.pkl&#39;, &#39;wb&#39;) as f:</span>
+<span class="c1">#     pickle.dump(ead_by_ts_by_basin, f)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./background/AdaptationModelling/book"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../CBAmodelling/book/miraca_cba.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">MIRACA CBA Model</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02_indirect_damages_baseline.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Adaptation of CI - A multi-level approach</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation-of-ci-direct-damages">Adaptation of CI - Direct damages</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MIRACA
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
