@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -66,7 +66,7 @@
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Work packages" href="riskassessment/AssetRisk.html" />
+    <link rel="next" title="The Miraca Approach" href="riskassessment/miraca_approach.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -172,15 +172,11 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">The MIRACA approach</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">The Miraca approach</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="riskassessment/AssetRisk.html">Pending: Asset-level risk assessment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="riskassessment/NetworkRisk.html">Pending: Network-level risk assessment</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="riskassessment/SystemicRisk/book/intro.html">Systemic risk assessment</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="riskassessment/SystemicRisk/book/SystemicRisk_framework.html">Systemic risk assessment</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1"><a class="reference internal" href="riskassessment/CBAMultiHazard.html">Pending: Cost-benefit appraisal of multi-hazard adaptation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="riskassessment/miraca_approach.html">Description of the framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="riskassessment/NetworkRisk.html">Asset-level climate risk assessment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="riskassessment/SystemicRisk/book/intro.html">Systemic risk and macroeconomic assessment</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
 <ul class="nav bd-sidenav">
@@ -189,7 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="usecases/UC4/book/E_E%2BL_ESRM20%2BElsus.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usecases/UC5/Use_Case_5_v1.html">Use Case 5 - Flooding and heat in Slovenia</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Background material</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical background</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="background/Exposure_Miraca/book/intro.html">Exposure database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="background/Exposure_Miraca/book/Exposure_Miraca.html">Exposure database</a></li>
@@ -372,7 +368,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -388,6 +386,17 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systemic-risk-approach-for-critical-infrastructure">Systemic Risk Approach for Critical Infrastructure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-approach">The Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-background">Technical background</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -399,42 +408,39 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-miraca-book">
 <h1>Welcome to the Miraca Book<a class="headerlink" href="#welcome-to-the-miraca-book" title="Link to this heading">#</a></h1>
-<p>This is still work in progress to test the setting up of a Jupyter Book.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
+<p>The <strong>M</strong>ultihazard <strong>I</strong>nfrastructure <strong>R</strong>isk <strong>A</strong>ssessment for <strong>C</strong>limate <strong>A</strong>daptation (<strong>MIRACA</strong>) project, is a 4-year Horizon Europe project that catalyses and empowers the implementation of adaptation measures for Critical Infrastructure throughout Europe, by providing public authorities with a toolkit to take evidence-based decisions. The project started in January 2023 and will run until December 2026.</p>
+<section id="systemic-risk-approach-for-critical-infrastructure">
+<h2>Systemic Risk Approach for Critical Infrastructure<a class="headerlink" href="#systemic-risk-approach-for-critical-infrastructure" title="Link to this heading">#</a></h2>
+<p>There is an urgent need to <strong>adapt Europe’s critical infrastructure</strong> to our rapidly changing climate. Public authorities need support to enable them to pinpoint the locations of risks from climate change and develop affordable strategies to enhance infrastructure systems’ resilience. Existing methods for climate risk analysis are not tailored to the complexities of CI, because they do not properly account for systems interdependencies, as well as still containing key data gaps.
+MIRACA builds from standard climate risk assessment framework and extends beyond-state-of-the-art in CI systems analysis and appraisal of the resilience of adaptation solutions.</p>
+</section>
+<section id="the-approach">
+<h2>The Approach<a class="headerlink" href="#the-approach" title="Link to this heading">#</a></h2>
+<p>The MIRACA approach focuses on assessing climate risk beyond the asset-level, expanding it to conceive Critical Infrastructure from a network and systems-level perspective. climate assessment and adaptation strategies.</p>
+<p><svg version="1.1" width="1.2em" height="1.2em" class="sd-octicon sd-octicon-arrow-right" viewBox="0 0 16 16" aria-hidden="true"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"></path></svg> <a class="reference internal" href="riskassessment/miraca_approach.html"><span class="doc std std-doc">Read more about the MIRACA Framework</span></a></p>
+</section>
+<section id="use-cases">
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="Link to this heading">#</a></h2>
+<p>To demonstrate, validate, promote the uptake of the tools and methods developed as part of the project, we have selected five Use Cases, in which local public authorities and relevant CI managers steer and co-develop our decision-support toolkit. These Use Cases cover a variety of locations, infrastructure types and climate hazards.</p>
+<p><svg version="1.1" width="1.2em" height="1.2em" class="sd-octicon sd-octicon-arrow-right" viewBox="0 0 16 16" aria-hidden="true"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"></path></svg> <a class="reference internal" href="usecases/introduction.html"><span class="doc std std-doc">Explore in more detail the different use cases</span></a></p>
+</section>
+<section id="technical-background">
+<h2>Technical background<a class="headerlink" href="#technical-background" title="Link to this heading">#</a></h2>
+<p>The background section focuses on the Miraca Approach by describing in more detail the core developments of the project. These cover methodologies and approaches from the full risk steps, from exposure to adaptation appraisal. These aim to support users to better understand the models and tools of the project.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Miraca workbench is an active, evolving project and will be updated continuously during 2026.</p>
+</div>
+<a class="reference internal image-reference" href="_images/figure_introduction.png"><img alt="_images/figure_introduction.png" src="_images/figure_introduction.png" style="width: 800px;" />
+</a>
+</section>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">The MIRACA approach</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="riskassessment/AssetRisk.html">Pending: Asset-level risk assessment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="riskassessment/NetworkRisk.html">Pending: Network-level risk assessment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="riskassessment/SystemicRisk/book/intro.html">Systemic risk assessment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="riskassessment/CBAMultiHazard.html">Pending: Cost-benefit appraisal of multi-hazard adaptation</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="usecases/introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usecases/UC3/book/Use_Case_template.html">Use case 3 - Flooding in Zuid-Holland</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usecases/UC4/book/E_E%2BL_ESRM20%2BElsus.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usecases/UC5/Use_Case_5_v1.html">Use Case 5 - Flooding and heat in Slovenia</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Background material</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="background/Exposure_Miraca/book/intro.html">Exposure database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="background/Vulnerability/book/Vulnerability_workbench.html">Vulnerability database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="background/RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="background/MacroImpacts.html">Pending: Macroeconomic impacts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="background/CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About Miraca</a></li>
-</ul>
 </div>
 </section>
 
@@ -469,11 +475,11 @@ It does not go in-depth into any particular topic - check out <a class="referenc
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="riskassessment/AssetRisk.html"
+       href="riskassessment/miraca_approach.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Work packages</p>
+        <p class="prev-next-title">The Miraca Approach</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -483,6 +489,25 @@ It does not go in-depth into any particular topic - check out <a class="referenc
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systemic-risk-approach-for-critical-infrastructure">Systemic Risk Approach for Critical Infrastructure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-approach">The Approach</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-cases">Use Cases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-background">Technical background</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

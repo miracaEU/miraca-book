@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -393,12 +393,12 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-comments">General Comments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure">Directory structure</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-characterisation">Hazard characterisation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure-assessment">Exposure Assessment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-assessment">Vulnerability Assessment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-assessment">Risk Assessment</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-subsection">Introduction [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure-subsection">Directory structure [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-characterisation-subsection">Hazard characterisation [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure-assessment-subsection">Exposure Assessment [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-assessment-subsection">Vulnerability Assessment [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-assessment-subsection">Risk Assessment [subsection]</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-simulation-is-not-enough">A single simulation is not enough</a></li>
 </ul>
 </li>
@@ -445,9 +445,6 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading VOLL data from: c:\repos\UC3\data\land_use\voll_lu.csv
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\peregrin\AppData\Local\miniforge3\envs\miraca_template\Lib\site-packages\ema_workbench\em_framework\__init__.py:101: UserWarning: ipyparallel not installed - IpyparalleEvaluator not available
   warnings.warn(&quot;ipyparallel not installed - IpyparalleEvaluator not available&quot;)
 </pre></div>
@@ -458,16 +455,16 @@
 <h2>General Comments<a class="headerlink" href="#general-comments" title="Link to this heading">#</a></h2>
 <p>Note: Hazard, exposure, population, and land use data are too heavy. A sample of the data is provided instead.</p>
 </section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<section id="introduction-subsection">
+<h2>Introduction [subsection]<a class="headerlink" href="#introduction-subsection" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Using pluvial flood data for South Holland, in the Netherlands, we estimate the disruptions on medium-low voltage substations, considering a set number of repair crews to carry out repairs on broken down substations. We availability of the road network is used to determine whether a substation can be reached.</p></li>
 <li><p>This use case is most relevant for electricity distribution network operators</p></li>
 <li><p>The focus of this use case is adaptation under uncertainty in interdependent CI</p></li>
 </ul>
 </section>
-<section id="directory-structure">
-<h2>Directory structure<a class="headerlink" href="#directory-structure" title="Link to this heading">#</a></h2>
+<section id="directory-structure-subsection">
+<h2>Directory structure [subsection]<a class="headerlink" href="#directory-structure-subsection" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up configuration</span>
@@ -535,8 +532,8 @@ WARNING! Values of lost load should be calculated with country-wide VOLL rates, 
 </div>
 </div>
 </section>
-<section id="hazard-characterisation">
-<h2>Hazard characterisation<a class="headerlink" href="#hazard-characterisation" title="Link to this heading">#</a></h2>
+<section id="hazard-characterisation-subsection">
+<h2>Hazard characterisation [subsection]<a class="headerlink" href="#hazard-characterisation-subsection" title="Link to this heading">#</a></h2>
 <p>Data description - Pluvial flooding</p>
 <p>The flood considered in this use case is produced by excess rainfall.
 To produce this data, the assumption of 200 mm of rainfall on previously wet soil over the whole province of South Holland, the Netherlands was considered.</p>
@@ -573,12 +570,12 @@ To produce this data, the assumption of 200 mm of rainfall on previously wet soi
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 10 hazard map files
 </pre></div>
 </div>
-<img alt="../../../_images/8f1782e1b03b50db0ce15cbe642f926ae4cd06f95d50ffbba5f9910799e58831.png" src="../../../_images/8f1782e1b03b50db0ce15cbe642f926ae4cd06f95d50ffbba5f9910799e58831.png" />
+<img alt="../../../_images/6aec9b413eacb8cc1bfe62d48539493c430cc57e3db416ab9ba59d62a27d48b3.png" src="../../../_images/6aec9b413eacb8cc1bfe62d48539493c430cc57e3db416ab9ba59d62a27d48b3.png" />
 </div>
 </div>
 </section>
-<section id="exposure-assessment">
-<h2>Exposure Assessment<a class="headerlink" href="#exposure-assessment" title="Link to this heading">#</a></h2>
+<section id="exposure-assessment-subsection">
+<h2>Exposure Assessment [subsection]<a class="headerlink" href="#exposure-assessment-subsection" title="Link to this heading">#</a></h2>
 <p>The electricity substation data is provided by Stedin, the local DSO, openly.
 The street data used is retrieved from OpenStreetMap</p>
 <div class="cell docutils container">
@@ -603,22 +600,21 @@ Combined total: 245 electricity assets
 Asset types: {&#39;msls&#39;: 245}
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\peregrin\AppData\Local\Temp\ipykernel_29288\2282920993.py:3: UserWarning: Geometry is in a geographic CRS. Results from &#39;centroid&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\peregrin\AppData\Local\Temp\ipykernel_34156\2282920993.py:3: UserWarning: Geometry is in a geographic CRS. Results from &#39;centroid&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
 
   gdf_assets.centroid.to_crs(epsg=4326).plot(ax=ax, color=&#39;green&#39;, markersize=20)
 </pre></div>
 </div>
-<img alt="../../../_images/49d62aaa6d20a47de07e44c6206bd8200f2ee3b242b5b055adcaf7970f9865d5.png" src="../../../_images/49d62aaa6d20a47de07e44c6206bd8200f2ee3b242b5b055adcaf7970f9865d5.png" />
+<img alt="../../../_images/945770339de4a545f63d71f5b190418739eb7a1ba8bd2427ace4c65c38b0ddf9.png" src="../../../_images/945770339de4a545f63d71f5b190418739eb7a1ba8bd2427ace4c65c38b0ddf9.png" />
 </div>
 </div>
 </section>
-<section id="vulnerability-assessment">
-<h2>Vulnerability Assessment<a class="headerlink" href="#vulnerability-assessment" title="Link to this heading">#</a></h2>
+<section id="vulnerability-assessment-subsection">
+<h2>Vulnerability Assessment [subsection]<a class="headerlink" href="#vulnerability-assessment-subsection" title="Link to this heading">#</a></h2>
 <p>We estimate the damage to substations by intersecting the footprints of the substations with flooding depth data and taking the maximum value.</p>
 <p>This value is then related to substation damage using a linearized depth-damage (vulnerability) curve (FEMA, 2003; Sánchez-Muñoz et al., 2020). Substation damage is expressed as a damage ratio between 0 (undamaged) and 1 (fully damaged). Finally, the damage ratio is used to estimate the repair time in hours through a repair time function (Movahednia et al., 2022; Sánchez-Muñoz et al., 2020).</p>
-<p>FEMA. Multi-Hazard Loss Estimation Methodology, Flood Model: Hazus-MH MR4 Technical Manual, 2009th ed.; FEMA: Washington, DC, USA, 2009.</p>
+<p>FEMA. (2003). Multi-hazard Loss Estimation Methodology Earthquake Model HAZUS®MH MR4 Techni cal Manual. http: <a class="reference external" href="//www.civil.ist.utl.pt/%E2%88%BCmlopes/conteudos/DamageStates/hazus_mr4_">//www.civil.ist.utl.pt/∼mlopes/conteudos/DamageStates/hazus_mr4_</a> earthquake_tech_manual.pdf</p>
 <p>Movahednia, M., Kargarian, A., Ozdemir, C. E., &amp; Hagen, S. C. (2022). Power Grid Resilience Enhancement via Protecting Electrical Substations Against Flood Hazards: A Stochastic Framework. IEEE Transactions on Industrial Informatics, 18(3), 2132–2143. <a class="reference external" href="https://doi.org/10.1109/TII.2021.3100079">https://doi.org/10.1109/TII.2021.3100079</a></p>
-<p>Sánchez-Muñoz, D., Domínguez-García, J. L., Martínez-Gomariz, E., Russo, B., Stevens, J., &amp; Pardo, M. (2020). Electrical Grid Risk Assessment Against Flooding in Barcelona and Bristol Cities. Sustainability, 12(4), 1527. <a class="reference external" href="https://doi.org/10.3390/su12041527">https://doi.org/10.3390/su12041527</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -632,8 +628,8 @@ Asset types: {&#39;msls&#39;: 245}
 <span class="p">)</span>
 
 <span class="c1"># Example coefficients for curves</span>
-<span class="n">damage_coeffs</span> <span class="o">=</span> <span class="n">simulation_params</span><span class="p">[</span><span class="s1">&#39;recovery_parameters&#39;</span><span class="p">][</span><span class="s1">&#39;damage_ratio_coefficients&#39;</span><span class="p">]</span>  <span class="c1"># m, n for damage ratio</span>
-<span class="n">repair_coeffs</span> <span class="o">=</span> <span class="n">simulation_params</span><span class="p">[</span><span class="s1">&#39;recovery_parameters&#39;</span><span class="p">][</span><span class="s1">&#39;repair_time_coefficients&#39;</span><span class="p">]</span>  <span class="c1"># a, b, c for repair time</span>
+<span class="n">damage_coeffs</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>  <span class="c1"># m, n for damage ratio</span>
+<span class="n">repair_coeffs</span> <span class="o">=</span> <span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>  <span class="c1"># a, b, c for repair time</span>
 
 <span class="n">hazard_depths</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">damage_ratios</span> <span class="o">=</span> <span class="n">default_damage_ratio_function</span><span class="p">(</span><span class="n">hazard_depths</span><span class="p">,</span> <span class="n">damage_coeffs</span><span class="p">)</span>
@@ -680,12 +676,12 @@ Asset types: {&#39;msls&#39;: 245}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/3fb8f669004b295c44455e2cc07b35bd08786be81e9643216d96cc2d726e4531.png" src="../../../_images/3fb8f669004b295c44455e2cc07b35bd08786be81e9643216d96cc2d726e4531.png" />
+<img alt="../../../_images/bff61d43820ad42c8ba6f06c0971891999a999e9934b426204e889c041b90ae0.png" src="../../../_images/bff61d43820ad42c8ba6f06c0971891999a999e9934b426204e889c041b90ae0.png" />
 </div>
 </div>
 </section>
-<section id="risk-assessment">
-<h2>Risk Assessment<a class="headerlink" href="#risk-assessment" title="Link to this heading">#</a></h2>
+<section id="risk-assessment-subsection">
+<h2>Risk Assessment [subsection]<a class="headerlink" href="#risk-assessment-subsection" title="Link to this heading">#</a></h2>
 <p>The time explicit breakdown and recovery simulation is done iteratively to explore the uncertainty space, with all the deterministic results (e.g. flood overlays, road isolations, etc) being computed once, and catched for future runs.</p>
 <section id="a-single-simulation-is-not-enough">
 <h3>A single simulation is not enough<a class="headerlink" href="#a-single-simulation-is-not-enough" title="Link to this heading">#</a></h3>
@@ -832,8 +828,8 @@ Total crew assignments: 16
 RECOVERY TIMELINE (Daily Summary)
 ========================================
 Day 0: 100.0% operational, 0 flooded, 0 unreachable, 0 damaged.
-Day 1: 98.8% operational, 5 flooded, 0 unreachable, 5 damaged.
-Day 2: 98.8% operational, 6 flooded, 0 unreachable, 6 damaged.
+Day 1: 99.6% operational, 5 flooded, 0 unreachable, 5 damaged.
+Day 2: 98.4% operational, 6 flooded, 0 unreachable, 6 damaged.
 Day 3: 98.8% operational, 5 flooded, 0 unreachable, 5 damaged.
 Day 4: 99.6% operational, 2 flooded, 0 unreachable, 2 damaged.
 Day 5: 99.6% operational, 2 flooded, 0 unreachable, 2 damaged.
@@ -868,11 +864,8 @@ Repair backlog: Start=0.0hrs, Peak=18.1hrs, End=0.0hrs
 </div>
 <p>To understand the extent of the impact, it is necessary to map the population and the value of lost load to each substations. In other words, when a substation fails, it is necessary to understand how many people live in the area it services, and the economic activity that takes place in the area.</p>
 <p>For that, population and land-use information can be of use. The Central Bureau voor de Statistiek (CBS) of the Netherlands provides this information - <a class="reference external" href="https://www.cbs.nl/en-gb">https://www.cbs.nl/en-gb</a></p>
+<p>In this case, a sample of the data is used.</p>
 <p>First, the population data is mapped to service areas:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In this case, a sample of the data is used. Please note that for monetary impacts to be relevant, the country-scale land-use data should be used; when the country-scale data is used, this computation can take several minutes.</p>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">study_area</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">study_area_path</span><span class="p">,</span> <span class="n">driver</span><span class="o">=</span><span class="s1">&#39;GeoJSON&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:28992&quot;</span><span class="p">)</span>
@@ -925,15 +918,19 @@ Repair backlog: Start=0.0hrs, Peak=18.1hrs, End=0.0hrs
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\Users\peregrin\AppData\Local\miniforge3\envs\miraca_template\Lib\site-packages\pyogrio\raw.py:198: RuntimeWarning: driver GeoJSON does not support open option DRIVER
   return ogr_read(
-C:\Users\peregrin\AppData\Local\Temp\ipykernel_29288\3309938487.py:14: DeprecationWarning: The &#39;unary_union&#39; attribute is deprecated, use the &#39;union_all()&#39; method instead.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating Voronoi polygons for service areas...
+Loading population data...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\peregrin\AppData\Local\Temp\ipykernel_34156\3309938487.py:14: DeprecationWarning: The &#39;unary_union&#39; attribute is deprecated, use the &#39;union_all()&#39; method instead.
   boundary=study_area.geometry.unary_union
 c:\Users\peregrin\AppData\Local\miniforge3\envs\miraca_template\Lib\site-packages\pyogrio\raw.py:198: RuntimeWarning: driver GPKG does not support open option DRIVER
   return ogr_read(
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating Voronoi polygons for service areas...
-Loading population data...
-Preparing population impact data...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Preparing population impact data...
 Population assignment: 221/229 polygons with impact values
 Total assigned population: 41969
 Population data prepared for 229 assets
@@ -1062,33 +1059,22 @@ asset_to_lu ready with 229 assets
   Total in asset_land_use_map: 229
 </pre></div>
 </div>
-<img alt="../../../_images/0b40a27c544233316298472e7c7eff15820ea1ae3ec23fc5c1d82019c1898a6f.png" src="../../../_images/0b40a27c544233316298472e7c7eff15820ea1ae3ec23fc5c1d82019c1898a6f.png" />
+<img alt="../../../_images/f80d5a8262dfc346f40c4ec851016eef348aa104ea7317d6734d20760e8b7817.png" src="../../../_images/f80d5a8262dfc346f40c4ec851016eef348aa104ea7317d6734d20760e8b7817.png" />
 </div>
 </div>
 </section>
 </section>
 <section id="adaptation">
 <h2>Adaptation<a class="headerlink" href="#adaptation" title="Link to this heading">#</a></h2>
-<p>There are multiple uncertainty sources that should be accounted for:</p>
-<ul class="simple">
-<li><p>How many repair crews are there actually available?</p></li>
-<li><p>What is the maintenance condition of the substations and how does that affect their probability of breakdown?</p></li>
-<li><p>And perhaps most importantly, what adaptation measures can we adopt in this case?</p></li>
-</ul>
+<p>There are multiple uncertainty sources that should be accounted for: how many repair crews are there actually available? What is the maintenance condition of the substations and how does that affect their probability of breakdown? And perhaps most importantly, what adaptation measures can we adopt in this case?</p>
 <p>As an operational measure, different repair schemes are considered, for example, prioritising repairs for substations that service the most population, or those that service the areas of highest monetary impacts.</p>
-<p>We identify two structural adaptation options:</p>
+<p>We identify two structural adaptation options</p>
 <ul class="simple">
 <li><p>Elevating substations</p></li>
 <li><p>Increasing drainage for certain areas to reduce the inundation depth</p></li>
 </ul>
 <p>In both cases, the depth of water that the adaptation measure reduces is subtracted from the affected assets. In the case of increasing drainage, the effect on both, substations and roads is considered.</p>
 <p>We use the Exploratory Modelling Analysis (EMA) workbench for this process: <a class="github reference external" href="https://github.com/quaquel/EMAworkbench">quaquel/EMAworkbench</a></p>
-<p>Kwakkel, J. H. (2017). The Exploratory Modeling Workbench: An open source toolkit for exploratory modeling, scenario discovery, and (multi-objective) robust decision making. Environmental Modelling &amp; Software, 96, 239–250. <a class="reference external" href="https://doi.org/10.1016/j.envsoft.2017.06.054">https://doi.org/10.1016/j.envsoft.2017.06.054</a></p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>The ‘simulate_asset_damage_recovery_access_breakdown_ema’ function is a wrapper for the ‘simulate_asset_damage_recovery_access_breakdown’ function used in the single assessment run earlier. It is designed to be passed as the function keyword argument for the Model class of the EMA workbench as shown below.</p>
-<p>For this cell, expect long runtimes for large number of scenarios.</p>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ema_logging</span><span class="o">.</span><span class="n">log_to_stderr</span><span class="p">(</span><span class="n">ema_logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
@@ -1224,7 +1210,7 @@ Loaded caches: [&#39;accessibility_cache&#39;, &#39;hazard_extraction_cache&#39;
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                  | 0/400 [00:00&lt;?, ?it/s][MainProcess/INFO] performing experiments sequentially
- 62%|█████████████████████████               | 250/400 [00:26&lt;00:14, 10.15it/s]
+ 62%|█████████████████████████               | 250/400 [00:32&lt;00:19,  7.79it/s]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cache miss for island_assignment_EV0_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
@@ -1281,17 +1267,22 @@ Computing island lengths...
 Saved overlap cache: 17 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
 Cache miss for island_assignment_EV9_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04, computing islands on the fly...
 Loading hazard graph from c:\repos\UC3\data\test_samples\static\output_graph\base_graph_hazard_editted.p
-Saved island cache: 20 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 63%|█████████████████████████               | 251/400 [00:37&lt;03:35,  1.44s/it]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved island cache: 20 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\island_cache_test_hazard_timesteps.pkl
 Successfully computed and cached islands for island_assignment_EV9_ma_0.2_n245_ffb9075134a2efe7ad5cdcebb95eef31_L1f5bd4d04
 Computing island lengths...
 Saved overlap cache: 18 entries to c:\repos\UC3\data\interim\interim_test_hazard_timesteps\overlap_cache_test_hazard_timesteps.pkl
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████| 400/400 [00:45&lt;00:00,  8.73it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████| 400/400 [00:57&lt;00:00,  6.98it/s]
 [MainProcess/INFO] experiments finished
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Completed all experiments with execution id 1771513793. Total runs: 400
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Completed all experiments with execution id 1764937208. Total runs: 400
 </pre></div>
 </div>
 </div>
@@ -1300,15 +1291,11 @@ Saved overlap cache: 18 entries to c:\repos\UC3\data\interim\interim_test_hazard
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">experiments_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;policy&#39;</span><span class="p">,</span> <span class="s1">&#39;scenario&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sample of experiment DataFrame:&quot;</span><span class="p">)</span>
-<span class="n">experiments_df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="n">experiments_df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sample of experiment DataFrame:
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1336,87 +1323,96 @@ Saved overlap cache: 18 entries to c:\repos\UC3\data\interim\interim_test_hazard
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>5.735938</td>
+      <th>350</th>
+      <td>6.500834</td>
       <td>2</td>
       <td>0</td>
+      <td>L1_and_L2_combined + monetary</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>351</th>
+      <td>5.452702</td>
+      <td>2</td>
+      <td>1</td>
+      <td>L1_and_L2_combined + monetary</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>352</th>
+      <td>5.564706</td>
+      <td>4</td>
+      <td>2</td>
+      <td>L1_and_L2_combined + monetary</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>353</th>
+      <td>6.112133</td>
+      <td>3</td>
+      <td>3</td>
+      <td>L1_and_L2_combined + monetary</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>354</th>
+      <td>6.992902</td>
+      <td>5</td>
+      <td>4</td>
+      <td>L1_and_L2_combined + monetary</td>
+      <td>ElectricitySimulation</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>5.145508</td>
+      <td>1</td>
+      <td>45</td>
       <td>population_impacts_policy</td>
       <td>ElectricitySimulation</td>
     </tr>
     <tr>
-      <th>121</th>
-      <td>6.275224</td>
-      <td>1</td>
-      <td>21</td>
-      <td>lowest_repair_time_islands_policy</td>
-      <td>ElectricitySimulation</td>
-    </tr>
-    <tr>
-      <th>130</th>
-      <td>5.011044</td>
-      <td>4</td>
-      <td>30</td>
-      <td>lowest_repair_time_islands_policy</td>
-      <td>ElectricitySimulation</td>
-    </tr>
-    <tr>
-      <th>144</th>
-      <td>5.114600</td>
-      <td>5</td>
-      <td>44</td>
-      <td>lowest_repair_time_islands_policy</td>
-      <td>ElectricitySimulation</td>
-    </tr>
-    <tr>
-      <th>177</th>
-      <td>5.782857</td>
-      <td>2</td>
-      <td>27</td>
-      <td>highest_repair_time_islands_policy</td>
-      <td>ElectricitySimulation</td>
-    </tr>
-    <tr>
-      <th>189</th>
-      <td>7.050600</td>
+      <th>46</th>
+      <td>5.679073</td>
       <td>3</td>
-      <td>39</td>
-      <td>highest_repair_time_islands_policy</td>
+      <td>46</td>
+      <td>population_impacts_policy</td>
       <td>ElectricitySimulation</td>
     </tr>
     <tr>
-      <th>247</th>
-      <td>5.165909</td>
-      <td>2</td>
+      <th>47</th>
+      <td>5.985470</td>
+      <td>5</td>
       <td>47</td>
-      <td>baseline</td>
+      <td>population_impacts_policy</td>
       <td>ElectricitySimulation</td>
     </tr>
     <tr>
-      <th>252</th>
-      <td>6.788225</td>
+      <th>48</th>
+      <td>5.289725</td>
       <td>2</td>
-      <td>2</td>
-      <td>L1_area_pumping + monetary</td>
+      <td>48</td>
+      <td>population_impacts_policy</td>
       <td>ElectricitySimulation</td>
     </tr>
     <tr>
-      <th>275</th>
-      <td>6.746287</td>
-      <td>4</td>
-      <td>25</td>
-      <td>L1_area_pumping + monetary</td>
-      <td>ElectricitySimulation</td>
-    </tr>
-    <tr>
-      <th>299</th>
-      <td>6.964824</td>
-      <td>4</td>
+      <th>49</th>
+      <td>5.013340</td>
+      <td>5</td>
       <td>49</td>
-      <td>L1_area_pumping + monetary</td>
+      <td>population_impacts_policy</td>
       <td>ElectricitySimulation</td>
     </tr>
   </tbody>
 </table>
+<p>400 rows × 5 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -1483,10 +1479,6 @@ Saved overlap cache: 18 entries to c:\repos\UC3\data\interim\interim_test_hazard
 </div>
 <p>And plot it using the lines function, part of the EMA workbench</p>
 <p>To explore the different outputs, some grouping and filtering functionalities are prepared.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Monetary impacts are illustrative unless calculated with country-wide VOLL rates instead of sample data!</p>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Configure grouping</span>
@@ -1561,7 +1553,7 @@ c:\repos\UC3\src\visualization.py:716: UserWarning: Boolean Series key will be r
   return experiments_df[mask]
 </pre></div>
 </div>
-<img alt="../../../_images/cfd5d82cd049a804ea6129c09561d07fbfbd2f8ab4ad5e8faca36e2f3b4fdaf5.png" src="../../../_images/cfd5d82cd049a804ea6129c09561d07fbfbd2f8ab4ad5e8faca36e2f3b4fdaf5.png" />
+<img alt="../../../_images/97ac6ef1efca350063edbf299dfb12cb9f99ec7d653ba045def61169463ef9b4.png" src="../../../_images/97ac6ef1efca350063edbf299dfb12cb9f99ec7d653ba045def61169463ef9b4.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plot summary:
 
 Grouped by: policy
@@ -1588,44 +1580,44 @@ Monetary impact
 monetary_impact_total:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €1,774,238,201.05
-  Mean final value: €710,685,019.26
-  Non-zero scenarios: 397 / 400
+  Max final value: €1,865,497,648.75
+  Mean final value: €712,450,573.07
+  Non-zero scenarios: 396 / 400
 
 monetary_impact_residential:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €166,624,547.26
-  Mean final value: €30,978,615.54
-  Non-zero scenarios: 348 / 400
+  Max final value: €164,555,665.44
+  Mean final value: €31,778,318.64
+  Non-zero scenarios: 354 / 400
 
 monetary_impact_commercial:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €333,579,933.73
-  Mean final value: €80,065,022.59
-  Non-zero scenarios: 386 / 400
+  Max final value: €354,124,549.72
+  Mean final value: €78,215,375.30
+  Non-zero scenarios: 389 / 400
 
 monetary_impact_industrial:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €575,743,197.61
-  Mean final value: €386,402,731.03
+  Max final value: €592,852,717.48
+  Mean final value: €395,297,574.86
   Non-zero scenarios: 396 / 400
 
 monetary_impact_transport:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €39,142,087.05
-  Mean final value: €12,894,435.79
-  Non-zero scenarios: 335 / 400
+  Max final value: €40,388,474.92
+  Mean final value: €12,794,525.92
+  Non-zero scenarios: 338 / 400
 
 monetary_impact_public_sector:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €761,777,071.16
-  Mean final value: €200,344,213.90
-  Non-zero scenarios: 335 / 400
+  Max final value: €765,236,628.72
+  Mean final value: €194,364,777.94
+  Non-zero scenarios: 338 / 400
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c:\repos\UC3\src\visualization.py:716: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
@@ -1634,7 +1626,7 @@ c:\repos\UC3\src\visualization.py:716: UserWarning: Boolean Series key will be r
   return experiments_df[mask]
 </pre></div>
 </div>
-<img alt="../../../_images/13b9651175660055b183b091024990a32d904d75d6eef69729f98adfade1f56b.png" src="../../../_images/13b9651175660055b183b091024990a32d904d75d6eef69729f98adfade1f56b.png" />
+<img alt="../../../_images/fe0a30b8f4db4b6471021c61e2cf647a4ac8feeb6d401404b898bf403cae8fe4.png" src="../../../_images/fe0a30b8f4db4b6471021c61e2cf647a4ac8feeb6d401404b898bf403cae8fe4.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Plot summary:
 
 Grouped by: policy
@@ -1661,143 +1653,143 @@ Monetary impact
 monetary_impact_total:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €1,774,238,201.05
-  Mean final value: €710,685,019.26
-  Non-zero scenarios: 397 / 400
+  Max final value: €1,865,497,648.75
+  Mean final value: €712,450,573.07
+  Non-zero scenarios: 396 / 400
 
 monetary_impact_residential:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €166,624,547.26
-  Mean final value: €30,978,615.54
-  Non-zero scenarios: 348 / 400
+  Max final value: €164,555,665.44
+  Mean final value: €31,778,318.64
+  Non-zero scenarios: 354 / 400
 
 monetary_impact_commercial:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €333,579,933.73
-  Mean final value: €80,065,022.59
-  Non-zero scenarios: 386 / 400
+  Max final value: €354,124,549.72
+  Mean final value: €78,215,375.30
+  Non-zero scenarios: 389 / 400
 
 monetary_impact_industrial:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €575,743,197.61
-  Mean final value: €386,402,731.03
+  Max final value: €592,852,717.48
+  Mean final value: €395,297,574.86
   Non-zero scenarios: 396 / 400
 
 monetary_impact_transport:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €39,142,087.05
-  Mean final value: €12,894,435.79
-  Non-zero scenarios: 335 / 400
+  Max final value: €40,388,474.92
+  Mean final value: €12,794,525.92
+  Non-zero scenarios: 338 / 400
 
 monetary_impact_public_sector:
   Shape: (400, 240)
   Min final value: €0.00
-  Max final value: €761,777,071.16
-  Mean final value: €200,344,213.90
-  Non-zero scenarios: 335 / 400
+  Max final value: €765,236,628.72
+  Mean final value: €194,364,777.94
+  Non-zero scenarios: 338 / 400
 Impact results - all experiments (n=400):
 Number of policies: 8
 
 Monetary Impact Total:
   - Peak hourly impact: €20,221,026.68
-  - Total impact (mean): €710,685,019.26
+  - Total impact (mean): €712,450,573.07
   - Total impact (median): €543,323,380.59
 
 Monetary Impact Residential:
   - Peak hourly impact: €3,333,248.44
-  - Total impact (mean): €30,978,615.54
+  - Total impact (mean): €31,778,318.64
   - Total impact (median): €17,730,402.20
 
 Monetary Impact Commercial:
   - Peak hourly impact: €3,284,463.09
-  - Total impact (mean): €80,065,022.59
-  - Total impact (median): €36,593,992.05
+  - Total impact (mean): €78,215,375.30
+  - Total impact (median): €18,798,119.12
 
 Monetary Impact Industrial:
   - Peak hourly impact: €7,163,561.93
-  - Total impact (mean): €386,402,731.03
-  - Total impact (median): €400,066,560.26
+  - Total impact (mean): €395,297,574.86
+  - Total impact (median): €404,725,987.45
 
 Monetary Impact Transport:
   - Peak hourly impact: €359,786.73
-  - Total impact (mean): €12,894,435.79
+  - Total impact (mean): €12,794,525.92
   - Total impact (median): €8,288,186.39
 
 Monetary Impact Public Sector:
   - Peak hourly impact: €6,079,966.49
-  - Total impact (mean): €200,344,213.90
+  - Total impact (mean): €194,364,777.94
   - Total impact (median): €10,811,117.38
 
 
 Adaptation Policy Comparison
-  population_impacts_policy: €748,916,283.92 (±€410,274,979.14)
-  monetary_impacts_policy: €945,556,224.43 (±€415,724,442.17)
-  lowest_repair_time_islands_policy: €798,108,529.18 (±€443,069,373.38)
-  highest_repair_time_islands_policy: €747,329,936.46 (±€459,319,699.14)
-  baseline: €885,626,598.46 (±€420,950,333.78)
-  L1_area_pumping + monetary: €778,442,355.40 (±€410,482,993.01)
-  L2_asset_protection + monetary: €402,939,653.94 (±€115,492,603.07)
-  L1_and_L2_combined + monetary: €378,560,572.27 (±€142,160,318.60)
+  population_impacts_policy: €818,138,282.04 (±€444,505,204.91)
+  monetary_impacts_policy: €710,609,818.46 (±€388,187,860.82)
+  lowest_repair_time_islands_policy: €880,770,157.63 (±€437,511,254.09)
+  highest_repair_time_islands_policy: €830,065,431.62 (±€480,297,578.83)
+  baseline: €788,052,485.83 (±€433,724,880.03)
+  L1_area_pumping + monetary: €849,010,342.17 (±€443,702,090.83)
+  L2_asset_protection + monetary: €421,793,447.54 (±€123,741,966.37)
+  L1_and_L2_combined + monetary: €401,164,619.23 (±€130,057,322.34)
 
 Detailed results for policy: population_impacts_policy
 -- population_impacts_policy (n=50):
-  Total monetary impact: €748,916,283.92 (±€410,274,979.14)
+  Total monetary impact: €818,138,282.04 (±€444,505,204.91)
   Peak flooded assets: 6.0
-  Min operational assets: 241.5
-  Peak affected population: 342
+  Min operational assets: 241.3
+  Peak affected population: 408
 
 Detailed results for policy: monetary_impacts_policy
 -- monetary_impacts_policy (n=50):
-  Total monetary impact: €945,556,224.43 (±€415,724,442.17)
+  Total monetary impact: €710,609,818.46 (±€388,187,860.82)
   Peak flooded assets: 6.0
-  Min operational assets: 241.3
-  Peak affected population: 389
+  Min operational assets: 241.6
+  Peak affected population: 323
 
 Detailed results for policy: lowest_repair_time_islands_policy
 -- lowest_repair_time_islands_policy (n=50):
-  Total monetary impact: €798,108,529.18 (±€443,069,373.38)
+  Total monetary impact: €880,770,157.63 (±€437,511,254.09)
   Peak flooded assets: 6.0
-  Min operational assets: 241.4
-  Peak affected population: 377
+  Min operational assets: 241.3
+  Peak affected population: 411
 
 Detailed results for policy: highest_repair_time_islands_policy
 -- highest_repair_time_islands_policy (n=50):
-  Total monetary impact: €747,329,936.46 (±€459,319,699.14)
+  Total monetary impact: €830,065,431.62 (±€480,297,578.83)
   Peak flooded assets: 6.0
-  Min operational assets: 241.5
-  Peak affected population: 389
+  Min operational assets: 241.3
+  Peak affected population: 384
 
 Detailed results for policy: baseline
 -- baseline (n=50):
-  Total monetary impact: €885,626,598.46 (±€420,950,333.78)
+  Total monetary impact: €788,052,485.83 (±€433,724,880.03)
   Peak flooded assets: 6.0
-  Min operational assets: 241.3
-  Peak affected population: 394
+  Min operational assets: 241.5
+  Peak affected population: 366
 
 Detailed results for policy: L1_area_pumping + monetary
 -- L1_area_pumping + monetary (n=50):
-  Total monetary impact: €778,442,355.40 (±€410,482,993.01)
+  Total monetary impact: €849,010,342.17 (±€443,702,090.83)
   Peak flooded assets: 4.0
-  Min operational assets: 241.9
-  Peak affected population: 200
+  Min operational assets: 241.8
+  Peak affected population: 211
 
 Detailed results for policy: L2_asset_protection + monetary
 -- L2_asset_protection + monetary (n=50):
-  Total monetary impact: €402,939,653.94 (±€115,492,603.07)
+  Total monetary impact: €421,793,447.54 (±€123,741,966.37)
   Peak flooded assets: 4.0
-  Min operational assets: 242.2
-  Peak affected population: 162
+  Min operational assets: 242.1
+  Peak affected population: 203
 
 Detailed results for policy: L1_and_L2_combined + monetary
 -- L1_and_L2_combined + monetary (n=50):
-  Total monetary impact: €378,560,572.27 (±€142,160,318.60)
+  Total monetary impact: €401,164,619.23 (±€130,057,322.34)
   Peak flooded assets: 3.0
   Min operational assets: 242.3
-  Peak affected population: 126
+  Peak affected population: 127
 </pre></div>
 </div>
 </div>
@@ -1871,12 +1863,12 @@ Detailed results for policy: L1_and_L2_combined + monetary
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-comments">General Comments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure">Directory structure</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-characterisation">Hazard characterisation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure-assessment">Exposure Assessment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-assessment">Vulnerability Assessment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-assessment">Risk Assessment</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-subsection">Introduction [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure-subsection">Directory structure [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-characterisation-subsection">Hazard characterisation [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure-assessment-subsection">Exposure Assessment [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-assessment-subsection">Vulnerability Assessment [subsection]</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-assessment-subsection">Risk Assessment [subsection]</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-simulation-is-not-enough">A single simulation is not enough</a></li>
 </ul>
 </li>
