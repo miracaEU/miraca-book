@@ -14,13 +14,14 @@ parts:
       - title: "Systemic risk and macroeconomic assessment"
         file: riskassessment/SystemicRisk/book/intro
 
-
   - caption: Use Cases
     chapters:
       - title: Introduction
         file: usecases/introduction
       - title: Use Case 1 - Flooding and windstorms in th TEN-T corridor
+        file: placeholder1
       - title: Use Case 2 - Wildfires in Catalonia
+        file: placeholder2
       - title: Use case 3 - Flooding in Zuid-Holland
         file: usecases/UC3/book/Use_Case_template
       - title: Use Case 4 - Landslides & Earthquake in Greece
@@ -50,6 +51,7 @@ parts:
           - file: background/Transport-Flows-Allocation/book/Rail_Flow_Assignment
           - file: background/Transport-Flows-Allocation/book/Road_Flow_Assignment
       - title: "Adaptation strategies to Critical Infrastructure"
+        file: placeholder3
 
   - caption: About
     chapters:
