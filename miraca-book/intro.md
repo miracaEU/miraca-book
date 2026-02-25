@@ -5,7 +5,8 @@
 :align: cente
 ```
 
-The **M**ultihazard **I**nfrastructure **R**isk **A**ssessment for **C**limate **A**daptation (**MIRACA**) project, is a 4-year Horizon Europe project that catalyses and empowers the implementation of adaptation measures for Critical Infrastructure throughout Europe, by providing public authorities with a toolkit to take evidence-based decisions. The project started in January 2023 and will run until December 2026.
+:::{card} The **M**ultihazard **I**nfrastructure **R**isk **A**ssessment for **C**limate **A**daptation (**MIRACA**) project, is a 4-year Horizon Europe project that catalyses and empowers the implementation of adaptation measures for Critical Infrastructure throughout Europe, by providing public authorities with a toolkit to take evidence-based decisions. The project started in January 2023 and will run until December 2026. 
+:::
 
 ## Systemic Risk Approach for Critical Infrastructure
 
