@@ -10,15 +10,13 @@ parts:
       - title: "Description of the framework"
         file: riskassessment/miraca_approach
       - title: "Example: Belgium road infrastructure"
-        sections:
         file: riskassessment/AssetRiskModelling/book/risk_assessment_belgium
-        file: riskassessment/SystemicRisk/book/intro
 
   - caption: Use Cases
     chapters:
       - title: Introduction
         file: usecases/introduction
-      - title: Use Case 1 - Flooding and windstorms in th TEN-T corridor
+      - title: Use Case 1 - Flooding and windstorms in the TEN-T corridor
         file: placeholder1
       - title: Use Case 2 - Wildfires in Catalonia
         file: placeholder2
@@ -48,12 +46,12 @@ parts:
           - file: background/Transport-Flows-Allocation/book/Maritime_Flow_Assignment
           - file: background/Transport-Flows-Allocation/book/Rail_Flow_Assignment
           - file: background/Transport-Flows-Allocation/book/Road_Flow_Assignment
-      - title: "Adaptation strategies to Critical Infrastructure"
+      - file: background/AdaptationModelling/book/01_direct_damages_baseline
+        title: "Adaptation strategies to Critical Infrastructure"
         sections:
-        - file: background/AdaptationModelling/book/01_direct_damages_baseline
-        - file: background/AdaptationModelling/book/02_indirect_damages_baseline
-        - file: background/AdaptationModelling/book/03_batch_process_adaptations
-        - file: background/AdaptationModelling/book/04_results_summary
+          - file: background/AdaptationModelling/book/02_indirect_damages_baseline
+          - file: background/AdaptationModelling/book/03_batch_process_adaptations
+          - file: background/AdaptationModelling/book/04_results_summary
 
 
 
