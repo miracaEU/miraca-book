@@ -38,8 +38,6 @@ parts:
         file: background/Vulnerability/book/Vulnerability_workbench
       - title: Network modelling
         file: background/RoadFlowModelling/book/miraca_roads
-      - title: "Pending: Macroeconomic impacts"
-        file: background/MacroImpacts
       - title: Cost-benefit analysis
         file: background/CBAmodelling/book/miraca_cba
       - file: background/EnergyModelling/book/ElectricModel
