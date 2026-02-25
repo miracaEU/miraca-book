@@ -9,9 +9,9 @@ parts:
     chapters:
       - title: "Description of the framework"
         file: riskassessment/miraca_approach
-      - title: "Asset-level climate risk assessment"
+      - title: "Example: Belgium road infrastructure"
+        sections:
         file: riskassessment/AssetRiskModelling/book/risk_assessment_belgium
-      - title: "Systemic risk and macroeconomic assessment"
         file: riskassessment/SystemicRisk/book/intro
 
   - caption: Use Cases
@@ -49,7 +49,12 @@ parts:
           - file: background/Transport-Flows-Allocation/book/Rail_Flow_Assignment
           - file: background/Transport-Flows-Allocation/book/Road_Flow_Assignment
       - title: "Adaptation strategies to Critical Infrastructure"
-        file: placeholder3
+        - file: background/AdaptationModelling/book/01_direct_damages_baseline
+        - file: background/AdaptationModelling/book/02_indirect_damages_baseline
+        - file: background/AdaptationModelling/book/03_batch_process_adaptations
+        - file: background/AdaptationModelling/book/04_results_summary
+
+
 
   - caption: About
     chapters:
