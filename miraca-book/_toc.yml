@@ -49,6 +49,7 @@ parts:
           - file: background/Transport-Flows-Allocation/book/Rail_Flow_Assignment
           - file: background/Transport-Flows-Allocation/book/Road_Flow_Assignment
       - title: "Adaptation strategies to Critical Infrastructure"
+        sections:
         - file: background/AdaptationModelling/book/01_direct_damages_baseline
         - file: background/AdaptationModelling/book/02_indirect_damages_baseline
         - file: background/AdaptationModelling/book/03_batch_process_adaptations
