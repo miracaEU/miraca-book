@@ -14,5 +14,8 @@ dependencies:
   - snkit
   - xarray
   - ipykernel
+  - openpyxl
   - pip:
       - -e ./miraca-book/background/RoadFlowModelling
+      - -e ./miraca-book/background/CBAmodelling
+      
