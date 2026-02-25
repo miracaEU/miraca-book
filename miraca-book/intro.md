@@ -1,11 +1,10 @@
 # Welcome to the Miraca Book
 
-```{image} /figures/figure_introduction.png
-:width: 800px
-:align: cente
-```
 
-:::{card} The **M**ultihazard **I**nfrastructure **R**isk **A**ssessment for **C**limate **A**daptation (**MIRACA**) project, is a 4-year Horizon Europe project that catalyses and empowers the implementation of adaptation measures for Critical Infrastructure throughout Europe, by providing public authorities with a toolkit to take evidence-based decisions. The project started in January 2023 and will run until December 2026. 
+:::{card} 
+:class: no-bold
+
+The **M**ultihazard **I**nfrastructure **R**isk **A**ssessment for **C**limate **A**daptation (**MIRACA**) project, is a 4-year Horizon Europe project that catalyses and empowers the implementation of adaptation measures for Critical Infrastructure throughout Europe, by providing public authorities with a toolkit to take evidence-based decisions. The project started in January 2023 and will run until December 2026. 
 :::
 
 ## Systemic Risk Approach for Critical Infrastructure
@@ -31,4 +30,9 @@ The background section focuses on the Miraca Approach by describing in more deta
 
 ```{note}
 The Miraca workbench is an active, evolving project and will be updated continuously during 2026.
+```
+
+```{image} /figures/figure_introduction_1.png
+:width: 800px
+:align: cente
 ```
