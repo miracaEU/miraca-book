@@ -3,7 +3,7 @@
 
 title: MIRACA Technical Workbench
 author: MIRACA
-logo: logo.png
+logo: figures/logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -15,6 +15,10 @@ latex:
   latex_documents:
     targetname: book.tex
 
+sphinx:
+  extra_extensions:
+    - sphinx_design
+
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - references.bib
@@ -22,7 +26,7 @@ bibtex_bibfiles:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/miracaEU/miraca-book # Online location of your book
-  path_to_book: docs # Optional path to your book, relative to the repository root
+  path_to_book: miraca-book # Optional path to your book, relative to the repository root
   branch: main # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book

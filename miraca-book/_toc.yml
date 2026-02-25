@@ -5,35 +5,55 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: The MIRACA approach
+  - caption: The Miraca approach
     chapters:
-      - title: "Pending: Asset-level risk assessment"
-        file: riskassessment/AssetRisk
-      - title: "Pending: Network-level risk assessment"
-        file: riskassessment/NetworkRisk
-      - title: Systemic risk assessment
-        file: riskassessment/SystemicRisk/book/intro
-        sections:
-          - file: riskassessment/SystemicRisk/book/SystemicRisk_framework
-      - title: "Pending: Cost-benefit appraisal of multi-hazard adaptation"
-        file: riskassessment/CBAMultiHazard
+      - title: "Description of the framework"
+        file: riskassessment/miraca_approach
+      - title: "Example: Belgium road infrastructure"
+        file: riskassessment/AssetRiskModelling/book/risk_assessment_belgium
 
-  - caption: "Use Cases"
+  - caption: Use Cases
     chapters:
-      - title: UC4
+      - title: Introduction
+        file: usecases/introduction
+      - title: Use Case 1 - Flooding and windstorms in the TEN-T corridor
+        file: placeholder1
+      - title: Use Case 2 - Wildfires in Catalonia
+        file: placeholder2
+      - title: Use case 3 - Flooding in Zuid-Holland
+        file: usecases/UC3/book/Use_Case_template
+      - title: Use Case 4 - Landslides & Earthquake in Greece
         file: usecases/UC4/book/E_E+L_ESRM20+Elsus
+      - title: Use Case 5 - Flooding and heat in Slovenia
+        file: usecases/UC5/Use_Case_5_v1
 
-  - caption: Background material
+  - caption: Technical background
     chapters:
-      - file: background/Exposure_Miraca/book/Exposure_Miraca
+      - file: background/Exposure_Miraca/book/intro
+        sections:
+          - file: background/Exposure_Miraca/book/Exposure_Miraca
       - title: "Vulnerability database"
         file: background/Vulnerability/book/Vulnerability_workbench
       - title: Network modelling
         file: background/RoadFlowModelling/book/miraca_roads
-      - title: "Pending: Macroeconomic impacts"
-        file: background/MacroImpacts
       - title: Cost-benefit analysis
         file: background/CBAmodelling/book/miraca_cba
+      - file: background/EnergyModelling/book/ElectricModel
+      - file: background/Transport-Flows-Allocation/book/intro
+        sections:
+          - file: background/Transport-Flows-Allocation/book/Air_Flow_Assignment
+          - file: background/Transport-Flows-Allocation/book/IWW_Flow_Assignment
+          - file: background/Transport-Flows-Allocation/book/Maritime_Flow_Assignment
+          - file: background/Transport-Flows-Allocation/book/Rail_Flow_Assignment
+          - file: background/Transport-Flows-Allocation/book/Road_Flow_Assignment
+      - file: background/AdaptationModelling/book/01_direct_damages_baseline
+        title: "Adaptation strategies to Critical Infrastructure"
+        sections:
+          - file: background/AdaptationModelling/book/02_indirect_damages_baseline
+          - file: background/AdaptationModelling/book/03_batch_process_adaptations
+          - file: background/AdaptationModelling/book/04_results_summary
+
+
 
   - caption: About
     chapters:

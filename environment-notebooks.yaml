@@ -14,8 +14,14 @@ dependencies:
   - snkit
   - xarray
   - ipykernel
+  - openpyxl   
+  - contextily
+  - rtree
+  - rasterstats
   - openpyxl
   - pip:
+      - ema_workbench
+      - "-e ."
+      - git+https://github.com/nismod/DAFNI-NIRD.git
       - -e ./miraca-book/background/RoadFlowModelling
       - -e ./miraca-book/background/CBAmodelling
-      
