@@ -10,7 +10,7 @@ parts:
       - title: "Description of the framework"
         file: riskassessment/miraca_approach
       - title: "Asset-level climate risk assessment"
-        file: riskassessment/NetworkRisk
+        file: riskassessment/AssetRiskModelling/book/risk_assessment_belgium
       - title: "Systemic risk and macroeconomic assessment"
         file: riskassessment/SystemicRisk/book/intro
 
