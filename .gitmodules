@@ -38,6 +38,6 @@
 [submodule "miraca-book/riskassessment/Systemic-Economic-Impact"]
 	path = miraca-book/riskassessment/Systemic-Economic-Impact
 	url = https://github.com/miracaEU/Systemic-Economic-Impact
-[submodule "miraca-book/miraca-book/background/Transport-Flows-Allocation"]
-	path = miraca-book/miraca-book/background/Transport-Flows-Allocation
+[submodule "miraca-book/background/Transport-Flows-Allocation"]
+	path = miraca-book/background/Transport-Flows-Allocation
 	url = https://github.com/miracaEU/Transport-Flows-Allocation
