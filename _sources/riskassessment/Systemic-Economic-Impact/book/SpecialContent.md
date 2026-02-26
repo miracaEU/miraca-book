@@ -1,4 +1,4 @@
-# Useful markdown tricks
+## Useful markdown tricks
 
 Jupyter book allows for some special formatted boxes e.g. notes, alerts reminders etc. GitHub doesnt render them automatically so the display here can be slightly different.
 

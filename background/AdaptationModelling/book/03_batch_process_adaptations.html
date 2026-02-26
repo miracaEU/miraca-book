@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Adaptation of CI - Calculate adaptations &#8212; MIRACA Technical Workbench</title>
+    <title>Adaptation of CI - A multi-level approach &#8212; MIRACA Technical Workbench</title>
   
   
   
@@ -64,8 +64,8 @@
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Summary" href="04_results_summary.html" />
-    <link rel="prev" title="Adaptation of Critical Infrastructure - Indirect losses" href="02_indirect_damages_baseline.html" />
+    <link rel="next" title="Adaptation of CI - A multi-level approach" href="04_results_summary.html" />
+    <link rel="prev" title="Adaptation of CI - A multi-level approach" href="02_indirect_damages_baseline.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -183,7 +183,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../placeholder1.html">Use Case 1 - Flooding and windstorms in the TEN-T corridor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../placeholder2.html">Use Case 2 - Wildfires in Catalonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC3/book/Use_Case_template.html">Use case 3 - Flooding in Zuid-Holland</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC4/book/E_E%2BL_ESRM20%2BElsus.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC5/Use_Case_5_v1.html">Use Case 5 - Energy</a></li>
 
 
@@ -203,9 +202,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="01_direct_damages_baseline.html">Adaptation strategies to Critical Infrastructure</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="02_indirect_damages_baseline.html">Adaptation of Critical Infrastructure - Indirect losses</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Adaptation of CI - Calculate adaptations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_results_summary.html">Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_indirect_damages_baseline.html">Adaptation of CI - A multi-level approach</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Adaptation of CI - A multi-level approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_results_summary.html">Adaptation of CI - A multi-level approach</a></li>
 </ul>
 </details></li>
 </ul>
@@ -394,7 +393,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Adaptation of CI - Calculate adaptations</h1>
+    <h1>Adaptation of CI - A multi-level approach</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -404,12 +403,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-necessary-packages">Step 1: Load the necessary packages</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-default-configuration-and-model-parameters">Step 2: Load default configuration and model parameters</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-load-asset-data-and-adaptation-cost-data">Step 3: Load asset data and adaptation cost data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-define-adaptations-to-apply">Step 4: Define adaptations to apply</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-apply-adaptations-and-recalculate-risk">Step 5: Apply adaptations and recalculate risk</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-save-raw-output-to-files">Step 6: Save raw output to files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation-of-ci-calculate-adaptations">Adaptation of CI - Calculate adaptations</a></li>
 </ul>
             </nav>
         </div>
@@ -421,26 +415,20 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="adaptation-of-ci-calculate-adaptations">
-<h1>Adaptation of CI - Calculate adaptations<a class="headerlink" href="#adaptation-of-ci-calculate-adaptations" title="Link to this heading">#</a></h1>
-<p>In this notebook, the goal is to calculate the risk of river flooding under a baseline scenario where no adaptation has happened, and compare it with what would the risk be if different adaptation levels were considered. The measures tested in this example range from purely from reducing the hazard (by building floodwall), asset-based adaptatio, network and system:</p>
-<ul class="simple">
-<li><p>Level 1 - <strong>Hazard level adaptation</strong>: Bbuild a floodwall</p></li>
-<li><p>Level 2 - <strong>Asset level adaptation</strong>: Elevate railway as viaduct</p></li>
-<li><p>Level 3 - <strong>Network level adaptation</strong>: Create new bridges between assets</p></li>
-<li><p>Level 4 - <strong>System level adaptation</strong>: Reduce traffic and freight demand</p></li>
-</ul>
-<section id="step-1-load-the-necessary-packages">
-<h2>Step 1: Load the necessary packages<a class="headerlink" href="#step-1-load-the-necessary-packages" title="Link to this heading">#</a></h2>
+  <section id="adaptation-of-ci-a-multi-level-approach">
+<h1>Adaptation of CI - A multi-level approach<a class="headerlink" href="#adaptation-of-ci-a-multi-level-approach" title="Link to this heading">#</a></h1>
+<p>In this example we demonstrate how adaptations of different levels (hazard-, asset-, network- and system-level) can be appraised based on their cost of adaptation, risk, and benefits of adaptation. This notebook covers the calculation of adaptation benefits and and initial costs.</p>
+<section id="adaptation-of-ci-calculate-adaptations">
+<h2>Adaptation of CI - Calculate adaptations<a class="headerlink" href="#adaptation-of-ci-calculate-adaptations" title="Link to this heading">#</a></h2>
+<p><em>Level 1 - Hazard level adaptation (build floodwall)</em></p>
+<p><em>Level 2 - Asset level adaptation (elevate railway as viaduct)</em></p>
+<p><em>Level 3 - Network level adaptation (new bridges between assets)</em></p>
+<p><em>Level 4 - System level adaptation (reduce traffic and freight demand)</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="c1"># os.chdir(&#39;path/to/book/directory&#39;)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()))</span>
+<span class="c1"># os.chdir(&#39;..&#39;)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">src.ci_adapt_utilities</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/data&#39;</span><span class="p">)</span>
@@ -449,9 +437,7 @@
 </div>
 </div>
 </div>
-</section>
-<section id="step-2-load-default-configuration-and-model-parameters">
-<h2>Step 2: Load default configuration and model parameters<a class="headerlink" href="#step-2-load-default-configuration-and-model-parameters" title="Link to this heading">#</a></h2>
+<p>Load default configuration and model parameters</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">config_file</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> <span class="o">+</span> <span class="s1">&#39;/config_ci_adapt_test.ini&#39;</span><span class="p">)</span>
@@ -460,10 +446,7 @@
 </div>
 </div>
 </div>
-</section>
-<section id="step-3-load-asset-data-and-adaptation-cost-data">
-<h2>Step 3: Load asset data and adaptation cost data<a class="headerlink" href="#step-3-load-asset-data-and-adaptation-cost-data" title="Link to this heading">#</a></h2>
-<p>This step includes also loading the results of the Risk Analysis under the baseline scenario, where no adaptation options are considered.</p>
+<p>Load asset data, adaptation cost data, and results from baseline (no adaptation) risk.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">assets</span><span class="p">,</span> <span class="n">geom_dict</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">return_period_dict</span><span class="p">,</span> <span class="n">adaptation_unit_costs</span><span class="p">,</span> <span class="n">rp_spec_priority</span><span class="p">,</span> <span class="n">average_road_cost_per_ton_km</span><span class="p">,</span> <span class="n">average_train_cost_per_ton_km</span><span class="p">,</span> <span class="n">average_train_load_tons</span> <span class="o">=</span> <span class="n">startup_ci_adapt</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">config_file</span><span class="p">)</span>
@@ -492,17 +475,15 @@ Success: only int type values
 </div>
 </div>
 </div>
-</section>
-<section id="step-4-define-adaptations-to-apply">
-<h2>Step 4: Define adaptations to apply<a class="headerlink" href="#step-4-define-adaptations-to-apply" title="Link to this heading">#</a></h2>
+<p>Define adaptations to apply</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">adaptations</span><span class="o">=</span><span class="p">{}</span>
 <span class="n">adaptations</span><span class="p">[</span><span class="s1">&#39;baseline&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;l1_l2_adapt_path&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;added_links&#39;</span><span class="p">:[],</span> <span class="s1">&#39;l4_adapt_path&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
-<span class="n">adaptations</span><span class="p">[</span><span class="s1">&#39;l1_trib&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;l1_l2_adapt_path&#39;</span><span class="p">:</span> <span class="n">data_path</span><span class="o">/</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;input/adaptations/l1_tributary.geojson&#39;</span><span class="p">),</span> <span class="s1">&#39;added_links&#39;</span><span class="p">:[],</span> <span class="s1">&#39;l4_adapt_path&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
-<span class="n">adaptations</span><span class="p">[</span><span class="s1">&#39;l2_trib&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;l1_l2_adapt_path&#39;</span><span class="p">:</span> <span class="n">data_path</span><span class="o">/</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;input/adaptations/l2_tributary.geojson&#39;</span><span class="p">),</span> <span class="s1">&#39;added_links&#39;</span><span class="p">:[],</span> <span class="s1">&#39;l4_adapt_path&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+<span class="n">adaptations</span><span class="p">[</span><span class="s1">&#39;l1_trib&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;l1_l2_adapt_path&#39;</span><span class="p">:</span> <span class="n">data_path</span><span class="o">/</span><span class="sa">r</span><span class="s1">&#39;input\adaptations\l1_tributary.geojson&#39;</span><span class="p">,</span> <span class="s1">&#39;added_links&#39;</span><span class="p">:[],</span> <span class="s1">&#39;l4_adapt_path&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+<span class="n">adaptations</span><span class="p">[</span><span class="s1">&#39;l2_trib&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;l1_l2_adapt_path&#39;</span><span class="p">:</span> <span class="n">data_path</span><span class="o">/</span><span class="sa">r</span><span class="s1">&#39;input\adaptations\l2_tributary.geojson&#39;</span><span class="p">,</span> <span class="s1">&#39;added_links&#39;</span><span class="p">:[],</span> <span class="s1">&#39;l4_adapt_path&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
 <span class="n">adaptations</span><span class="p">[</span><span class="s1">&#39;l3_trib&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;l1_l2_adapt_path&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;added_links&#39;</span><span class="p">:[(</span><span class="mi">219651487</span><span class="p">,</span> <span class="mi">111997047</span><span class="p">)],</span> <span class="s1">&#39;l4_adapt_path&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
-<span class="n">adaptations</span><span class="p">[</span><span class="s1">&#39;l4_trib&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;l1_l2_adapt_path&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;added_links&#39;</span><span class="p">:[],</span> <span class="s1">&#39;l4_adapt_path&#39;</span><span class="p">:</span> <span class="n">data_path</span><span class="o">/</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;input/adaptations/l4_tributary.geojson&#39;</span><span class="p">)}</span>
+<span class="n">adaptations</span><span class="p">[</span><span class="s1">&#39;l4_trib&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;l1_l2_adapt_path&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;added_links&#39;</span><span class="p">:[],</span> <span class="s1">&#39;l4_adapt_path&#39;</span><span class="p">:</span> <span class="n">data_path</span><span class="o">/</span><span class="sa">r</span><span class="s1">&#39;input\adaptations\l4_tributary.geojson&#39;</span><span class="p">}</span>
 
 <span class="c1"># Other adaptations can be added</span>
 <span class="c1"># adaptations[&#39;l1_rhine&#39;] = {&#39;l1_l2_adapt_path&#39;: data_path/r&#39;input\adaptations\l1_rhine.geojson&#39;, &#39;added_links&#39;:[], &#39;l4_adapt_path&#39;: None}</span>
@@ -513,9 +494,7 @@ Success: only int type values
 </div>
 </div>
 </div>
-</section>
-<section id="step-5-apply-adaptations-and-recalculate-risk">
-<h2>Step 5: Apply adaptations and recalculate risk<a class="headerlink" href="#step-5-apply-adaptations-and-recalculate-risk" title="Link to this heading">#</a></h2>
+<p>Apply adaptations and recalculate risk</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Store results in dictionaries</span>
@@ -595,18 +574,23 @@ Success: only int type values
 -  l2_trib
 -  l3_trib
 -  l4_trib
-Adaptation baseline already processed. Skipping.
-Adaptation l1_trib already processed. Skipping.
-Adaptation l2_trib already processed. Skipping.
-Adaptation l3_trib already processed. Skipping.
-Adaptation l4_trib already processed. Skipping.
+Applying adaptation:  fwall_nahe
+Level 1 adaptation
+Applying adaptation:  elev_nahe
+Level 2 adaptation
+Applying adaptation:  elev_nahe
+Level 2 adaptation
+Applying adaptation:  elev_nahe
+Level 2 adaptation
+Applying adaptation: new connection between assets with osm_id  (219651487, 111997047)
+Level 3 adaptation
+Applying adaptation: shifted demand for routes:  [(&#39;node_682&#39;, &#39;node_684&#39;), (&#39;node_684&#39;, &#39;node_682&#39;), (&#39;node_260&#39;, &#39;node_387&#39;), (&#39;node_387&#39;, &#39;node_260&#39;), (&#39;node_387&#39;, &#39;node_434&#39;), (&#39;node_387&#39;, &#39;node_286&#39;), (&#39;node_434&#39;, &#39;node_387&#39;), (&#39;node_286&#39;, &#39;node_387&#39;)]
+Level 4 adaptation
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="step-6-save-raw-output-to-files">
-<h2>Step 6: Save raw output to files<a class="headerlink" href="#step-6-save-raw-output-to-files" title="Link to this heading">#</a></h2>
+<p>Save raw output to files</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Report output dataframe</span>
@@ -635,23 +619,56 @@ Adaptation l4_trib already processed. Skipping.
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>baseline</th>
+      <th>l1_trib</th>
+      <th>l2_trib</th>
+      <th>l3_trib</th>
+      <th>l4_trib</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
+      <td>{'flood_DERP_RW_H_4326_2080428500': {}, 'flood...</td>
+      <td>{'flood_DERP_RW_H_4326_2080428500': {}, 'flood...</td>
+      <td>{'flood_DERP_RW_H_4326_2080428500': {}, 'flood...</td>
+      <td>{'flood_DERP_RW_H_4326_2080428500': {}, 'flood...</td>
+      <td>{'flood_DERP_RW_H_4326_2080428500': {}, 'flood...</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>{'flood_DERP_RW_H_4326_2080428500': 0.0, 'floo...</td>
+      <td>{'flood_DERP_RW_H_4326_2080428500': 0.0, 'floo...</td>
+      <td>{'flood_DERP_RW_H_4326_2080428500': 0.0, 'floo...</td>
+      <td>{'flood_DERP_RW_H_4326_2080428500': 0, 'flood_...</td>
+      <td>{'flood_DERP_RW_H_4326_2080428500': 0, 'flood_...</td>
     </tr>
     <tr>
       <th>2</th>
+      <td>{'flood_DERP_RW_H': 5929015.800494674, 'flood_...</td>
+      <td>{'flood_DERP_RW_H': 5918264.328845593, 'flood_...</td>
+      <td>{'flood_DERP_RW_H': 5427421.889182759, 'flood_...</td>
+      <td>{'flood_DERP_RW_H': 5929015.800494674, 'flood_...</td>
+      <td>{'flood_DERP_RW_H': 5427421.889182759, 'flood_...</td>
     </tr>
     <tr>
       <th>3</th>
+      <td>Empty GeoDataFrame
+Columns: [osm_id, asset, na...</td>
+      <td>osm_id asset         name gauge   elec...</td>
+      <td>osm_id asset                name gauge...</td>
+      <td>Empty GeoDataFrame
+Columns: [osm_id, asset, na...</td>
+      <td>Empty GeoDataFrame
+Columns: [osm_id, asset, na...</td>
     </tr>
     <tr>
       <th>4</th>
+      <td>{'l1': None, 'l2': {}, 'l3': {}}</td>
+      <td>{'l1': {0: 266240624.64660648}, 'l2': {}, 'l3'...</td>
+      <td>{'l1': {}, 'l2': {'flood_DERP_RW_H_4326_208043...</td>
+      <td>{'l1': None, 'l2': {}, 'l3': {(219651487, 1119...</td>
+      <td>{'l1': None, 'l2': {}, 'l3': {}}</td>
     </tr>
   </tbody>
 </table>
@@ -685,6 +702,15 @@ Adaptation l4_trib already processed. Skipping.
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">adaptation_costs_path</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">adaptation_costs</span><span class="p">[</span><span class="n">adapt_id</span><span class="p">],</span> <span class="n">f</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Saved results for adaptation: </span><span class="si">{</span><span class="n">adapt_id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved results for adaptation: baseline
+Saved results for adaptation: l1_trib
+Saved results for adaptation: l2_trib
+Saved results for adaptation: l3_trib
+Saved results for adaptation: l4_trib
 </pre></div>
 </div>
 </div>
@@ -728,7 +754,7 @@ Adaptation l4_trib already processed. Skipping.
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Adaptation of Critical Infrastructure - Indirect losses</p>
+        <p class="prev-next-title">Adaptation of CI - A multi-level approach</p>
       </div>
     </a>
     <a class="right-next"
@@ -736,7 +762,7 @@ Adaptation l4_trib already processed. Skipping.
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Summary</p>
+        <p class="prev-next-title">Adaptation of CI - A multi-level approach</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -757,12 +783,7 @@ Adaptation l4_trib already processed. Skipping.
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-necessary-packages">Step 1: Load the necessary packages</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-default-configuration-and-model-parameters">Step 2: Load default configuration and model parameters</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-load-asset-data-and-adaptation-cost-data">Step 3: Load asset data and adaptation cost data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-define-adaptations-to-apply">Step 4: Define adaptations to apply</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-apply-adaptations-and-recalculate-risk">Step 5: Apply adaptations and recalculate risk</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-save-raw-output-to-files">Step 6: Save raw output to files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation-of-ci-calculate-adaptations">Adaptation of CI - Calculate adaptations</a></li>
 </ul>
   </nav></div>
 
