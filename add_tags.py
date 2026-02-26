@@ -39,7 +39,7 @@ def add_tags_to_notebook(path):
 
 if __name__ == "__main__":
     args = parse_args()
-    notebooks = args.path.glob("*.ipynb")
+    notebooks = args.path.rglob("*.ipynb")
     # Search through each notebook and look for the text, add a tag if necessary
     for nb in notebooks:
         add_tags_to_notebook(nb)
