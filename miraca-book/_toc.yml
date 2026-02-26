@@ -10,13 +10,13 @@ parts:
       - title: "Description of the framework"
         file: riskassessment/miraca_approach
       - title: "Example: Belgium road infrastructure"
-        file: /riskassessment/example.md
+        file: riskassessment/example
         expanded: true
         sections:
-          -file: riskassessment/AssetRiskModelling/book/risk_assessment_belgium
-           title: "Climate Risk Assessment"
-          -file: riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium
-           title: "Systemic Economic impacts"
+          - file: riskassessment/AssetRiskModelling/book/risk_assessment_belgium
+            title: "Climate Risk Assessment"
+          - file: riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium
+            title: "Systemic Economic impacts"
 
   - caption: Use Cases
     chapters:
