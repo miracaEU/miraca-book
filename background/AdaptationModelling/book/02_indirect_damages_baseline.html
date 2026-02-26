@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Adaptation of CI - A multi-level approach &#8212; MIRACA Technical Workbench</title>
+    <title>Adaptation of Critical Infrastructure - Indirect losses &#8212; MIRACA Technical Workbench</title>
   
   
   
@@ -64,8 +64,8 @@
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Adaptation of CI - A multi-level approach" href="03_batch_process_adaptations.html" />
-    <link rel="prev" title="Adaptation of CI - A multi-level approach" href="01_direct_damages_baseline.html" />
+    <link rel="next" title="Adaptation of CI - Calculate adaptations" href="03_batch_process_adaptations.html" />
+    <link rel="prev" title="Adaptation of Critical Infrastructure - Direct damages" href="01_direct_damages_baseline.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -172,8 +172,7 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">The Miraca approach</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/miraca_approach.html">Description of the framework</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium.html">Systemic Economic impacts</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
 </ul>
@@ -183,6 +182,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../placeholder1.html">Use Case 1 - Flooding and windstorms in the TEN-T corridor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../placeholder2.html">Use Case 2 - Wildfires in Catalonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC3/book/Use_Case_template.html">Use case 3 - Flooding in Zuid-Holland</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC4/book/E_E%2BL_ESRM20%2BElsus.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC5/Use_Case_5_v1.html">Use Case 5 - Energy</a></li>
 
 
@@ -195,16 +195,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Exposure_Miraca/book/Exposure_Miraca.html">Exploring the Critical Infrastructure Exposure Database</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Vulnerability/book/intro.html">Vulnerability Database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../Vulnerability/book/Vulnerability_workbench.html">Explore the Vulnerability database</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Vulnerability/book/Vulnerability_workbench.html">Vulnerability database</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="01_direct_damages_baseline.html">Adaptation strategies to Critical Infrastructure</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Adaptation of CI - A multi-level approach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03_batch_process_adaptations.html">Adaptation of CI - A multi-level approach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_results_summary.html">Adaptation of CI - A multi-level approach</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Adaptation of Critical Infrastructure - Indirect losses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_batch_process_adaptations.html">Adaptation of CI - Calculate adaptations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_results_summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -393,7 +390,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Adaptation of CI - A multi-level approach</h1>
+    <h1>Adaptation of Critical Infrastructure - Indirect losses</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -403,7 +400,19 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation-of-ci-indirect-losses">Adaptation of CI - Indirect losses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-necessary-packages">Step 1: Load the necessary packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-default-configuration-and-model-parameters">Step 2: Load default configuration and model parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-read-exposure-assets-vulnerability-curves-and-hazard-data">Step 3: Read exposure assets, vulnerability curves and hazard data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-route-data-for-the-area-of-interest">Load the route data for the area of interest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-rail-network-and-graph">Create the rail network and graph</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-weights-based-on-railway-length-and-find-the-shortest-paths-for-all-each-origin-destination-pair">Add weights based on railway length and find the shortest paths for all each origin/destination pair</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-parallel-virtual-graph-to-reroute-isolated-trips">Create parallel “virtual” graph to reroute isolated trips</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-results-for-basin-floods">Save results for basin floods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-find-the-indirect-impacts-from-river-mainstem-flooding">Step 4: Find the indirect impacts from river mainstem flooding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculate-risk">Step 5: Calculate risk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-visualise-indirect-losses">Step 6: Visualise indirect losses</a></li>
 </ul>
             </nav>
         </div>
@@ -415,15 +424,14 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="adaptation-of-ci-a-multi-level-approach">
-<h1>Adaptation of CI - A multi-level approach<a class="headerlink" href="#adaptation-of-ci-a-multi-level-approach" title="Link to this heading">#</a></h1>
-<p>In this example we demonstrate how adaptations of different levels (hazard-, asset-, network- and system-level) can be appraised based on their cost of adaptation, risk, and benefits of adaptation. This notebook covers the calculation of indirect losses; there is also a notebook for direct damages and a subsequent notebooks for adaptation appraisal.</p>
-<section id="adaptation-of-ci-indirect-losses">
-<h2>Adaptation of CI - Indirect losses<a class="headerlink" href="#adaptation-of-ci-indirect-losses" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="adaptation-of-critical-infrastructure-indirect-losses">
+<h1>Adaptation of Critical Infrastructure - Indirect losses<a class="headerlink" href="#adaptation-of-critical-infrastructure-indirect-losses" title="Link to this heading">#</a></h1>
+<p>This notebook is a continuatio of the Assessment of <a class="reference external" href="https://miracaeu.github.io/miraca-book/background/AdaptationModelling/book/02_indirect_damages_baseline.html">Adaptation of Critical Infrastructure - Direct Damages</a>.</p>
 <p>Using the hazard and assets overlay of the direct damages notebook, this notebook shows how historical freight volumes and passenger ridership are used to calculate indirect losses. The freight losses are calculated using the incremental cost of shipping by road vs rail, while the passenger losses are calculated based on the ticketing revenue loss. Freight and passenger ridership data from Eurostat are used.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ADDITIONAL DEPENDENCIES</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDDEN CELL</span>
+<span class="c1">#ADDITIONAL DEPENDENCIES</span>
 <span class="c1"># !pip install triangle</span>
 <span class="c1"># !pip install rasterio</span>
 <span class="c1"># !pip install geopy</span>
@@ -432,11 +440,17 @@
 </div>
 </div>
 </div>
+<section id="step-1-load-the-necessary-packages">
+<h2>Step 1: Load the necessary packages<a class="headerlink" href="#step-1-load-the-necessary-packages" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="c1"># os.chdir(&#39;path/to/book/directory&#39;)</span>
-<span class="c1"># os.chdir(&#39;..&#39;)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()))</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">src.ci_adapt_utilities</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
@@ -446,7 +460,9 @@
 </div>
 </div>
 </div>
-<p>Load default configuration and model parameters</p>
+</section>
+<section id="step-2-load-default-configuration-and-model-parameters">
+<h2>Step 2: Load default configuration and model parameters<a class="headerlink" href="#step-2-load-default-configuration-and-model-parameters" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load configuration with ini file (created running config.py)</span>
@@ -456,7 +472,9 @@
 </div>
 </div>
 </div>
-<p>Load asset data and transport cost data</p>
+</section>
+<section id="step-3-read-exposure-assets-vulnerability-curves-and-hazard-data">
+<h2>Step 3: Read exposure assets, vulnerability curves and hazard data<a class="headerlink" href="#step-3-read-exposure-assets-vulnerability-curves-and-hazard-data" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">assets</span><span class="p">,</span> <span class="n">geom_dict</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">return_period_dict</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">rp_spec_priority</span><span class="p">,</span> <span class="n">average_road_cost_per_ton_km</span><span class="p">,</span> <span class="n">average_train_cost_per_ton_km</span><span class="p">,</span> <span class="n">average_train_load_tons</span> <span class="o">=</span> <span class="n">startup_ci_adapt</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">config_file</span><span class="p">)</span>
@@ -472,11 +490,12 @@
 </div>
 </div>
 </div>
-<p>Load the route data for the area of interest</p>
+<section id="load-the-route-data-for-the-area-of-interest">
+<h3>Load the route data for the area of interest<a class="headerlink" href="#load-the-route-data-for-the-area-of-interest" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load route data</span>
-<span class="n">route_data_source</span><span class="o">=</span><span class="n">data_path</span><span class="o">/</span><span class="sa">r</span><span class="s1">&#39;input\traffic\NET_SEGMENTS_EU_EFTA_Filtered_0.xlsx&#39;</span>
+<span class="n">route_data_source</span><span class="o">=</span><span class="n">data_path</span><span class="o">/</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;input/traffic/NET_SEGMENTS_EU_EFTA_Filtered_0.xlsx&#39;</span><span class="p">)</span>
 <span class="n">route_data</span><span class="o">=</span><span class="n">prepare_route_data</span><span class="p">(</span><span class="n">route_data_source</span><span class="p">,</span> <span class="n">assets</span><span class="p">)</span>
 <span class="n">route_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
@@ -526,8 +545,8 @@
       <td>1.000</td>
       <td>6,078.000</td>
       <td>DE</td>
-      <td>POINT (884511.9871012702 6434834.058730009)</td>
-      <td>POINT (879858.6676332649 6441241.378778344)</td>
+      <td>POINT (884511.9871012702 6434834.05873001)</td>
+      <td>POINT (879858.6676332649 6441241.378778343)</td>
     </tr>
     <tr>
       <th>3250</th>
@@ -540,8 +559,8 @@
       <td>1.000</td>
       <td>5,804.000</td>
       <td>DE</td>
-      <td>POINT (879858.6676332649 6441241.378778344)</td>
-      <td>POINT (884511.9871012702 6434834.058730009)</td>
+      <td>POINT (879858.6676332649 6441241.378778343)</td>
+      <td>POINT (884511.9871012702 6434834.05873001)</td>
     </tr>
     <tr>
       <th>4044</th>
@@ -554,14 +573,16 @@
       <td>2.000</td>
       <td>0.000</td>
       <td>DE</td>
-      <td>POINT (879497.2043410999 6429427.441768809)</td>
-      <td>POINT (864887.3582970536 6437118.144174217)</td>
+      <td>POINT (879497.2043411 6429427.441768808)</td>
+      <td>POINT (864887.3582970536 6437118.144174216)</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<p>Create the rail network and graph</p>
+</section>
+<section id="create-the-rail-network-and-graph">
+<h3>Create the rail network and graph<a class="headerlink" href="#create-the-rail-network-and-graph" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prepare network to create graph</span>
@@ -586,7 +607,9 @@
 </div>
 </div>
 </div>
-<p>Add weights based on railway length and find the shortest paths for all each origin/destination pair</p>
+</section>
+<section id="add-weights-based-on-railway-length-and-find-the-shortest-paths-for-all-each-origin-destination-pair">
+<h3>Add weights based on railway length and find the shortest paths for all each origin/destination pair<a class="headerlink" href="#add-weights-based-on-railway-length-and-find-the-shortest-paths-for-all-each-origin-destination-pair" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Removing floats from osm_id</span>
@@ -606,7 +629,9 @@ Failed to find paths for 0 routes
 </div>
 </div>
 </div>
-<p>Create parallel “virtual” graph to reroute isolated trips</p>
+</section>
+<section id="create-parallel-virtual-graph-to-reroute-isolated-trips">
+<h3>Create parallel “virtual” graph to reroute isolated trips<a class="headerlink" href="#create-parallel-virtual-graph-to-reroute-isolated-trips" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create initial virtual graph</span>
@@ -685,32 +710,34 @@ Success: only int type values
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Disrupted edges: 26
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Disrupted edges: 60
 Calculating economic impact...
-flood_DERP_RW_H_4326_2080430240 (5427421.889182759, 2820390.5045673745, 2607031.3846153845)
+flood_DERP_RW_L_4326_2080430240 (54274218.89182885, 28203905.045675002, 26070313.846153848)
 Disrupted edges: 24
 Calculating economic impact...
-flood_DERP_RW_H_4326_2080430320 (1711264.6439201704, 47212.41315093989, 1664052.2307692305)
+flood_DERP_RW_H_4326_2080430320 (1711264.643920138, 47212.413150907596, 1664052.2307692305)
 Disrupted edges: 98
 Calculating economic impact...
-flood_DERP_RW_L_4326_2080428500 (74788268.74428403, 47059358.74428403, 27728910.000000004)
-Disrupted edges: 60
-Calculating economic impact...
-flood_DERP_RW_L_4326_2080430240 (54274218.89182758, 28203905.04567374, 26070313.846153848)
+flood_DERP_RW_L_4326_2080428500 (74788268.74428132, 47059358.74428132, 27728910.000000004)
 Disrupted edges: 78
 Calculating economic impact...
-flood_DERP_RW_L_4326_2080430320 (30944709.817721482, 14304187.510029174, 16640522.307692308)
-Disrupted edges: 50
+flood_DERP_RW_L_4326_2080430320 (30944709.817722384, 14304187.510030076, 16640522.307692308)
+Disrupted edges: 26
 Calculating economic impact...
-flood_DERP_RW_M_4326_2080430240 (10854843.778365519, 5640781.009134749, 5214062.769230769)
+flood_DERP_RW_H_4326_2080430240 (5427421.889182885, 2820390.5045675007, 2607031.3846153845)
 Disrupted edges: 60
 Calculating economic impact...
-flood_DERP_RW_M_4326_2080430320 (6188941.963544296, 2860837.5020058355, 3328104.461538461)
+flood_DERP_RW_M_4326_2080430320 (6188941.963544477, 2860837.5020060157, 3328104.461538461)
+Disrupted edges: 50
+Calculating economic impact...
+flood_DERP_RW_M_4326_2080430240 (10854843.77836577, 5640781.009135001, 5214062.769230769)
 </pre></div>
 </div>
 </div>
 </div>
-<p>Save results for basin floods</p>
+</section>
+<section id="save-results-for-basin-floods">
+<h3>Save results for basin floods<a class="headerlink" href="#save-results-for-basin-floods" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cols_names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;total_eur&#39;</span><span class="p">,</span> <span class="s1">&#39;freight_eur&#39;</span><span class="p">,</span> <span class="s1">&#39;passengers_eur&#39;</span><span class="p">]</span> 
@@ -720,7 +747,10 @@ flood_DERP_RW_M_4326_2080430320 (6188941.963544296, 2860837.5020058355, 3328104.
 </div>
 </div>
 </div>
-<p>Find the indirect impacts from river mainstem flooding</p>
+</section>
+</section>
+<section id="step-4-find-the-indirect-impacts-from-river-mainstem-flooding">
+<h2>Step 4: Find the indirect impacts from river mainstem flooding<a class="headerlink" href="#step-4-find-the-indirect-impacts-from-river-mainstem-flooding" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now repeat collecting all the disrupted edges accross all maps with the same return period</span>
@@ -779,7 +809,9 @@ Impact for flood_DERP_RW_L in M Eur: 103.13
 </div>
 </div>
 </div>
-<p>Visualise indirect losses and calculate risk</p>
+</section>
+<section id="step-5-calculate-risk">
+<h2>Step 5: Calculate risk<a class="headerlink" href="#step-5-calculate-risk" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="s1">&#39;interim/collected_flood_runs&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.pkl&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">file</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;overlay&#39;</span><span class="p">)]</span>
@@ -830,10 +862,10 @@ Impact for flood_DERP_RW_L in M Eur: 103.13
   </thead>
   <tbody>
     <tr>
-      <th>2080430240</th>
-      <td>5,427,421.889</td>
-      <td>54,274,218.892</td>
-      <td>10,854,843.778</td>
+      <th>2080430320</th>
+      <td>1,711,264.644</td>
+      <td>30,944,709.818</td>
+      <td>6,188,941.964</td>
     </tr>
     <tr>
       <th>2080428500</th>
@@ -842,10 +874,10 @@ Impact for flood_DERP_RW_L in M Eur: 103.13
       <td>0.000</td>
     </tr>
     <tr>
-      <th>2080430320</th>
-      <td>1,711,264.644</td>
-      <td>30,944,709.818</td>
-      <td>6,188,941.964</td>
+      <th>2080430240</th>
+      <td>5,427,421.889</td>
+      <td>54,274,218.892</td>
+      <td>10,854,843.778</td>
     </tr>
   </tbody>
 </table>
@@ -908,24 +940,28 @@ Impact for flood_DERP_RW_L in M Eur: 103.13
 </div>
 </div>
 </div>
+</section>
+<section id="step-6-visualise-indirect-losses">
+<h2>Step 6: Visualise indirect losses<a class="headerlink" href="#step-6-visualise-indirect-losses" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find total damages by basin over the 100 y period</span>
 <span class="n">total_damages_by_basin</span> <span class="o">=</span> <span class="p">{</span><span class="n">basin</span><span class="p">:</span> <span class="n">ead_by_ts_by_basin</span><span class="p">[</span><span class="n">basin</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="k">for</span> <span class="n">basin</span> <span class="ow">in</span> <span class="n">ead_by_ts_by_basin</span><span class="o">.</span><span class="n">keys</span><span class="p">()}</span>
 
-<span class="c1">#plot the EAD for each basin    </span>
+<span class="c1"># Plot the EAD for each basin    </span>
 <span class="k">for</span> <span class="n">basin</span><span class="p">,</span> <span class="n">ead_df</span> <span class="ow">in</span> <span class="n">ead_by_ts_by_basin</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ead_df</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">basin</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Basin&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Timesteps [year]&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;EAD [EUR/year]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Expected Annual Damages [€/year] per basin - 1/100 return period event&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
         
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/06d69c521ad5403e707c704d84771fdec38dc4b32f23cd5bffe94a767174f0d3.png" src="../../../_images/06d69c521ad5403e707c704d84771fdec38dc4b32f23cd5bffe94a767174f0d3.png" />
+<img alt="../../../_images/d333f9c28272b3080b0baa9304860323aa2dca4dd80c86646e90a8c41db42c63.png" src="../../../_images/d333f9c28272b3080b0baa9304860323aa2dca4dd80c86646e90a8c41db42c63.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -951,7 +987,7 @@ Impact for flood_DERP_RW_L in M Eur: 103.13
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/ef7660705425635f5f00735b3dd269a2014b89ec65beb053eb5cb53c8f2be208.png" src="../../../_images/ef7660705425635f5f00735b3dd269a2014b89ec65beb053eb5cb53c8f2be208.png" />
+<img alt="../../../_images/bb3c0060c8f486cbd2b5da4f14895e87e436896602b3579a3a8aa1bd9f366afb.png" src="../../../_images/bb3c0060c8f486cbd2b5da4f14895e87e436896602b3579a3a8aa1bd9f366afb.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1013,7 +1049,7 @@ Impact for flood_DERP_RW_L in M Eur: 103.13
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Adaptation of CI - A multi-level approach</p>
+        <p class="prev-next-title">Adaptation of Critical Infrastructure - Direct damages</p>
       </div>
     </a>
     <a class="right-next"
@@ -1021,7 +1057,7 @@ Impact for flood_DERP_RW_L in M Eur: 103.13
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Adaptation of CI - A multi-level approach</p>
+        <p class="prev-next-title">Adaptation of CI - Calculate adaptations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1042,7 +1078,19 @@ Impact for flood_DERP_RW_L in M Eur: 103.13
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation-of-ci-indirect-losses">Adaptation of CI - Indirect losses</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-necessary-packages">Step 1: Load the necessary packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-default-configuration-and-model-parameters">Step 2: Load default configuration and model parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-read-exposure-assets-vulnerability-curves-and-hazard-data">Step 3: Read exposure assets, vulnerability curves and hazard data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-route-data-for-the-area-of-interest">Load the route data for the area of interest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-rail-network-and-graph">Create the rail network and graph</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-weights-based-on-railway-length-and-find-the-shortest-paths-for-all-each-origin-destination-pair">Add weights based on railway length and find the shortest paths for all each origin/destination pair</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-parallel-virtual-graph-to-reroute-isolated-trips">Create parallel “virtual” graph to reroute isolated trips</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-results-for-basin-floods">Save results for basin floods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-find-the-indirect-impacts-from-river-mainstem-flooding">Step 4: Find the indirect impacts from river mainstem flooding</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculate-risk">Step 5: Calculate risk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-visualise-indirect-losses">Step 6: Visualise indirect losses</a></li>
 </ul>
   </nav></div>
 

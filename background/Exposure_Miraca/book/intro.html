@@ -172,8 +172,7 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">The Miraca approach</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/miraca_approach.html">Description of the framework</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium.html">Systemic Economic impacts</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
 </ul>
@@ -183,6 +182,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../placeholder1.html">Use Case 1 - Flooding and windstorms in the TEN-T corridor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../placeholder2.html">Use Case 2 - Wildfires in Catalonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC3/book/Use_Case_template.html">Use case 3 - Flooding in Zuid-Holland</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC4/book/E_E%2BL_ESRM20%2BElsus.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC5/Use_Case_5_v1.html">Use Case 5 - Energy</a></li>
 
 
@@ -195,16 +195,13 @@
 <li class="toctree-l2"><a class="reference internal" href="Exposure_Miraca.html">Exploring the Critical Infrastructure Exposure Database</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Vulnerability/book/intro.html">Vulnerability Database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../Vulnerability/book/Vulnerability_workbench.html">Explore the Vulnerability database</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Vulnerability/book/Vulnerability_workbench.html">Vulnerability database</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../AdaptationModelling/book/01_direct_damages_baseline.html">Adaptation strategies to Critical Infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/02_indirect_damages_baseline.html">Adaptation of CI - A multi-level approach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/03_batch_process_adaptations.html">Adaptation of CI - A multi-level approach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/04_results_summary.html">Adaptation of CI - A multi-level approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/02_indirect_damages_baseline.html">Adaptation of Critical Infrastructure - Indirect losses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/03_batch_process_adaptations.html">Adaptation of CI - Calculate adaptations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/04_results_summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -419,23 +416,21 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exposure-database">
 <h1>Exposure database<a class="headerlink" href="#exposure-database" title="Link to this heading">#</a></h1>
-<p>Exposure data for critical infrastructure (CI) assets is one of the first steps in conducting a Climate Risk Assessment. There are multiple ways to access information on critical infrastructure. For country-level assessments, government and public agencies generally publish datasets on roads, railways, and power networks. These datasets often provide high accuracy, comprehensive attributes, and consistent data. However, access to certain information or specific infrastructure assets may be limited.</p>
-<p>Other sources of data come from international organizations and research institutes, which build on public data sources and combine them with additional inputs such as satellite imagery or models. These datasets enable broader coverage across regions, but they may have more limited attributes compared to government datasets and often require further processing.</p>
-<p>Within MIRACA, the main goal is to provide a framework that supports the assessment of climate change impacts and adaptation measures in a consistent way at the Pan-European level. To achieve the same level of detail and granularity across countries, while ensuring completeness for all critical infrastructure assets, we have sourced critical infrastructure data from OpenStreetMap (OSM).</p>
-<p><img alt="Screenshot" src="../../../_images/flowchart.png" /></p>
+<p>Exposure data for critical infrastructure (CI)—assets is one of the first steps towards before carrying out a Climate Risk Assessment. There are multiple ways to access information on critical infrastructure. For country-level assessments, Government and public agencies generally publish information about roads, railways or power network. These datasets often offer high accuracy, and include comprehensive attributes and consistent data. However, some information or specific infrastructure assets might have limited access.</p>
+<p>Other sources of data come from international organisations and research institutes, that build on public data sources and, combined with additional sources of data, such as satellite imagery or models. These datasets allow for a large wide coverage. On the other hand, they can have more limited attributes compared to government public datasets and require for</p>
+<p>Within MIRACA, the main aim is to provide a framework to support the assessment of the impacts of cliamte change and adaptation on a consistently way at the Pan-European level. In order to have the same level of detail and granularity across countries, while ensuring there is completeness for all critical infrastructure assets, we have retrieved critical infrastructure data from OpenStreetMap (OSM).</p>
 <section id="openstreetmap-osm">
 <h2>OpenStreetMap (OSM)<a class="headerlink" href="#openstreetmap-osm" title="Link to this heading">#</a></h2>
-<p>OpenStreetMap is a globally collaborative geographic database that is free to access and that includes data about roads, buildings, addresses, shops and businesses, points of interest, railways, trails, transit, land use and natural features, and much more. You can explore OpenStreetMaps in the following link: <a class="reference external" href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a></p>
+<p>OpenStreetMap is a globally collaborative geographic database that is free to access created by a community of mappers,</p>
 </section>
 <section id="accessing-and-downloading-osm-data">
 <h2>Accessing and downloading OSM data<a class="headerlink" href="#accessing-and-downloading-osm-data" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://osmnx.readthedocs.io/en/stable/">OSMnx</a> is a Python package to allows to easily download, model, analyze, and visualize street networks and other geospatial features from OpenStreetMap (Boeing et a., 2025).</p>
+<p>OSMnx is a Python package to easily download, model, analyze, and visualize street networks and other geospatial features from OpenStreetMap.</p>
+<p><img alt="Screenshot" src="../../../_images/flowchart.png" /></p>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Boeing, G. (2025). Modeling and Analyzing Urban Networks and Amenities with OSMnx. Geographical Analysis, published online ahead of print. doi:10.1111/gean.70009</p></li>
-</ul>
+<p>Boeing, G. (2025). Modeling and Analyzing Urban Networks and Amenities with OSMnx. Geographical Analysis, published online ahead of print. doi:10.1111/gean.70009</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>

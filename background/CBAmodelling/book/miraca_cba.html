@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MIRACA CBA Model &#8212; MIRACA Technical Workbench</title>
+    <title>Cost-Benefit Analysis &#8212; MIRACA Technical Workbench</title>
   
   
   
@@ -60,11 +60,13 @@
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'background/CBAmodelling/book/miraca_cba';</script>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Adaptation of CI - A multi-level approach" href="../../AdaptationModelling/book/01_direct_damages_baseline.html" />
+    <link rel="next" title="Adaptation of Critical Infrastructure - Direct damages" href="../../AdaptationModelling/book/01_direct_damages_baseline.html" />
     <link rel="prev" title="Road Flow Model" href="../../RoadFlowModelling/book/miraca_roads.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -172,8 +174,7 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">The Miraca approach</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/miraca_approach.html">Description of the framework</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium.html">Systemic Economic impacts</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
 </ul>
@@ -183,6 +184,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../placeholder1.html">Use Case 1 - Flooding and windstorms in the TEN-T corridor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../placeholder2.html">Use Case 2 - Wildfires in Catalonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC3/book/Use_Case_template.html">Use case 3 - Flooding in Zuid-Holland</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC4/book/E_E%2BL_ESRM20%2BElsus.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC5/Use_Case_5_v1.html">Use Case 5 - Energy</a></li>
 
 
@@ -195,16 +197,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Exposure_Miraca/book/Exposure_Miraca.html">Exploring the Critical Infrastructure Exposure Database</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Vulnerability/book/intro.html">Vulnerability Database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../Vulnerability/book/Vulnerability_workbench.html">Explore the Vulnerability database</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Vulnerability/book/Vulnerability_workbench.html">Vulnerability database</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Cost-benefit analysis</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../AdaptationModelling/book/01_direct_damages_baseline.html">Adaptation strategies to Critical Infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/02_indirect_damages_baseline.html">Adaptation of CI - A multi-level approach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/03_batch_process_adaptations.html">Adaptation of CI - A multi-level approach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/04_results_summary.html">Adaptation of CI - A multi-level approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/02_indirect_damages_baseline.html">Adaptation of Critical Infrastructure - Indirect losses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/03_batch_process_adaptations.html">Adaptation of CI - Calculate adaptations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/04_results_summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -393,7 +392,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>MIRACA CBA Model</h1>
+    <h1>Cost-Benefit Analysis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -403,17 +402,29 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cba-outputs">CBA outputs</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-data-acquisition">1. Setup and Data Acquisition</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-cba-model-parameters">Read CBA model parameters</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-damages-and-losses-without-adaptation-and-convert-to-timeseries">Read damages and losses without adaptation and convert to timeseries</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-damages-and-losses-with-adaptation-and-convert-to-timeseries">Read damages and losses with adaptation and convert to timeseries</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merge-the-loss-dataframes-and-estimate-avoided-losses">Merge the loss dataframes and estimate avoided losses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-loss-analysis">2. Economic Loss Analysis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-the-avoided-economic-losses-by-some-gdp-change-factor-if-needed">Project the Avoided Economic losses by some GDP change factor, if needed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-benefit-calculation">3. Cost-Benefit Calculation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-adaptation-cost-timeseries">Estimate the adaptation cost timeseries</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merge-the-adaptation-losses-with-the-adptation-costs-to-estimates-the-benefits-and-cost">Merge the adaptation losses with the adptation costs to estimates the benefits and cost</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-the-discounting-of-the-benefits-and-the-costs-based-on-the-discount-rate">Do the discounting of the Benefits and the costs based on the discount rate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthesis-and-results">4. Synthesis and Results</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-added-benefits-costs-and-bcr-summed-over-the-timeseries">Estimate the added benefits, costs, and BCR summed over the timeseries</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-the-final-results">Save the final results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validation-and-visualisation">5. Validation and Visualisation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-plot-of-benefit-and-cost-timeseries-with-a-without-discounting">Test - Plot of Benefit and Cost timeseries with a without discounting</a></li>
 </ul>
 </li>
@@ -428,20 +439,20 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="miraca-cba-model">
-<h1>MIRACA CBA Model<a class="headerlink" href="#miraca-cba-model" title="Link to this heading">#</a></h1>
-<p>In this example, we develop a stylised example template for Cost-benefit Analysis (CBA)</p>
-<p>CBA involves prior estimation of the Expected Annnual direct Damages (EAD) and Expected Annual indirect Economic Losses (EAEL) with and without the implementation of an adaptation option.
-These losses are estimated over a set of consecutive years or in most cases at specific time horizons.
-For example - EAD and EAEL might be estimated for a given baseline year (e.g. 2025) and for future years for which climate scenario-based hazard maps might be created (e.g. 2050, 2080 SSP3 7.0)</p>
-<p>CBA also requires inputs of the initial investment costs of the adaptation option, and its maintenance costs (recurrent and periodic)</p>
-<p>Further inputs include the timeline of the CBA assessment and discount rates
-Economic GPD growth rates might also be needed to project future EAELs</p>
-<section id="cba-outputs">
-<h2>CBA outputs<a class="headerlink" href="#cba-outputs" title="Link to this heading">#</a></h2>
-<p>Benefits = Avoided Damages and Losses over time = (EAD_withoutadaptaion - EAD_withadaptation) + (EAEL_withoutadaptation - EAEL_withadaptation)</p>
-<p>Costs = Initial investment + Maintenance over time</p>
-<p>Benefit-Cost Ratio (BCR) = (Discounted Benefits)/(Discounted Costs)</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="cost-benefit-analysis">
+<h1>Cost-Benefit Analysis<a class="headerlink" href="#cost-benefit-analysis" title="Link to this heading">#</a></h1>
+<p>In this example, we develop a stylised example template for Cost-benefit Analysis (CBA).</p>
+<p>CBA involves prior estimation of the Expected Annnual direct Damages (EAD) and Expected Annual indirect Economic Losses (EAEL) with and without the implementation of an adaptation option. These losses are estimated over a set of consecutive years or in most cases at specific time horizons. For example - EAD and EAEL might be estimated for a given baseline year (e.g. 2025) and for future years for which climate scenario-based hazard maps might be created (e.g. 2050, 2080 SSP3 7.0).</p>
+<p>CBA also requires inputs of the initial investment costs of the adaptation option, and its maintenance costs (recurrent and periodic).</p>
+<p>Further inputs include the timeline of the CBA assessment and discount rates.
+Economic GPD growth rates might also be needed to project future EAELs.</p>
+<p>The outputs of this analysis are the benefits (avoided damages and losses over time), the costs and the Benefit-Cost Ratio (BCR).</p>
+<div class="math notranslate nohighlight">
+\[\text{Benefits} = (\text{EAD}_{\text{without adaptation}} - \text{EAD}_{\text{with adaptation}}) + (\text{EAEL}_{\text{without adaptation}} - \text{EAEL}_{\text{with adaptation}})\]</div>
+<div class="math notranslate nohighlight">
+\[\text{Costs} = \text{Initial investment} + \text{Maintenance over time}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{Benefit-Cost Ratio (BCR)} = \frac{\text{Discounted Benefits}}{\text{Discounted Costs}}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
@@ -459,6 +470,8 @@ Economic GPD growth rates might also be needed to project future EAELs</p>
 </div>
 </div>
 </div>
+<section id="setup-and-data-acquisition">
+<h2>1. Setup and Data Acquisition<a class="headerlink" href="#setup-and-data-acquisition" title="Link to this heading">#</a></h2>
 <section id="read-cba-model-parameters">
 <h3>Read CBA model parameters<a class="headerlink" href="#read-cba-model-parameters" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -544,6 +557,9 @@ Economic GPD growth rates might also be needed to project future EAELs</p>
 </div>
 </div>
 </section>
+</section>
+<section id="economic-loss-analysis">
+<h2>2. Economic Loss Analysis<a class="headerlink" href="#economic-loss-analysis" title="Link to this heading">#</a></h2>
 <section id="project-the-avoided-economic-losses-by-some-gdp-change-factor-if-needed">
 <h3>Project the Avoided Economic losses by some GDP change factor, if needed<a class="headerlink" href="#project-the-avoided-economic-losses-by-some-gdp-change-factor-if-needed" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -566,6 +582,9 @@ Economic GPD growth rates might also be needed to project future EAELs</p>
 </div>
 </div>
 </section>
+</section>
+<section id="cost-benefit-calculation">
+<h2>3. Cost-Benefit Calculation<a class="headerlink" href="#cost-benefit-calculation" title="Link to this heading">#</a></h2>
 <section id="estimate-the-adaptation-cost-timeseries">
 <h3>Estimate the adaptation cost timeseries<a class="headerlink" href="#estimate-the-adaptation-cost-timeseries" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -612,6 +631,9 @@ Economic GPD growth rates might also be needed to project future EAELs</p>
 </div>
 </div>
 </section>
+</section>
+<section id="synthesis-and-results">
+<h2>4. Synthesis and Results<a class="headerlink" href="#synthesis-and-results" title="Link to this heading">#</a></h2>
 <section id="estimate-the-added-benefits-costs-and-bcr-summed-over-the-timeseries">
 <h3>Estimate the added benefits, costs, and BCR summed over the timeseries<a class="headerlink" href="#estimate-the-added-benefits-costs-and-bcr-summed-over-the-timeseries" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -716,6 +738,9 @@ Economic GPD growth rates might also be needed to project future EAELs</p>
 </div>
 </div>
 </section>
+</section>
+<section id="validation-and-visualisation">
+<h2>5. Validation and Visualisation<a class="headerlink" href="#validation-and-visualisation" title="Link to this heading">#</a></h2>
 <section id="test-plot-of-benefit-and-cost-timeseries-with-a-without-discounting">
 <h3>Test - Plot of Benefit and Cost timeseries with a without discounting<a class="headerlink" href="#test-plot-of-benefit-and-cost-timeseries-with-a-without-discounting" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -725,14 +750,15 @@ Economic GPD growth rates might also be needed to project future EAELs</p>
 <span class="n">test_df</span><span class="p">[</span><span class="s2">&quot;cost&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">test_df</span><span class="p">[</span><span class="s2">&quot;cost&quot;</span><span class="p">]</span>
 <span class="n">test_df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">year_column</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;benefit&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
 <span class="n">test_df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">year_column</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;cost&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">&quot;Benefit&quot;</span><span class="p">,</span> <span class="s2">&quot;Cost&quot;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;year&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x15c4dba90&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/57eaf7a1f9b72dd8908c4b13c59cef14a9bb5540bac6a123d0b4b95448bf3a73.png" src="../../../_images/57eaf7a1f9b72dd8908c4b13c59cef14a9bb5540bac6a123d0b4b95448bf3a73.png" />
+<img alt="../../../_images/f410d27a6430be5da2371e7834e81be966dd02b550d4030b07b39b987aff3d54.png" src="../../../_images/f410d27a6430be5da2371e7834e81be966dd02b550d4030b07b39b987aff3d54.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -742,14 +768,15 @@ Economic GPD growth rates might also be needed to project future EAELs</p>
 <span class="n">test_df</span><span class="p">[</span><span class="s2">&quot;cost_pv&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span> <span class="o">*</span> <span class="n">test_df</span><span class="p">[</span><span class="s2">&quot;cost_pv&quot;</span><span class="p">]</span>
 <span class="n">test_df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">year_column</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;benefit_pv&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
 <span class="n">test_df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">year_column</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;cost_pv&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">&quot;Benefit&quot;</span><span class="p">,</span> <span class="s2">&quot;Cost&quot;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;lower right&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;year&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x15cf5b460&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/6e244316f416825db7dcc95b86302a2005322bac7a6db8faabd97348b2871da1.png" src="../../../_images/6e244316f416825db7dcc95b86302a2005322bac7a6db8faabd97348b2871da1.png" />
+<img alt="../../../_images/3c0e86ac2f4c4cebfaefaca1bdcc0d9298aa64b11479d8fffcdb0d20cf713028.png" src="../../../_images/3c0e86ac2f4c4cebfaefaca1bdcc0d9298aa64b11479d8fffcdb0d20cf713028.png" />
 </div>
 </div>
 </section>
@@ -800,7 +827,7 @@ Economic GPD growth rates might also be needed to project future EAELs</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Adaptation of CI - A multi-level approach</p>
+        <p class="prev-next-title">Adaptation of Critical Infrastructure - Direct damages</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -821,17 +848,29 @@ Economic GPD growth rates might also be needed to project future EAELs</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cba-outputs">CBA outputs</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-data-acquisition">1. Setup and Data Acquisition</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-cba-model-parameters">Read CBA model parameters</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-damages-and-losses-without-adaptation-and-convert-to-timeseries">Read damages and losses without adaptation and convert to timeseries</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-damages-and-losses-with-adaptation-and-convert-to-timeseries">Read damages and losses with adaptation and convert to timeseries</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merge-the-loss-dataframes-and-estimate-avoided-losses">Merge the loss dataframes and estimate avoided losses</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-loss-analysis">2. Economic Loss Analysis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-the-avoided-economic-losses-by-some-gdp-change-factor-if-needed">Project the Avoided Economic losses by some GDP change factor, if needed</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cost-benefit-calculation">3. Cost-Benefit Calculation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-adaptation-cost-timeseries">Estimate the adaptation cost timeseries</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merge-the-adaptation-losses-with-the-adptation-costs-to-estimates-the-benefits-and-cost">Merge the adaptation losses with the adptation costs to estimates the benefits and cost</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#do-the-discounting-of-the-benefits-and-the-costs-based-on-the-discount-rate">Do the discounting of the Benefits and the costs based on the discount rate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthesis-and-results">4. Synthesis and Results</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimate-the-added-benefits-costs-and-bcr-summed-over-the-timeseries">Estimate the added benefits, costs, and BCR summed over the timeseries</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-the-final-results">Save the final results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#validation-and-visualisation">5. Validation and Visualisation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-plot-of-benefit-and-cost-timeseries-with-a-without-discounting">Test - Plot of Benefit and Cost timeseries with a without discounting</a></li>
 </ul>
 </li>
