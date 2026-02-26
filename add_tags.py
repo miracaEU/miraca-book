@@ -9,7 +9,7 @@ def parse_args():
         "--path",
         type=Path,
         help="Path to the notebooks.",
-        default="./miraca-book/**/",
+        default=Path("./miraca-book/"),
     )
     return parser.parse_args()
 
@@ -39,7 +39,12 @@ def add_tags_to_notebook(path):
 
 if __name__ == "__main__":
     args = parse_args()
+<<<<<<< HEAD
     notebooks = args.path.rglob("*.ipynb")
+=======
+    notebooks = args.path.rglob("**/*.ipynb")
+>>>>>>> 348d0873714231051cd577e27af98b4809a9d1f0
     # Search through each notebook and look for the text, add a tag if necessary
     for nb in notebooks:
+        print(nb)
         add_tags_to_notebook(nb)
