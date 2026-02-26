@@ -2,7 +2,7 @@
 
 
 :::{card} 
-:class: no-bold
+:class-body: no-bold
 
 The **M**ultihazard **I**nfrastructure **R**isk **A**ssessment for **C**limate **A**daptation (**MIRACA**) project, is a 4-year Horizon Europe project that catalyses and empowers the implementation of adaptation measures for Critical Infrastructure throughout Europe, by providing public authorities with a toolkit to take evidence-based decisions. The project started in January 2023 and will run until December 2026. 
 :::
@@ -29,10 +29,9 @@ To demonstrate, validate and promote the uptake of the tools and methods develop
 
 The background section focuses on the models and methods behind Miraca Approach, describing in more detail the core developments of the project. These include a description of the methodologies for the the full climate risk steps, from exposure to adaptation appraisal. These aim to support users to better understand the models and tools of the project.
 
-````md
-```{note}
-The Miraca workbench is an active, evolving project and will be updated continuously during 2026.
-```
+> [!NOTE]
+>The Miraca workbench is an active, evolving project and will be updated continuously during 2026.
+
 
 ```{image} /figures/figure_introduction_1.png
 :width: 800px
