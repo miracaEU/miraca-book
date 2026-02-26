@@ -181,13 +181,10 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../usecases/introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../placeholder1.html">Use Case 1 - Flooding and windstorms in the TEN-T corridor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../placeholder2.html">Use Case 2 - Wildfires in Catalonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC1_intro.html">Use Case 1 - Flooding and windstorms in the TEN-T corridor (Coming soon)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC3/book/Use_Case_template.html">Use case 3 - Flooding in Zuid-Holland</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC4/book/E_E%2BL_ESRM20%2BElsus.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC5/Use_Case_5_v1.html">Use Case 5 - Energy</a></li>
-
-
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC4/book/E_E%2BL_ESRM20%2BElsus_new.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC5/Use_Case_5_v1.html">Use Case 5 - Flooding and landslides in Slovenia</a></li>
 
 
 </ul>
@@ -203,13 +200,6 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../AdaptationModelling/book/introduction.html">Adaptation strategies to Critical Infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/01_direct_damages_baseline.html">Adaptation of Critical Infrastructure - Direct damages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/02_indirect_damages_baseline.html">Adaptation of Critical Infrastructure - Indirect losses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/03_batch_process_adaptations.html">Adaptation of CI - Calculate adaptations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../AdaptationModelling/book/04_results_summary.html">Summary</a></li>
-</ul>
-</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
@@ -1140,11 +1130,11 @@
 <section id="step-5-generation-of-the-exposure-database">
 <h2>Step 5. Generation of the Exposure Database<a class="headerlink" href="#step-5-generation-of-the-exposure-database" title="Link to this heading">#</a></h2>
 <p>To explore the Exposure database, there are only 2 inputs required: the <code class="docutils literal notranslate"><span class="pre">Country</span></code> and <code class="docutils literal notranslate"><span class="pre">Network</span> <span class="pre">type</span></code>.</p>
-<blockquote>
-<div><p>[!WARNING]
-<strong>Long Execution Time Expected!</strong>
-Running this cell queries the live OpenStreetMap database (Overpass API) to download infrastructure data for an entire country. Depending on the country’s size and your internet connection, <strong>this can take several minutes to complete</strong>.</p>
-</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Long Execution Time Expected!</strong>
+Running this cell queries the live OpenStreetMap database (Overpass API) to download infrastructure data for an entire country. Depending on the country’s size and your internet connection, **this can take several minutes to complete.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">network_type</span> <span class="o">=</span> <span class="s2">&quot;Education&quot;</span>
@@ -1391,11 +1381,11 @@ Running this cell queries the live OpenStreetMap database (Overpass API) to down
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
 </div>
-<blockquote>
-<div><p>[!WARNING]
-<strong>Long Execution Time Expected!</strong>
-Running this cell downloads and constructs a complete, drivable street network graph for an entire country. Depending on the country’s size, <strong>this can take significantly longer than the previous step and uses a large amount of your computer’s memory</strong>.</p>
-</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Long Execution Time Expected!</strong>
+Running this cell downloads and constructs a complete street network graph for an entire country. Depending on the country’s size, **this can take significantly longer than the previous step and uses a large amount of your computer’s memory.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">street_network</span> <span class="o">=</span> <span class="n">get_street_network</span><span class="p">(</span><span class="n">EU_code</span><span class="p">[</span><span class="n">country</span><span class="p">],</span> <span class="s2">&quot;Roadway&quot;</span><span class="p">,</span> <span class="s2">&quot;OSM&quot;</span><span class="p">,</span> <span class="n">show_map</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>     <span class="c1"># set show_map=False to save some running time</span>

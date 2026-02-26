@@ -1,0 +1,1286 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Use Case 2 - Wildfires in Catalonia, Spain &#8212; MIRACA Technical Workbench</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usecases/UC2/book/Use_Case_2';</script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="MIRACA Technical Workbench - Home"/>
+    <img src="../../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="MIRACA Technical Workbench - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Welcome to the Miraca Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">The Miraca approach</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/miraca_approach.html">Description of the framework</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/AssetRiskModelling/book/risk_assessment_belgium.html">Climate Risk Assessment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium.html">Systemic Economic impacts</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC1_intro.html">Use Case 1 - Flooding and windstorms in the TEN-T corridor (Coming soon)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC3/book/Use_Case_template.html">Use case 3 - Flooding in Zuid-Holland</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC4/book/E_E%2BL_ESRM20%2BElsus_new.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC5/Use_Case_5_v1.html">Use Case 5 - Flooding and landslides in Slovenia</a></li>
+
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical background</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../background/Exposure_Miraca/book/intro.html">Exposure database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Exposure_Miraca/book/Exposure_Miraca.html">Exploring the Critical Infrastructure Exposure Database</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../background/Vulnerability/book/intro.html">Vulnerability Database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Vulnerability/book/Vulnerability_workbench.html">Explore the Vulnerability database</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About Miraca</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book/issues/new?title=Issue%20on%20page%20%2Fusecases/UC2/book/Use_Case_2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/usecases/UC2/book/Use_Case_2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Use Case 2 - Wildfires in Catalonia, Spain</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-data">1. Configuration &amp; Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-fires-characterisation">2. Historical Fires Characterisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-of-all-historical-fires-in-catalonia-between-1985-and-2023">2.1. Map of all historical fires in Catalonia between 1985 and 2023</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-evolution-of-fires">2.2. Annual Evolution of Fires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seasonality-of-fires">2.3. Seasonality of Fires</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-level-fire-correlations-with-meteo-variables">3. Macro-level Fire Correlations with Meteo Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fire-event-level-mereo-variables-for-different-fire-events">4. Fire-event level: Mereo variables for different fire events</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#influence-of-biophysical-variables-in-fires">5. Influence of Biophysical Variables in Fires</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biomass">5.1. Biomass</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elevation">5.2. Elevation</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="use-case-2-wildfires-in-catalonia-spain">
+<h1>Use Case 2 - Wildfires in Catalonia, Spain<a class="headerlink" href="#use-case-2-wildfires-in-catalonia-spain" title="Link to this heading">#</a></h1>
+<p>Wildfires are complex, dynamic phenomena driven by an intricate mix of long-term climate trends, daily weather extremes, and localised landscape features. The purpose of this notebook is to explore how these <strong>meteorological</strong> and <strong>biophysical</strong> variables interact to dictate <strong>wildfire behaviour, size, and frequency</strong>. Focusing on the region of Catalonia, Spain, this analysis integrates several layers of data to build a complete picture of fire events:</p>
+<ul class="simple">
+<li><p>Historical Fire Catalogs from 1986 to 2023</p></li>
+<li><p>Meteorological &amp; Climate database extracted from ERA5-Reanalysis</p></li>
+<li><p>High-resolution raster datasets capturing biomass, land cover types and Digital Elevation Models (DEM)</p></li>
+</ul>
+<p>This case study is structured as an analytical funnel with the following sections:</p>
+<ol class="arabic simple">
+<li><p>Configuration &amp; Data</p></li>
+<li><p>Historical Fires Characterisation</p></li>
+<li><p>Macro-level Fire Correlations with Meteo Variables</p></li>
+<li><p>Fire-event level: Meteo variables for different fire events</p></li>
+<li><p>Influence of Nature in Fires</p></li>
+</ol>
+<section id="configuration-data">
+<h2>1. Configuration &amp; Data<a class="headerlink" href="#configuration-data" title="Link to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cartopy.crs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ccrs</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cartopy.feature</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cfeature</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">xrspatial</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">rasterio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">rioxarray</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">pearsonr</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="kn">import</span> <span class="n">ListedColormap</span><span class="p">,</span> <span class="n">LinearSegmentedColormap</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>We load the historical wildfire catalog for Catalonia (1986–2023) sourced from the <em>Institut Cartogràfic i Geològic de Catalunya</em> (ICGC). For every unique fire (<code class="docutils literal notranslate"><span class="pre">fire_id</span></code>), each row provides:</p>
+<ul class="simple">
+<li><p>Spatial Data: The fire’s perimeter (geometry) and the coordinates of its centroid.</p></li>
+<li><p>Observed Meteorology: Weather conditions on the exact date of the fire, extracted at the centroid. This data is extracted from ERA5-Reanalysis.</p></li>
+<li><p>Climatological Baseline: The historical average conditions for that specific day of the year (using the 1981–2000 reference period), labeled with a <em>_clim</em> suffix. This structure allows us to easily calculate and analyze weather anomalies.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Download Time Expected!</strong>
+Running this cell fetches data directly from the Zenodo research repository. Depending on your internet speed, <strong>this may take a minute or two to download and load the GeoJSON file into your notebook’s memory.</strong> Please do not interrupt the kernel while it is fetching the data.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fires</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span>
+    <span class="s2">&quot;https://zenodo.org/records/18770754/files/fires_CAT_with_meteo.geojson&quot;</span>
+    <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Columns: </span><span class="si">{</span><span class="n">fires</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">fires</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Columns: [&#39;date&#39;, &#39;area&#39;, &#39;lon&#39;, &#39;lat&#39;, &#39;year&#39;, &#39;month&#39;, &#39;fire_id&#39;, &#39;area_ha&#39;, &#39;pr&#39;, &#39;tas&#39;, &#39;hurs&#39;, &#39;wind&#39;, &#39;windmax&#39;, &#39;vpd&#39;, &#39;fwi&#39;, &#39;spei3&#39;, &#39;spei12&#39;, &#39;spei12_lagged&#39;, &#39;pr_anomaly&#39;, &#39;tas_anomaly&#39;, &#39;hurs_anomaly&#39;, &#39;wind_anomaly&#39;, &#39;windmax_anomaly&#39;, &#39;vpd_anomaly&#39;, &#39;fwi_anomaly&#39;, &#39;pr_clim&#39;, &#39;tas_clim&#39;, &#39;hurs_clim&#39;, &#39;wind_clim&#39;, &#39;windmax_clim&#39;, &#39;vpd_clim&#39;, &#39;fwi_clim&#39;, &#39;spei3_clim&#39;, &#39;spei12_clim&#39;, &#39;spei12_lagged_clim&#39;, &#39;pr_anomaly_clim&#39;, &#39;tas_anomaly_clim&#39;, &#39;hurs_anomaly_clim&#39;, &#39;wind_anomaly_clim&#39;, &#39;windmax_anomaly_clim&#39;, &#39;vpd_anomaly_clim&#39;, &#39;fwi_anomaly_clim&#39;, &#39;geometry&#39;]
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>area</th>
+      <th>lon</th>
+      <th>lat</th>
+      <th>year</th>
+      <th>month</th>
+      <th>fire_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1986-07-19</td>
+      <td>2.795379e+08</td>
+      <td>2.972878</td>
+      <td>42.398173</td>
+      <td>1986</td>
+      <td>7</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1998-07-18</td>
+      <td>2.753549e+08</td>
+      <td>1.547005</td>
+      <td>41.824862</td>
+      <td>1998</td>
+      <td>7</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2012-07-22</td>
+      <td>1.921472e+08</td>
+      <td>2.889306</td>
+      <td>42.359151</td>
+      <td>2012</td>
+      <td>7</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1994-08-10</td>
+      <td>1.630026e+08</td>
+      <td>2.594465</td>
+      <td>41.785177</td>
+      <td>1994</td>
+      <td>8</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1998-07-19</td>
+      <td>1.568074e+08</td>
+      <td>1.562088</td>
+      <td>41.932784</td>
+      <td>1998</td>
+      <td>7</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>This dataset includes several specific meteorological variables, drought indices, and their variations. Here is a breakdown of what each abbreviation means:</p>
+<p><strong>Core Weather Variables (Observed at the time of the fire)</strong></p>
+<ul class="simple">
+<li><p>pr: Precipitation (Rainfall amount).</p></li>
+<li><p>tas: Near-surface air temperature.</p></li>
+<li><p>hurs: Near-surface relative humidity.</p></li>
+<li><p>wind: Average wind speed.</p></li>
+<li><p>windmax: Maximum wind speed (gusts).</p></li>
+<li><p>vpd: Vapor Pressure Deficit. This measures the difference between the amount of moisture in the air and how much moisture the air can hold when saturated. Higher VPD means the air is aggressively pulling moisture out of the vegetation (drying out the fuel).</p></li>
+</ul>
+<p><strong>Fire and Drought Indices</strong></p>
+<ul class="simple">
+<li><p>fwi: Fire Weather Index. A comprehensive numeric rating of fire danger based on weather observations.</p></li>
+<li><p>spei3: 3-month Standardized Precipitation Evapotranspiration Index. Measures short-term drought conditions.</p></li>
+<li><p>spei12: 12-month SPEI. Measures long-term drought conditions.</p></li>
+<li><p>spei12_lagged: The 12-month SPEI from a previous period. This is often used to analyze how historical long-term drought “pre-conditioned” the vegetation before the fire season started.</p></li>
+</ul>
+<p><strong>Column Suffixes</strong></p>
+<p>To analyze how abnormal the weather was during a fire, the dataset includes these modifiers for the variables above:</p>
+<ul class="simple">
+<li><p>[variable]_clim: The climatological baseline. This is the expected, historical average for that specific day of the year, calculated using the 1981–2000 reference period.</p></li>
+<li><p>[variable]_anomaly: The deviation from the norm (usually calculated as Observed - Climatology). Positive temperature anomalies or negative precipitation anomalies often correlate with higher fire danger.</p></li>
+</ul>
+</section>
+<section id="historical-fires-characterisation">
+<h2>2. Historical Fires Characterisation<a class="headerlink" href="#historical-fires-characterisation" title="Link to this heading">#</a></h2>
+<section id="map-of-all-historical-fires-in-catalonia-between-1985-and-2023">
+<h3>2.1. Map of all historical fires in Catalonia between 1985 and 2023<a class="headerlink" href="#map-of-all-historical-fires-in-catalonia-between-1985-and-2023" title="Link to this heading">#</a></h3>
+<p>We explore the historical wildfires dataset by geographical distribution, pattern and size.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup the Map Projection</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>  <span class="c1"># Made figure slightly larger</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+
+<span class="c1"># Add Geographic Context</span>
+<span class="c1"># Coastlines and national borders</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">BORDERS</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Add Province/Regional borders (This will show the outline of Catalonia)</span>
+<span class="n">states_provinces</span> <span class="o">=</span> <span class="n">cfeature</span><span class="o">.</span><span class="n">NaturalEarthFeature</span><span class="p">(</span>
+    <span class="n">category</span><span class="o">=</span><span class="s2">&quot;cultural&quot;</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;admin_1_states_provinces_lines&quot;</span><span class="p">,</span>
+    <span class="n">scale</span><span class="o">=</span><span class="s2">&quot;10m&quot;</span><span class="p">,</span>
+    <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">states_provinces</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+
+<span class="c1"># Plot the Fires with Outlines</span>
+<span class="n">fires</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">column</span><span class="o">=</span><span class="s2">&quot;area_ha&quot;</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;YlOrRd&quot;</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+    <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>  <span class="c1"># The border color for each fire</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>  <span class="c1"># Keep it thin so it doesn&#39;t look messy</span>
+    <span class="n">transform</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
+    <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Area (ha)&quot;</span><span class="p">,</span> <span class="s2">&quot;shrink&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
+<span class="p">)</span>
+
+<span class="c1"># Zoom to Catalonia</span>
+<span class="n">bounds</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">total_bounds</span>
+<span class="n">margin</span> <span class="o">=</span> <span class="mf">0.2</span>  <span class="c1"># Add a small buffer around the data</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">margin</span><span class="p">,</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">margin</span><span class="p">,</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">margin</span><span class="p">,</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">margin</span><span class="p">],</span>
+    <span class="n">crs</span><span class="o">=</span><span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">(),</span>
+<span class="p">)</span>
+
+<span class="c1"># Titles and Labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Wildfire Areas in Catalonia&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dms</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">x_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">y_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/caac41c930ef8569ed6887ebf951fca79428afe687c118592bc25bac01e5c125.png" src="../../../_images/caac41c930ef8569ed6887ebf951fca79428afe687c118592bc25bac01e5c125.png" />
+</div>
+</div>
+</section>
+<section id="annual-evolution-of-fires">
+<h3>2.2. Annual Evolution of Fires<a class="headerlink" href="#annual-evolution-of-fires" title="Link to this heading">#</a></h3>
+<p>To analyse the temporal evolution of wildfire characteristics in Catalonia, four variables are studied:</p>
+<ul class="simple">
+<li><p>Total of area burned by the fires (in hectares)</p></li>
+<li><p>Average size of fire events (in hectares)</p></li>
+<li><p>Number of fires</p></li>
+<li><p>Percentage of area burned by large fires (&gt;1000 ha)</p></li>
+</ul>
+<p>The data illustrates a <strong>shift after the severe wildfires of 1994</strong>; the subsequent implementation of an action plan and improved forest management successfully reduced fire risks, leading to a noticeable <strong>decrease in the average size of fires</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup Categories (Bins)</span>
+<span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&lt;10 ha&quot;</span><span class="p">,</span> <span class="s2">&quot;10-100 ha&quot;</span><span class="p">,</span> <span class="s2">&quot;100-1000 ha&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;1000 ha&quot;</span><span class="p">]</span>
+<span class="n">fires</span><span class="p">[</span><span class="s2">&quot;size_cat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">fires</span><span class="p">[</span><span class="s2">&quot;area_ha&quot;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">)</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#fee5d9&quot;</span><span class="p">,</span> <span class="s2">&quot;#fcae91&quot;</span><span class="p">,</span> <span class="s2">&quot;#fb6a4a&quot;</span><span class="p">,</span> <span class="s2">&quot;#cb181d&quot;</span><span class="p">]</span>  <span class="c1"># Sequential reds</span>
+
+<span class="c1"># Prepare Pivot Tables for Stacked Plots</span>
+<span class="n">area_pivot</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+    <span class="n">index</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;size_cat&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;area_ha&quot;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">count_pivot</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+    <span class="n">index</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;size_cat&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;area_ha&quot;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Calculate the standard metrics for the bottom row</span>
+<span class="n">yearly_stats</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">fires</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">total_area_ha</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;area_ha&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span> <span class="n">avg_size</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;area_ha&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">large_area</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">fires</span><span class="p">[</span><span class="n">fires</span><span class="p">[</span><span class="s2">&quot;area_ha&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)[</span><span class="s2">&quot;area_ha&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="p">)</span>
+<span class="n">yearly_stats</span> <span class="o">=</span> <span class="n">yearly_stats</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">large_area</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">yearly_stats</span><span class="p">[</span><span class="s2">&quot;pct_large&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">yearly_stats</span><span class="p">[</span><span class="s2">&quot;area_ha&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">yearly_stats</span><span class="p">[</span><span class="s2">&quot;total_area_ha&quot;</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Wildfire Statistics by Size Category (Catalonia)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<span class="c1"># Plot 1: STACKED Total Burned Area</span>
+<span class="n">area_pivot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span>
+<span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Total Burned Area by Size (ha)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Hectares&quot;</span><span class="p">)</span>
+
+<span class="c1"># Plot 2: STACKED Number of Fires</span>
+<span class="n">count_pivot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Number of Fires by Size&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Count&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Fire Size Class&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="c1"># Plot 3: Average Size (Simple Bar)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">yearly_stats</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">),</span> <span class="n">yearly_stats</span><span class="p">[</span><span class="s2">&quot;avg_size&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span>
+<span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Average Fire Size (All Fires)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Hectares&quot;</span><span class="p">)</span>
+
+<span class="c1"># Plot 4: % Burned by Large Fires (Simple Bar)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">yearly_stats</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">),</span>
+    <span class="n">yearly_stats</span><span class="p">[</span><span class="s2">&quot;pct_large&quot;</span><span class="p">],</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkred&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;% Area Burned by Large Fires (&gt;1000 ha)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Percentage (%)&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">105</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]:</span>
+    <span class="c1"># Set labels to rotate for readability</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># This tells Matplotlib to only show every 5th label</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">ticks</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_xticks</span><span class="p">()</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="n">yearly_stats</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">yearly_stats</span><span class="p">))</span>
+    <span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">ticks</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.90</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/6f901a3890b5ad4a76315d32d79ec6f7fcd1802185960871388952f4a714aeb2.png" src="../../../_images/6f901a3890b5ad4a76315d32d79ec6f7fcd1802185960871388952f4a714aeb2.png" />
+</div>
+</div>
+</section>
+<section id="seasonality-of-fires">
+<h3>2.3. Seasonality of Fires<a class="headerlink" href="#seasonality-of-fires" title="Link to this heading">#</a></h3>
+<p>We can see a distinct seasonality to wildfires in Catalonia, as the vast majority —and particularly the largest, most devastating ones— are heavily concentrated in the warm and dry summer months.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prepare Pivot Tables for Monthly Analysis</span>
+<span class="c1"># Total area summed per month and size category</span>
+<span class="n">month_area_pivot</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">fires</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+        <span class="n">index</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="p">,</span>
+        <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;size_cat&quot;</span><span class="p">,</span>
+        <span class="n">values</span><span class="o">=</span><span class="s2">&quot;area_ha&quot;</span><span class="p">,</span>
+        <span class="n">aggfunc</span><span class="o">=</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span>
+        <span class="n">observed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">month_count_pivot</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">fires</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span>
+        <span class="n">index</span><span class="o">=</span><span class="s2">&quot;month&quot;</span><span class="p">,</span>
+        <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;size_cat&quot;</span><span class="p">,</span>
+        <span class="n">values</span><span class="o">=</span><span class="s2">&quot;area_ha&quot;</span><span class="p">,</span>
+        <span class="n">aggfunc</span><span class="o">=</span><span class="s2">&quot;count&quot;</span><span class="p">,</span>
+        <span class="n">observed</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># Create a side-by-side comparison</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Seasonality of Wildfires by Size Class (Catalonia)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+
+<span class="c1"># Left Plot: Total Area (Stacked)</span>
+<span class="n">month_area_pivot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span>
+<span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Total Burned Area per Month (ha)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Hectares&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Right Plot: Frequency of Fires (Stacked)</span>
+<span class="n">month_count_pivot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Number of Fires per Month&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Number of Fires&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Fire Size Class&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.88</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/91157faec861bd46441805d40375ab114fc8be7aeccea36709f7d7a347af3360.png" src="../../../_images/91157faec861bd46441805d40375ab114fc8be7aeccea36709f7d7a347af3360.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="macro-level-fire-correlations-with-meteo-variables">
+<h2>3. Macro-level Fire Correlations with Meteo Variables<a class="headerlink" href="#macro-level-fire-correlations-with-meteo-variables" title="Link to this heading">#</a></h2>
+<p>To analyze the correlation between fire events and meteorological conditions, the dataset is split at the year 1996, marking the implementation of improved fire management policies after the 1994 events.</p>
+<p>Comparing the correlation values between both periods reveals that average meteorological conditions are no longer as strict a predictor of the total burned area, thanks to the current management policies for fire control. While drought indicators show the strongest correlation in both eras, the influence of the lagged SPEI-12 notably strengthened after 1996. Its positive correlation suggests a “pre-conditioning” effect: wetter conditions in the preceding year promote increased vegetation growth, which subsequently dries out and acts as abundant fuel for future fires.</p>
+<p>Furthermore, when comparing FWI against fire metrics, it is notable that the frequency and size of larger fires no longer mirror the overarching meteorological conditions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the split year</span>
+<span class="n">split_year</span> <span class="o">=</span> <span class="mi">1996</span>
+
+<span class="c1"># Define the aggregation dictionary once to avoid repeating it</span>
+<span class="n">meteo_agg</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;total_area_ha&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;area_ha&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;num_fires&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;area_ha&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;avg_fwi&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;fwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;avg_hurs&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;hurs&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;avg_vpd&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;vpd&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;avg_spei3&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;spei3&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;avg_spei12&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;spei12&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;avg_spei12_lagged&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;spei12_lagged&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;anom_hurs&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;hurs_anomaly&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;anom_vpd&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;vpd_anomaly&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;anom_fwi&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;fwi_anomaly&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;anom_wind&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;wind_anomaly&quot;</span><span class="p">,</span> <span class="s2">&quot;mean&quot;</span><span class="p">),</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_stats_for_all_time</span><span class="p">(</span><span class="n">df_subset</span><span class="p">):</span>
+    <span class="c1"># Process the whole dataset</span>
+    <span class="n">stats</span> <span class="o">=</span> <span class="n">df_subset</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="o">**</span><span class="n">meteo_agg</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+    <span class="c1"># Calculate % Large fires</span>
+    <span class="n">large</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">df_subset</span><span class="p">[</span><span class="n">df_subset</span><span class="p">[</span><span class="s2">&quot;area_ha&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1000</span><span class="p">]</span>
+        <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)[</span><span class="s2">&quot;area_ha&quot;</span><span class="p">]</span>
+        <span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">large</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;area_ha&quot;</span><span class="p">:</span> <span class="s2">&quot;large_fire_area_ha&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">stats</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">large</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;pct_large&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">stats</span><span class="p">[</span><span class="s2">&quot;large_fire_area_ha&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="n">stats</span><span class="p">[</span><span class="s2">&quot;total_area_ha&quot;</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="k">return</span> <span class="n">stats</span>
+
+
+<span class="c1"># Create the two datasets (continuous timelines)</span>
+<span class="n">annual_stats_100</span> <span class="o">=</span> <span class="n">get_stats_for_all_time</span><span class="p">(</span><span class="n">fires</span><span class="p">[</span><span class="n">fires</span><span class="p">[</span><span class="s2">&quot;area_ha&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">])</span>
+<span class="n">annual_stats_10</span> <span class="o">=</span> <span class="n">get_stats_for_all_time</span><span class="p">(</span><span class="n">fires</span><span class="p">[</span><span class="n">fires</span><span class="p">[</span><span class="s2">&quot;area_ha&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">])</span>
+<span class="n">annual_stats</span> <span class="o">=</span> <span class="n">get_stats_for_all_time</span><span class="p">(</span><span class="n">fires</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Correlation calculations</span>
+<span class="n">corr1</span> <span class="o">=</span> <span class="n">annual_stats</span><span class="p">[</span><span class="n">annual_stats</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">1996</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()[[</span><span class="s1">&#39;total_area_ha&#39;</span><span class="p">]]</span>
+<span class="n">corr2</span> <span class="o">=</span> <span class="n">annual_stats</span><span class="p">[</span><span class="n">annual_stats</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">1996</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()[[</span><span class="s1">&#39;total_area_ha&#39;</span><span class="p">]]</span>
+
+<span class="c1"># Rename columns to distinguish between the &gt;=100 ha and &gt;=10 ha datasets</span>
+<span class="n">corr1_renamed</span> <span class="o">=</span> <span class="n">corr1</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;total_area_ha&#39;</span><span class="p">:</span> <span class="s1">&#39;Area_ha (before 1996)&#39;</span><span class="p">,</span> 
+<span class="p">})</span>
+<span class="n">corr2_renamed</span> <span class="o">=</span> <span class="n">corr2</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+    <span class="s1">&#39;total_area_ha&#39;</span><span class="p">:</span> <span class="s1">&#39;Area_ha (1996 and after)&#39;</span><span class="p">,</span> 
+<span class="p">})</span>
+
+<span class="c1"># Concatenate the two dataframes side-by-side</span>
+<span class="n">combined_corr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">corr1_renamed</span><span class="p">,</span> <span class="n">corr2_renamed</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Filter to keep only the specified rows</span>
+<span class="n">rows_to_plot</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;avg_fwi&#39;</span><span class="p">,</span> <span class="s1">&#39;avg_hurs&#39;</span><span class="p">,</span> <span class="s1">&#39;avg_vpd&#39;</span><span class="p">,</span> <span class="s1">&#39;avg_spei3&#39;</span><span class="p">,</span> <span class="s1">&#39;avg_spei12&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;avg_spei12_lagged&#39;</span><span class="p">,</span> <span class="s1">&#39;anom_hurs&#39;</span><span class="p">,</span> <span class="s1">&#39;anom_vpd&#39;</span><span class="p">,</span> <span class="s1">&#39;anom_fwi&#39;</span><span class="p">,</span> <span class="s1">&#39;anom_wind&#39;</span>
+<span class="p">]</span>
+<span class="n">combined_corr</span> <span class="o">=</span> <span class="n">combined_corr</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">rows_to_plot</span><span class="p">]</span>
+
+<span class="c1"># Find the maximum absolute value for a centered colorbar (calculated on the filtered data)</span>
+<span class="n">max_abs_val</span> <span class="o">=</span> <span class="n">combined_corr</span><span class="o">.</span><span class="n">abs</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="c1"># Plot the combined heatmap</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">combined_corr</span><span class="p">,</span> 
+    <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> 
+    <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">,</span>
+    <span class="n">vmin</span><span class="o">=-</span><span class="n">max_abs_val</span><span class="p">,</span>  <span class="c1"># Set minimum to negative max absolute value</span>
+    <span class="n">vmax</span><span class="o">=</span><span class="n">max_abs_val</span><span class="p">,</span>   <span class="c1"># Set maximum to positive max absolute value</span>
+    <span class="n">center</span><span class="o">=</span><span class="mi">0</span>            <span class="c1"># Force the center of the colormap to be 0</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Combined Correlation Matrix: Climate Variables vs Total Area Burned&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/8e858a242837c7653c1cd436e7d896a6fa1e18b3b15feac6e1a2807a63550780.png" src="../../../_images/8e858a242837c7653c1cd436e7d896a6fa1e18b3b15feac6e1a2807a63550780.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_fwi_vs_metrics_2x2</span><span class="p">(</span><span class="n">data_large</span><span class="p">,</span> <span class="n">data_small</span><span class="p">,</span> <span class="n">meteo_var</span><span class="o">=</span><span class="s2">&quot;avg_fwi&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates a 2x2 plot comparing area and fire counts against a single meteo variable.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fire Metrics vs </span><span class="si">{</span><span class="n">meteo_agg</span><span class="p">[</span><span class="n">meteo_var</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> (1986-2023)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">0.96</span><span class="p">)</span>
+
+    <span class="n">axes_flat</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+    <span class="c1"># Define the 4 subplots: dataset, column to plot, title, and y-axis label</span>
+    <span class="n">plot_configs</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">data_small</span><span class="p">,</span> <span class="s2">&quot;col&quot;</span><span class="p">:</span> <span class="s2">&quot;total_area_ha&quot;</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Total Burned Area (Fires &lt; 100ha)&quot;</span><span class="p">,</span> <span class="s2">&quot;ylabel&quot;</span><span class="p">:</span> <span class="s2">&quot;Area (ha)&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="n">data_large</span><span class="p">,</span> <span class="s2">&quot;col&quot;</span><span class="p">:</span> <span class="s2">&quot;total_area_ha&quot;</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Total Burned Area (Fires &gt;= 100ha)&quot;</span><span class="p">,</span> <span class="s2">&quot;ylabel&quot;</span><span class="p">:</span> <span class="s2">&quot;Area (ha)&quot;</span><span class="p">}</span>
+    <span class="p">]</span>
+
+    <span class="n">bar_color</span> <span class="o">=</span> <span class="s2">&quot;#e3131a&quot;</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">config</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">plot_configs</span><span class="p">):</span>
+        <span class="n">ax1</span> <span class="o">=</span> <span class="n">axes_flat</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span>
+        <span class="n">metric_col</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;col&quot;</span><span class="p">]</span>
+
+        <span class="c1"># 1. Draw Bars (Fire Metric)</span>
+        <span class="n">ax1</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="n">metric_col</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">bar_color</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+        <span class="c1"># --- Style Left Y-axis (Red for Fire Data) ---</span>
+        <span class="n">ax1</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="n">bar_color</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">bar_color</span><span class="p">)</span>
+        <span class="n">ax1</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="n">bar_color</span><span class="p">)</span>
+        <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;ylabel&quot;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">bar_color</span><span class="p">)</span>
+        <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">],</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+        <span class="c1"># X-axis label only for the bottom row</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+        <span class="c1"># 2. Setup Dual Axis for Meteo Variable (FWI)</span>
+        <span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+
+        <span class="c1"># Split data for correlation and coloring</span>
+        <span class="n">pre_96</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">1996</span><span class="p">]</span>
+        <span class="n">post_96</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">1996</span><span class="p">]</span>
+
+        <span class="c1"># Calculate Correlations safely</span>
+        <span class="n">r_pre</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">pre_96</span><span class="p">[</span><span class="n">metric_col</span><span class="p">],</span> <span class="n">pre_96</span><span class="p">[</span><span class="n">meteo_var</span><span class="p">])</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pre_96</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">r_post</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">post_96</span><span class="p">[</span><span class="n">metric_col</span><span class="p">],</span> <span class="n">post_96</span><span class="p">[</span><span class="n">meteo_var</span><span class="p">])</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">post_96</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># 3. Plot Lines (Meteo Variable)</span>
+        <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pre_96</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">pre_96</span><span class="p">[</span><span class="n">meteo_var</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Pre-96 (r=</span><span class="si">{</span><span class="n">r_pre</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+        <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">post_96</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">],</span> <span class="n">post_96</span><span class="p">[</span><span class="n">meteo_var</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Post-96 (r=</span><span class="si">{</span><span class="n">r_post</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">)</span>
+
+        <span class="c1"># --- Style Right Y-axis (Black for Meteo) ---</span>
+        <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">meteo_agg</span><span class="p">[</span><span class="n">meteo_var</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+        <span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper center&quot;</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">framealpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+        <span class="c1"># Clean up tick labels</span>
+        <span class="n">ax1</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+
+    <span class="c1"># Adjust layout so title and labels don&#39;t overlap</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">rect</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">plot_fwi_vs_metrics_2x2</span><span class="p">(</span>
+    <span class="n">data_large</span><span class="o">=</span><span class="n">annual_stats_100</span><span class="p">,</span>
+    <span class="n">data_small</span><span class="o">=</span><span class="n">annual_stats_10</span><span class="p">,</span>
+    <span class="n">meteo_var</span><span class="o">=</span><span class="s2">&quot;avg_fwi&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/6b6b6b43fd97b182426522feac96e38ceeb39e79ba19c5e98e99f0ab94409fa8.png" src="../../../_images/6b6b6b43fd97b182426522feac96e38ceeb39e79ba19c5e98e99f0ab94409fa8.png" />
+</div>
+</div>
+</section>
+<section id="fire-event-level-mereo-variables-for-different-fire-events">
+<h2>4. Fire-event level: Mereo variables for different fire events<a class="headerlink" href="#fire-event-level-mereo-variables-for-different-fire-events" title="Link to this heading">#</a></h2>
+<p>Next, we analyze the specific meteorological conditions observed on the exact days of the fire events. While fire spread is naturally more likely to occur under conditions of low relative humidity, high VPD, and an elevated FWI, our correlation analysis reveals a counterintuitive result: the FWI recorded at the time of the event is not a strong predictor of the final fire extent. This confirms that while high FWI values flag dangerous weather, they alone are insufficient to predict the ultimate size and severity of a wildfire.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Prepare the data</span>
+<span class="n">df_plot</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_plot</span> <span class="o">=</span> <span class="n">df_plot</span><span class="p">[</span><span class="n">df_plot</span><span class="p">[</span><span class="s2">&quot;area_ha&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">]</span>  <span class="c1"># Filter for fires &gt; 100ha</span>
+
+<span class="c1"># 2. Identify pairs</span>
+<span class="n">var_names</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;hurs&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;vpd&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fwi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;spei3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;spei12&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hurs_anomaly&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;vpd_anomaly&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fwi_anomaly&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;wind_anomaly&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;spei12_lagged&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># 3. Setup Grid</span>
+<span class="n">n_cols</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">n_rows</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">var_names</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_cols</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">n_rows</span><span class="p">,</span> <span class="n">n_cols</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">n_rows</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">var</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">var_names</span><span class="p">):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="c1"># Selecting the specific actual and clim columns</span>
+    <span class="n">actual_col</span> <span class="o">=</span> <span class="n">var</span>
+    <span class="n">clim_col</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">_clim&quot;</span>
+
+    <span class="c1"># Melt specifically for this variable to avoid huge memory usage</span>
+    <span class="n">temp_df</span> <span class="o">=</span> <span class="n">df_plot</span><span class="p">[[</span><span class="s2">&quot;fire_id&quot;</span><span class="p">,</span> <span class="n">actual_col</span><span class="p">,</span> <span class="n">clim_col</span><span class="p">]]</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span>
+        <span class="n">id_vars</span><span class="o">=</span><span class="s2">&quot;fire_id&quot;</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;Group&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Map for clean legend</span>
+    <span class="n">temp_df</span><span class="p">[</span><span class="s2">&quot;Group&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_df</span><span class="p">[</span><span class="s2">&quot;Group&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span>
+        <span class="p">{</span><span class="n">actual_col</span><span class="p">:</span> <span class="s2">&quot;Fires&quot;</span><span class="p">,</span> <span class="n">clim_col</span><span class="p">:</span> <span class="s2">&quot;Climatology&quot;</span><span class="p">}</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Plot</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">temp_df</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span><span class="p">,</span>
+        <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Group&quot;</span><span class="p">,</span>
+        <span class="n">stat</span><span class="o">=</span><span class="s2">&quot;density&quot;</span><span class="p">,</span>  <span class="c1"># This makes the area under each curve = 1</span>
+        <span class="n">common_norm</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>  <span class="c1"># This ensures both groups are normalized independently</span>
+        <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+        <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">palette</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">&quot;Fires&quot;</span><span class="p">:</span> <span class="s2">&quot;#d32f2f&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Climatology&quot;</span><span class="p">:</span> <span class="s2">&quot;#0E80B9&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Probability Density&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Cleanup</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">axes</span><span class="p">)):</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">delaxes</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span>
+    <span class="s2">&quot;Fire Events (&gt;100ha) vs. 20-Year Climatology&quot;</span><span class="p">,</span>
+    <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">,</span>
+    <span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/9eab598cca03b8a2b693a442a6f0dbea745ac80bbbd71e5ec36796156959db39.png" src="../../../_images/9eab598cca03b8a2b693a442a6f0dbea745ac80bbbd71e5ec36796156959db39.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Use your fires GeoDataFrame/DataFrame directly</span>
+<span class="c1"># Every row in your new geojson is an actual fire event.</span>
+<span class="n">df_fires</span> <span class="o">=</span> <span class="n">fires</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># CHOOSE YOUR FEATURE HERE:</span>
+<span class="c1"># Options: &#39;fwi&#39;, &#39;tas&#39;, &#39;spei3&#39;, etc.</span>
+<span class="c1"># Or the anomaly version: &#39;fwi_anomaly&#39; (if you calculated it in the previous step)</span>
+
+<span class="n">feature_to_plot</span> <span class="o">=</span> <span class="s2">&quot;fwi&quot;</span>
+<span class="n">log_y</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Set to True if you want to use a logarithmic scale for the y-axis (common for fire size distributions)</span>
+<span class="n">filter_large_fires</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Set to True to focus on larger fires (e.g., area_ha &gt; 100)</span>
+<span class="k">if</span> <span class="n">filter_large_fires</span><span class="p">:</span>
+    <span class="n">df_fires</span> <span class="o">=</span> <span class="n">df_fires</span><span class="p">[</span><span class="n">df_fires</span><span class="p">[</span><span class="s1">&#39;area_ha&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">100</span><span class="p">]</span>
+    
+<span class="c1"># 2. Calculate the correlation for the title</span>
+<span class="c1"># Use area_ha (the column we created earlier) or &quot;area&quot;</span>
+<span class="n">y_axis_col</span> <span class="o">=</span> <span class="s2">&quot;area_ha&quot;</span>
+<span class="n">valid_data</span> <span class="o">=</span> <span class="n">df_fires</span><span class="p">[[</span><span class="n">feature_to_plot</span><span class="p">,</span> <span class="n">y_axis_col</span><span class="p">]]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">valid_data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">corr</span> <span class="o">=</span> <span class="n">valid_data</span><span class="p">[</span><span class="n">feature_to_plot</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">valid_data</span><span class="p">[</span><span class="n">y_axis_col</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">corr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+<span class="c1"># 3. Create the interactive scatter plot</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">df_fires</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">feature_to_plot</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">y_axis_col</span><span class="p">,</span>
+    <span class="n">hover_data</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;fire_id&quot;</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">],</span>  <span class="c1"># Added year for better context</span>
+    <span class="n">log_y</span><span class="o">=</span><span class="n">log_y</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">feature_to_plot</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2"> vs Burned Area (Pearson r = </span><span class="si">{</span><span class="n">corr</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">y_axis_col</span><span class="p">:</span> <span class="s2">&quot;Area (Hectares)&quot;</span><span class="p">,</span>
+        <span class="n">feature_to_plot</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Actual </span><span class="si">{</span><span class="n">feature_to_plot</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2"> on Fire Day&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">color_discrete_sequence</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;#d32f2f&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="c1"># 4. Stylistic Improvements</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">template</span><span class="o">=</span><span class="s2">&quot;plotly_white&quot;</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Actual </span><span class="si">{</span><span class="n">feature_to_plot</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s2">&quot;Burned Area (Hectares, Log Scale)&quot;</span><span class="p">,</span>
+    <span class="n">hoverlabel</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">bgcolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="c1"># 5. Add a trendline (Optional but helpful for visualization)</span>
+<span class="c1"># If you want a trendline, uncomment the line below:</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.6</span><span class="p">))</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+</section>
+<section id="influence-of-biophysical-variables-in-fires">
+<h2>5. Influence of Biophysical Variables in Fires<a class="headerlink" href="#influence-of-biophysical-variables-in-fires" title="Link to this heading">#</a></h2>
+<p>Because meteorological variables alone cannot fully explain fire behavior, we must also consider the physical landscape. In this section, historical fire perimeters are plotted alongside key biophysical variables, including pre-fire biomass (fuel load), land cover, and topography. Below, we examine two specific case studies where the final extent of the fire is dictated by the complex interaction between these local terrain features and extreme weather conditions.</p>
+<section id="biomass">
+<h3>5.1. Biomass<a class="headerlink" href="#biomass" title="Link to this heading">#</a></h3>
+<p>Biomass naturally acts as the primary fuel source for wildfires, directly driving their intensity and spread. In this case study, the perimeter of the burn scar aligns almost perfectly with areas of high biomass volume recorded in 1985. Combined with severe, prolonged drought conditions (indicated by intensely low SPEI-3 and SPEI-12 values), this dense fuel load created the ideal environment for a massive fire event.</p>
+<p><img alt="example1.png" src="usecases/UC2/book/attachment:example1.png" /></p>
+</section>
+<section id="elevation">
+<h3>5.2. Elevation<a class="headerlink" href="#elevation" title="Link to this heading">#</a></h3>
+<p>In this example, topography acted as a critical physical barrier. A sharp increase in elevation prevented the fire from spreading further north, despite a large volume of available biomass in that direction. Additionally, the burned area is situated on a south-facing slope (aspect). In the Northern Hemisphere, these slopes receive maximum solar radiation, which aggressively dries out the vegetation. Combined with three months of severe drought (low SPEI-3) and a very high FWI value, the area was highly volatile and sustained an intense fire event.</p>
+<p><img alt="example2.png" src="usecases/UC2/book/attachment:example2.png" /></p>
+<p>The ultimate goal of this analysis is to inform a predictive wildfire model. We have demonstrated that final fire extent is a complex product of extreme weather anomalies, accumulated drought, fuel density, and topographical barriers.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./usecases/UC2/book"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-data">1. Configuration &amp; Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-fires-characterisation">2. Historical Fires Characterisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-of-all-historical-fires-in-catalonia-between-1985-and-2023">2.1. Map of all historical fires in Catalonia between 1985 and 2023</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-evolution-of-fires">2.2. Annual Evolution of Fires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seasonality-of-fires">2.3. Seasonality of Fires</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-level-fire-correlations-with-meteo-variables">3. Macro-level Fire Correlations with Meteo Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fire-event-level-mereo-variables-for-different-fire-events">4. Fire-event level: Mereo variables for different fire events</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#influence-of-biophysical-variables-in-fires">5. Influence of Biophysical Variables in Fires</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biomass">5.1. Biomass</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elevation">5.2. Elevation</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MIRACA
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
