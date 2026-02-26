@@ -38,3 +38,6 @@
 [submodule "miraca-book/background/AdaptationModelling"]
 	path = miraca-book/background/AdaptationModelling
 	url = https://github.com/miracaEU/AdaptationModelling.git
+[submodule "miraca-book/riskassessment/Systemic-Economic-Impact"]
+	path = miraca-book/riskassessment/Systemic-Economic-Impact
+	url = https://github.com/miracaEU/Systemic-Economic-Impact
