@@ -37,8 +37,9 @@ parts:
       - file: background/Exposure_Miraca/book/intro
         sections:
           - file: background/Exposure_Miraca/book/Exposure_Miraca
-      - title: "Vulnerability database"
-        file: background/Vulnerability/book/Vulnerability_workbench
+      - file: background/Vulnerability/book/intro
+        sections:
+          - file: background/Vulnerability/book/Vulnerability_workbench
       - title: Network modelling
         file: background/RoadFlowModelling/book/miraca_roads
       - title: Cost-benefit analysis
