@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -172,7 +172,9 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">The Miraca approach</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/miraca_approach.html">Description of the framework</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/AssetRiskModelling/book/risk_assessment_belgium.html">Climate Risk Assessment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium.html">Systemic Economic impacts</a></li>
 </ul>
 </details></li>
 </ul>
@@ -195,7 +197,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Exposure_Miraca/book/Exposure_Miraca.html">Exploring the Critical Infrastructure Exposure Database</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Vulnerability/book/Vulnerability_workbench.html">Vulnerability database</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Vulnerability/book/intro.html">Vulnerability Database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Vulnerability/book/Vulnerability_workbench.html">Explore the Vulnerability database</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Adaptation strategies to Critical Infrastructure</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -434,7 +439,12 @@
 <p>In this demonstration only the rail track is considered, though damage to other asset types can also be calculated using the correct depth-damage functions (see Nirandjan, et al. (2024)).</p>
 <section id="step-1-load-the-necessary-packages">
 <h2>Step 1: Load the necessary packages<a class="headerlink" href="#step-1-load-the-necessary-packages" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
@@ -452,6 +462,7 @@
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
 <section id="step-2-load-default-configuration-and-model-parameters">
