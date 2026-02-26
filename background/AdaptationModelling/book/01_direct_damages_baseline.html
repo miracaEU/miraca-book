@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Adaptation of CI - A multi-level approach &#8212; MIRACA Technical Workbench</title>
+    <title>Adaptation of Critical Infrastructure - Direct damages &#8212; MIRACA Technical Workbench</title>
   
   
   
@@ -64,7 +64,7 @@
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Adaptation of CI - A multi-level approach" href="02_indirect_damages_baseline.html" />
+    <link rel="next" title="Adaptation of Critical Infrastructure - Indirect losses" href="02_indirect_damages_baseline.html" />
     <link rel="prev" title="MIRACA CBA Model" href="../../CBAmodelling/book/miraca_cba.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -173,7 +173,6 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/miraca_approach.html">Description of the framework</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/AssetRiskModelling/book/risk_assessment_belgium.html">Climate Risk Assessment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium.html">Systemic Economic impacts</a></li>
 </ul>
 </details></li>
@@ -194,16 +193,16 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical background</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../Exposure_Miraca/book/intro.html">Exposure database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../Exposure_Miraca/book/Exposure_Miraca.html">Exposure database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Exposure_Miraca/book/Exposure_Miraca.html">Exploring the Critical Infrastructure Exposure Database</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Vulnerability/book/Vulnerability_workbench.html">Vulnerability database</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Adaptation strategies to Critical Infrastructure</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_indirect_damages_baseline.html">Adaptation of CI - A multi-level approach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03_batch_process_adaptations.html">Adaptation of CI - A multi-level approach</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_results_summary.html">Adaptation of CI - A multi-level approach</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_indirect_damages_baseline.html">Adaptation of Critical Infrastructure - Indirect losses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_batch_process_adaptations.html">Adaptation of CI - Calculate adaptations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_results_summary.html">Summary</a></li>
 </ul>
 </details></li>
 </ul>
@@ -392,7 +391,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Adaptation of CI - A multi-level approach</h1>
+    <h1>Adaptation of Critical Infrastructure - Direct damages</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -402,7 +401,21 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation-of-ci-direct-damages">Adaptation of CI - Direct damages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-necessary-packages">Step 1: Load the necessary packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-default-configuration-and-model-parameters">Step 2: Load default configuration and model parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-read-exposure-assets-vulnerability-curves-and-hazard-data">Step 3: Read exposure assets, vulnerability curves and hazard data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure">Exposure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability">Vulnerability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard">Hazard</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-overlay-hazard-and-asset-data">Step 4: Overlay hazard and asset data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-overlay-data-to-files-for-reuse-in-later-stages-of-the-analysis">Save overlay data to files for reuse in later stages of the analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualise-direct-damages-and-calculate-risk">Visualise direct damages and calculate risk</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-risk-calculation-and-expected-annual-damages-ead">Step 5: Risk calculation and Expected Annual Damages (EAD)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
         </div>
@@ -414,19 +427,23 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="adaptation-of-ci-a-multi-level-approach">
-<h1>Adaptation of CI - A multi-level approach<a class="headerlink" href="#adaptation-of-ci-a-multi-level-approach" title="Link to this heading">#</a></h1>
-<p>In this example we demonstrate how adaptations of different levels (hazard-, asset-, network- and system-level) can be appraised based on their cost of adaptation, risk, and benefits of adaptation. This notebook covers the calculation of direct damage; subsequent notebooks cover indirect losses, and adaptation appraisal.</p>
-<section id="adaptation-of-ci-direct-damages">
-<h2>Adaptation of CI - Direct damages<a class="headerlink" href="#adaptation-of-ci-direct-damages" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="adaptation-of-critical-infrastructure-direct-damages">
+<h1>Adaptation of Critical Infrastructure - Direct damages<a class="headerlink" href="#adaptation-of-critical-infrastructure-direct-damages" title="Link to this heading">#</a></h1>
+<p>In this examples we demonstrate how adaptations of different levels (hazard-, asset-, network- and system-level) can be appraised based on their cost of adaptation, risk, and benefits of adaptation. This notebook covers the calculation of <strong>direct damage</strong>.</p>
 <p>The calculation of direct damages is based on the DamageScanner by Koks, et al (2023) <em>(DamageScanner: Python tool for natural hazard damage assessments. Zenodo. <a class="reference external" href="http://doi.org/10.5281/zenodo.2551015">http://doi.org/10.5281/zenodo.2551015</a>)</em></p>
 <p>Data of assets downloaded from OpenStreetMap (OSM) are overlayed with vectorised flood maps (BfG, 2019) and depth-damage functions (Kellerman, et al. 2015) are used to determine the damage to the railway. The direct risk is calculated by using the trapezoidal rule over the damages produced by 3 floods of different return periods. Future risk is calculated using results from the Transformed-Stationary methodology for non-stationary Extreme Value Analysis (Mentaschi et al., 2016). A sample of data is included in the data directory.</p>
 <p>In this demonstration only the rail track is considered, though damage to other asset types can also be calculated using the correct depth-damage functions (see Nirandjan, et al. (2024)).</p>
+<section id="step-1-load-the-necessary-packages">
+<h2>Step 1: Load the necessary packages<a class="headerlink" href="#step-1-load-the-necessary-packages" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="c1"># os.chdir(&#39;path/to/book/directory&#39;)</span>
-<span class="c1"># os.chdir(&#39;..&#39;)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()))</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">src</span><span class="w"> </span><span class="kn">import</span> <span class="n">damagescanner_rail_track</span> <span class="k">as</span> <span class="n">ds</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">src.ci_adapt_utilities</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -437,7 +454,9 @@
 </div>
 </div>
 </div>
-<p>Load default configuration and model parameters</p>
+</section>
+<section id="step-2-load-default-configuration-and-model-parameters">
+<h2>Step 2: Load default configuration and model parameters<a class="headerlink" href="#step-2-load-default-configuration-and-model-parameters" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load configuration with ini file (created running config.py)</span>
@@ -447,10 +466,15 @@
 </div>
 </div>
 </div>
-<p>Read exposure (assets), vulnerability (depth-damage curves), and hazard data</p>
+</section>
+<section id="step-3-read-exposure-assets-vulnerability-curves-and-hazard-data">
+<h2>Step 3: Read exposure assets, vulnerability curves and hazard data<a class="headerlink" href="#step-3-read-exposure-assets-vulnerability-curves-and-hazard-data" title="Link to this heading">#</a></h2>
+<p>The exposure database is retrieved from OpenStreetMaps. Vulnerability damage curves is obtained from a recent paper from Nirandjan et al., (2024).</p>
+<section id="exposure">
+<h3>Exposure<a class="headerlink" href="#exposure" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load asset data (OpenStreetMap contributors. (2023). Germany country dump retrieved from OSM. https://www.openstreetmap.org)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load asset data</span>
 <span class="n">assets</span><span class="p">,</span> <span class="n">geom_dict</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">rp_spec_priority</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">startup_ci_adapt</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">config_file</span><span class="p">)</span>
 <span class="n">asset_options</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;bridge_design_rp&#39;</span><span class="p">:</span><span class="s1">&#39;M&#39;</span><span class="p">,</span>
                <span class="s1">&#39;tunnel_design_rp&#39;</span><span class="p">:</span><span class="s1">&#39;M&#39;</span><span class="p">}</span>
@@ -467,10 +491,12 @@
 </div>
 </div>
 </div>
+</section>
+<section id="vulnerability">
+<h3>Vulnerability<a class="headerlink" href="#vulnerability" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read vulnerability and maximum damage data (Nirandjan, S., Koks, E. E., Ye, M., Pant, R., Van Ginkel, K. C. H., Aerts, J. C. J. H., &amp; Ward, P. J. (2024). Review article: Physical Vulnerability Database for Critical Infrastructure Multi-Hazard Risk Assessments – A systematic review and data collection. https://doi.org/10.5194/nhess-2023-208)</span>
-<span class="n">curve_types</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;rail&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;F8.1&#39;</span><span class="p">]}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">curve_types</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;rail&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;F8.1&#39;</span><span class="p">]}</span>
 <span class="n">infra_curves</span><span class="p">,</span> <span class="n">maxdams</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">read_vul_maxdam</span><span class="p">(</span><span class="n">data_path</span><span class="p">,</span> <span class="n">hazard_type</span><span class="p">,</span> <span class="n">infra_type</span><span class="p">)</span>
 <span class="n">max_damage_tables</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_path</span> <span class="o">/</span> <span class="n">vulnerability_data</span> <span class="o">/</span> <span class="s1">&#39;Table_D3_Costs_V1.1.0.xlsx&#39;</span><span class="p">,</span><span class="n">sheet_name</span><span class="o">=</span><span class="s1">&#39;Cost_Database&#39;</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found matching infrastructure curves for: </span><span class="si">{</span><span class="n">infra_type</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -483,10 +509,12 @@
 </div>
 </div>
 </div>
+</section>
+<section id="hazard">
+<h3>Hazard<a class="headerlink" href="#hazard" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read hazard data (BfG. (2019). BfG OpenData Dataset Überflutungstiefen (Hochwasserrisikomanagement-RL 2. Zyklus 2016-2021) [Dataset]. https://geoportal.bafg.de/download/opendata/ueberflutungstiefen-2019/servicefeed.xml)</span>
-<span class="n">test_haz_path</span> <span class="o">=</span> <span class="n">data_path</span> <span class="o">/</span> <span class="sa">r</span><span class="s1">&#39;Floods\Germany\basin_intersections&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test_haz_path</span> <span class="o">=</span> <span class="n">data_path</span> <span class="o">/</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;Floods/Germany/basin_intersections&#39;</span><span class="p">)</span>
 <span class="n">hazard_data_list</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">read_hazard_data</span><span class="p">(</span><span class="n">test_haz_path</span><span class="p">,</span> <span class="n">hazard_type</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="n">country_name</span><span class="p">,</span> <span class="n">subfolders</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">hazard_data_list</span><span class="p">)</span><span class="si">}</span><span class="s1"> hazard maps.&#39;</span><span class="p">)</span>
 </pre></div>
@@ -498,7 +526,10 @@
 </div>
 </div>
 </div>
-<p>Overlay hazard and asset data</p>
+</section>
+</section>
+<section id="step-4-overlay-hazard-and-asset-data">
+<h2>Step 4: Overlay hazard and asset data<a class="headerlink" href="#step-4-overlay-hazard-and-asset-data" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate direct damage by asset (Koks. E.E. (2023). DamageScanner: Python tool for natural hazard damage assessments. Zenodo. http://doi.org/10.5281/zenodo.2551015)</span>
@@ -524,29 +555,30 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-01-06 16:20:07 - Reading hazard map 1 of 9: flood_DERP_RW_H_4326_2080428500
-2025-01-06 16:20:07 - Coarse overlay of hazard map with assets...
-2025-01-06 16:20:10 - Reading hazard map 2 of 9: flood_DERP_RW_H_4326_2080430240
-2025-01-06 16:20:11 - Coarse overlay of hazard map with assets...
-2025-01-06 16:20:57 - Reading hazard map 3 of 9: flood_DERP_RW_H_4326_2080430320
-2025-01-06 16:20:58 - Coarse overlay of hazard map with assets...
-2025-01-06 16:21:56 - Reading hazard map 4 of 9: flood_DERP_RW_L_4326_2080428500
-2025-01-06 16:21:56 - Coarse overlay of hazard map with assets...
-2025-01-06 16:22:13 - Reading hazard map 5 of 9: flood_DERP_RW_L_4326_2080430240
-2025-01-06 16:22:15 - Coarse overlay of hazard map with assets...
-2025-01-06 16:23:36 - Reading hazard map 6 of 9: flood_DERP_RW_L_4326_2080430320
-2025-01-06 16:23:39 - Coarse overlay of hazard map with assets...
-2025-01-06 16:26:48 - Reading hazard map 7 of 9: flood_DERP_RW_M_4326_2080428500
-2025-01-06 16:26:48 - Coarse overlay of hazard map with assets...
-2025-01-06 16:26:54 - Reading hazard map 8 of 9: flood_DERP_RW_M_4326_2080430240
-2025-01-06 16:26:55 - Coarse overlay of hazard map with assets...
-2025-01-06 16:27:59 - Reading hazard map 9 of 9: flood_DERP_RW_M_4326_2080430320
-2025-01-06 16:28:00 - Coarse overlay of hazard map with assets...
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2026-02-25 14:46:07 - Reading hazard map 1 of 9: flood_DERP_RW_L_4326_2080430240
+2026-02-25 14:46:08 - Coarse overlay of hazard map with assets...
+2026-02-25 14:46:13 - Reading hazard map 2 of 9: flood_DERP_RW_H_4326_2080430320
+2026-02-25 14:46:13 - Coarse overlay of hazard map with assets...
+2026-02-25 14:46:15 - Reading hazard map 3 of 9: flood_DERP_RW_H_4326_2080428500
+2026-02-25 14:46:15 - Coarse overlay of hazard map with assets...
+2026-02-25 14:46:16 - Reading hazard map 4 of 9: flood_DERP_RW_L_4326_2080428500
+2026-02-25 14:46:16 - Coarse overlay of hazard map with assets...
+2026-02-25 14:46:18 - Reading hazard map 5 of 9: flood_DERP_RW_L_4326_2080430320
+2026-02-25 14:46:18 - Coarse overlay of hazard map with assets...
+2026-02-25 14:46:35 - Reading hazard map 6 of 9: flood_DERP_RW_H_4326_2080430240
+2026-02-25 14:46:35 - Coarse overlay of hazard map with assets...
+2026-02-25 14:46:37 - Reading hazard map 7 of 9: flood_DERP_RW_M_4326_2080430320
+2026-02-25 14:46:38 - Coarse overlay of hazard map with assets...
+2026-02-25 14:46:42 - Reading hazard map 8 of 9: flood_DERP_RW_M_4326_2080428500
+2026-02-25 14:46:42 - Coarse overlay of hazard map with assets...
+2026-02-25 14:46:42 - Reading hazard map 9 of 9: flood_DERP_RW_M_4326_2080430240
+2026-02-25 14:46:42 - Coarse overlay of hazard map with assets...
 </pre></div>
 </div>
 </div>
 </div>
-<p>Save overlay data to files for reuse in later stages of the analysis</p>
+<section id="save-overlay-data-to-files-for-reuse-in-later-stages-of-the-analysis">
+<h3>Save overlay data to files for reuse in later stages of the analysis<a class="headerlink" href="#save-overlay-data-to-files-for-reuse-in-later-stages-of-the-analysis" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save the data to csv files</span>
@@ -561,7 +593,9 @@
 </div>
 </div>
 </div>
-<p>Visualise direct damages and calculate risk</p>
+</section>
+<section id="visualise-direct-damages-and-calculate-risk">
+<h3>Visualise direct damages and calculate risk<a class="headerlink" href="#visualise-direct-damages-and-calculate-risk" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot the gdf and color each feature by the value of flood_DERP_RW_L_4326_2080430320_avg or black if no value</span>
@@ -574,7 +608,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/b5abd37ad982f788de870c42e667e0666848512fef6eaf95b8bbe11e93b9cd35.png" src="../../../_images/b5abd37ad982f788de870c42e667e0666848512fef6eaf95b8bbe11e93b9cd35.png" />
+<img alt="../../../_images/a6404f039c5dc6619a5588dd9b9a544407289de6099aa3c4076b7d127b7c9f56.png" src="../../../_images/a6404f039c5dc6619a5588dd9b9a544407289de6099aa3c4076b7d127b7c9f56.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -594,6 +628,10 @@
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="step-5-risk-calculation-and-expected-annual-damages-ead">
+<h2>Step 5: Risk calculation and Expected Annual Damages (EAD)<a class="headerlink" href="#step-5-risk-calculation-and-expected-annual-damages-ead" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the risk as expected annual damages (EAD) by basin</span>
@@ -709,7 +747,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/02cbbbab17f3b67b28dd5465758614e1c51c2a89158783b0023f77b2156d557a.png" src="../../../_images/02cbbbab17f3b67b28dd5465758614e1c51c2a89158783b0023f77b2156d557a.png" />
+<img alt="../../../_images/5b76f63161aea5800d5fb1666ebadde6939f4ce4680ec30e99a33886e58c7ae4.png" src="../../../_images/5b76f63161aea5800d5fb1666ebadde6939f4ce4680ec30e99a33886e58c7ae4.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -720,6 +758,14 @@
 </div>
 </div>
 </div>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>OpenStreetMap contributors,. (2023). Germany country dump retrieved from OSM. <a class="reference external" href="https://www.openstreetmap.org">https://www.openstreetmap.org</a></p></li>
+<li><p>Nirandjan, S., Koks, E. E., Ye, M., Pant, R., Van Ginkel, K. C. H., Aerts, J. C. J. H., &amp; Ward, P. J. (2024). Review article: Physical Vulnerability Database for Critical Infrastructure Multi-Hazard Risk Assessments – A systematic review and data collection. <a class="reference external" href="https://doi.org/10.5194/nhess-2023-208">https://doi.org/10.5194/nhess-2023-208</a></p></li>
+<li><p>BfG. (2019). BfG OpenData Dataset Überflutungstiefen (Hochwasserrisikomanagement-RL 2. Zyklus 2016-2021) [Dataset]. <a class="reference external" href="https://geoportal.bafg.de/download/opendata/ueberflutungstiefen-2019/servicefeed.xml">https://geoportal.bafg.de/download/opendata/ueberflutungstiefen-2019/servicefeed.xml</a></p></li>
+</ul>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -769,7 +815,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Adaptation of CI - A multi-level approach</p>
+        <p class="prev-next-title">Adaptation of Critical Infrastructure - Indirect losses</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -790,7 +836,21 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation-of-ci-direct-damages">Adaptation of CI - Direct damages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-necessary-packages">Step 1: Load the necessary packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-default-configuration-and-model-parameters">Step 2: Load default configuration and model parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-read-exposure-assets-vulnerability-curves-and-hazard-data">Step 3: Read exposure assets, vulnerability curves and hazard data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure">Exposure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability">Vulnerability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard">Hazard</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-overlay-hazard-and-asset-data">Step 4: Overlay hazard and asset data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#save-overlay-data-to-files-for-reuse-in-later-stages-of-the-analysis">Save overlay data to files for reuse in later stages of the analysis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualise-direct-damages-and-calculate-risk">Visualise direct damages and calculate risk</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-risk-calculation-and-expected-annual-damages-ead">Step 5: Risk calculation and Expected Annual Damages (EAD)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
 

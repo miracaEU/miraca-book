@@ -11,6 +11,6 @@ The goal of this section is to show in a step-by-step process, how a user can de
 
 **Systemic Economic Impact**: This section demonstrates the systemic economic effects of the transportation corridor (roads) failure in Belgium. It assesses the implications of disrupted corridors in the country.
 
-{octicon}`arrow-right;1.2em` [Explore the Systemic Economic Impact here](riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium)
+{octicon}`arrow-right;1.2em` [Explore the Systemic Economic Impact](riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium)
 
 
