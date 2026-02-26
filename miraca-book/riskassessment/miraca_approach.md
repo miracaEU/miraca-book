@@ -8,6 +8,7 @@ The MIRACA approach consists of the development of a layered decision-support to
 :align: center
 ```
 
+
 MIRACA’s key innovative aspects consist of:
 
 - Asset-level CI **exposure** and **vulnerabilities** in Europe within a **multi-hazard** context: In the single and multi-hazard context, there are some gaps regarding asset location and vulnerability attributes and asset characteristics. Through the Use Cases, Miraca is working on an integrated assessment of CI exposure and vulnerabilities upon multi-hazard events.
