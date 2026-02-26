@@ -37,8 +37,9 @@ parts:
       - file: background/Exposure_Miraca/book/intro
         sections:
           - file: background/Exposure_Miraca/book/Exposure_Miraca
-      - title: "Vulnerability database"
-        file: background/Vulnerability/book/Vulnerability_workbench
+      - file: background/Vulnerability/book/intro
+        sections:
+          - file: background/Vulnerability/book/Vulnerability_workbench
       - title: Network modelling
         file: background/RoadFlowModelling/book/miraca_roads
       - title: Cost-benefit analysis
@@ -51,14 +52,13 @@ parts:
           - file: background/Transport-Flows-Allocation/book/Maritime_Flow_Assignment
           - file: background/Transport-Flows-Allocation/book/Rail_Flow_Assignment
           - file: background/Transport-Flows-Allocation/book/Road_Flow_Assignment
-      - file: background/AdaptationModelling/book/01_direct_damages_baseline
+      - file: background/AdaptationModelling/book/introduction
         title: "Adaptation strategies to Critical Infrastructure"
         sections:
+          - file: background/AdaptationModelling/book/01_direct_damages_baseline
           - file: background/AdaptationModelling/book/02_indirect_damages_baseline
           - file: background/AdaptationModelling/book/03_batch_process_adaptations
           - file: background/AdaptationModelling/book/04_results_summary
-
-
 
   - caption: About
     chapters:
