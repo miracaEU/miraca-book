@@ -9,25 +9,27 @@ The **M**ultihazard **I**nfrastructure **R**isk **A**ssessment for **C**limate *
 
 ## Systemic Risk Approach for Critical Infrastructure
 
-There is an urgent need to **adapt Europe’s critical infrastructure** to our rapidly changing climate. Public authorities need support to enable them to pinpoint the locations of risks from climate change and develop affordable strategies to enhance infrastructure systems’ resilience. Existing methods for climate risk analysis are not tailored to the complexities of CI, because they do not properly account for systems interdependencies, as well as still containing key data gaps.
-MIRACA builds from standard climate risk assessment framework and extends beyond-state-of-the-art in CI systems analysis and appraisal of the resilience of adaptation solutions.
+There is an urgent need to **adapt Europe’s critical infrastructure** to our rapidly changing climate. Public authorities need support to enable them to **pinpoint the locations of risks** from climate change and **develop affordable strategies to enhance infrastructure systems’ resilience**. Existing methods for climate risk analysis are not tailored to the complexities of CI, because they do not properly account for systems interdependencies, as well as still containing key data gaps.
+
+MIRACA builds from the standard climate risk assessment framework and extends beyond-state-of-the-art in CI systems analysis and appraisal of the resilience of adaptation solutions.
 
 ## The Approach
 
-The MIRACA approach focuses on assessing climate risk beyond the asset-level, expanding it to conceive Critical Infrastructure from a network and systems-level perspective. climate assessment and adaptation strategies.
+The MIRACA approach focuses on assessing climate risk beyond the asset-level, expanding it to conceive Critical Infrastructure from a network and systems-level perspective, both for risk assessment and the design of adaptation strategies.
 
 {octicon}`arrow-right;1.2em` [Read more about the MIRACA Framework](riskassessment/miraca_approach)
 
 ## Use Cases
 
-To demonstrate, validate, promote the uptake of the tools and methods developed as part of the project, we have selected five Use Cases, in which local public authorities and relevant CI managers steer and co-develop our decision-support toolkit. These Use Cases cover a variety of locations, infrastructure types and climate hazards.
+To demonstrate, validate and promote the uptake of the tools and methods developed as part of the project, we have selected five Use Cases, in which local public authorities and relevant CI managers steer and co-develop our decision-support toolkit. These Use Cases cover a variety of locations, infrastructure types and climate hazards.
 
 {octicon}`arrow-right;1.2em` [Explore in more detail the different use cases](usecases/introduction)
 
 ## Technical background
 
-The background section focuses on the Miraca Approach by describing in more detail the core developments of the project. These cover methodologies and approaches from the full risk steps, from exposure to adaptation appraisal. These aim to support users to better understand the models and tools of the project.
+The background section focuses on the models and methods behind Miraca Approach, describing in more detail the core developments of the project. These include a description of the methodologies for the the full climate risk steps, from exposure to adaptation appraisal. These aim to support users to better understand the models and tools of the project.
 
+````md
 ```{note}
 The Miraca workbench is an active, evolving project and will be updated continuously during 2026.
 ```
