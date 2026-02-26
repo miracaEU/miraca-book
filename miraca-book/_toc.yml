@@ -11,7 +11,6 @@ parts:
         file: riskassessment/miraca_approach
       - title: "Example: Belgium road infrastructure"
         file: riskassessment/example
-        expanded: true
         sections:
           - file: riskassessment/AssetRiskModelling/book/risk_assessment_belgium
             title: "Climate Risk Assessment"
