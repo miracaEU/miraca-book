@@ -1,3 +1,0 @@
-# USECASE 2
-
-TBD.

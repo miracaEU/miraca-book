@@ -21,15 +21,15 @@ parts:
     chapters:
       - title: Introduction
         file: usecases/introduction
-      - title: Use Case 1 - Flooding and windstorms in the TEN-T corridor
-        file: placeholder1
+      - title: Use Case 1 - Flooding and windstorms in the TEN-T corridor (Coming soon)
+        file: usecases/UC1_intro
       - title: Use Case 2 - Wildfires in Catalonia
-        file: placeholder2
+        file: usecases/UC2/book/Use_Case_2
       - title: Use case 3 - Flooding in Zuid-Holland
         file: usecases/UC3/book/Use_Case_template
       - title: Use Case 4 - Landslides & Earthquake in Greece
-        file: usecases/UC4/book/E_E+L_ESRM20+Elsus
-      - title: Use Case 5 - Flooding and heat in Slovenia
+        file: usecases/UC4/book/E_E+L_ESRM20+Elsus_new
+      - title: Use Case 5 - Flooding and landslides in Slovenia
         file: usecases/UC5/Use_Case_5_v1
 
   - caption: Technical background
@@ -56,9 +56,14 @@ parts:
         title: "Adaptation strategies to Critical Infrastructure"
         sections:
           - file: background/AdaptationModelling/book/01_direct_damages_baseline
+            title: Direct damages
           - file: background/AdaptationModelling/book/02_indirect_damages_baseline
+            title: Indirect Losses
           - file: background/AdaptationModelling/book/03_batch_process_adaptations
+            title: Costs of adaptation strategies
           - file: background/AdaptationModelling/book/04_results_summary
+            title: Avoided damages and adaptation costs
+
 
   - caption: About
     chapters:
