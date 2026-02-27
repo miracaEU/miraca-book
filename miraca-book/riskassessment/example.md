@@ -1,5 +1,5 @@
 
-# Exploring the Miraca approach through a real case example in Belgium
+# Exploring the MIRACA approach through a real case example in Belgium
 
 In order to illustrate some of the underlying principles of the methodology, we have developed a country-level, asset and system risk assessment for road infrastructure under riverine flooding. 
 

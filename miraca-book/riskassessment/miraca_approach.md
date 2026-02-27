@@ -3,7 +3,7 @@
 The MIRACA approach consists of the development of a layered decision-support tool that enhances resilience through adaptation at different levels. The flowchart below describes in detail what the building blocks of the methodology are.
 
 ```{image} /figures/MIRACA_Framework.png
-:alt: Miraca framework
+:alt: MIRACA framework
 :width: 800px
 :align: center
 ```
@@ -11,7 +11,7 @@ The MIRACA approach consists of the development of a layered decision-support to
 
 MIRACA’s key innovative aspects consist of:
 
-- Asset-level CI **exposure** and **vulnerabilities** in Europe within a **multi-hazard** context: In the single-and multi-hazard context, there are some gaps regarding asset location and vulnerability attributes and asset characteristics. Through the Use Cases, Miraca is working on an integrated assessment of CI exposure and vulnerabilities upon multi-hazard events.
+- Asset-level CI **exposure** and **vulnerabilities** in Europe within a **multi-hazard** context: In the single-and multi-hazard context, there are some gaps regarding asset location and vulnerability attributes and asset characteristics. Through the Use Cases, MIRACA is working on an integrated assessment of CI exposure and vulnerabilities upon multi-hazard events.
 
 
 - Generalised and transferable **infrastructure network-level models** across Europe: In network analysis, most approaches do not address transboundary interdependencies. MIRACA is developing a transferable modelling framework that captures the interdependencies between networks.
