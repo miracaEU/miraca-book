@@ -412,7 +412,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-data">1. Configuration &amp; Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-fires-characterisation">2. Historical Fires Characterisation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-of-all-historical-fires-in-catalonia-between-1985-and-2023">2.1. Map of all historical fires in Catalonia between 1985 and 2023</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-evolution-of-fires">2.2. Annual Evolution of Fires</a></li>
@@ -439,6 +439,8 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="use-case-2-wildfires-in-catalonia-spain">
 <h1>Use Case 2 - Wildfires in Catalonia, Spain<a class="headerlink" href="#use-case-2-wildfires-in-catalonia-spain" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>Wildfires are complex, dynamic phenomena driven by an intricate mix of long-term climate trends, daily weather extremes, and localised landscape features. The purpose of this notebook is to explore how these <strong>meteorological</strong> and <strong>biophysical</strong> variables interact to dictate <strong>wildfire behaviour, size, and frequency</strong>. Focusing on the region of Catalonia, Spain, this analysis integrates several layers of data to build a complete picture of fire events:</p>
 <ul class="simple">
 <li><p>Historical Fire Catalogs from 1986 to 2023</p></li>
@@ -453,8 +455,6 @@
 <li><p>Fire-event level: Meteo variables for different fire events</p></li>
 <li><p>Influence of Nature in Fires</p></li>
 </ol>
-<section id="configuration-data">
-<h2>1. Configuration &amp; Data<a class="headerlink" href="#configuration-data" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -463,6 +463,7 @@
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+
 <span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">cartopy.crs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ccrs</span>
@@ -482,10 +483,10 @@
 </div>
 </details>
 </div>
-<p>We load the historical wildfire catalog for Catalonia (1986–2023) sourced from the <em>Institut Cartogràfic i Geològic de Catalunya</em> (ICGC). For every unique fire (<code class="docutils literal notranslate"><span class="pre">fire_id</span></code>), each row provides:</p>
+<p>We load the historical wildfire catalog for Catalonia (1986–2023) sourced from the <strong>Institut Cartogràfic i Geològic de Catalunya (ICGC)</strong>. For every unique fire (<code class="docutils literal notranslate"><span class="pre">fire_id</span></code>), each row provides:</p>
 <ul class="simple">
 <li><p>Spatial Data: The fire’s perimeter (geometry) and the coordinates of its centroid.</p></li>
-<li><p>Observed Meteorology: Weather conditions on the exact date of the fire, extracted at the centroid. This data is extracted from ERA5-Reanalysis.</p></li>
+<li><p>Observed Meteorology: Weather conditions on the exact date of the fire, extracted at the centroid. This data is extracted from <strong>ERA5-Reanalysis</strong>.</p></li>
 <li><p>Climatological Baseline: The historical average conditions for that specific day of the year (using the 1981–2000 reference period), labeled with a <em>_clim</em> suffix. This structure allows us to easily calculate and analyze weather anomalies.</p></li>
 </ul>
 <div class="admonition warning">
@@ -1173,12 +1174,12 @@ Running this cell fetches data directly from the Zenodo research repository. Dep
 <section id="biomass">
 <h3>5.1. Biomass<a class="headerlink" href="#biomass" title="Link to this heading">#</a></h3>
 <p>Biomass naturally acts as the primary fuel source for wildfires, directly driving their intensity and spread. In this case study, the perimeter of the burn scar aligns almost perfectly with areas of high biomass volume recorded in 1985. Combined with severe, prolonged drought conditions (indicated by intensely low SPEI-3 and SPEI-12 values), this dense fuel load created the ideal environment for a massive fire event.</p>
-<p><img alt="example1.png" src="usecases/UC2/book/attachment:example1.png" /></p>
+<p><img alt="Example 1" src="../../../_images/example1.png" /></p>
 </section>
 <section id="elevation">
 <h3>5.2. Elevation<a class="headerlink" href="#elevation" title="Link to this heading">#</a></h3>
 <p>In this example, topography acted as a critical physical barrier. A sharp increase in elevation prevented the fire from spreading further north, despite a large volume of available biomass in that direction. Additionally, the burned area is situated on a south-facing slope (aspect). In the Northern Hemisphere, these slopes receive maximum solar radiation, which aggressively dries out the vegetation. Combined with three months of severe drought (low SPEI-3) and a very high FWI value, the area was highly volatile and sustained an intense fire event.</p>
-<p><img alt="example2.png" src="usecases/UC2/book/attachment:example2.png" /></p>
+<p><img alt="Example 2" src="../../../_images/example2.png" /></p>
 <p>The ultimate goal of this analysis is to inform a predictive wildfire model. We have demonstrated that final fire extent is a complex product of extreme weather anomalies, accumulated drought, fuel density, and topographical barriers.</p>
 </section>
 </section>
@@ -1249,7 +1250,7 @@ Running this cell fetches data directly from the Zenodo research repository. Dep
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-data">1. Configuration &amp; Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-fires-characterisation">2. Historical Fires Characterisation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-of-all-historical-fires-in-catalonia-between-1985-and-2023">2.1. Map of all historical fires in Catalonia between 1985 and 2023</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-evolution-of-fires">2.2. Annual Evolution of Fires</a></li>

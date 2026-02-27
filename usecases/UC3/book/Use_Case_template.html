@@ -423,6 +423,7 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation">Adaptation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-adaptation-options">Comparison of adaptation options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
         </div>
@@ -436,6 +437,10 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="use-case-3-flooding-in-zuid-holland">
 <h1>Use case 3 - Flooding in Zuid-Holland<a class="headerlink" href="#use-case-3-flooding-in-zuid-holland" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>The focus of this use case is adaptation under uncertainty in interdependent Critical Infrastructure. This use case is most relevant for electricity distribution network operators.</p>
+<p>Using pluvial flood data for South Holland, in the Netherlands, we estimate the disruptions on medium-low voltage substations, considering a set number of repair crews to carry out repairs on broken down substations. We availability of the road network is used to determine whether a substation can be reached.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -444,7 +449,7 @@
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
-<span class="c1"># Imports</span>
+
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span>
@@ -477,13 +482,9 @@
 </div>
 </details>
 </div>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>The focus of this use case is adaptation under uncertainty in interdependent Critical Infrastructure. This use case is most relevant for electricity distribution network operators.</p>
-<p>Using pluvial flood data for South Holland, in the Netherlands, we estimate the disruptions on medium-low voltage substations, considering a set number of repair crews to carry out repairs on broken down substations. We availability of the road network is used to determine whether a substation can be reached.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Since in this use case, the Hazard, exposure, population, and land use data are too heavy, a sample of the data is provided instead.</p>
+<p>In this Use Case the Hazard, exposure, population, and land use data cover a large area leading to very heavy files. Therefore, in this notebook a sample of the data is provided instead.</p>
 </div>
 </section>
 <section id="directory-structure">
@@ -557,7 +558,7 @@ WARNING! Values of lost load should be calculated with country-wide VOLL rates, 
 </section>
 <section id="hazard-characterisation">
 <h2>Hazard characterisation<a class="headerlink" href="#hazard-characterisation" title="Link to this heading">#</a></h2>
-<p>Data description - Pluvial flooding</p>
+<p><strong>Pluvial flooding</strong></p>
 <p>The flood considered in this use case is produced by excess rainfall.
 To produce this data, the assumption of 200 mm of rainfall on previously wet soil over the whole province of South Holland, the Netherlands was considered.</p>
 <p>The data consists of time explicity flooding depth maps at a daily timestep. The aggregated flood maps for this model can be found in the Open Data Portal of Zuid Holland: <a class="reference external" href="https://opendata.zuid-holland.nl/geonetwork/srv/api/records/6cb97102-f3b3-421e-a37e-c90615118e6d">https://opendata.zuid-holland.nl/geonetwork/srv/api/records/6cb97102-f3b3-421e-a37e-c90615118e6d</a></p>
@@ -632,10 +633,7 @@ Asset types: {&#39;msls&#39;: 245}
 <section id="vulnerability-assessment">
 <h2>Vulnerability Assessment<a class="headerlink" href="#vulnerability-assessment" title="Link to this heading">#</a></h2>
 <p>We estimate the damage to substations by intersecting the footprints of the substations with flooding depth data and taking the maximum value.</p>
-<p>This value is then related to substation damage using a linearized depth-damage (vulnerability) curve (FEMA, 2003; Sánchez-Muñoz et al., 2020). Substation damage is expressed as a damage ratio between 0 (undamaged) and 1 (fully damaged). Finally, the damage ratio is used to estimate the repair time in hours through a repair time function (Movahednia et al., 2022; Sánchez-Muñoz et al., 2020).</p>
-<p>FEMA. Multi-Hazard Loss Estimation Methodology, Flood Model: Hazus-MH MR4 Technical Manual, 2009th ed.; FEMA: Washington, DC, USA, 2009.</p>
-<p>Movahednia, M., Kargarian, A., Ozdemir, C. E., &amp; Hagen, S. C. (2022). Power Grid Resilience Enhancement via Protecting Electrical Substations Against Flood Hazards: A Stochastic Framework. IEEE Transactions on Industrial Informatics, 18(3), 2132–2143. <a class="reference external" href="https://doi.org/10.1109/TII.2021.3100079">https://doi.org/10.1109/TII.2021.3100079</a></p>
-<p>Sánchez-Muñoz, D., Domínguez-García, J. L., Martínez-Gomariz, E., Russo, B., Stevens, J., &amp; Pardo, M. (2020). Electrical Grid Risk Assessment Against Flooding in Barcelona and Bristol Cities. Sustainability, 12(4), 1527. <a class="reference external" href="https://doi.org/10.3390/su12041527">https://doi.org/10.3390/su12041527</a></p>
+<p>This value is then related to substation damage using a linearized depth-damage (vulnerability) curve (FEMA, 2003; Sánchez-Muñoz et al., 2020). Substation damage is expressed as a damage ratio between 0 (undamaged) and 1 (fully damaged). Finally, the damage ratio is used to estimate the repair time in hours through a repair time function (<a class="reference external" href="https://doi.org/10.1109/TII.2021.3100079">Movahednia et al., 2022</a> and <a class="reference external" href="https://doi.org/10.3390/su12041527">Sánchez-Muñoz et al., 2020</a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example coefficients for curves</span>
@@ -1808,6 +1806,14 @@ Detailed results for policy: L1_and_L2_combined + monetary
 </div>
 </div>
 </section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>FEMA. Multi-Hazard Loss Estimation Methodology, Flood Model: Hazus-MH MR4 Technical Manual, 2009th ed.; FEMA: Washington, DC, USA, 2009.</p></li>
+<li><p>Movahednia, M., Kargarian, A., Ozdemir, C. E., &amp; Hagen, S. C. (2022). Power Grid Resilience Enhancement via Protecting Electrical Substations Against Flood Hazards: A Stochastic Framework. IEEE Transactions on Industrial Informatics, 18(3), 2132–2143. <a class="reference external" href="https://doi.org/10.1109/TII.2021.3100079">https://doi.org/10.1109/TII.2021.3100079</a></p></li>
+<li><p>Sánchez-Muñoz, D., Domínguez-García, J. L., Martínez-Gomariz, E., Russo, B., Stevens, J., &amp; Pardo, M. (2020). Electrical Grid Risk Assessment Against Flooding in Barcelona and Bristol Cities. Sustainability, 12(4), 1527. <a class="reference external" href="https://doi.org/10.3390/su12041527">https://doi.org/10.3390/su12041527</a></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1886,6 +1892,7 @@ Detailed results for policy: L1_and_L2_combined + monetary
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptation">Adaptation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-adaptation-options">Comparison of adaptation options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
 
