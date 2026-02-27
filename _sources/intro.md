@@ -1,4 +1,4 @@
-# Welcome to the Miraca Book
+# Welcome to the MIRACA Book
 
 
 :::{card} 
@@ -27,10 +27,10 @@ To demonstrate, validate and promote the uptake of the tools and methods develop
 
 ## Technical background
 
-The background section focuses on the models and methods behind the Miraca Approach, describing in more detail the core developments of the project. These include a description of the methodologies for the full climate risk steps, from exposure to adaptation appraisal. These aim to support users to better understand the models and tools of the project.
+The background section focuses on the models and methods behind the MIRACA Approach, describing in more detail the core developments of the project. These include a description of the methodologies for the full climate risk steps, from exposure to adaptation appraisal. These aim to support users to better understand the models and tools of the project.
 
 > [!NOTE]
->The Miraca workbench is an active, evolving project and will be updated continuously during 2026.
+>The MIRACA workbench is an active, evolving project and will be updated continuously during 2026.
 
 
 ```{image} /figures/figure_introduction_1.png
