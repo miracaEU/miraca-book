@@ -9,7 +9,7 @@ The **M**ultihazard **I**nfrastructure **R**isk **A**ssessment for **C**limate *
 
 ## Systemic Risk Approach for Critical Infrastructure
 
-There is an urgent need to **adapt Europe’s critical infrastructure** to our rapidly changing climate. Public authorities need support to enable them to **pinpoint the locations of risks** from climate change and **develop affordable strategies to enhance infrastructure systems’ resilience**. Existing methods for climate risk analysis are not tailored to the complexities of CI, because they do not properly account for systems interdependencies, as well as still containing key data gaps.
+There is an urgent need to **adapt Europe’s critical infrastructure** to our rapidly changing climate. Public authorities need support to enable them to **pinpoint the locations of risks** from climate change and **develop affordable strategies to enhance infrastructure systems’ resilience**. Existing methods for climate risk analysis are not tailored to the complexities of Critical Infrastructure (CI), because they do not properly account for systems interdependencies, as well as still containing key data gaps.
 
 MIRACA builds from the standard climate risk assessment framework and extends beyond the state of the art in CI systems analysis and appraisal of the resilience of adaptation solutions.
 
@@ -29,9 +29,9 @@ To demonstrate, validate and promote the uptake of the tools and methods develop
 
 The background section focuses on the models and methods behind the MIRACA Approach, describing in more detail the core developments of the project. These include a description of the methodologies for the full climate risk steps, from exposure to adaptation appraisal. These aim to support users to better understand the models and tools of the project.
 
-> [!NOTE]
->The MIRACA workbench is an active, evolving project and will be updated continuously during 2026.
-
+```{note}
+The MIRACA workbench is an active, evolving project and will be updated continuously during 2026.
+```
 
 ```{image} /figures/figure_introduction_1.png
 :width: 800px
