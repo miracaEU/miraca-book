@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; MIRACA Technical Workbench</title>
+    <title>Adaptation Modelling &#8212; MIRACA Technical Workbench</title>
   
   
   
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -188,7 +188,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../usecases/UC5/Use_Case_5_v1.html">Use Case 5 - Flooding and landslides in Slovenia</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical background</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../Exposure_Miraca/book/intro.html">Exposure database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Exposure_Miraca/book/Exposure_Miraca.html">Exploring the Critical Infrastructure Exposure Database</a></li>
 </ul>
@@ -199,15 +199,21 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Air_Flow_Assignment.html">Air Flow Visualization by Country</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Transport-Flows-Allocation/book/IWW_Flow_Assignment.html">Inland Waterways Flow Visualization by Country</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Maritime_Flow_Assignment.html">Maritime Flow Visualization by Country</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Rail_Flow_Assignment.html">Railway Flow Visualization by Country</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Road_Flow_Assignment.html">Road Flow Visualization by Country</a></li>
-<li class="toctree-l1"><a class="reference internal" href="01_direct_damages_baseline.html">Direct damages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_indirect_damages_baseline.html">Indirect Losses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_batch_process_adaptations.html">Costs of adaptation strategies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_results_summary.html">Avoided damages and adaptation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Transport-Flows-Allocation/book/intro.html">Transport Flows Allocation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Air_Flow_Assignment.html">Air Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/IWW_Flow_Assignment.html">Inland Waterways Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Maritime_Flow_Assignment.html">Maritime Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Rail_Flow_Assignment.html">Railway Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Road_Flow_Assignment.html">Road Flow Visualization by Country</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Adaptation strategies to Critical Infrastructure</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_direct_damages_baseline.html">Direct damages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_indirect_damages_baseline.html">Indirect Losses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_batch_process_adaptations.html">Costs of adaptation strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_results_summary.html">Avoided damages and adaptation costs</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
@@ -381,9 +387,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -394,7 +398,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Adaptation Modelling</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -408,8 +412,11 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="adaptation-modelling">
+<h1>Adaptation Modelling<a class="headerlink" href="#adaptation-modelling" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {
