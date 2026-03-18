@@ -11,5 +11,5 @@ This project has received funding from the European Union’s Horizon Europe res
 
 ```{image} /figures/EN_FundedbytheEU_RGB_POS.png
 :width: 500px
-:align: cente
+:align: center
 ```

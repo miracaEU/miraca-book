@@ -35,5 +35,5 @@ The MIRACA workbench is an active, evolving project and will be updated continuo
 
 ```{image} /figures/figure_introduction_1.png
 :width: 800px
-:align: cente
+:align: center
 ```
