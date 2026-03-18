@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -199,15 +199,21 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../RoadFlowModelling/book/miraca_roads.html">Network modelling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../CBAmodelling/book/miraca_cba.html">Cost-benefit analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Air_Flow_Assignment.html">Air Flow Visualization by Country</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Transport-Flows-Allocation/book/IWW_Flow_Assignment.html">Inland Waterways Flow Visualization by Country</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Maritime_Flow_Assignment.html">Maritime Flow Visualization by Country</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Rail_Flow_Assignment.html">Railway Flow Visualization by Country</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Road_Flow_Assignment.html">Road Flow Visualization by Country</a></li>
-<li class="toctree-l1"><a class="reference internal" href="01_direct_damages_baseline.html">Direct damages</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Indirect Losses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_batch_process_adaptations.html">Costs of adaptation strategies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="04_results_summary.html">Avoided damages and adaptation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Transport-Flows-Allocation/book/intro.html">Transport and Flow Allocation model</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Air_Flow_Assignment.html">Air Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/IWW_Flow_Assignment.html">Inland Waterways Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Maritime_Flow_Assignment.html">Maritime Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Rail_Flow_Assignment.html">Railway Flow Visualization by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Transport-Flows-Allocation/book/Road_Flow_Assignment.html">Road Flow Visualization by Country</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="introduction.html">Adaptation strategies to Critical Infrastructure</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01_direct_damages_baseline.html">Direct damages</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Indirect Losses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_batch_process_adaptations.html">Costs of adaptation strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_results_summary.html">Avoided damages and adaptation costs</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
 <ul class="nav bd-sidenav">
@@ -430,7 +436,7 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="adaptation-of-critical-infrastructure-indirect-losses">
 <h1>Adaptation of Critical Infrastructure - Indirect losses<a class="headerlink" href="#adaptation-of-critical-infrastructure-indirect-losses" title="Link to this heading">#</a></h1>
-<p>This notebook is a continuatio of the Assessment of <a class="reference external" href="https://miracaeu.github.io/miraca-book/background/AdaptationModelling/book/02_indirect_damages_baseline.html">Adaptation of Critical Infrastructure - Direct Damages</a>.</p>
+<p>This notebook is a continuation of the Assessment of <a class="reference external" href="https://miracaeu.github.io/miraca-book/background/AdaptationModelling/book/02_indirect_damages_baseline.html">Adaptation of Critical Infrastructure - Direct Damages</a>.</p>
 <p>Using the hazard and assets overlay of the direct damages notebook, this notebook shows how historical freight volumes and passenger ridership are used to calculate indirect losses. The freight losses are calculated using the incremental cost of shipping by road vs rail, while the passenger losses are calculated based on the ticketing revenue loss. Freight and passenger ridership data from Eurostat are used.</p>
 <section id="step-1-load-the-necessary-packages">
 <h2>Step 1: Load the necessary packages<a class="headerlink" href="#step-1-load-the-necessary-packages" title="Link to this heading">#</a></h2>
