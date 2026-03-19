@@ -36,11 +36,15 @@ dependencies:
   - lonboard
   - cartopy
   - pandapower
+  - gdal
+  - proj
+  - pyproj
 
   - pip:
       - damagescanner==1.0.0
-      - ema_workbench
+      - ema_workbench==2.5.3
       - "-e ."
       - git+https://github.com/nismod/DAFNI-NIRD.git
       - -e ./miraca-book/background/RoadFlowModelling
       - -e ./miraca-book/background/CBAmodelling
+      
