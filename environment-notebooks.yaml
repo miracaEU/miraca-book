@@ -47,4 +47,5 @@ dependencies:
       - git+https://github.com/nismod/DAFNI-NIRD.git
       - -e ./miraca-book/background/RoadFlowModelling
       - -e ./miraca-book/background/CBAmodelling
+      - -e ./miraca-book/usecases/UC1
       

@@ -22,7 +22,7 @@ parts:
       - title: Introduction
         file: usecases/introduction
       - title: Use Case 1 - Flooding and Windstorms in the TEN-T corridor (Coming soon)
-        file: usecases/UC1_intro
+        file: usecases/UC1/book/UC1_intro
       - title: Use Case 2 - Wildfires in Catalonia
         file: usecases/UC2/book/Use_Case_2
       - title: Use Case 3 - Flooding in Zuid-Holland
