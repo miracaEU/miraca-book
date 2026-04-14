@@ -21,8 +21,8 @@ parts:
     chapters:
       - title: Introduction
         file: usecases/introduction
-      - title: Use Case 1 - Flooding and Windstorms in the TEN-T corridor (Coming soon)
-        file: usecases/UC1/book/UC1_intro
+      - title: Use Case 1 - Flooding and Windstorms in the TEN-T corridor
+        file: usecases/UC1/book/TENT_corridors_disruption_analysis
       - title: Use Case 2 - Wildfires in Catalonia
         file: usecases/UC2/book/Use_Case_2
       - title: Use Case 3 - Flooding in Zuid-Holland
@@ -40,9 +40,9 @@ parts:
       - file: background/Vulnerability/book/intro
         sections:
           - file: background/Vulnerability/book/Vulnerability_workbench
-      - title: Network modelling
+      - title: Network Modelling
         file: background/RoadFlowModelling/book/miraca_roads
-      - title: Cost-benefit analysis
+      - title: Cost-Benefit Analysis
         file: background/CBAmodelling/book/miraca_cba
       - file: background/EnergyModelling/book/ElectricModel
       - file: background/Transport-Flows-Allocation/book/intro
@@ -53,16 +53,16 @@ parts:
           - file: background/Transport-Flows-Allocation/book/Rail_Flow_Assignment
           - file: background/Transport-Flows-Allocation/book/Road_Flow_Assignment
       - file: background/AdaptationModelling/book/introduction
-        title: "Adaptation strategies to Critical Infrastructure"
+        title: "Adaptation strategies for Critical Infrastructure"
         sections:
           - file: background/AdaptationModelling/book/01_direct_damages_baseline
-            title: Direct damages
+            title: Direct Damages
           - file: background/AdaptationModelling/book/02_indirect_damages_baseline
-            title: Indirect losses
+            title: Indirect Losses
           - file: background/AdaptationModelling/book/03_batch_process_adaptations
-            title: Costs of adaptation strategies
+            title: Cost of Adaptation Strategies
           - file: background/AdaptationModelling/book/04_results_summary
-            title: Avoided damages and adaptation costs
+            title: Avoided Damages and Adaptation Costs
 
 
   - caption: About
