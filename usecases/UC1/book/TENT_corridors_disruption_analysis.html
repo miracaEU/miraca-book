@@ -1,0 +1,1498 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Adaptation to Flood and Windstorm Impacts on the Trans-European Transport Network (TEN-T) &#8212; MIRACA Technical Workbench</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usecases/UC1/book/TENT_corridors_disruption_analysis';</script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Use Case 2 - Wildfires in Catalonia, Spain" href="../../UC2/book/Use_Case_2.html" />
+    <link rel="prev" title="Introduction to the Use Cases" href="../../introduction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="MIRACA Technical Workbench - Home"/>
+    <img src="../../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="MIRACA Technical Workbench - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Welcome to the MIRACA Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">The MIRACA Approach</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/miraca_approach.html">Description of the framework</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/AssetRiskModelling/book/risk_assessment_belgium.html">Climate Risk Assessment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium.html">Systemic Economic Impacts</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Use Case 1 - Flooding and Windstorms in the TEN-T corridor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC2/book/Use_Case_2.html">Use Case 2 - Wildfires in Catalonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC3/book/Use_Case_3.html">Use Case 3 - Flooding in Zuid-Holland</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC4/book/E_E%2BL_ESRM20%2BElsus_new.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC5/Use_Case_5_v1.html">Use Case 5 - Flooding and Landslides in Slovenia</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Background</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../background/Exposure_Miraca/book/intro.html">Exposure database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Exposure_Miraca/book/Exposure_Miraca.html">Exploring the Critical Infrastructure Exposure Database</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../background/Vulnerability/book/intro.html">Vulnerability Database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Vulnerability/book/Vulnerability_workbench.html">Explore the Vulnerability Database</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/RoadFlowModelling/book/miraca_roads.html">Network Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/CBAmodelling/book/miraca_cba.html">Cost-Benefit Analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/intro.html">Transport and Flow Allocation model</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/Air_Flow_Assignment.html">Air Flow Visualisation by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/IWW_Flow_Assignment.html">Inland Waterways Flow Visualisation by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/Maritime_Flow_Assignment.html">Maritime Flow Visualisation by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/Rail_Flow_Assignment.html">Railway Flow Visualisation by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/Road_Flow_Assignment.html">Road Flow Visualisation by Country</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../background/AdaptationModelling/book/introduction.html">Adaptation strategies for Critical Infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/AdaptationModelling/book/01_direct_damages_baseline.html">Direct Damages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/AdaptationModelling/book/02_indirect_damages_baseline.html">Indirect Losses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/AdaptationModelling/book/03_batch_process_adaptations.html">Cost of Adaptation Strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/AdaptationModelling/book/04_results_summary.html">Avoided Damages and Adaptation Costs</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About MIRACA</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book/issues/new?title=Issue%20on%20page%20%2Fusecases/UC1/book/TENT_corridors_disruption_analysis.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/usecases/UC1/book/TENT_corridors_disruption_analysis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Adaptation to Flood and Windstorm Impacts on the Trans-European Transport Network (TEN-T)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-configuration">1. Setup and Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-infrastructure-data">2. Load Infrastructure Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualise-all-assets-by-corridor">3. Visualise All Assets by Corridor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#freight-flows-visualisation">4. Freight Flows Visualisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#passenger-flows-visualisation">5. Passenger Flows Visualisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-quantification">6. Hazard Exposure Quantification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#railway-flood-risk-analysis">7. Railway Flood Risk Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current-conditions">Current Conditions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#climate-change-scenarios-interpolated-damages">Climate Change Scenarios - Interpolated Damages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#climate-change-scenarios-expected-annual-damage-ead">Climate Change Scenarios - Expected Annual Damage (EAD)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="adaptation-to-flood-and-windstorm-impacts-on-the-trans-european-transport-network-ten-t">
+<h1>Adaptation to Flood and Windstorm Impacts on the Trans-European Transport Network (TEN-T)<a class="headerlink" href="#adaptation-to-flood-and-windstorm-impacts-on-the-trans-european-transport-network-ten-t" title="Link to this heading">#</a></h1>
+<p>This analysis examines the risk and expected damages of TEN-T corridor infrastructure to climate hazards, with specific focus on:</p>
+<ol class="arabic simple">
+<li><p><strong>Spatial distribution of exposed assets</strong>: Mapping the location and extent of TEN-T infrastructure across different transport modes.</p></li>
+<li><p><strong>Flow-weighted criticality assessment</strong>: Identifying high-priority infrastructure based on freight and passenger volumes.</p></li>
+<li><p><strong>Hazard exposure quantification</strong>: Assessing infrastructure exposure to flooding and wind storm events across different return periods.</p></li>
+<li><p><strong>Economic impact evaluation</strong>: Quantifying direct damages and expected annual damage (EAD) under current and future climate scenarios.</p></li>
+</ol>
+<section id="setup-and-configuration">
+<h2>1. Setup and Configuration<a class="headerlink" href="#setup-and-configuration" title="Link to this heading">#</a></h2>
+<p>The TEN-T (Trans-European Transport Network) connects major European cities and ports through dedicated freight and passenger corridors.</p>
+<p>This section imports required libraries and loads foundational data:</p>
+<ul class="simple">
+<li><p><strong>Base map</strong>: European country boundaries.</p></li>
+<li><p><strong>Libraries</strong>: GeoPandas for spatial data, Pandas for tabular data, Matplotlib for visualisation</p></li>
+<li><p><strong>TEN-T Corridors</strong>: 9 major European transport corridors (A-L) with unique colours for identification.</p></li>
+<li><p><strong>Utility functions</strong>: Custom functions from <code class="docutils literal notranslate"><span class="pre">tent_utils.py</span></code> for corridor extraction and visualisation.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.lines</span><span class="w"> </span><span class="kn">import</span> <span class="n">Line2D</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># Import utility functions</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tent_utils</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">extract_corridors</span><span class="p">,</span>
+    <span class="n">setup_ax</span><span class="p">,</span>
+    <span class="n">get_linewidth_freight</span><span class="p">,</span>
+    <span class="n">get_linewidth_passenger</span><span class="p">,</span>
+    <span class="n">get_markersize_freight</span><span class="p">,</span>
+    <span class="n">get_markersize_passenger</span><span class="p">,</span>
+    <span class="n">plot_by_corridor_and_visual_attr</span><span class="p">,</span>
+    <span class="n">reproject_raster_to_3035</span><span class="p">,</span>
+    <span class="n">aggregate_by_location</span><span class="p">,</span>
+    <span class="n">create_flow_legend</span><span class="p">,</span>
+    <span class="n">load_infrastructure_parquet</span><span class="p">,</span>
+    <span class="n">reproject_infrastructure_dict</span><span class="p">,</span>
+    <span class="n">merge_risk_data_preserve_geometry</span><span class="p">,</span>
+    <span class="n">format_log_colorbar</span>
+<span class="p">)</span>
+
+<span class="c1"># Set plotting style</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn-v0_8-darkgrid&#39;</span><span class="p">)</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="c1"># Data paths</span>
+<span class="n">code_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span>
+<span class="n">inputs_dir</span> <span class="o">=</span> <span class="n">code_dir</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">&quot;inputs&quot;</span> <span class="o">/</span> <span class="s2">&quot;europe_corridors_with_flows&quot;</span>
+
+<span class="c1"># File paths for infrastructure with flows</span>
+<span class="n">infrastructure_files</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;railway_edges&quot;</span><span class="p">:</span> <span class="n">inputs_dir</span> <span class="o">/</span> <span class="s2">&quot;europe_railway_edges_corridors_with_flows.parquet&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;railway_stations&quot;</span><span class="p">:</span> <span class="n">inputs_dir</span> <span class="o">/</span> <span class="s2">&quot;europe_railway_stations_corridors_with_flows.parquet&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;iww_edges&quot;</span><span class="p">:</span> <span class="n">inputs_dir</span> <span class="o">/</span> <span class="s2">&quot;europe_iww_edges_corridors_with_flows.parquet&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;airports&quot;</span><span class="p">:</span> <span class="n">inputs_dir</span> <span class="o">/</span> <span class="s2">&quot;europe_airports_corridors_with_flows.parquet&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ports&quot;</span><span class="p">:</span> <span class="n">inputs_dir</span> <span class="o">/</span> <span class="s2">&quot;europe_ports_corridors_with_flows.parquet&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># TEN-T corridor configuration</span>
+<span class="n">corridor_order</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;J&#39;</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;U&#39;</span><span class="p">]</span>
+
+<span class="n">corridor_legend</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Baltic-Adriatic&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;North Sea-Adriatic&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Mediterranean&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Scandinavian-Mediterranean&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Atlantic&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Rhine-Danube&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Baltic-Aegean&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;W. Balkans-E. Mediterranean&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;North Sea-Mediterranean&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Not-in-corridor&#39;</span>
+<span class="p">]</span>
+
+<span class="n">corridor_palette</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;#0080C0&#39;</span><span class="p">,</span>  <span class="c1"># Blue - Baltic-Adriatic</span>
+    <span class="s1">&#39;#E91E8C&#39;</span><span class="p">,</span>  <span class="c1"># Magenta/Pink - North Sea-Adriatic</span>
+    <span class="s1">&#39;#00A651&#39;</span><span class="p">,</span>  <span class="c1"># Green - Mediterranean</span>
+    <span class="s1">&#39;#FF69B4&#39;</span><span class="p">,</span>  <span class="c1"># Light Pink - Scandinavian-Mediterranean</span>
+    <span class="s1">&#39;#FFD700&#39;</span><span class="p">,</span>  <span class="c1"># Yellow/Gold - Atlantic</span>
+    <span class="s1">&#39;#00BFFF&#39;</span><span class="p">,</span>  <span class="c1"># Cyan/Light Blue - Rhine-Danube</span>
+    <span class="s1">&#39;#8B4789&#39;</span><span class="p">,</span>  <span class="c1"># Purple - Baltic-Aegean</span>
+    <span class="s1">&#39;#8B4513&#39;</span><span class="p">,</span>  <span class="c1"># Brown - W. Balkans-E. Mediterranean</span>
+    <span class="s1">&#39;#228B22&#39;</span><span class="p">,</span>  <span class="c1"># Dark Green - North Sea-Mediterranean</span>
+    <span class="s1">&#39;#b3b3b3&#39;</span>   <span class="c1"># Gray - Not-in-corridor</span>
+<span class="p">]</span>
+
+<span class="c1"># Create corridor mapping dictionaries</span>
+<span class="n">corridor_colors</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">corridor_order</span><span class="p">,</span> <span class="n">corridor_palette</span><span class="p">))</span>
+<span class="n">corridor_names</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">corridor_order</span><span class="p">,</span> <span class="n">corridor_legend</span><span class="p">))</span>
+
+<span class="c1"># Load European country boundaries</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading European country boundaries...&quot;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">countries_path</span> <span class="o">=</span> <span class="n">code_dir</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">&quot;inputs&quot;</span> <span class="o">/</span> <span class="s2">&quot;ne_10m&quot;</span> <span class="o">/</span> <span class="s2">&quot;ne_10m_admin_0_countries.shp&quot;</span>
+    <span class="n">europe_countries</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">countries_path</span><span class="p">)</span>
+    <span class="n">europe_countries</span> <span class="o">=</span> <span class="n">europe_countries</span><span class="p">[</span><span class="n">europe_countries</span><span class="p">[</span><span class="s1">&#39;CONTINENT&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Europe&#39;</span><span class="p">]</span>
+    <span class="n">europe_countries</span> <span class="o">=</span> <span class="n">europe_countries</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s1">&#39;EPSG:3035&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">europe_countries</span><span class="p">)</span><span class="si">}</span><span class="s2"> European countries&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not load country boundaries: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">europe_countries</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading European country boundaries...
+Loaded 51 European countries
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-infrastructure-data">
+<h2>2. Load Infrastructure Data<a class="headerlink" href="#load-infrastructure-data" title="Link to this heading">#</a></h2>
+<p>Loads geospatial infrastructure datasets from parquet files, including:</p>
+<ul class="simple">
+<li><p><strong>Ports</strong>: Maritime terminals with cargo and passenger statistics.</p></li>
+<li><p><strong>Railway edges</strong>: Rail network segments with flow data.</p></li>
+<li><p><strong>Airports</strong>: Air transport hubs with passenger/freight volumes.</p></li>
+<li><p><strong>Railway stations</strong>: Station locations and capacities.</p></li>
+<li><p><strong>Inland waterways (IWW)</strong>: River and canal transport routes.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading infrastructure data...</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">infrastructure</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Load all infrastructure files</span>
+<span class="k">for</span> <span class="n">infra_type</span><span class="p">,</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">infrastructure_files</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">gdf</span> <span class="o">=</span> <span class="n">load_infrastructure_parquet</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">infra_type</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">gdf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">infrastructure</span><span class="p">[</span><span class="n">infra_type</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">infrastructure</span><span class="p">)</span><span class="si">}</span><span class="s2"> infrastructure types&quot;</span><span class="p">)</span>
+
+<span class="c1"># Reproject all to EPSG:3035</span>
+<span class="n">infrastructure</span> <span class="o">=</span> <span class="n">reproject_infrastructure_dict</span><span class="p">(</span><span class="n">infrastructure</span><span class="p">)</span>
+
+<span class="c1"># Add corridor information using utility function</span>
+<span class="k">for</span> <span class="n">infra_type</span><span class="p">,</span> <span class="n">gdf</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="s1">&#39;CORRIDORS&#39;</span> <span class="ow">in</span> <span class="n">gdf</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;corridor_list&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;CORRIDORS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">extract_corridors</span><span class="p">)</span>
+        <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;primary_corridor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;corridor_list&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">infra_type</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;primary_corridor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="si">}</span><span class="s2"> unique primary corridors&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading infrastructure data...
+
+railway_edges       : File not found
+railway_stations    : File not found
+iww_edges           : File not found
+airports            : File not found
+ports               : File not found
+
+Loaded 0 infrastructure types
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualise-all-assets-by-corridor">
+<h2>3. Visualise All Assets by Corridor<a class="headerlink" href="#visualise-all-assets-by-corridor" title="Link to this heading">#</a></h2>
+<p>This overview reveals the geographic extent of each corridor and identifies key multimodal hubs where different transport modes intersect.</p>
+<p>Comprehensive map showing the spatial distribution of all TEN-T infrastructure coloured by corridor:</p>
+<ul class="simple">
+<li><p><strong>Colour coding</strong>: Each corridor has a unique colour (e.g., blue for Baltic-Adriatic, green for Mediterranean).</p></li>
+<li><p><strong>Network edges</strong>: Railway (thin lines), roads (dashed), and inland waterways (thick dash-dot)</p></li>
+<li><p><strong>Node facilities</strong>: Ports (circles), airports (triangles), railway stations (squares).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">16</span><span class="p">))</span>
+
+<span class="c1"># Use utility function to set up the map</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">)</span>
+
+<span class="c1"># Plot edges (railway, road, and IWW)</span>
+<span class="k">for</span> <span class="n">infra_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;railway_edges&#39;</span><span class="p">,</span> <span class="s1">&#39;road_edges&#39;</span><span class="p">,</span> <span class="s1">&#39;iww_edges&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">infra_type</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">:</span>
+        <span class="n">gdf</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="n">infra_type</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">infra_type</span> <span class="o">==</span> <span class="s1">&#39;railway_edges&#39;</span><span class="p">:</span>
+            <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span>
+        <span class="k">elif</span> <span class="n">infra_type</span> <span class="o">==</span> <span class="s1">&#39;road_edges&#39;</span><span class="p">:</span>
+            <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.6</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># iww_edges</span>
+            <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.8</span>
+        
+        <span class="k">for</span> <span class="n">corridor</span> <span class="ow">in</span> <span class="n">corridor_colors</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;primary_corridor&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">corridor</span>
+            <span class="k">if</span> <span class="n">mask</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+                <span class="n">gdf</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+                    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+                    <span class="n">color</span><span class="o">=</span><span class="n">corridor_colors</span><span class="p">[</span><span class="n">corridor</span><span class="p">],</span>
+                    <span class="n">linewidth</span><span class="o">=</span><span class="n">linewidth</span><span class="p">,</span>
+                    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+                    <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span>
+                <span class="p">)</span>
+
+<span class="c1"># Plot nodes (ports, airports, railway stations)</span>
+<span class="k">for</span> <span class="n">infra_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;ports&#39;</span><span class="p">,</span> <span class="s1">&#39;airports&#39;</span><span class="p">,</span> <span class="s1">&#39;railway_stations&#39;</span><span class="p">,</span> <span class="s1">&#39;iww_nodes&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">infra_type</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">:</span>
+        <span class="n">gdf</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="n">infra_type</span><span class="p">]</span>
+        
+        <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span> <span class="k">if</span> <span class="n">infra_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;ports&#39;</span><span class="p">,</span> <span class="s1">&#39;iww_nodes&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="p">(</span><span class="s1">&#39;^&#39;</span> <span class="k">if</span> <span class="n">infra_type</span> <span class="o">==</span> <span class="s1">&#39;airports&#39;</span> <span class="k">else</span> <span class="s1">&#39;s&#39;</span><span class="p">)</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="mi">100</span> <span class="k">if</span> <span class="n">infra_type</span> <span class="o">==</span> <span class="s1">&#39;airports&#39;</span> <span class="k">else</span> <span class="p">(</span><span class="mi">80</span> <span class="k">if</span> <span class="n">infra_type</span> <span class="o">==</span> <span class="s1">&#39;ports&#39;</span> <span class="k">else</span> <span class="mi">15</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">corridor</span> <span class="ow">in</span> <span class="n">corridor_colors</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="n">gdf</span><span class="p">[</span><span class="s1">&#39;primary_corridor&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">corridor</span>
+            <span class="k">if</span> <span class="n">mask</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+                <span class="n">gdf</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+                    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+                    <span class="n">color</span><span class="o">=</span><span class="n">corridor_colors</span><span class="p">[</span><span class="n">corridor</span><span class="p">],</span>
+                    <span class="n">marker</span><span class="o">=</span><span class="n">marker</span><span class="p">,</span>
+                    <span class="n">markersize</span><span class="o">=</span><span class="n">size</span><span class="p">,</span>
+                    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span> <span class="k">if</span> <span class="n">infra_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">,</span> <span class="s1">&#39;ports&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="mf">0.3</span><span class="p">,</span>
+                    <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
+                    <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span> <span class="k">if</span> <span class="n">infra_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">,</span> <span class="s1">&#39;ports&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="mf">0.5</span><span class="p">,</span>
+                    <span class="n">zorder</span><span class="o">=</span><span class="mi">4</span> <span class="k">if</span> <span class="n">infra_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">,</span> <span class="s1">&#39;ports&#39;</span><span class="p">]</span> <span class="k">else</span> <span class="mi">3</span>
+                <span class="p">)</span>
+
+<span class="c1"># Create legends</span>
+<span class="n">corridor_elements</span> <span class="o">=</span> <span class="p">[</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">corridor_colors</span><span class="p">[</span><span class="n">code</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> 
+                            <span class="n">label</span><span class="o">=</span><span class="n">corridor_names</span><span class="p">[</span><span class="n">code</span><span class="p">])</span> 
+                     <span class="k">for</span> <span class="n">code</span> <span class="ow">in</span> <span class="n">corridor_order</span> <span class="k">if</span> <span class="n">code</span> <span class="o">!=</span> <span class="s1">&#39;U&#39;</span><span class="p">]</span>
+
+<span class="n">infra_elements</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Railway&#39;</span><span class="p">),</span>
+    <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Road&#39;</span><span class="p">),</span>
+    <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;IWW&#39;</span><span class="p">),</span>
+    <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> 
+           <span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Ports&#39;</span><span class="p">,</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">),</span>
+    <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> 
+           <span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Airports&#39;</span><span class="p">,</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">legend1</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">corridor_elements</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;TEN-T Corridors&#39;</span><span class="p">,</span> 
+                   <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">legend1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">infra_elements</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Infrastructure&#39;</span><span class="p">,</span> 
+         <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;TEN-T Corridor Infrastructure Assets&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/9edb296d30e0cb683b1f7feec5f982a2a1dea5a2ee30b667c919646427088b18.png" src="../../../_images/9edb296d30e0cb683b1f7feec5f982a2a1dea5a2ee30b667c919646427088b18.png" />
+</div>
+</div>
+</section>
+<section id="freight-flows-visualisation">
+<h2>4. Freight Flows Visualisation<a class="headerlink" href="#freight-flows-visualisation" title="Link to this heading">#</a></h2>
+<p>This visualisation identifies critical freight arteries and bottlenecks. Major corridors like Rhine-Danube show high volumes due to their central European location and connection to key industrial regions.</p>
+<p>Maps showing annual freight volumes across TEN-T corridors, measured in megatonnes (MT/year):</p>
+<ul class="simple">
+<li><p><strong>Line width</strong> (rail/IWW): Proportional to freight volume - thicker lines = higher tonnage.</p></li>
+<li><p><strong>Bubble size</strong> (ports/airports): Proportional to total freight handled annually.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prepare freight flow data</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Preparing freight flow visualisation...</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Aggregate ports by port_code</span>
+<span class="k">if</span> <span class="s1">&#39;ports&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">:</span>
+    <span class="n">freight_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;ports&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;freight&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">and</span> <span class="s1">&#39;computed&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+    <span class="n">ports_agg</span> <span class="o">=</span> <span class="n">aggregate_by_location</span><span class="p">(</span><span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;ports&#39;</span><span class="p">],</span> <span class="s1">&#39;port_code&#39;</span><span class="p">,</span> <span class="n">freight_cols</span><span class="p">,</span> <span class="s1">&#39;total_freight&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ports_agg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;ports_agg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ports_agg</span>
+
+<span class="c1"># Aggregate airports</span>
+<span class="k">if</span> <span class="s1">&#39;airports&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">:</span>
+    <span class="n">freight_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;freight&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">and</span> <span class="s1">&#39;computed&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+    <span class="k">if</span> <span class="n">freight_cols</span><span class="p">:</span>
+        <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">][</span><span class="s1">&#39;total_freight&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">][</span><span class="n">freight_cols</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="c1"># Railway freight flows</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="s1">&#39;Railway Freight Flows&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;railway_edges&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span> <span class="ow">and</span> <span class="s1">&#39;flow_rail_freight&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;railway_edges&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">railway_with_flow</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;railway_edges&#39;</span><span class="p">][</span><span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;railway_edges&#39;</span><span class="p">][</span><span class="s1">&#39;flow_rail_freight&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">railway_with_flow</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span> <span class="o">=</span> <span class="n">railway_with_flow</span><span class="p">[</span><span class="s1">&#39;flow_rail_freight&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+        <span class="n">railway_with_flow</span><span class="p">[</span><span class="s1">&#39;linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">railway_with_flow</span><span class="p">[</span><span class="s1">&#39;flow_rail_freight&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">get_linewidth_freight</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="n">plot_by_corridor_and_visual_attr</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">railway_with_flow</span><span class="p">,</span> <span class="n">corridor_colors</span><span class="p">,</span> <span class="s1">&#39;linewidth&#39;</span><span class="p">)</span>
+        
+        <span class="c1"># Add legend</span>
+        <span class="n">line_legend</span> <span class="o">=</span> <span class="n">create_flow_legend</span><span class="p">((</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MT/year&#39;</span><span class="p">,</span> <span class="n">is_freight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">line_legend</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Rail Freight&#39;</span><span class="p">,</span> 
+                      <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="c1"># IWW freight flows</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="s1">&#39;IWW Freight Flows&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;iww_edges&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span> <span class="ow">and</span> <span class="s1">&#39;flow_iww_freight&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;iww_edges&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">iww_with_flow</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;iww_edges&#39;</span><span class="p">][</span><span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;iww_edges&#39;</span><span class="p">][</span><span class="s1">&#39;flow_iww_freight&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">iww_with_flow</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span> <span class="o">=</span> <span class="n">iww_with_flow</span><span class="p">[</span><span class="s1">&#39;flow_iww_freight&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+        <span class="n">iww_with_flow</span><span class="p">[</span><span class="s1">&#39;linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">iww_with_flow</span><span class="p">[</span><span class="s1">&#39;flow_iww_freight&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">get_linewidth_freight</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="n">plot_by_corridor_and_visual_attr</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">iww_with_flow</span><span class="p">,</span> <span class="n">corridor_colors</span><span class="p">,</span> <span class="s1">&#39;linewidth&#39;</span><span class="p">)</span>
+        
+        <span class="n">line_legend</span> <span class="o">=</span> <span class="n">create_flow_legend</span><span class="p">((</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MT/year&#39;</span><span class="p">,</span> <span class="n">is_freight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">line_legend</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;IWW Freight&#39;</span><span class="p">,</span> 
+                      <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="c1"># Port freight flows</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="s1">&#39;Port Freight Flows&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;ports_agg&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">:</span>
+    <span class="n">ports_with_flow</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;ports_agg&#39;</span><span class="p">][</span><span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;ports_agg&#39;</span><span class="p">][</span><span class="s1">&#39;total_freight&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ports_with_flow</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span> <span class="o">=</span> <span class="n">ports_with_flow</span><span class="p">[</span><span class="s1">&#39;total_freight&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+        <span class="n">ports_with_flow</span><span class="p">[</span><span class="s1">&#39;markersize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ports_with_flow</span><span class="p">[</span><span class="s1">&#39;total_freight&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">get_markersize_freight</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="n">plot_by_corridor_and_visual_attr</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">ports_with_flow</span><span class="p">,</span> <span class="n">corridor_colors</span><span class="p">,</span> <span class="s1">&#39;markersize&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+        
+        <span class="n">bubble_legend</span> <span class="o">=</span> <span class="n">create_flow_legend</span><span class="p">((</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MT/year&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">is_freight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">bubble_legend</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Port Freight&#39;</span><span class="p">,</span> 
+                      <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="c1"># Airport freight flows</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="s1">&#39;Airport Freight Flows&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;airports&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span> <span class="ow">and</span> <span class="s1">&#39;total_freight&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">airports_with_flow</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">][</span><span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">][</span><span class="s1">&#39;total_freight&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">airports_with_flow</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span> <span class="o">=</span> <span class="n">airports_with_flow</span><span class="p">[</span><span class="s1">&#39;total_freight&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+        <span class="n">airports_with_flow</span><span class="p">[</span><span class="s1">&#39;markersize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">airports_with_flow</span><span class="p">[</span><span class="s1">&#39;total_freight&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">get_markersize_freight</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="n">plot_by_corridor_and_visual_attr</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">airports_with_flow</span><span class="p">,</span> <span class="n">corridor_colors</span><span class="p">,</span> <span class="s1">&#39;markersize&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">)</span>
+        
+        <span class="n">bubble_legend</span> <span class="o">=</span> <span class="n">create_flow_legend</span><span class="p">((</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;MT/year&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">is_freight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">bubble_legend</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Airport Freight&#39;</span><span class="p">,</span> 
+                      <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Preparing freight flow visualization...
+</pre></div>
+</div>
+<img alt="../../../_images/a5004bdb6f91c8fd0432fe0a5a657eb18cab10a7f18c17c8e9fc57cf7a5b30e8.png" src="../../../_images/a5004bdb6f91c8fd0432fe0a5a657eb18cab10a7f18c17c8e9fc57cf7a5b30e8.png" />
+</div>
+</div>
+</section>
+<section id="passenger-flows-visualisation">
+<h2>5. Passenger Flows Visualisation<a class="headerlink" href="#passenger-flows-visualisation" title="Link to this heading">#</a></h2>
+<p>Passenger flows concentrate around major metropolitan areas and tourist destinations. Disruptions to these high-volume routes have significant socioeconomic impacts.</p>
+<p>Maps showing annual passenger volumes across TEN-T corridors, measured in millions of trips per year:</p>
+<ul class="simple">
+<li><p><strong>Railway passengers</strong>: Urban corridors and high-speed rail routes show highest volumes.</p></li>
+<li><p><strong>Airport passengers</strong>: Hub airports dominate with tens of millions of annual passengers.</p></li>
+<li><p><strong>Port passengers</strong>: Ferry services, cruise terminals, especially in Mediterranean and Baltic regions.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prepare passenger flow data</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Preparing passenger flow visualization...</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Aggregate ports by port_code for passengers</span>
+<span class="k">if</span> <span class="s1">&#39;ports&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">:</span>
+    <span class="n">passenger_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;ports&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;passenger&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">and</span> <span class="s1">&#39;computed&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+    <span class="n">ports_pass_agg</span> <span class="o">=</span> <span class="n">aggregate_by_location</span><span class="p">(</span><span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;ports&#39;</span><span class="p">],</span> <span class="s1">&#39;port_code&#39;</span><span class="p">,</span> <span class="n">passenger_cols</span><span class="p">,</span> <span class="s1">&#39;total_passenger&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ports_pass_agg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;ports_pass_agg&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ports_pass_agg</span>
+
+<span class="c1"># Aggregate airports for passengers</span>
+<span class="k">if</span> <span class="s1">&#39;airports&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">:</span>
+    <span class="n">passenger_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="s1">&#39;passenger&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">and</span> <span class="s1">&#39;computed&#39;</span> <span class="ow">in</span> <span class="n">col</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span>
+    <span class="k">if</span> <span class="n">passenger_cols</span><span class="p">:</span>
+        <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">][</span><span class="s1">&#39;total_passenger&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">][</span><span class="n">passenger_cols</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+
+<span class="c1"># Railway passenger flows</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="s1">&#39;Railway Passenger Flows&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;railway_edges&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span> <span class="ow">and</span> <span class="s1">&#39;flow_rail_passenger&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;railway_edges&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">railway_with_flow</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;railway_edges&#39;</span><span class="p">][</span><span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;railway_edges&#39;</span><span class="p">][</span><span class="s1">&#39;flow_rail_passenger&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">railway_with_flow</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span> <span class="o">=</span> <span class="n">railway_with_flow</span><span class="p">[</span><span class="s1">&#39;flow_rail_passenger&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+        <span class="n">railway_with_flow</span><span class="p">[</span><span class="s1">&#39;linewidth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">railway_with_flow</span><span class="p">[</span><span class="s1">&#39;flow_rail_passenger&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">get_linewidth_passenger</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="n">plot_by_corridor_and_visual_attr</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">railway_with_flow</span><span class="p">,</span> <span class="n">corridor_colors</span><span class="p">,</span> <span class="s1">&#39;linewidth&#39;</span><span class="p">)</span>
+        
+        <span class="n">line_legend</span> <span class="o">=</span> <span class="n">create_flow_legend</span><span class="p">((</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;M trips/year&#39;</span><span class="p">,</span> <span class="n">is_freight</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">line_legend</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Rail Passengers&#39;</span><span class="p">,</span> 
+                      <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="c1"># Port passenger flows</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="s1">&#39;Port Passenger Flows&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;ports_pass_agg&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">:</span>
+    <span class="n">ports_with_flow</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;ports_pass_agg&#39;</span><span class="p">][</span><span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;ports_pass_agg&#39;</span><span class="p">][</span><span class="s1">&#39;total_passenger&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">ports_with_flow</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span> <span class="o">=</span> <span class="n">ports_with_flow</span><span class="p">[</span><span class="s1">&#39;total_passenger&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+        <span class="n">ports_with_flow</span><span class="p">[</span><span class="s1">&#39;markersize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ports_with_flow</span><span class="p">[</span><span class="s1">&#39;total_passenger&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">get_markersize_passenger</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="n">plot_by_corridor_and_visual_attr</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">ports_with_flow</span><span class="p">,</span> <span class="n">corridor_colors</span><span class="p">,</span> <span class="s1">&#39;markersize&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+        
+        <span class="n">bubble_legend</span> <span class="o">=</span> <span class="n">create_flow_legend</span><span class="p">((</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;M trips/year&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">is_freight</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">bubble_legend</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Port Passengers&#39;</span><span class="p">,</span> 
+                      <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="c1"># Airport passenger flows</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="s1">&#39;Airport Passenger Flows&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="s1">&#39;airports&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span> <span class="ow">and</span> <span class="s1">&#39;total_passenger&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">airports_with_flow</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">][</span><span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;airports&#39;</span><span class="p">][</span><span class="s1">&#39;total_passenger&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">airports_with_flow</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span> <span class="o">=</span> <span class="n">airports_with_flow</span><span class="p">[</span><span class="s1">&#39;total_passenger&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.65</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">])</span>
+        <span class="n">airports_with_flow</span><span class="p">[</span><span class="s1">&#39;markersize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">airports_with_flow</span><span class="p">[</span><span class="s1">&#39;total_passenger&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">get_markersize_passenger</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="n">plot_by_corridor_and_visual_attr</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">airports_with_flow</span><span class="p">,</span> <span class="n">corridor_colors</span><span class="p">,</span> <span class="s1">&#39;markersize&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">)</span>
+        
+        <span class="n">bubble_legend</span> <span class="o">=</span> <span class="n">create_flow_legend</span><span class="p">((</span><span class="n">p05</span><span class="p">,</span> <span class="n">p35</span><span class="p">,</span> <span class="n">p65</span><span class="p">,</span> <span class="n">p95</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;M trips/year&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">is_freight</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">handles</span><span class="o">=</span><span class="n">bubble_legend</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Airport Passengers&#39;</span><span class="p">,</span> 
+                      <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">title_fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Preparing passenger flow visualization...
+</pre></div>
+</div>
+<img alt="../../../_images/5ddc925cd292a6984a1ace110788d8a395333e5ee0d59d03ac805879c599ba04.png" src="../../../_images/5ddc925cd292a6984a1ace110788d8a395333e5ee0d59d03ac805879c599ba04.png" />
+</div>
+</div>
+</section>
+<section id="hazard-exposure-quantification">
+<h2>6. Hazard Exposure Quantification<a class="headerlink" href="#hazard-exposure-quantification" title="Link to this heading">#</a></h2>
+<p>Visualisation of climate hazard intensities across Europe using raster data:</p>
+<p>These maps reveal which geographic areas face the highest hazard intensities. Overlaying infrastructure on these maps (next sections) identifies exposed assets and quantifies climate risks.</p>
+<ul class="simple">
+<li><p><strong>Return period (RP)</strong>: RP100 = event expected once every 100 years on average.</p></li>
+<li><p><strong>Flood depth maps</strong>: River flood inundation depth (meters) for RP100 events (1% annual probability).</p></li>
+<li><p><strong>Wind speed maps</strong>: Maximum wind speeds (m/s) for RP100 windstorm events.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Paths to hazard maps</span>
+<span class="n">hazard_dir</span> <span class="o">=</span> <span class="n">code_dir</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">&quot;inputs&quot;</span> <span class="o">/</span> <span class="s2">&quot;climate_hazards&quot;</span>
+<span class="n">flood_map_path</span> <span class="o">=</span> <span class="n">hazard_dir</span> <span class="o">/</span> <span class="s2">&quot;River_flood&quot;</span> <span class="o">/</span> <span class="s2">&quot;RP100_europe.tif&quot;</span>
+<span class="n">wind_map_path</span> <span class="o">=</span> <span class="n">hazard_dir</span> <span class="o">/</span> <span class="s2">&quot;Windstorms&quot;</span> <span class="o">/</span> <span class="s2">&quot;RP100_europe.tif&quot;</span>
+
+<span class="c1"># Load hazard maps with downsampling for faster visualizsation</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading 100-year return period hazard maps...&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Load and reproject rasters using utility function</span>
+<span class="n">flood_raster</span> <span class="o">=</span> <span class="n">reproject_raster_to_3035</span><span class="p">(</span><span class="n">flood_map_path</span><span class="p">)</span>
+<span class="n">wind_raster</span> <span class="o">=</span> <span class="n">reproject_raster_to_3035</span><span class="p">(</span><span class="n">wind_map_path</span><span class="p">)</span>
+
+<span class="c1"># Get Europe mask for clipping</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shapely.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">box</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rasterio.mask</span><span class="w"> </span><span class="kn">import</span> <span class="n">mask</span> <span class="k">as</span> <span class="n">rio_mask</span>
+
+<span class="c1"># Create bounding box from infrastructure</span>
+<span class="k">if</span> <span class="s1">&#39;railway_edges&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">:</span>
+    <span class="n">infra_bounds</span> <span class="o">=</span> <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;railway_edges&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">total_bounds</span>
+    <span class="n">bbox</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span>
+        <span class="p">{</span><span class="s1">&#39;geometry&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">box</span><span class="p">(</span><span class="o">*</span><span class="n">infra_bounds</span><span class="p">)]},</span> 
+        <span class="n">crs</span><span class="o">=</span><span class="s1">&#39;EPSG:3035&#39;</span>
+    <span class="p">)</span>
+
+<span class="c1"># Plot flood depth map</span>
+<span class="k">if</span> <span class="n">flood_raster</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Processing flood raster...&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Create custom colormap for flood depth</span>
+    <span class="n">flood_cmap</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span>
+        <span class="s1">&#39;flood&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;#ffffcc&#39;</span><span class="p">,</span> <span class="s1">&#39;#a1dab4&#39;</span><span class="p">,</span> <span class="s1">&#39;#41b6c4&#39;</span><span class="p">,</span> <span class="s1">&#39;#2c7fb8&#39;</span><span class="p">,</span> <span class="s1">&#39;#253494&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># Use show for proper georeferencing</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">rasterio.plot</span><span class="w"> </span><span class="kn">import</span> <span class="n">show</span>
+    <span class="n">show</span><span class="p">(</span><span class="n">flood_raster</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="n">flood_cmap</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Overlay country boundaries</span>
+    <span class="k">if</span> <span class="n">europe_countries</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">europe_countries</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+    
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Flood Depth - 100 Year Return Period&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+    
+    <span class="c1"># Zoom to continental Europe (EPSG:3035 coordinates)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">2_500_000</span><span class="p">,</span> <span class="mi">6_500_000</span><span class="p">)</span>  <span class="c1"># West to East</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">1_500_000</span><span class="p">,</span> <span class="mi">5_500_000</span><span class="p">)</span>  <span class="c1"># South to North</span>
+    
+    <span class="c1"># Add colorbar manually</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.cm</span><span class="w"> </span><span class="kn">import</span> <span class="n">ScalarMappable</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="kn">import</span> <span class="n">Normalize</span>
+    <span class="n">sm1</span> <span class="o">=</span> <span class="n">ScalarMappable</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">flood_cmap</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">sm1</span><span class="o">.</span><span class="n">set_array</span><span class="p">([])</span>
+    <span class="n">cbar1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sm1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.046</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.04</span><span class="p">)</span>
+    <span class="n">cbar1</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;Flood Depth (m)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="c1"># Plot wind speed map</span>
+<span class="k">if</span> <span class="n">wind_raster</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Processing wind raster...&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Create custom colormap for wind speed</span>
+    <span class="n">wind_cmap</span> <span class="o">=</span> <span class="n">colors</span><span class="o">.</span><span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span>
+        <span class="s1">&#39;wind&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;#ffffb2&#39;</span><span class="p">,</span> <span class="s1">&#39;#fecc5c&#39;</span><span class="p">,</span> <span class="s1">&#39;#fd8d3c&#39;</span><span class="p">,</span> <span class="s1">&#39;#f03b20&#39;</span><span class="p">,</span> <span class="s1">&#39;#bd0026&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># Use show for proper georeferencing</span>
+    <span class="n">show</span><span class="p">(</span><span class="n">wind_raster</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="n">wind_cmap</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Overlay country boundaries</span>
+    <span class="k">if</span> <span class="n">europe_countries</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">europe_countries</span><span class="o">.</span><span class="n">boundary</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+    
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Wind Speed - 100 Year Return Period&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+    
+    <span class="c1"># Zoom to continental Europe (EPSG:3035 coordinates)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">2_500_000</span><span class="p">,</span> <span class="mi">6_500_000</span><span class="p">)</span>  <span class="c1"># West to East</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">1_500_000</span><span class="p">,</span> <span class="mi">5_500_000</span><span class="p">)</span>  <span class="c1"># South to North</span>
+    
+    
+    <span class="c1"># Add colorbar manually</span>
+    <span class="n">wind_data</span> <span class="o">=</span> <span class="n">wind_raster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">masked</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">sm2</span> <span class="o">=</span> <span class="n">ScalarMappable</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">wind_cmap</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
+                                                         <span class="n">vmax</span><span class="o">=</span><span class="mi">60</span><span class="p">))</span>
+    <span class="n">sm2</span><span class="o">.</span><span class="n">set_array</span><span class="p">([])</span>
+    <span class="n">cbar2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sm2</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.046</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.04</span><span class="p">)</span>
+    <span class="n">cbar2</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;Wind Gust Speed (m/s)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading 100-year return period hazard maps...
+Processing flood raster...
+Processing wind raster...
+</pre></div>
+</div>
+<img alt="../../../_images/ef409ab4a94acce3a4f818a72d1b773b1518502c0d23200e764269a7d7736d8a.png" src="../../../_images/ef409ab4a94acce3a4f818a72d1b773b1518502c0d23200e764269a7d7736d8a.png" />
+</div>
+</div>
+</section>
+<section id="railway-flood-risk-analysis">
+<h2>7. Railway Flood Risk Analysis<a class="headerlink" href="#railway-flood-risk-analysis" title="Link to this heading">#</a></h2>
+<p>This section analyses the direct economic impacts of river flooding on railway infrastructure. We examine:</p>
+<ol class="arabic simple">
+<li><p><strong>Exposure metrics</strong>: Length of railway infrastructure exposed to flooding at different return periods.</p></li>
+<li><p><strong>Damage assessment</strong>: Direct economic damages to exposed assets based on flood depth and infrastructure replacement costs.</p></li>
+<li><p><strong>Current conditions</strong>: Risk under present-day climate (100-year return period events).</p></li>
+<li><p><strong>Climate change scenarios</strong>: How risks change under 1.5°C, 2.0°C, 3.0°C, and 4.0°C global warming scenarios.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load railway risk data</span>
+<span class="n">risk_dir</span> <span class="o">=</span> <span class="n">code_dir</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">&quot;inputs&quot;</span> <span class="o">/</span> <span class="s2">&quot;risk&quot;</span> <span class="o">/</span> <span class="s2">&quot;River_flood&quot;</span>
+<span class="n">rail_risk_path</span> <span class="o">=</span> <span class="n">risk_dir</span> <span class="o">/</span> <span class="s2">&quot;rail_risk.parquet&quot;</span>
+<span class="n">rail_risk_cc_path</span> <span class="o">=</span> <span class="n">risk_dir</span> <span class="o">/</span> <span class="s2">&quot;rail_risk_CC.parquet&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading railway flood risk data...</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Load current conditions risk data</span>
+<span class="n">rail_risk</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">rail_risk_path</span><span class="p">)</span>
+<span class="c1"># Load climate change risk data</span>
+<span class="n">rail_risk_cc</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">rail_risk_cc_path</span><span class="p">)</span>
+
+<span class="c1"># Merge risk data with railway geometry using utility function</span>
+<span class="k">if</span> <span class="s1">&#39;railway_edges&#39;</span> <span class="ow">in</span> <span class="n">infrastructure</span><span class="p">:</span>
+    <span class="n">railway_with_risk</span> <span class="o">=</span> <span class="n">merge_risk_data_preserve_geometry</span><span class="p">(</span>
+        <span class="n">infrastructure</span><span class="p">[</span><span class="s1">&#39;railway_edges&#39;</span><span class="p">],</span> 
+        <span class="n">rail_risk</span><span class="p">,</span> 
+        <span class="n">rail_risk_cc</span>
+    <span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Warning: Railway edges not loaded in infrastructure data&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Calculate derived metrics for RP100</span>
+<span class="n">railway_with_risk</span><span class="p">[</span><span class="s1">&#39;pct_damage_100&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">railway_with_risk</span><span class="p">[</span><span class="s1">&#39;mean_damage_100&#39;</span><span class="p">]</span> <span class="o">/</span> 
+    <span class="p">(</span><span class="n">railway_with_risk</span><span class="p">[</span><span class="s1">&#39;exposure_100&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5000</span><span class="p">)</span>
+<span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Filter to assets with exposure</span>
+<span class="n">railway_exposed</span> <span class="o">=</span> <span class="n">railway_with_risk</span><span class="p">[</span><span class="n">railway_with_risk</span><span class="p">[</span><span class="s1">&#39;exposure_100&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Assets exposed to RP100 flooding: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">railway_exposed</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total exposed length: </span><span class="si">{</span><span class="n">railway_exposed</span><span class="p">[</span><span class="s1">&#39;exposure_100&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> m&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total damage (RP100): €</span><span class="si">{</span><span class="n">railway_exposed</span><span class="p">[</span><span class="s1">&#39;mean_damage_100&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="mf">1e6</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> million&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total EAD: €</span><span class="si">{</span><span class="n">railway_exposed</span><span class="p">[</span><span class="s1">&#39;EAD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="mf">1e6</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> million&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading railway flood risk data...
+
+
+Assets exposed to RP100 flooding: 167910
+Total exposed length: 33710212.0 m
+Total damage (RP100): €49405.95 million
+Total EAD: €447.02 million
+</pre></div>
+</div>
+</div>
+</div>
+<section id="current-conditions">
+<h3>Current Conditions<a class="headerlink" href="#current-conditions" title="Link to this heading">#</a></h3>
+<p>Visualization of railway flood risk under current climate conditions:</p>
+<ul class="simple">
+<li><p><strong>Direct Damage</strong>: Monetary cost of repairs/replacement in euros for 100-year return period events.</p></li>
+<li><p><strong>Damage Percentage</strong>: Proportion of asset value damaged (capped at 100% for visualization) for 100-year return period events.</p></li>
+<li><p><strong>Exposed Length</strong>: Total meters of railway track exposed to flooding per asset for 100-year return period events.</p></li>
+<li><p><strong>Expected Annual Damage (EAD)</strong>: Annualized damage costs accounting for all return periods and their probabilities.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="c1"># 1. Exposed Length (m)</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="s1">&#39;Exposed Length (100 years return period event)&#39;</span><span class="p">)</span>
+<span class="c1"># Normalize colormap to p05-p95 range for better visibility</span>
+<span class="n">vmin_exp</span> <span class="o">=</span> <span class="n">railway_exposed</span><span class="p">[</span><span class="s1">&#39;exposure_100&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">vmax_exp</span> <span class="o">=</span> <span class="n">railway_exposed</span><span class="p">[</span><span class="s1">&#39;exposure_100&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+<span class="n">railway_exposed</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">column</span><span class="o">=</span><span class="s1">&#39;exposure_100&#39;</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;YlOrRd&#39;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Exposed Length (m)&#39;</span><span class="p">,</span> <span class="s1">&#39;shrink&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">},</span>
+    <span class="n">vmin</span><span class="o">=</span><span class="n">vmin_exp</span><span class="p">,</span>
+    <span class="n">vmax</span><span class="o">=</span><span class="n">vmax_exp</span>
+<span class="p">)</span>
+
+<span class="c1"># 2. Damage Percentage</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="s1">&#39;Damage Percentage (100 years return period event)&#39;</span><span class="p">)</span>
+<span class="c1"># Cap at 100% for visualization</span>
+<span class="n">railway_exposed_capped</span> <span class="o">=</span> <span class="n">railway_exposed</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">railway_exposed_capped</span><span class="p">[</span><span class="s1">&#39;pct_damage_100_capped&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">railway_exposed_capped</span><span class="p">[</span><span class="s1">&#39;pct_damage_100&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">upper</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">vmin_pct</span> <span class="o">=</span> <span class="n">railway_exposed_capped</span><span class="p">[</span><span class="s1">&#39;pct_damage_100_capped&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">vmax_pct</span> <span class="o">=</span> <span class="n">railway_exposed_capped</span><span class="p">[</span><span class="s1">&#39;pct_damage_100_capped&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+<span class="n">railway_exposed_capped</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="n">column</span><span class="o">=</span><span class="s1">&#39;pct_damage_100_capped&#39;</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Damage (%)&#39;</span><span class="p">,</span> <span class="s1">&#39;shrink&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">},</span>
+    <span class="n">vmin</span><span class="o">=</span><span class="n">vmin_pct</span><span class="p">,</span>
+    <span class="n">vmax</span><span class="o">=</span><span class="n">vmax_pct</span>
+<span class="p">)</span>
+
+<span class="c1"># 3. Direct Damage (RP100) - Log Scale</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="s1">&#39;Direct Damage (100 years return period event) - Log Scale&#39;</span><span class="p">)</span>
+<span class="c1"># Use log10 transformation for better visualisation of wide range</span>
+<span class="n">railway_exposed_dmg</span> <span class="o">=</span> <span class="n">railway_exposed</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">railway_exposed_dmg</span><span class="p">[</span><span class="s1">&#39;log_mean_damage_100&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">railway_exposed_dmg</span><span class="p">[</span><span class="s1">&#39;mean_damage_100&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">))</span>
+<span class="n">vmin_dmg</span> <span class="o">=</span> <span class="n">railway_exposed_dmg</span><span class="p">[</span><span class="s1">&#39;log_mean_damage_100&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">vmax_dmg</span> <span class="o">=</span> <span class="n">railway_exposed_dmg</span><span class="p">[</span><span class="s1">&#39;log_mean_damage_100&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+<span class="n">railway_exposed_dmg</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+    <span class="n">column</span><span class="o">=</span><span class="s1">&#39;log_mean_damage_100&#39;</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdPu&#39;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;Damage (€)&#39;</span><span class="p">,</span> <span class="s1">&#39;shrink&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">},</span>
+    <span class="n">vmin</span><span class="o">=</span><span class="n">vmin_dmg</span><span class="p">,</span>
+    <span class="n">vmax</span><span class="o">=</span><span class="n">vmax_dmg</span>
+<span class="p">)</span>
+<span class="c1"># Format colorbar with powers of 10</span>
+<span class="n">cbar_dmg</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">colorbar</span>
+<span class="n">format_log_colorbar</span><span class="p">(</span><span class="n">cbar_dmg</span><span class="p">)</span>
+
+<span class="c1"># 4. Expected Annual Damage (EAD) - Log Scale</span>
+<span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="s1">&#39;Expected Annual Damage (EAD) - Log Scale&#39;</span><span class="p">)</span>
+<span class="n">railway_exposed_ead</span> <span class="o">=</span> <span class="n">railway_exposed</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">railway_exposed_ead</span><span class="p">[</span><span class="s1">&#39;log_EAD&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">railway_exposed_ead</span><span class="p">[</span><span class="s1">&#39;EAD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">))</span>
+<span class="n">vmin_ead</span> <span class="o">=</span> <span class="n">railway_exposed_ead</span><span class="p">[</span><span class="s1">&#39;log_EAD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">vmax_ead</span> <span class="o">=</span> <span class="n">railway_exposed_ead</span><span class="p">[</span><span class="s1">&#39;log_EAD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
+<span class="n">railway_exposed_ead</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+    <span class="n">column</span><span class="o">=</span><span class="s1">&#39;log_EAD&#39;</span><span class="p">,</span>
+    <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Purples&#39;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;EAD (€/year)&#39;</span><span class="p">,</span> <span class="s1">&#39;shrink&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">},</span>
+    <span class="n">vmin</span><span class="o">=</span><span class="n">vmin_ead</span><span class="p">,</span>
+    <span class="n">vmax</span><span class="o">=</span><span class="n">vmax_ead</span>
+<span class="p">)</span>
+<span class="c1"># Format colorbar with powers of 10</span>
+<span class="n">cbar_ead</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">colorbar</span>
+<span class="n">format_log_colorbar</span><span class="p">(</span><span class="n">cbar_ead</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/118e56a020ef602b4d4f290f3b458b4cd23a339cf68d33b6f890b7564912edbc.png" src="../../../_images/118e56a020ef602b4d4f290f3b458b4cd23a339cf68d33b6f890b7564912edbc.png" />
+</div>
+</div>
+</section>
+<section id="climate-change-scenarios-interpolated-damages">
+<h3>Climate Change Scenarios - Interpolated Damages<a class="headerlink" href="#climate-change-scenarios-interpolated-damages" title="Link to this heading">#</a></h3>
+<p>This shows how the same infrastructure faces higher damages as climate change increases flood frequency.</p>
+<p>Under climate change, the frequency of extreme flooding increases. A flood that currently occurs once every 100 years may become more frequent - occurring every 50, 30, or even 20 years under warmer scenarios.</p>
+<p>This section interpolates damages by:</p>
+<ol class="arabic simple">
+<li><p>Taking the climate-adjusted return period for each warming scenario</p></li>
+<li><p>Interpolating damage values between known return periods</p></li>
+<li><p>Calculating total damages across the network for each scenario</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Interpolate damages for climate change scenarios</span>
+<span class="n">scenarios</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1.5C&#39;</span><span class="p">,</span> <span class="s1">&#39;2.0C&#39;</span><span class="p">,</span> <span class="s1">&#39;3.0C&#39;</span><span class="p">,</span> <span class="s1">&#39;4.0C&#39;</span><span class="p">]</span>
+<span class="n">return_periods</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interpolating damages for climate change scenarios...</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">scenario</span> <span class="ow">in</span> <span class="n">scenarios</span><span class="p">:</span>
+    <span class="n">adj_rp_col</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;adjusted_rp_100_</span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">damage_col</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;damage_cc_</span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span>
+    
+    <span class="k">if</span> <span class="n">adj_rp_col</span> <span class="ow">in</span> <span class="n">railway_with_risk</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">railway_with_risk</span><span class="p">[</span><span class="n">damage_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">railway_with_risk</span><span class="p">[</span><span class="s1">&#39;mean_damage_100&#39;</span><span class="p">]</span>
+        
+        <span class="c1"># Print summary</span>
+        <span class="n">total_damage</span> <span class="o">=</span> <span class="n">railway_with_risk</span><span class="p">[</span><span class="n">damage_col</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">avg_adj_rp</span> <span class="o">=</span> <span class="n">railway_with_risk</span><span class="p">[</span><span class="n">adj_rp_col</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s2">: Column </span><span class="si">{</span><span class="n">adj_rp_col</span><span class="si">}</span><span class="s2"> not found&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Damage interpolation completed&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="c1"># Filter to exposed assets - preserve GeoDataFrame structure</span>
+<span class="n">railway_cc</span> <span class="o">=</span> <span class="n">railway_with_risk</span><span class="p">[</span><span class="n">railway_with_risk</span><span class="p">[</span><span class="s1">&#39;exposure_100&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Plot damage ratios for each scenario (scenario/baseline)</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">scenario</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">scenarios</span><span class="p">):</span>
+    <span class="n">damage_col</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;damage_cc_</span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">ratio_col</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;damage_ratio_</span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span>
+    
+    <span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Frequency Increase - </span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1"> Scenario&#39;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">damage_col</span> <span class="ow">in</span> <span class="n">railway_cc</span><span class="o">.</span><span class="n">columns</span> <span class="ow">and</span> <span class="s1">&#39;mean_damage_100&#39;</span> <span class="ow">in</span> <span class="n">railway_cc</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="c1"># Calculate ratio: scenario damage / baseline damage</span>
+        <span class="n">railway_cc</span><span class="p">[</span><span class="n">ratio_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">railway_cc</span><span class="p">[</span><span class="n">damage_col</span><span class="p">]</span> <span class="o">/</span> <span class="n">railway_cc</span><span class="p">[</span><span class="s1">&#39;mean_damage_100&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        
+        <span class="n">freq_ratio_col</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;freq_ratio_</span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">adj_rp_col</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;adjusted_rp_100_</span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="n">railway_cc</span><span class="p">[</span><span class="n">freq_ratio_col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">railway_cc</span><span class="p">[</span><span class="n">adj_rp_col</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        
+        <span class="c1"># Use frequency ratio for visualisation instead</span>
+        <span class="n">vmin</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">vmax</span> <span class="o">=</span> <span class="mi">5</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s2">: Avg freq = </span><span class="si">{</span><span class="n">railway_cc</span><span class="p">[</span><span class="n">freq_ratio_col</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">x, plotting </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">railway_cc</span><span class="p">)</span><span class="si">}</span><span class="s2"> features&quot;</span><span class="p">)</span>
+        
+        <span class="n">im</span> <span class="o">=</span> <span class="n">railway_cc</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+            <span class="n">column</span><span class="o">=</span><span class="n">freq_ratio_col</span><span class="p">,</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;YlOrRd&#39;</span><span class="p">,</span>
+            <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+            <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;Frequency Increase - </span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;shrink&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">},</span>
+            <span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span>
+            <span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span>
+        <span class="p">)</span>
+        
+        <span class="c1"># Add text annotation with average frequency increase</span>
+        <span class="n">avg_freq_ratio</span> <span class="o">=</span> <span class="n">railway_cc</span><span class="p">[</span><span class="n">freq_ratio_col</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Avg frequency: </span><span class="si">{</span><span class="n">avg_freq_ratio</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">x baseline</span><span class="se">\n</span><span class="s1">(RP100 event occurs </span><span class="si">{</span><span class="n">avg_freq_ratio</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">x more often)&#39;</span><span class="p">,</span>
+                      <span class="n">transform</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span>
+                      <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;wheat&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Data not available for </span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> 
+                      <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Interpolating damages for climate change scenarios...
+
+
+Damage interpolation completed
+1.5C: Avg freq = 1.63x, plotting 167910 features
+2.0C: Avg freq = 1.97x, plotting 167910 features
+3.0C: Avg freq = 2.34x, plotting 167910 features
+4.0C: Avg freq = 2.71x, plotting 167910 features
+</pre></div>
+</div>
+<img alt="../../../_images/f40df696ed79aba44890738a2ef100f2aa2904242c468458a034e0f8b6f3cb2a.png" src="../../../_images/f40df696ed79aba44890738a2ef100f2aa2904242c468458a034e0f8b6f3cb2a.png" />
+</div>
+</div>
+</section>
+<section id="climate-change-scenarios-expected-annual-damage-ead">
+<h3>Climate Change Scenarios - Expected Annual Damage (EAD)<a class="headerlink" href="#climate-change-scenarios-expected-annual-damage-ead" title="Link to this heading">#</a></h3>
+<p>EAD is crucial for long-term infrastructure planning and climate adaptation investment decisions. It translates probabilistic risk into actionable financial metrics.</p>
+<p>EAD (Expected Annual Damage) integrates damages across all return periods to estimate average annual costs:</p>
+<ul class="simple">
+<li><p><strong>Risk escalation</strong>: Higher warming = higher EAD as extreme events become more frequent.</p></li>
+<li><p><strong>Methodology</strong>: EAD = sum of (damage at each RP) × (annual probability of that RP).</p></li>
+<li><p><strong>Interpretation</strong>: EAD represents the annualized budget needed for repairs/replacements under each scenario.</p></li>
+<li><p><strong>Climate scenarios</strong>: Calculated separately for 1.5°C, 2.0°C, 3.0°C, and 4.0°C warming levels.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check EAD columns for climate scenarios</span>
+<span class="n">ead_scenarios</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1.5C&#39;</span><span class="p">,</span> <span class="s1">&#39;2.0C&#39;</span><span class="p">,</span> <span class="s1">&#39;3.0C&#39;</span><span class="p">,</span> <span class="s1">&#39;4.0C&#39;</span><span class="p">]</span>
+<span class="n">ead_columns</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;EAD_</span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span> <span class="k">for</span> <span class="n">scenario</span> <span class="ow">in</span> <span class="n">ead_scenarios</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Checking EAD columns for climate scenarios:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">ead_columns</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">railway_with_risk</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="n">total_ead</span> <span class="o">=</span> <span class="n">railway_with_risk</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">: €</span><span class="si">{</span><span class="n">total_ead</span><span class="o">/</span><span class="mf">1e6</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> million/year&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">col</span><span class="si">}</span><span class="s2">: Not found&quot;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="c1"># Plot EAD ratios for each climate scenario (scenario/baseline)</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">scenario</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ead_scenarios</span><span class="p">):</span>
+    <span class="n">ead_col</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;EAD_</span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span>
+    <span class="n">ratio_col</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;EAD_ratio_</span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span>
+    
+    <span class="n">setup_ax</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">europe_countries</span><span class="p">,</span> <span class="n">infrastructure</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;EAD Increase - </span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1"> Scenario&#39;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">ead_col</span> <span class="ow">in</span> <span class="n">railway_cc</span><span class="o">.</span><span class="n">columns</span> <span class="ow">and</span> <span class="s1">&#39;EAD&#39;</span> <span class="ow">in</span> <span class="n">railway_cc</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="c1"># Calculate ratio: scenario EAD / baseline EAD</span>
+        <span class="n">railway_cc</span><span class="p">[</span><span class="n">ratio_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">railway_cc</span><span class="p">[</span><span class="n">ead_col</span><span class="p">]</span> <span class="o">/</span> <span class="n">railway_cc</span><span class="p">[</span><span class="s1">&#39;EAD&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+        
+        <span class="c1"># Use fixed scale 1-5 for all scenarios</span>
+        <span class="n">vmin</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">vmax</span> <span class="o">=</span> <span class="mi">5</span>
+        
+        <span class="n">im</span> <span class="o">=</span> <span class="n">railway_cc</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+            <span class="n">column</span><span class="o">=</span><span class="n">ratio_col</span><span class="p">,</span>
+            <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;YlOrRd&#39;</span><span class="p">,</span>
+            <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+            <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;EAD Ratio - </span><span class="si">{</span><span class="n">scenario</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;shrink&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">},</span>
+            <span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span>
+            <span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span>
+        <span class="p">)</span>
+        
+        <span class="c1"># Add text annotation with average increase</span>
+        <span class="n">avg_ratio</span> <span class="o">=</span> <span class="n">railway_cc</span><span class="p">[</span><span class="n">ratio_col</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.98</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Average: </span><span class="si">{</span><span class="n">avg_ratio</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">x baseline&#39;</span><span class="p">,</span>
+                      <span class="n">transform</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+                      <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;wheat&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Data not available for </span><span class="si">{</span><span class="n">ead_col</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> 
+                      <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">transAxes</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Checking EAD columns for climate scenarios:
+  EAD_1.5C: €633.69 million/year
+  EAD_2.0C: €750.65 million/year
+  EAD_3.0C: €867.59 million/year
+  EAD_4.0C: €946.86 million/year
+</pre></div>
+</div>
+<img alt="../../../_images/0ca5d1abf8c5a285bfc8f98447c4839a759c8a131134259676a25fa2aa34aed3.png" src="../../../_images/0ca5d1abf8c5a285bfc8f98447c4839a759c8a131134259676a25fa2aa34aed3.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./usecases/UC1/book"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../introduction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction to the Use Cases</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../UC2/book/Use_Case_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Use Case 2 - Wildfires in Catalonia, Spain</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-and-configuration">1. Setup and Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-infrastructure-data">2. Load Infrastructure Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualise-all-assets-by-corridor">3. Visualise All Assets by Corridor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#freight-flows-visualisation">4. Freight Flows Visualisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#passenger-flows-visualisation">5. Passenger Flows Visualisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-exposure-quantification">6. Hazard Exposure Quantification</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#railway-flood-risk-analysis">7. Railway Flood Risk Analysis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#current-conditions">Current Conditions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#climate-change-scenarios-interpolated-damages">Climate Change Scenarios - Interpolated Damages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#climate-change-scenarios-expected-annual-damage-ead">Climate Change Scenarios - Expected Annual Damage (EAD)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MIRACA
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
