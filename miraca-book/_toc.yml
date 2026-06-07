@@ -68,3 +68,5 @@ parts:
   - caption: About
     chapters:
       - file: about
+      - title: Getting Started
+        file: setup
