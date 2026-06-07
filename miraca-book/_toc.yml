@@ -67,6 +67,7 @@ parts:
 
   - caption: About
     chapters:
-      - file: about
+      - title: About
+        file: about
       - title: Getting Started
         file: setup
