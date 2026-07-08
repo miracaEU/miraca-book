@@ -5,6 +5,15 @@ format: jb-book
 root: intro
 
 parts:
+  - caption: About
+    chapters:
+      - title: "The MIRACA Project"
+        file: about
+      - title: "EU Mission on Adaptation"
+        file: mission_adaptation
+      - title: "How to start"
+        file: setup
+
   - caption: The MIRACA Approach
     chapters:
       - title: "Description of the framework"
@@ -63,11 +72,3 @@ parts:
             title: Cost of Adaptation Strategies
           - file: background/AdaptationModelling/book/04_results_summary
             title: Avoided Damages and Adaptation Costs
-
-
-  - caption: About
-    chapters:
-      - title: About
-        file: about
-      - title: Getting Started
-        file: setup
