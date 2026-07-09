@@ -1,0 +1,2843 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Use Case 4 - Adaptation to societal risk of hydrological hazards (floods) through schools and hospitals in Greece - JRC Flood model &#8212; MIRACA Technical Workbench</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usecases/UC4/book/F_E+F_ERSM20+JRC_new';</script>
+    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt="MIRACA Technical Workbench - Home"/>
+    <img src="../../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="MIRACA Technical Workbench - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Welcome to the MIRACA Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">The MIRACA Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../mission_adaptation.html">EU Mission on Adaptation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../setup.html">How to start</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">The MIRACA Approach</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../riskassessment/miraca_approach.html">Description of the framework</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../riskassessment/example.html">Example: Belgium road infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/AssetRiskModelling/book/risk_assessment_belgium.html">Climate Risk Assessment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../riskassessment/Systemic-Economic-Impact/book/systemic_impacts_belgium.html">Systemic Economic Impacts</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Use Cases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC1/book/TENT_corridors_disruption_analysis.html">Use Case 1 - Flooding and Windstorms in the TEN-T corridor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC2/book/Use_Case_2.html">Use Case 2 - Wildfires in Catalonia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC3/book/Use_Case_3.html">Use Case 3 - Flooding in Zuid-Holland</a></li>
+<li class="toctree-l1"><a class="reference internal" href="E_E%2BL_ESRM20%2BElsus_new.html">Use Case 4 - Landslides &amp; Earthquake in Greece</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Background</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../background/Exposure_Miraca/book/intro.html">Exposure database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Exposure_Miraca/book/Exposure_Miraca.html">Exploring the Critical Infrastructure Exposure Database</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../background/Vulnerability/book/intro.html">Vulnerability Database</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Vulnerability/book/Vulnerability_workbench.html">Explore the Vulnerability Database</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/RoadFlowModelling/book/miraca_roads.html">Network Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../background/CBAmodelling/book/miraca_cba.html">Cost-Benefit Analysis</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/intro.html">Transport and Flow Allocation model</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/Air_Flow_Assignment.html">Air Flow Visualisation by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/IWW_Flow_Assignment.html">Inland Waterways Flow Visualisation by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/Maritime_Flow_Assignment.html">Maritime Flow Visualisation by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/Rail_Flow_Assignment.html">Railway Flow Visualisation by Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/Transport-Flows-Allocation/book/Road_Flow_Assignment.html">Road Flow Visualisation by Country</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../background/AdaptationModelling/book/introduction.html">Adaptation strategies for Critical Infrastructure</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/AdaptationModelling/book/01_direct_damages_baseline.html">Direct Damages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/AdaptationModelling/book/02_indirect_damages_baseline.html">Indirect Losses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/AdaptationModelling/book/03_batch_process_adaptations.html">Cost of Adaptation Strategies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../background/AdaptationModelling/book/04_results_summary.html">Avoided Damages and Adaptation Costs</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/miracaEU/miraca-book/issues/new?title=Issue%20on%20page%20%2Fusecases/UC4/book/F_E+F_ERSM20+JRC_new.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/usecases/UC4/book/F_E+F_ERSM20+JRC_new.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Use Case 4 - Adaptation to societal risk of hydrological  hazards (floods) through schools and hospitals in Greece - JRC Flood model</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-comments">General Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure">Directory structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure-assessment">Exposure Assessment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-characterisation">Hazard characterisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-exposure-and-hazard-dataset">Combined exposure and hazard dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-assessment">Vulnerability Assessment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-assessment">Risk Assessment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-hazard-risk-assessment-floods">Single-hazard risk assessment (floods)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-hazard-risk-assessment-earthquakes-and-floods">Multi-Hazard Risk Assessment (Earthquakes and Floods)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="use-case-4-adaptation-to-societal-risk-of-hydrological-hazards-floods-through-schools-and-hospitals-in-greece-jrc-flood-model">
+<h1>Use Case 4 - Adaptation to societal risk of hydrological  hazards (floods) through schools and hospitals in Greece - JRC Flood model<a class="headerlink" href="#use-case-4-adaptation-to-societal-risk-of-hydrological-hazards-floods-through-schools-and-hospitals-in-greece-jrc-flood-model" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HIDE CODE</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">gc</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">inspect</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">rasterio</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rasterio.warp</span><span class="w"> </span><span class="kn">import</span> <span class="n">calculate_default_transform</span><span class="p">,</span> <span class="n">reproject</span><span class="p">,</span> <span class="n">Resampling</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rasterio.features</span><span class="w"> </span><span class="kn">import</span> <span class="n">shapes</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">rasterstats</span><span class="w"> </span><span class="kn">import</span> <span class="n">point_query</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">lognorm</span><span class="p">,</span> <span class="n">norm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shapely.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">Point</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shapely</span><span class="w"> </span><span class="kn">import</span> <span class="n">wkt</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpl</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mcolors</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpatches</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.lines</span><span class="w"> </span><span class="kn">import</span> <span class="n">Line2D</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">font_manager</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="kn">import</span> <span class="n">ListedColormap</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.offsetbox</span><span class="w"> </span><span class="kn">import</span> <span class="n">OffsetImage</span><span class="p">,</span> <span class="n">AnnotationBbox</span>
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="general-comments">
+<h2>General Comments<a class="headerlink" href="#general-comments" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This notebook follows the MIRACA Use Case template structure to ensure consistency across the MIRACA Python Book.</p></li>
+<li><p>The workflow is demonstrated for a subset of assets (Schools or Hospitals) within Central Macedonia (Greece).</p></li>
+<li><p>Output files are saved in a structured <code class="docutils literal notranslate"><span class="pre">Results/</span></code> directory to facilitate reproducibility and reuse.</p></li>
+</ul>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>This Use Case assesses the societal risk of schools and hospitals in Central Macedonia (Greece), considering hydrological hazards (floods) and the combination of floods-earthquakes.</p></li>
+<li><p>The analysis combines hazard, exposure, and vulnerability information to estimate potential physical damage for different return periods.</p></li>
+<li><p>Relevant stakeholders include: The Civil Protection authorities of the Region of Central Macedonia and the Municipality of Thessaloniki, Greece.</p></li>
+<li><p>The results support climate adaptation planning and risk-informed decision-making for critical infrastructures such as educational and healthcare facilities.</p></li>
+</ul>
+</section>
+<section id="directory-structure">
+<h2>Directory structure<a class="headerlink" href="#directory-structure" title="Link to this heading">#</a></h2>
+<p>This notebook assumes the following directory structure:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data/</span></code><br />
+Input datasets (exposure, hazard, fragility/vulnerability tables, administrative boundaries).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Results/</span></code><br />
+Output folder automatically created by the notebook.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Results/&lt;asset&gt;/Single-Hazard/</span></code><br />
+Outputs for earthquake-only calculations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Results/&lt;asset&gt;/Multi-Hazard/</span></code><br />
+Outputs for earthquake + landslide calculations.</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>Note: <code class="docutils literal notranslate"><span class="pre">&lt;asset&gt;</span></code> is either <code class="docutils literal notranslate"><span class="pre">Schools</span></code> or <code class="docutils literal notranslate"><span class="pre">Hospitals</span></code> depending on the selection below.</p>
+</div></blockquote>
+<p>Select whether you want to compute the risk assessment for educational buildings (asset = “Schools”) or healthcare facilities (asset = “Hospitals”).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">asset</span> <span class="o">=</span> <span class="s2">&quot;Schools&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Define the folder where the data is available and where the results will be saved.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span>
+
+<span class="n">savepath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span><span class="o">/</span> <span class="s1">&#39;Results&#39;</span> <span class="o">/</span> <span class="n">asset</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following color variables are defined for the Miraca theme. These colors will be used for visualizations. The font settings for the plots are also adjusted for consistency.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># miraca colors</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="s1">&#39;#4069F6&#39;</span> <span class="c1"># primary blue 500 </span>
+<span class="n">c2</span> <span class="o">=</span> <span class="s1">&#39;#171E37&#39;</span> <span class="c1"># black</span>
+<span class="n">c3</span> <span class="o">=</span> <span class="s1">&#39;#64F4C0&#39;</span> <span class="c1"># accent green </span>
+<span class="n">c4</span> <span class="o">=</span> <span class="s1">&#39;#FFFFFF&#39;</span> <span class="c1"># white</span>
+<span class="n">c5</span> <span class="o">=</span> <span class="s1">&#39;#ED5861&#39;</span> <span class="c1"># red</span>
+<span class="n">c6</span> <span class="o">=</span> <span class="s1">&#39;#F8CD48&#39;</span> <span class="c1"># yellow</span>
+<span class="n">c7</span> <span class="o">=</span> <span class="s1">&#39;#72DA95&#39;</span> <span class="c1"># green 500</span>
+<span class="n">c8</span> <span class="o">=</span> <span class="s1">&#39;#373D52&#39;</span> <span class="c1"># grey 900</span>
+<span class="n">c9</span> <span class="o">=</span> <span class="s1">&#39;#8F94A3&#39;</span> <span class="c1"># grey 500</span>
+<span class="n">c10</span> <span class="o">=</span> <span class="s1">&#39;#EBEDF5&#39;</span> <span class="c1"># grey 100</span>
+<span class="n">c11</span> <span class="o">=</span> <span class="s1">&#39;#72DA95&#39;</span> <span class="c1"># green</span>
+<span class="n">c12</span> <span class="o">=</span> <span class="s1">&#39;#373D52&#39;</span> <span class="c1"># blue 900</span>
+<span class="n">c13</span> <span class="o">=</span> <span class="s1">&#39;#6687F8&#39;</span> <span class="c1"># blue 400</span>
+<span class="n">c14</span> <span class="o">=</span> <span class="s1">&#39;#EBEDF5&#39;</span> <span class="c1"># blue 100</span>
+<span class="n">c15</span> <span class="o">=</span> <span class="s1">&#39;#373D52&#39;</span> <span class="c1"># 429787 900</span>
+<span class="n">c16</span> <span class="o">=</span> <span class="s1">&#39;#9CF8D7&#39;</span> <span class="c1"># green 400</span>
+<span class="n">c17</span> <span class="o">=</span> <span class="s1">&#39;#E0FDF2&#39;</span> <span class="c1"># green 100</span>
+
+<span class="c1"># Adjust font settings</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s1">&#39;Calibri&#39;</span><span class="p">)</span>
+<span class="n">font</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;family&#39;</span><span class="p">:</span> <span class="s1">&#39;Calibri&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="s1">&#39;bold&#39;</span><span class="p">}</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.default&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;regular&#39;</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;mathtext.rm&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">font</span><span class="p">[</span><span class="s1">&#39;family&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exposure-assessment">
+<h2>Exposure Assessment<a class="headerlink" href="#exposure-assessment" title="Link to this heading">#</a></h2>
+<p>Exposure data correspond to educational and healthcare facilities located in the Region of Central Macedonia, Greece.</p>
+<ul class="simple">
+<li><p>Study area: Region of Central Macedonia, Greece.</p></li>
+<li><p>Assets considered: Schools and major healthcare facilities (hospitals).</p></li>
+<li><p>Educational facilities achieve high spatial coverage across the study area.</p></li>
+<li><p>Healthcare facilities focus on the main hospitals located within the Metropolitan area of Thessaloniki.</p></li>
+<li><p>Assets are selected based on the availability of reliable exposure information to ensure robust risk assessment results.</p></li>
+</ul>
+<p>Load exposure data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load exposure data</span>
+<span class="k">if</span> <span class="n">asset</span> <span class="o">==</span> <span class="s2">&quot;Schools&quot;</span><span class="p">:</span>
+    <span class="n">csv1_path</span> <span class="o">=</span> <span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;Exposure_Riskschools.csv&quot;</span>
+<span class="k">elif</span> <span class="n">asset</span> <span class="o">==</span> <span class="s2">&quot;Hospitals&quot;</span><span class="p">:</span>
+    <span class="n">csv1_path</span> <span class="o">=</span> <span class="n">data_path</span> <span class="o">/</span> <span class="s2">&quot;Exposure_Hospitals.csv&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid asset type. Please choose either &#39;Schools&#39; or &#39;Hospitals&#39;.&quot;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Load the CSV files into pandas DataFrames</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv1_path</span><span class="p">)</span>
+
+<span class="c1"># Column names for longitude and latitude</span>
+<span class="n">longitude_col1</span> <span class="o">=</span> <span class="s1">&#39;Longitude&#39;</span>
+<span class="n">latitude_col1</span> <span class="o">=</span> <span class="s1">&#39;Latitude&#39;</span>
+
+<span class="c1"># Convert the DataFrames to GeoDataFrames</span>
+<span class="n">gdf1</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">df1</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">df1</span><span class="p">[</span><span class="n">longitude_col1</span><span class="p">],</span> <span class="n">df1</span><span class="p">[</span><span class="n">latitude_col1</span><span class="p">]))</span>
+
+<span class="c1"># Set the CRS for both GeoDataFrames to WGS84</span>
+<span class="n">gdf1</span><span class="o">.</span><span class="n">set_crs</span><span class="p">(</span><span class="n">epsg</span><span class="o">=</span><span class="mi">4326</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>id</th>
+      <th>Name</th>
+      <th>Counsil</th>
+      <th>Material</th>
+      <th>Lateral Loading system</th>
+      <th>Code level</th>
+      <th>Floors</th>
+      <th>Lateral Coefficiency</th>
+      <th>Intensity</th>
+      <th>Typology</th>
+      <th>Area</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>22.538980</td>
+      <td>40.511320</td>
+      <td>72</td>
+      <td>3ο Νηπιαγωγείο Αιγινίου</td>
+      <td>ΠΥΔΝΑΣ-ΚΟΛΙΝΔΡΟΥ</td>
+      <td>Precast</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>SA(1.5)</td>
+      <td>Precast-CDH</td>
+      <td>107.60</td>
+      <td>POINT (22.53898 40.51132)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>22.543110</td>
+      <td>40.498490</td>
+      <td>73</td>
+      <td>1ο Δημοτικό Αιγινίου</td>
+      <td>ΠΥΔΝΑΣ-ΚΟΛΙΝΔΡΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>1</td>
+      <td>10.0</td>
+      <td>PGA</td>
+      <td>CR_LFINF-CDH-10_H1</td>
+      <td>1008.00</td>
+      <td>POINT (22.54311 40.49849)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>22.911365</td>
+      <td>40.734834</td>
+      <td>82</td>
+      <td>1ο Νηπιαγωγείο Ωραιοκάστρου</td>
+      <td>ΩΡΑΙΟΚΑΣΤΡΟΥ</td>
+      <td>MUR: unreinforced masonry</td>
+      <td>LWAL: load bearing wall</td>
+      <td>CDN</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>PGA</td>
+      <td>MUR_LWAL-DNO_H1</td>
+      <td>450.00</td>
+      <td>POINT (22.91136 40.73483)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>22.919226</td>
+      <td>40.723864</td>
+      <td>83</td>
+      <td>2ο Γυμνάσιο Ωραιοκάστρου</td>
+      <td>ΩΡΑΙΟΚΑΣΤΡΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>3</td>
+      <td>15.0</td>
+      <td>SA(0.6)</td>
+      <td>CR_LFINF-CDH-15_H3</td>
+      <td>3408.00</td>
+      <td>POINT (22.91923 40.72386)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>22.993852</td>
+      <td>40.612094</td>
+      <td>84</td>
+      <td>3ο Δημοτικό Σχολείο Πυλαίας</td>
+      <td>ΠΥΛΑΙΑΣ-ΧΟΡΤΙΑΤΗ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LDUAL: dual frame-wall system</td>
+      <td>CDH</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>PGA</td>
+      <td>CR_LDUAL-DUH_H2</td>
+      <td>2010.00</td>
+      <td>POINT (22.99385 40.61209)</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1713</th>
+      <td>22.456130</td>
+      <td>40.222693</td>
+      <td>2024</td>
+      <td>Λύκειο Κονταριώτισσας - Κτίριο Β</td>
+      <td>ΔΙΟΥ-ΟΛΥΜΠΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LDUAL: dual frame-wall system</td>
+      <td>CDH</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>PGA</td>
+      <td>CR_LDUAL-DUH_H2</td>
+      <td>1024.80</td>
+      <td>POINT (22.45613 40.22269)</td>
+    </tr>
+    <tr>
+      <th>1714</th>
+      <td>22.456130</td>
+      <td>40.222693</td>
+      <td>2025</td>
+      <td>Λύκειο Κονταριώτισσας - Κτίριο Γ</td>
+      <td>ΔΙΟΥ-ΟΛΥΜΠΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LDUAL: dual frame-wall system</td>
+      <td>CDH</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>PGA</td>
+      <td>CR_LDUAL-DUH_H2</td>
+      <td>1160.90</td>
+      <td>POINT (22.45613 40.22269)</td>
+    </tr>
+    <tr>
+      <th>1715</th>
+      <td>22.456130</td>
+      <td>40.222693</td>
+      <td>2026</td>
+      <td>Λύκειο Κονταριώτισσας - Κτίριο Δ</td>
+      <td>ΔΙΟΥ-ΟΛΥΜΠΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LDUAL: dual frame-wall system</td>
+      <td>CDH</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>PGA</td>
+      <td>CR_LDUAL-DUH_H2</td>
+      <td>225.36</td>
+      <td>POINT (22.45613 40.22269)</td>
+    </tr>
+    <tr>
+      <th>1716</th>
+      <td>22.456130</td>
+      <td>40.222693</td>
+      <td>2027</td>
+      <td>Λύκειο Κονταριώτισσας - Κτίριο Ε</td>
+      <td>ΔΙΟΥ-ΟΛΥΜΠΟΥ</td>
+      <td>S: steel</td>
+      <td>LFBR: braced frame</td>
+      <td>CDH</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>PGA</td>
+      <td>S_LFBR-DUH_H1</td>
+      <td>956.37</td>
+      <td>POINT (22.45613 40.22269)</td>
+    </tr>
+    <tr>
+      <th>1717</th>
+      <td>22.500322</td>
+      <td>40.230284</td>
+      <td>2029</td>
+      <td>Νηπιαγωγείο Νέας Εφέσσου</td>
+      <td>ΔΙΟΥ-ΟΛΥΜΠΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDM</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>SA(0.3)</td>
+      <td>CR_LFINF-CDM-5_H1</td>
+      <td>112.36</td>
+      <td>POINT (22.50032 40.23028)</td>
+    </tr>
+  </tbody>
+</table>
+<p>1718 rows × 14 columns</p>
+</div></div></div>
+</div>
+<p>Visualize exposure data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shapefile_path</span> <span class="o">=</span> <span class="n">data_path</span> <span class="o">/</span> <span class="s1">&#39;central macedonia.shp&#39;</span>
+<span class="n">gdf_shapefile</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">shapefile_path</span><span class="p">)</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">gdf_shapefile</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span>
+    <span class="n">style_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;lightgray&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
+<span class="p">)</span>
+
+<span class="n">gdf1</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span>
+    <span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;caption&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">asset</span><span class="si">}</span><span class="s1"> - Central Macedonia&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;orientation&#39;</span><span class="p">:</span> <span class="s1">&#39;horizontal&#39;</span>
+    <span class="p">},</span>
+    <span class="n">marker_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;radius&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+<span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="hazard-characterisation">
+<h2>Hazard characterisation<a class="headerlink" href="#hazard-characterisation" title="Link to this heading">#</a></h2>
+<p>Floods</p>
+<ul class="simple">
+<li><p>European Commission - Joint Research Centre (JRC) river flood model (Dottori et al. 2021) in terms of flood depth for six different return periods (Dottori et al. 2021). The JRC model provides a gridded dataset that depicts water depth (in meters) across the river network for nine distinct flood return periods, ranging from 1-in-10 years to 1-in-500 years. River flow data used in the model were generated using the open-source hydrological model LISFLOOD. Flood inundation simulations were conducted with the LISFLOOD-FP hydrodynamic model, focusing on river basins larger than 150 km². This dataset was developed as part of the Copernicus Emergency Management Service initiative.</p></li>
+<li><p>Single hazard / Multi-hazards considered</p>
+<ul>
+<li><p>Single hazard: floods</p></li>
+<li><p>Multi-hazard: floods-earthquake</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; This dictionary initializes a DataFrame containing seismic return period data. </span>
+<span class="sd">The &#39;No&#39; column represents a sequential identifier for each flood scenario. </span>
+<span class="sd">The &#39;Return_Period&#39; column specifies the return period in years, </span>
+<span class="sd">The resulting DataFrame, Scenaria, captures these flood scenario details. &quot;&quot;&quot;</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;No&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">],</span>
+        <span class="s1">&#39;Return_Period&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">Scenaria</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Scenaria</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   No  Return_Period
+0   1             10
+1   2             20
+2   3             30
+3   4             40
+4   5             50
+5   6             75
+6   7            100
+7   8            200
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sample raster values - Flood Hazard</p>
+<p>In order to download the flood hazard data, you need to go to the following link and download the JRC flood datasets: <a class="reference external" href="https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/CEMS-EFAS/flood_hazard/">JRC Flood Hazard Data</a> After downloading the files, place them inside the <code class="docutils literal notranslate"><span class="pre">data</span></code> directory in your project folder in order to continue the workflow.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">JRC_periods</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">]</span>
+<span class="n">output_csv</span> <span class="o">=</span> <span class="n">savepath</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;Single-Hazard/Floods/Flood_JRC_hazard_sampled_values_</span><span class="si">{</span><span class="n">asset</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">JRC_periods</span><span class="p">:</span>
+    <span class="n">raster_path</span> <span class="o">=</span> <span class="n">data_path</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;Europe_RP</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">_filled_depth.tif&quot;</span>
+
+    <span class="c1"># Open the raster file</span>
+    <span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">raster_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">src</span><span class="p">:</span>
+        <span class="c1"># Check NoData value</span>
+        <span class="n">nodata_value</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">nodata</span>
+
+        <span class="c1"># Ensure CRS matches between the raster and the points</span>
+        <span class="k">if</span> <span class="n">gdf1</span><span class="o">.</span><span class="n">crs</span> <span class="o">!=</span> <span class="n">src</span><span class="o">.</span><span class="n">crs</span><span class="p">:</span>
+            <span class="n">gdf1</span> <span class="o">=</span> <span class="n">gdf1</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">src</span><span class="o">.</span><span class="n">crs</span><span class="p">)</span>
+
+        <span class="c1"># Extract coordinates from points</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="p">[(</span><span class="n">point</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">point</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">gdf1</span><span class="o">.</span><span class="n">geometry</span><span class="p">]</span>
+
+        <span class="c1"># Sample raster values at point locations</span>
+        <span class="n">sampled_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">src</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">coords</span><span class="p">):</span>
+            <span class="c1"># Replace NoData values with 0</span>
+            <span class="n">sampled_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">val</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">nodata_value</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="c1"># Add the sampled raster values as a new column in the GeoDataFrame</span>
+    <span class="n">gdf1</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;JRC_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sampled_values</span>
+
+<span class="c1"># Save the updated GeoDataFrame with all raster columns to a CSV file</span>
+<span class="n">gdf1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_csv</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vizualise Flood Hazard Data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot each flood scenario</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">JRC_periods</span><span class="p">:</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">gdf_shapefile</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span>
+        <span class="n">style_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;lightgray&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Central Macedonia&#39;</span>
+    <span class="p">)</span>
+
+    <span class="n">gdf1</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span>
+        <span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="p">,</span>
+        <span class="n">column</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;JRC_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+        <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;GnBu&#39;</span><span class="p">,</span>
+        <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">legend_kwds</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">&#39;caption&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;Flood depth (m) – RP </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> years&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;orientation&#39;</span><span class="p">:</span> <span class="s1">&#39;horizontal&#39;</span>
+        <span class="p">},</span>
+        <span class="n">marker_kwds</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;radius&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">)</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="combined-exposure-and-hazard-dataset">
+<h2>Combined exposure and hazard dataset<a class="headerlink" href="#combined-exposure-and-hazard-dataset" title="Link to this heading">#</a></h2>
+<p>Exposure points are linked with the corresponding flood intensity measures.
+The resulting dataset combines exposure and flood hazard and is used as input for the subsequent vulnerability and risk assessment steps.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load Exposure and Hazard Data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">output_csv</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>id</th>
+      <th>Name</th>
+      <th>Counsil</th>
+      <th>Material</th>
+      <th>Lateral Loading system</th>
+      <th>Code level</th>
+      <th>Floors</th>
+      <th>Lateral Coefficiency</th>
+      <th>...</th>
+      <th>Area</th>
+      <th>geometry</th>
+      <th>JRC_10</th>
+      <th>JRC_20</th>
+      <th>JRC_30</th>
+      <th>JRC_40</th>
+      <th>JRC_50</th>
+      <th>JRC_75</th>
+      <th>JRC_100</th>
+      <th>JRC_200</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>22.538980</td>
+      <td>40.511320</td>
+      <td>72</td>
+      <td>3ο Νηπιαγωγείο Αιγινίου</td>
+      <td>ΠΥΔΝΑΣ-ΚΟΛΙΝΔΡΟΥ</td>
+      <td>Precast</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>107.6</td>
+      <td>POINT (22.53898 40.51132)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>22.543110</td>
+      <td>40.498490</td>
+      <td>73</td>
+      <td>1ο Δημοτικό Αιγινίου</td>
+      <td>ΠΥΔΝΑΣ-ΚΟΛΙΝΔΡΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>1</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>1008.0</td>
+      <td>POINT (22.54311 40.49849)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>22.911365</td>
+      <td>40.734834</td>
+      <td>82</td>
+      <td>1ο Νηπιαγωγείο Ωραιοκάστρου</td>
+      <td>ΩΡΑΙΟΚΑΣΤΡΟΥ</td>
+      <td>MUR: unreinforced masonry</td>
+      <td>LWAL: load bearing wall</td>
+      <td>CDN</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>450.0</td>
+      <td>POINT (22.9113646 40.7348339)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>22.919226</td>
+      <td>40.723864</td>
+      <td>83</td>
+      <td>2ο Γυμνάσιο Ωραιοκάστρου</td>
+      <td>ΩΡΑΙΟΚΑΣΤΡΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>3</td>
+      <td>15.0</td>
+      <td>...</td>
+      <td>3408.0</td>
+      <td>POINT (22.9192263 40.7238642)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>22.993852</td>
+      <td>40.612094</td>
+      <td>84</td>
+      <td>3ο Δημοτικό Σχολείο Πυλαίας</td>
+      <td>ΠΥΛΑΙΑΣ-ΧΟΡΤΙΑΤΗ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LDUAL: dual frame-wall system</td>
+      <td>CDH</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>2010.0</td>
+      <td>POINT (22.993852 40.6120941)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 22 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="vulnerability-assessment">
+<h2>Vulnerability Assessment<a class="headerlink" href="#vulnerability-assessment" title="Link to this heading">#</a></h2>
+<p>Flood vulnerability of educational and healthcare facilities is assessed using building-class specific fragility functions (Huizinga et al. 2017; Batica et al. 2018; Nofal and van de Lindt, 2020).
+Fragility functions by Nofal and van de Lindt are applied for one-storey and two-storey schools and hospitals, defined in terms of flood depth. They cover five damage states (DS0–DS4), from insignificant to complete damage. Mean flood losses are estimated using the fragility-based flood loss approach for 8 return periods (10–200 years) with the JRC hazard model.</p>
+<p>Calculate the fragility value based on conditions</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate_value</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">asset</span> <span class="o">==</span> <span class="s2">&quot;Hospitals&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;F12&quot;</span>  <span class="c1"># If asset is Hospital, return F12</span>
+    <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Floors&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;F10&quot;</span>  <span class="c1"># If Floors == 1, return F10</span>
+    <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;Floors&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;F11&quot;</span>  <span class="c1"># If Floors &gt;= 2, return F11</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>  <span class="c1"># Default value for other cases</span>
+
+<span class="c1"># Apply the function to the DataFrame and create a new column</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Fragility_code&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">calculate_value</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Display the updated DataFrame</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>id</th>
+      <th>Name</th>
+      <th>Counsil</th>
+      <th>Material</th>
+      <th>Lateral Loading system</th>
+      <th>Code level</th>
+      <th>Floors</th>
+      <th>Lateral Coefficiency</th>
+      <th>...</th>
+      <th>geometry</th>
+      <th>JRC_10</th>
+      <th>JRC_20</th>
+      <th>JRC_30</th>
+      <th>JRC_40</th>
+      <th>JRC_50</th>
+      <th>JRC_75</th>
+      <th>JRC_100</th>
+      <th>JRC_200</th>
+      <th>Fragility_code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>22.538980</td>
+      <td>40.511320</td>
+      <td>72</td>
+      <td>3ο Νηπιαγωγείο Αιγινίου</td>
+      <td>ΠΥΔΝΑΣ-ΚΟΛΙΝΔΡΟΥ</td>
+      <td>Precast</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>POINT (22.53898 40.51132)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>F10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>22.543110</td>
+      <td>40.498490</td>
+      <td>73</td>
+      <td>1ο Δημοτικό Αιγινίου</td>
+      <td>ΠΥΔΝΑΣ-ΚΟΛΙΝΔΡΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>1</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>POINT (22.54311 40.49849)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>F10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>22.911365</td>
+      <td>40.734834</td>
+      <td>82</td>
+      <td>1ο Νηπιαγωγείο Ωραιοκάστρου</td>
+      <td>ΩΡΑΙΟΚΑΣΤΡΟΥ</td>
+      <td>MUR: unreinforced masonry</td>
+      <td>LWAL: load bearing wall</td>
+      <td>CDN</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>POINT (22.9113646 40.7348339)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>F10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>22.919226</td>
+      <td>40.723864</td>
+      <td>83</td>
+      <td>2ο Γυμνάσιο Ωραιοκάστρου</td>
+      <td>ΩΡΑΙΟΚΑΣΤΡΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>3</td>
+      <td>15.0</td>
+      <td>...</td>
+      <td>POINT (22.9192263 40.7238642)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>F11</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>22.993852</td>
+      <td>40.612094</td>
+      <td>84</td>
+      <td>3ο Δημοτικό Σχολείο Πυλαίας</td>
+      <td>ΠΥΛΑΙΑΣ-ΧΟΡΤΙΑΤΗ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LDUAL: dual frame-wall system</td>
+      <td>CDH</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>POINT (22.993852 40.6120941)</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>F11</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 23 columns</p>
+</div></div></div>
+</div>
+<p>Extract values for fragility</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load ESRM20 data</span>
+<span class="n">Nofal</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">data_path</span><span class="o">/</span><span class="s2">&quot;Nofal_fragility_curves.xlsx&quot;</span><span class="p">)</span>
+<span class="n">Nofal</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fragility_code&#39;</span><span class="p">,</span> <span class="s1">&#39;Median_DS1&#39;</span><span class="p">,</span> <span class="s1">&#39;Median_DS2&#39;</span><span class="p">,</span> <span class="s1">&#39;Median_DS3&#39;</span><span class="p">,</span> <span class="s1">&#39;Median_DS4&#39;</span><span class="p">,</span> <span class="s1">&#39;Beta_DS1&#39;</span><span class="p">,</span> <span class="s2">&quot;Beta_DS2&quot;</span><span class="p">,</span> <span class="s2">&quot;Beta_DS3&quot;</span><span class="p">,</span><span class="s2">&quot;Beta_DS4&quot;</span><span class="p">]</span>
+
+<span class="c1"># Initialize lists to store results</span>
+<span class="n">IM1</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">IM2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">IM3</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">IM4</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Beta_DS1</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Beta_DS2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Beta_DS3</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Beta_DS4</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Iterate over each value in &#39;Typology&#39; column of data</span>
+<span class="k">for</span> <span class="n">taxonomy</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Fragility_code&#39;</span><span class="p">]:</span>
+    <span class="c1"># Check if any row in &#39;Typology&#39; column matches current taxonomy</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">Nofal</span><span class="p">[</span><span class="s1">&#39;Fragility_code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">taxonomy</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">():</span>
+        <span class="c1"># Find the row where &#39;Typology&#39; matches and retrieve values</span>
+        <span class="n">filtered_data</span> <span class="o">=</span> <span class="n">Nofal</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">Nofal</span><span class="p">[</span><span class="s1">&#39;Fragility_code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">taxonomy</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">filtered_data</span><span class="o">.</span><span class="n">empty</span><span class="p">:</span>
+            <span class="n">IM1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">&#39;Median_DS1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">IM2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">&#39;Median_DS2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">IM3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">&#39;Median_DS3&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">IM4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">&#39;Median_DS4&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">Beta_DS1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">&#39;Beta_DS1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">Beta_DS2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">&#39;Beta_DS2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">Beta_DS3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">&#39;Beta_DS3&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">Beta_DS4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered_data</span><span class="p">[</span><span class="s1">&#39;Beta_DS4&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Handle case where no matching Typology is found in ESRM20</span>
+            <span class="n">IM1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+            <span class="n">IM2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+            <span class="n">IM3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+            <span class="n">IM4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+            <span class="n">Beta_DS1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+            <span class="n">Beta_DS2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+            <span class="n">Beta_DS3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>            
+            <span class="n">Beta_DS4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Handle case where no matching Typology is found in ESRM20</span>
+        <span class="n">IM1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">IM2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">IM3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">IM4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">Beta_DS1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">Beta_DS2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">Beta_DS3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>            
+        <span class="n">Beta_DS4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="c1"># Create a new DataFrame to store results</span>
+<span class="n">IM</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;IM1&#39;</span><span class="p">:</span> <span class="n">IM1</span><span class="p">,</span>
+    <span class="s1">&#39;IM2&#39;</span><span class="p">:</span> <span class="n">IM2</span><span class="p">,</span>
+    <span class="s1">&#39;IM3&#39;</span><span class="p">:</span> <span class="n">IM3</span><span class="p">,</span>
+    <span class="s1">&#39;IM4&#39;</span><span class="p">:</span> <span class="n">IM4</span><span class="p">,</span>
+    <span class="s1">&#39;Beta_DS1&#39;</span><span class="p">:</span> <span class="n">Beta_DS1</span><span class="p">,</span>
+    <span class="s1">&#39;Beta_DS2&#39;</span><span class="p">:</span> <span class="n">Beta_DS2</span><span class="p">,</span>
+    <span class="s1">&#39;Beta_DS3&#39;</span><span class="p">:</span> <span class="n">Beta_DS3</span> <span class="p">,</span>   
+    <span class="s1">&#39;Beta_DS4&#39;</span><span class="p">:</span> <span class="n">Beta_DS4</span>
+<span class="p">})</span>
+
+<span class="n">IM</span><span class="p">[</span><span class="s2">&quot;Fragility_code&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Fragility_code&quot;</span><span class="p">]</span>
+<span class="c1">#print(IM)</span>
+
+<span class="n">IM</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">15</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>IM1</th>
+      <th>IM2</th>
+      <th>IM3</th>
+      <th>IM4</th>
+      <th>Beta_DS1</th>
+      <th>Beta_DS2</th>
+      <th>Beta_DS3</th>
+      <th>Beta_DS4</th>
+      <th>Fragility_code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-1.570</td>
+      <td>-0.681</td>
+      <td>0.824</td>
+      <td>1.573</td>
+      <td>0.502</td>
+      <td>0.738</td>
+      <td>0.531</td>
+      <td>0.186</td>
+      <td>F10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-1.570</td>
+      <td>-0.681</td>
+      <td>0.824</td>
+      <td>1.573</td>
+      <td>0.502</td>
+      <td>0.738</td>
+      <td>0.531</td>
+      <td>0.186</td>
+      <td>F10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-1.570</td>
+      <td>-0.681</td>
+      <td>0.824</td>
+      <td>1.573</td>
+      <td>0.502</td>
+      <td>0.738</td>
+      <td>0.531</td>
+      <td>0.186</td>
+      <td>F10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-1.546</td>
+      <td>-0.678</td>
+      <td>1.388</td>
+      <td>2.006</td>
+      <td>0.488</td>
+      <td>0.740</td>
+      <td>0.435</td>
+      <td>0.254</td>
+      <td>F11</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-1.546</td>
+      <td>-0.678</td>
+      <td>1.388</td>
+      <td>2.006</td>
+      <td>0.488</td>
+      <td>0.740</td>
+      <td>0.435</td>
+      <td>0.254</td>
+      <td>F11</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>-1.570</td>
+      <td>-0.681</td>
+      <td>0.824</td>
+      <td>1.573</td>
+      <td>0.502</td>
+      <td>0.738</td>
+      <td>0.531</td>
+      <td>0.186</td>
+      <td>F10</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>-1.570</td>
+      <td>-0.681</td>
+      <td>0.824</td>
+      <td>1.573</td>
+      <td>0.502</td>
+      <td>0.738</td>
+      <td>0.531</td>
+      <td>0.186</td>
+      <td>F10</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>-1.546</td>
+      <td>-0.678</td>
+      <td>1.388</td>
+      <td>2.006</td>
+      <td>0.488</td>
+      <td>0.740</td>
+      <td>0.435</td>
+      <td>0.254</td>
+      <td>F11</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>-1.546</td>
+      <td>-0.678</td>
+      <td>1.388</td>
+      <td>2.006</td>
+      <td>0.488</td>
+      <td>0.740</td>
+      <td>0.435</td>
+      <td>0.254</td>
+      <td>F11</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>-1.546</td>
+      <td>-0.678</td>
+      <td>1.388</td>
+      <td>2.006</td>
+      <td>0.488</td>
+      <td>0.740</td>
+      <td>0.435</td>
+      <td>0.254</td>
+      <td>F11</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>-1.570</td>
+      <td>-0.681</td>
+      <td>0.824</td>
+      <td>1.573</td>
+      <td>0.502</td>
+      <td>0.738</td>
+      <td>0.531</td>
+      <td>0.186</td>
+      <td>F10</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>-1.546</td>
+      <td>-0.678</td>
+      <td>1.388</td>
+      <td>2.006</td>
+      <td>0.488</td>
+      <td>0.740</td>
+      <td>0.435</td>
+      <td>0.254</td>
+      <td>F11</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>-1.546</td>
+      <td>-0.678</td>
+      <td>1.388</td>
+      <td>2.006</td>
+      <td>0.488</td>
+      <td>0.740</td>
+      <td>0.435</td>
+      <td>0.254</td>
+      <td>F11</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>-1.570</td>
+      <td>-0.681</td>
+      <td>0.824</td>
+      <td>1.573</td>
+      <td>0.502</td>
+      <td>0.738</td>
+      <td>0.531</td>
+      <td>0.186</td>
+      <td>F10</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>-1.570</td>
+      <td>-0.681</td>
+      <td>0.824</td>
+      <td>1.573</td>
+      <td>0.502</td>
+      <td>0.738</td>
+      <td>0.531</td>
+      <td>0.186</td>
+      <td>F10</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="risk-assessment">
+<h2>Risk Assessment<a class="headerlink" href="#risk-assessment" title="Link to this heading">#</a></h2>
+<p>Risk metrics are computed by combining hazard intensity measures with exposure and vulnerability information for each flood scenario.</p>
+<p>Asset-level damage probabilities and loss ratios are estimated for multiple return periods, followed by the computation of annual collapse probability using the stress-based methodology.</p>
+<section id="single-hazard-risk-assessment-floods">
+<h3>Single-hazard risk assessment (floods)<a class="headerlink" href="#single-hazard-risk-assessment-floods" title="Link to this heading">#</a></h3>
+<p>Calculate damage index</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">norm</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_normal_distribution</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">std_dev</span><span class="p">):</span>
+
+    <span class="c1"># Ensure the standard deviation (std_dev) is positive</span>
+    <span class="n">std_dev</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">std_dev</span><span class="p">)</span>  <span class="c1"># Standard deviation should always be positive</span>
+    
+    <span class="c1"># Create a normal distribution with mean=mean and std_dev=std_dev</span>
+    <span class="k">return</span> <span class="n">norm</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="n">mean</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">std_dev</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compute_cdf_values</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">im_row</span><span class="p">,</span> <span class="n">return_period</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Computes CDF values based on the intensity and IM row data for a specific return period.</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters:</span>
+<span class="sd">    - row: A row from the input DataFrame.</span>
+<span class="sd">    - im_row: A row from the IM DataFrame containing beta and IM values.</span>
+<span class="sd">    - return_period: The return period (e.g., 10, 20, 30 years) used to identify the intensity column.</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">    - A tuple of computed CDF values (cdf1, cdf2, cdf3, cdf4), or 0 if values are NaN.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Dynamically set the column name based on the return period (e.g., JRC_10, JRC_20, etc.)</span>
+    <span class="n">column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;JRC_</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s1">&#39;</span>
+    
+    <span class="c1"># Get the intensity value (x_value) from the specified column</span>
+    <span class="n">x_value</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span> <span class="k">if</span> <span class="n">column_name</span> <span class="ow">in</span> <span class="n">row</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">column_name</span><span class="p">])</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+    <span class="c1"># Skip the row if x_value is 0 or NaN</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">x_value</span><span class="p">)</span> <span class="ow">or</span> <span class="n">x_value</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+        <span class="c1"># print(f&quot;Skipping row due to x_value = {x_value} at return period {return_period}&quot;)</span>
+        <span class="k">return</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span>  <span class="c1"># Return 0 for all CDF values</span>
+
+    <span class="c1"># Check if any of the IM values are NaN (missing)</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;IM1&quot;</span><span class="p">])</span> <span class="ow">or</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;IM2&quot;</span><span class="p">])</span> <span class="ow">or</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;IM3&quot;</span><span class="p">])</span> <span class="ow">or</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;IM4&quot;</span><span class="p">]):</span>
+        <span class="c1"># print(f&quot;Skipping row due to missing IM values at return period {return_period}&quot;)</span>
+        <span class="k">return</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span>  <span class="c1"># Return 0 for all CDF values</span>
+    
+    <span class="c1"># Define a list of IM values and beta values for each damage state</span>
+    <span class="n">im_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;IM1&quot;</span><span class="p">],</span> <span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;IM2&quot;</span><span class="p">],</span> <span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;IM3&quot;</span><span class="p">],</span> <span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;IM4&quot;</span><span class="p">]]</span>
+    <span class="n">beta_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;Beta_DS1&quot;</span><span class="p">],</span> <span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;Beta_DS2&quot;</span><span class="p">],</span> <span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;Beta_DS3&quot;</span><span class="p">],</span> <span class="n">im_row</span><span class="p">[</span><span class="s2">&quot;Beta_DS4&quot;</span><span class="p">]]</span>
+    
+    <span class="c1"># Initialize lists to store the CDF values</span>
+    <span class="n">cdf_values</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="c1"># Loop through the damage states and calculate CDF values</span>
+    <span class="k">for</span> <span class="n">im_value</span><span class="p">,</span> <span class="n">beta_value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">im_values</span><span class="p">,</span> <span class="n">beta_values</span><span class="p">):</span>
+        <span class="c1"># Create normal distributions for each damage state using IM values as means and beta values as std devs</span>
+        <span class="n">dist</span> <span class="o">=</span> <span class="n">calculate_normal_distribution</span><span class="p">(</span><span class="n">im_value</span><span class="p">,</span> <span class="n">beta_value</span><span class="p">)</span>
+        
+        <span class="c1"># Compute the CDF value for the given intensity (x_value) and append to the list</span>
+        <span class="n">cdf_val</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x_value</span><span class="p">))</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">dist</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x_value</span><span class="p">)))</span> <span class="k">else</span> <span class="mf">0.0</span>
+        <span class="n">cdf_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cdf_val</span><span class="p">)</span>
+    
+    <span class="c1"># Return the CDF values for all 4 damage states</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">cdf_values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a dictionary to store the CDF results for each return period</span>
+<span class="n">cdf_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Iterate over each row in the Scenarios DataFrame (Scenaria)</span>
+<span class="k">for</span> <span class="n">index_scen</span><span class="p">,</span> <span class="n">scen_row</span> <span class="ow">in</span> <span class="n">Scenaria</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Variables to store CDF results for each damage state</span>
+        <span class="n">cdf1</span><span class="p">,</span> <span class="n">cdf2</span><span class="p">,</span> <span class="n">cdf3</span><span class="p">,</span> <span class="n">cdf4</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+        
+        <span class="c1"># Scenario parameters</span>
+        <span class="n">return_period</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">scen_row</span><span class="p">[</span><span class="s1">&#39;Return_Period&#39;</span><span class="p">])</span>
+
+        <span class="c1"># Iterate over each row in the df DataFrame (your input data)</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+            <span class="c1"># Retrieve the corresponding row from the IM DataFrame</span>
+            <span class="k">if</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">IM</span><span class="p">):</span>
+                <span class="n">im_row</span> <span class="o">=</span> <span class="n">IM</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+                <span class="c1"># Compute CDF values for the specific return period</span>
+                <span class="n">cdf1_val</span><span class="p">,</span> <span class="n">cdf2_val</span><span class="p">,</span> <span class="n">cdf3_val</span><span class="p">,</span> <span class="n">cdf4_val</span> <span class="o">=</span> <span class="n">compute_cdf_values</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">im_row</span><span class="p">,</span> <span class="n">return_period</span><span class="p">)</span>
+                
+                <span class="c1"># Append the results for each damage state</span>
+                <span class="n">cdf1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cdf1_val</span><span class="p">)</span>
+                <span class="n">cdf2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cdf2_val</span><span class="p">)</span>
+                <span class="n">cdf3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cdf3_val</span><span class="p">)</span>
+                <span class="n">cdf4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cdf4_val</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Handle potential index mismatch</span>
+                <span class="n">cdf1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+                <span class="n">cdf2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+                <span class="n">cdf3</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+                <span class="n">cdf4</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+        <span class="c1"># Create a DataFrame to store the CDF results for the current scenario</span>
+        <span class="n">CDF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+            <span class="s2">&quot;Longitude&quot;</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Longitude&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;Latitude&quot;</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Latitude&quot;</span><span class="p">],</span>
+            <span class="sa">f</span><span class="s2">&quot;CDF1-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">cdf1</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;CDF2-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">cdf2</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;CDF3-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">cdf3</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;CDF4-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">cdf4</span>
+        <span class="p">})</span>
+        
+        <span class="c1"># Calculate the probabilities of occurrence for each damage state</span>
+        <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;P_DS1-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF1-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF2-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+        <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;P_DS2-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF2-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF3-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+        <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;P_DS3-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF3-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF4-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+        <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;P_DS4-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF4-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+        
+        <span class="n">DI_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+            <span class="c1"># Check Material type and calculate DI accordingly</span>
+            <span class="c1"># Calculate DI_value based on Fragility Code (F10, F11, F12)</span>
+            <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Fragility_code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F10&#39;</span><span class="p">:</span>
+                <span class="n">DI_value</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS1-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.08</span> <span class="o">+</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS2-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.39</span> <span class="o">+</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS3-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.72</span> <span class="o">+</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS4-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1</span>
+                <span class="p">)</span>
+            <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Fragility_code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F11&#39;</span><span class="p">:</span>
+                <span class="n">DI_value</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS1-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.05</span> <span class="o">+</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS2-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.24</span> <span class="o">+</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS3-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.72</span> <span class="o">+</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS4-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1</span>
+                <span class="p">)</span>
+            <span class="k">elif</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Fragility_code&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F12&#39;</span><span class="p">:</span>
+                <span class="n">DI_value</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS1-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.01</span> <span class="o">+</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS2-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.12</span> <span class="o">+</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS3-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.96</span> <span class="o">+</span>
+                    <span class="n">CDF</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;P_DS4-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Handle the default case if needed, e.g., for rows where Fragility_code is not F10, F11, or F12</span>
+                <span class="n">DI_value</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="c1"># Append the calculated DI to the list</span>
+            <span class="n">DI_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">DI_value</span><span class="p">)</span>
+    
+        <span class="c1"># Add the calculated DI values to the DataFrame</span>
+        <span class="n">CDF</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;DI-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DI_values</span>
+        
+        <span class="c1"># Reset the index to align all data</span>
+        <span class="n">CDF</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        
+        <span class="c1"># Store the DataFrame for the current scenario in a dictionary</span>
+        <span class="n">cdf_dict</span><span class="p">[</span><span class="n">return_period</span><span class="p">]</span> <span class="o">=</span> <span class="n">CDF</span>
+
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error processing scenario at index </span><span class="si">{</span><span class="n">index_scen</span><span class="si">}</span><span class="s2"> for return period </span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+<span class="c1"># Concatenate all the DataFrames horizontally (axis=1)</span>
+<span class="n">DI_flood</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">cdf_dict</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Drop duplicate &#39;Longitude&#39; and &#39;Latitude&#39; columns, keeping only the first occurrence</span>
+<span class="n">DI_flood</span> <span class="o">=</span> <span class="n">DI_flood</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="o">~</span><span class="n">DI_flood</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()]</span>
+
+<span class="n">DI_flood</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>  <span class="c1"># Print the first 15 rows for verification</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>CDF1-10</th>
+      <th>CDF2-10</th>
+      <th>CDF3-10</th>
+      <th>CDF4-10</th>
+      <th>P_DS1-10</th>
+      <th>P_DS2-10</th>
+      <th>P_DS3-10</th>
+      <th>P_DS4-10</th>
+      <th>...</th>
+      <th>DI-100</th>
+      <th>CDF1-200</th>
+      <th>CDF2-200</th>
+      <th>CDF3-200</th>
+      <th>CDF4-200</th>
+      <th>P_DS1-200</th>
+      <th>P_DS2-200</th>
+      <th>P_DS3-200</th>
+      <th>P_DS4-200</th>
+      <th>DI-200</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>22.538980</td>
+      <td>40.511320</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>22.543110</td>
+      <td>40.498490</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>22.911365</td>
+      <td>40.734834</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>22.919226</td>
+      <td>40.723864</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>22.993852</td>
+      <td>40.612094</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 74 columns</p>
+</div></div></div>
+</div>
+<p>Calculate annual collapse probability based on strest methodology</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define return periods</span>
+<span class="n">Periods</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">500</span><span class="p">]</span>
+
+<span class="c1"># Compute λ values</span>
+<span class="n">lambda_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">Periods</span><span class="p">]</span>
+
+<span class="c1"># Compute P[IM_i] using the given formula</span>
+<span class="n">P_IM</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lambda_values</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># Avoid first and last index</span>
+    <span class="n">P_IM_i</span> <span class="o">=</span> <span class="p">(</span><span class="n">lambda_values</span><span class="p">[</span><span class="n">t</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">lambda_values</span><span class="p">[</span><span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">P_IM</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">P_IM_i</span><span class="p">)</span>
+
+<span class="c1"># Create a dictionary mapping return periods to P[IM_i]</span>
+<span class="n">P_IM_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">Periods</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span> <span class="n">P_IM</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">P_IM</span><span class="p">))}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">P_IM_dict</span><span class="p">)</span>
+
+<span class="c1"># Multiply each &quot;CDF4-{r}&quot; column by the corresponding P[IM_i]</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">Periods</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>  <span class="c1"># Exclude first and last periods as they lack P[IM_i]</span>
+    <span class="n">column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;CDF4-</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">new_column_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">column_name</span><span class="si">}</span><span class="s2">*P[IM_i]&quot;</span>
+
+    <span class="k">if</span> <span class="n">column_name</span> <span class="ow">in</span> <span class="n">DI_flood</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>  
+        <span class="n">DI_flood</span><span class="p">[</span><span class="n">new_column_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">DI_flood</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span> <span class="o">*</span> <span class="n">P_IM_dict</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+
+<span class="c1"># Add a new column that sums all the new columns</span>
+<span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF4-</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">*P[IM_i]&quot;</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">Periods</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="sa">f</span><span class="s2">&quot;CDF4-</span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="n">DI_flood</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+<span class="c1"># Create a new column &quot;Sum_of_new_columns&quot; by summing across the new columns</span>
+<span class="n">DI_flood</span><span class="p">[</span><span class="s2">&quot;Annual Collapse Probability&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">DI_flood</span><span class="p">[</span><span class="n">new_columns</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">DI_flood</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{10: 0.07500000000000001, 20: 0.03333333333333334, 30: 0.0125, 40: 0.006666666666666666, 50: 0.005833333333333334, 75: 0.005, 100: 0.0041666666666666675, 200: 0.004}
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>CDF1-10</th>
+      <th>CDF2-10</th>
+      <th>CDF3-10</th>
+      <th>CDF4-10</th>
+      <th>P_DS1-10</th>
+      <th>P_DS2-10</th>
+      <th>P_DS3-10</th>
+      <th>P_DS4-10</th>
+      <th>...</th>
+      <th>DI-200</th>
+      <th>CDF4-10*P[IM_i]</th>
+      <th>CDF4-20*P[IM_i]</th>
+      <th>CDF4-30*P[IM_i]</th>
+      <th>CDF4-40*P[IM_i]</th>
+      <th>CDF4-50*P[IM_i]</th>
+      <th>CDF4-75*P[IM_i]</th>
+      <th>CDF4-100*P[IM_i]</th>
+      <th>CDF4-200*P[IM_i]</th>
+      <th>Annual Collapse Probability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>22.538980</td>
+      <td>40.511320</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>22.543110</td>
+      <td>40.498490</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>22.911365</td>
+      <td>40.734834</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>22.919226</td>
+      <td>40.723864</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>22.993852</td>
+      <td>40.612094</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 83 columns</p>
+</div></div></div>
+</div>
+<p>Create and save the final DataFrame containing the damage index (loss ratio) for different return periods along with the annual probability of collapse for each exposure point.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Concatenate df and IM horizontally, aligning by their index</span>
+<span class="n">common_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">IM</span><span class="p">,</span> <span class="n">DI_flood</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Display the first few rows of the combined DataFrame</span>
+<span class="n">flood_file_path</span> <span class="o">=</span> <span class="n">savepath</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;Single-Hazard/Floods/DI_Floods_JRC_</span><span class="si">{</span><span class="n">asset</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+
+<span class="c1"># Ensure the directory exists</span>
+<span class="n">flood_file_path</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">common_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">flood_file_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">common_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>id</th>
+      <th>Name</th>
+      <th>Counsil</th>
+      <th>Material</th>
+      <th>Lateral Loading system</th>
+      <th>Code level</th>
+      <th>Floors</th>
+      <th>Lateral Coefficiency</th>
+      <th>...</th>
+      <th>DI-200</th>
+      <th>CDF4-10*P[IM_i]</th>
+      <th>CDF4-20*P[IM_i]</th>
+      <th>CDF4-30*P[IM_i]</th>
+      <th>CDF4-40*P[IM_i]</th>
+      <th>CDF4-50*P[IM_i]</th>
+      <th>CDF4-75*P[IM_i]</th>
+      <th>CDF4-100*P[IM_i]</th>
+      <th>CDF4-200*P[IM_i]</th>
+      <th>Annual Collapse Probability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>22.538980</td>
+      <td>40.511320</td>
+      <td>72</td>
+      <td>3ο Νηπιαγωγείο Αιγινίου</td>
+      <td>ΠΥΔΝΑΣ-ΚΟΛΙΝΔΡΟΥ</td>
+      <td>Precast</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>22.543110</td>
+      <td>40.498490</td>
+      <td>73</td>
+      <td>1ο Δημοτικό Αιγινίου</td>
+      <td>ΠΥΔΝΑΣ-ΚΟΛΙΝΔΡΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>1</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>22.911365</td>
+      <td>40.734834</td>
+      <td>82</td>
+      <td>1ο Νηπιαγωγείο Ωραιοκάστρου</td>
+      <td>ΩΡΑΙΟΚΑΣΤΡΟΥ</td>
+      <td>MUR: unreinforced masonry</td>
+      <td>LWAL: load bearing wall</td>
+      <td>CDN</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>22.919226</td>
+      <td>40.723864</td>
+      <td>83</td>
+      <td>2ο Γυμνάσιο Ωραιοκάστρου</td>
+      <td>ΩΡΑΙΟΚΑΣΤΡΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>3</td>
+      <td>15.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>22.993852</td>
+      <td>40.612094</td>
+      <td>84</td>
+      <td>3ο Δημοτικό Σχολείο Πυλαίας</td>
+      <td>ΠΥΛΑΙΑΣ-ΧΟΡΤΙΑΤΗ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LDUAL: dual frame-wall system</td>
+      <td>CDH</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 115 columns</p>
+</div></div></div>
+</div>
+<p>Visualise loss ratio maps</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_DI</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">return_period</span><span class="p">,</span> <span class="n">Scenaria</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function plots a cumulative distribution function (CDF) map for a given return period, showing</span>
+<span class="sd">    the spatial distribution of the damage index (DI) across different locations.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    dataframe (pd.DataFrame): DataFrame containing &#39;Longitude&#39;, &#39;Latitude&#39;, and &#39;DI-{return_period}&#39;.</span>
+<span class="sd">    return_period (int): The return period in years, used to select the damage index column.</span>
+<span class="sd">    Scenaria (pd.DataFrame): DataFrame containing return period information for the legend.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    None: The function saves a plot to a file but does not return any values.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Convert DataFrame to GeoDataFrame</span>
+    <span class="n">geometry</span> <span class="o">=</span> <span class="p">[</span><span class="n">Point</span><span class="p">(</span><span class="n">xy</span><span class="p">)</span> <span class="k">for</span> <span class="n">xy</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;Longitude&#39;</span><span class="p">],</span> <span class="n">dataframe</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">])]</span>
+    <span class="n">gdf_points</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">geometry</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Load shapefile into GeoDataFrame</span>
+    <span class="n">shapefile_path</span> <span class="o">=</span> <span class="n">data_path</span> <span class="o">/</span> <span class="s1">&#39;central macedonia.shp&#39;</span>
+    <span class="n">gdf_shapefile</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">shapefile_path</span><span class="p">)</span>
+
+
+    <span class="c1"># Define the column for coloring</span>
+    <span class="n">color_column</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;DI-</span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="c1"># Check if the column exists in the DataFrame</span>
+    <span class="k">if</span> <span class="n">color_column</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">gdf_points</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The column &#39;</span><span class="si">{</span><span class="n">color_column</span><span class="si">}</span><span class="s2">&#39; does not exist in the DataFrame.&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Define custom bins and labels</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">]</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># Four categories</span>
+
+    <span class="c1"># Create a new column for categorization</span>
+    <span class="n">gdf_points</span><span class="p">[</span><span class="s1">&#39;quantiles&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">gdf_points</span><span class="p">[</span><span class="n">color_column</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">include_lowest</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Define a red color ramp</span>
+    <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span>  <span class="c1"># Light red for 0-0.1</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;#C2CFFC&#39;</span><span class="p">,</span>  <span class="c1"># Medium light red for 0.1-0.25</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;#4069F6&#39;</span><span class="p">,</span>  <span class="c1"># Darker red for 0.25-0.4</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;#000048&#39;</span>   <span class="c1"># Dark red for 0.4-1.0</span>
+    <span class="p">}</span>
+
+    <span class="c1"># Map colors to quantiles</span>
+    <span class="n">gdf_points</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdf_points</span><span class="p">[</span><span class="s1">&#39;quantiles&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">color_map</span><span class="p">)</span>
+
+    <span class="c1"># Plotting</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+    <span class="c1"># Plot shapefile layer</span>
+    <span class="n">gdf_shapefile</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="c1"># Plot points with specific colors</span>
+    <span class="n">gdf_points</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">gdf_points</span><span class="p">[</span><span class="s1">&#39;color&#39;</span><span class="p">],</span> 
+                    <span class="n">markersize</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+    <span class="c1"># Create custom legend</span>
+    <span class="n">legend_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0 - 0.1&#39;</span><span class="p">,</span> <span class="s1">&#39;0.1 - 0.25&#39;</span><span class="p">,</span> <span class="s1">&#39;0.25 - 0.4&#39;</span><span class="p">,</span> <span class="s1">&#39;0.4 - 1.0&#39;</span><span class="p">]</span>
+    <span class="n">legend_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span> <span class="s1">&#39;#C2CFFC&#39;</span><span class="p">,</span> <span class="s1">&#39;#4069F6&#39;</span><span class="p">,</span> <span class="s1">&#39;#000048&#39;</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">legend_colors</span><span class="p">,</span> <span class="n">legend_labels</span><span class="p">):</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([],</span> <span class="p">[],</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># Empty scatter for legend</span>
+
+    <span class="n">font</span> <span class="o">=</span> <span class="n">font_manager</span><span class="o">.</span><span class="n">FontProperties</span><span class="p">(</span><span class="n">weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Longitude&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Latitude&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Automatically get the name of the DataFrame variable</span>
+    <span class="n">dataframe_name</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">inspect</span><span class="o">.</span><span class="n">currentframe</span><span class="p">()</span><span class="o">.</span><span class="n">f_back</span><span class="o">.</span><span class="n">f_locals</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="ow">is</span> <span class="n">dataframe</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># Set title to include the DataFrame name</span>
+    <span class="c1">#plt.title(dataframe_name, weight=&quot;bold&quot;, fontsize=14)</span>
+    <span class="c1">#ax.set_axis_off()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Damage index</span><span class="se">\n</span><span class="s1">JRC - </span><span class="si">{</span><span class="n">return_period</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;lower left&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;whitesmoke&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">title_fontproperties</span><span class="o">=</span><span class="n">font</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">JRC_periods</span><span class="p">:</span>
+    <span class="n">plot_DI</span><span class="p">(</span><span class="n">DI_flood</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">Scenaria</span><span class="o">=</span><span class="n">Scenaria</span><span class="p">)</span>  
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/cc9661e980ca929809ce5c2b93eb40409bc766484d0683aa7615ce6166911e40.png" src="../../../_images/cc9661e980ca929809ce5c2b93eb40409bc766484d0683aa7615ce6166911e40.png" />
+<img alt="../../../_images/f85a24bac79e290381239b4c4652dafbcc65eef8c0ce9b132911e4c6f44e691f.png" src="../../../_images/f85a24bac79e290381239b4c4652dafbcc65eef8c0ce9b132911e4c6f44e691f.png" />
+<img alt="../../../_images/6e895a645179d471e45c5e3f3807abe425b0a457df5e2e053d8415ae354eb333.png" src="../../../_images/6e895a645179d471e45c5e3f3807abe425b0a457df5e2e053d8415ae354eb333.png" />
+<img alt="../../../_images/1e54fcc5fd1e1f33d3be9801b268ba2e4aa807a4e49a29e14b9dcadc88f88934.png" src="../../../_images/1e54fcc5fd1e1f33d3be9801b268ba2e4aa807a4e49a29e14b9dcadc88f88934.png" />
+<img alt="../../../_images/0269a455fbe88629bb89c01e288066f3ac8eec297a870ba9b97496c0354ef895.png" src="../../../_images/0269a455fbe88629bb89c01e288066f3ac8eec297a870ba9b97496c0354ef895.png" />
+<img alt="../../../_images/553dd17235f8aa27fc74d28448752a5551bb611671242bd6dd3618009f7ce11f.png" src="../../../_images/553dd17235f8aa27fc74d28448752a5551bb611671242bd6dd3618009f7ce11f.png" />
+<img alt="../../../_images/48c9b1e3f3bad7b2362e31cf61185c19a4cb6e92b8b5a81af052966e4b0d9aa7.png" src="../../../_images/48c9b1e3f3bad7b2362e31cf61185c19a4cb6e92b8b5a81af052966e4b0d9aa7.png" />
+<img alt="../../../_images/adec9fc60f9369bd98676ad16aece2b9fd084d75ca4efc995100f607ddf4a086.png" src="../../../_images/adec9fc60f9369bd98676ad16aece2b9fd084d75ca4efc995100f607ddf4a086.png" />
+</div>
+</div>
+</section>
+<section id="multi-hazard-risk-assessment-earthquakes-and-floods">
+<h3>Multi-Hazard Risk Assessment (Earthquakes and Floods)<a class="headerlink" href="#multi-hazard-risk-assessment-earthquakes-and-floods" title="Link to this heading">#</a></h3>
+<p>This section extends the single-hazard seismic risk assessment by considering the effects of earthquake-triggered landslides.</p>
+<p>Seismic hazard assessment: use of the newly developed open-access European Seismic Hazard maps (ESHM20, Danciu, et al., 2021) which provide PGA and spectral accelerations at different periods at bedrock for different return periods derived from probabilistic seismic hazard analysis (PSHA)
+Estimate PGA and spectral accelerations at different periods (Sa(T)) at the ground surface for different return periods considering a detailed site model using Openquake engine</p>
+<p>Flood hazard assessment : Compound damage from independent flood and earthquake hazards is estimated by combining damage state probabilities (Arrighi et al. 2023):</p>
+<div class="math notranslate nohighlight">
+\[P_{\text{COMB}}[LS \geq LS_i] = P_{E1}[LS \geq LS_i] + P_{E2}[LS \geq LS_i] - P_{E1}[LS \geq LS_i] \cdot P_{E2}[LS \geq LS_i]\]</div>
+<p>where <span class="math notranslate nohighlight">\(P_{E1}\)</span> is the flood exceedance probability and <span class="math notranslate nohighlight">\(P_{E2}\)</span> the earthquake
+exceedance probability (Eq. 6, Arrighi et al. 2023).</p>
+<p>Flood depth is taken from JRC river flood maps (Dottori et al. 2021); seismic intensity (PGA, Sa(T)) from ESHM20 (Danciu et al. 2021) via OpenQuake with site amplification. Fragility functions follow ESRM20 (earthquakes) and Nofal &amp; van de Lindt 2020 (floods). Results are compound loss maps for all 8 × 6 flood–earthquake return period combinations.</p>
+<p>Load Single-Hazard Results</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">earthquakes_path</span> <span class="o">=</span> <span class="n">savepath</span> <span class="o">/</span>  <span class="sa">f</span><span class="s2">&quot;Single-Hazard/Earthquakes/DI_Earthquakes_ESRM20_</span><span class="si">{</span><span class="n">asset</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+<span class="n">floods_path</span> <span class="o">=</span> <span class="n">savepath</span> <span class="o">/</span>  <span class="sa">f</span><span class="s2">&quot;Single-Hazard/Floods/DI_Floods_JRC_</span><span class="si">{</span><span class="n">asset</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+
+<span class="c1"># Load the CSV files into pandas DataFrames</span>
+<span class="n">df10</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">earthquakes_path</span><span class="p">)</span>
+<span class="n">df11</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">floods_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">RPE_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">73</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="mi">475</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">2500</span><span class="p">,</span><span class="mi">5000</span><span class="p">]</span>
+<span class="n">RPF_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">]</span>
+
+
+<span class="c1"># List of dataset names (DS1, DS2, DS3, DS4)</span>
+<span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;No&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+        <span class="s1">&#39;Return_Period&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">73</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="mi">475</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">2500</span><span class="p">,</span><span class="mi">5000</span><span class="p">],</span>
+        <span class="s1">&#39;1/years&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0137</span><span class="p">,</span><span class="mf">0.0098</span><span class="p">,</span><span class="mf">0.0021</span><span class="p">,</span><span class="mf">0.001</span><span class="p">,</span><span class="mf">0.0003</span><span class="p">,</span><span class="mf">0.0001</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Start DI_combined with metadata columns from df10</span>
+<span class="n">DI_combined</span> <span class="o">=</span> <span class="n">df10</span><span class="p">[[</span>
+    <span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Counsil&#39;</span><span class="p">,</span> <span class="s1">&#39;Material&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lateral Loading system&#39;</span><span class="p">,</span> <span class="s1">&#39;Code level&#39;</span><span class="p">,</span> <span class="s1">&#39;Floors&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lateral Coefficiency&#39;</span><span class="p">,</span> <span class="s1">&#39;Intensity&#39;</span><span class="p">,</span> <span class="s1">&#39;Typology&#39;</span><span class="p">,</span> <span class="s1">&#39;Area&#39;</span>
+<span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+
+<span class="k">for</span> <span class="n">RPE</span> <span class="ow">in</span> <span class="n">RPE_list</span><span class="p">:</span>
+    <span class="n">freq_RPE</span> <span class="o">=</span> <span class="n">df_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_data</span><span class="p">[</span><span class="s1">&#39;Return_Period&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">RPE</span><span class="p">,</span> <span class="s1">&#39;1/years&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="k">for</span> <span class="n">RPF</span> <span class="ow">in</span> <span class="n">RPF_list</span><span class="p">:</span>
+
+        <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
+             <span class="k">try</span><span class="p">:</span>
+                <span class="n">combined_value</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">df10</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF</span><span class="si">{</span><span class="n">dataset</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">freq_RPE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df11</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF</span><span class="si">{</span><span class="n">dataset</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df10</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF</span><span class="si">{</span><span class="n">dataset</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">freq_RPE</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df11</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;CDF</span><span class="si">{</span><span class="n">dataset</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+                <span class="p">)</span>
+            
+                <span class="c1"># Store the results in the new DataFrame</span>
+                <span class="n">DI_combined</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;PDS</span><span class="si">{</span><span class="n">dataset</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">combined_value</span>
+             <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Missing data for CDF</span><span class="si">{</span><span class="n">dataset</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">freq_RPE</span><span class="si">}</span><span class="s2"> or CDF</span><span class="si">{</span><span class="n">dataset</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">DI_combined</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;PDS</span><span class="si">{</span><span class="n">dataset</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">DI_combined</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">df10</span><span class="p">[</span><span class="s1">&#39;Material&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Precast&#39;</span><span class="p">:</span>
+                <span class="n">DI_combined</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;DI_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">DI_combined</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;PDS1_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.05</span> <span class="o">+</span>
+                    <span class="n">DI_combined</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;PDS2_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.30</span> <span class="o">+</span>
+                    <span class="n">DI_combined</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;PDS3_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.70</span> <span class="o">+</span>
+                    <span class="n">DI_combined</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;PDS4_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">DI_combined</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;DI_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                    <span class="n">DI_combined</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;PDS1_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.05</span> <span class="o">+</span>
+                    <span class="n">DI_combined</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;PDS2_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.15</span> <span class="o">+</span>
+                    <span class="n">DI_combined</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;PDS3_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mf">0.60</span> <span class="o">+</span>
+                    <span class="n">DI_combined</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;PDS4_</span><span class="si">{</span><span class="n">RPE</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">RPF</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1</span>
+                <span class="p">)</span>
+        
+
+
+<span class="n">file_path</span> <span class="o">=</span> <span class="n">savepath</span> <span class="o">/</span>  <span class="sa">f</span><span class="s2">&quot;Multi-hazard/Earthquakes &amp; Floods/DI_Earthquakes_&amp;_Floods_ESRM20_JRC_</span><span class="si">{</span><span class="n">asset</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+<span class="n">DI_combined</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Display the resulting combined DataFrame</span>
+<span class="n">DI_combined</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>id</th>
+      <th>Name</th>
+      <th>Counsil</th>
+      <th>Material</th>
+      <th>Lateral Loading system</th>
+      <th>Code level</th>
+      <th>Floors</th>
+      <th>Lateral Coefficiency</th>
+      <th>...</th>
+      <th>PDS1_5000-100</th>
+      <th>PDS2_5000-100</th>
+      <th>PDS3_5000-100</th>
+      <th>PDS4_5000-100</th>
+      <th>DI_5000-100</th>
+      <th>PDS1_5000-200</th>
+      <th>PDS2_5000-200</th>
+      <th>PDS3_5000-200</th>
+      <th>PDS4_5000-200</th>
+      <th>DI_5000-200</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>22.538980</td>
+      <td>40.511320</td>
+      <td>72</td>
+      <td>3ο Νηπιαγωγείο Αιγινίου</td>
+      <td>ΠΥΔΝΑΣ-ΚΟΛΙΝΔΡΟΥ</td>
+      <td>Precast</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.216825</td>
+      <td>0.002774</td>
+      <td>0.000004</td>
+      <td>7.202889e-10</td>
+      <td>0.011676</td>
+      <td>0.216825</td>
+      <td>0.002774</td>
+      <td>0.000004</td>
+      <td>7.202889e-10</td>
+      <td>0.011676</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>22.543110</td>
+      <td>40.498490</td>
+      <td>73</td>
+      <td>1ο Δημοτικό Αιγινίου</td>
+      <td>ΠΥΔΝΑΣ-ΚΟΛΙΝΔΡΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>1</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>0.092901</td>
+      <td>0.001004</td>
+      <td>0.000033</td>
+      <td>2.365594e-06</td>
+      <td>0.004818</td>
+      <td>0.092901</td>
+      <td>0.001004</td>
+      <td>0.000033</td>
+      <td>2.365594e-06</td>
+      <td>0.004818</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>22.911365</td>
+      <td>40.734834</td>
+      <td>82</td>
+      <td>1ο Νηπιαγωγείο Ωραιοκάστρου</td>
+      <td>ΩΡΑΙΟΚΑΣΤΡΟΥ</td>
+      <td>MUR: unreinforced masonry</td>
+      <td>LWAL: load bearing wall</td>
+      <td>CDN</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.954285</td>
+      <td>0.627054</td>
+      <td>0.378239</td>
+      <td>2.390916e-01</td>
+      <td>0.607808</td>
+      <td>0.954285</td>
+      <td>0.627054</td>
+      <td>0.378239</td>
+      <td>2.390916e-01</td>
+      <td>0.607808</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>22.919226</td>
+      <td>40.723864</td>
+      <td>83</td>
+      <td>2ο Γυμνάσιο Ωραιοκάστρου</td>
+      <td>ΩΡΑΙΟΚΑΣΤΡΟΥ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LFINF: infilled frame</td>
+      <td>CDH</td>
+      <td>3</td>
+      <td>15.0</td>
+      <td>...</td>
+      <td>0.778392</td>
+      <td>0.183462</td>
+      <td>0.035552</td>
+      <td>8.286710e-03</td>
+      <td>0.096057</td>
+      <td>0.778392</td>
+      <td>0.183462</td>
+      <td>0.035552</td>
+      <td>8.286710e-03</td>
+      <td>0.096057</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>22.993852</td>
+      <td>40.612094</td>
+      <td>84</td>
+      <td>3ο Δημοτικό Σχολείο Πυλαίας</td>
+      <td>ΠΥΛΑΙΑΣ-ΧΟΡΤΙΑΤΗ</td>
+      <td>CR: reinforced concrete</td>
+      <td>LDUAL: dual frame-wall system</td>
+      <td>CDH</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.580276</td>
+      <td>0.071731</td>
+      <td>0.015002</td>
+      <td>4.576872e-03</td>
+      <td>0.053352</td>
+      <td>0.580276</td>
+      <td>0.071731</td>
+      <td>0.015002</td>
+      <td>4.576872e-03</td>
+      <td>0.053352</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 253 columns</p>
+</div></div></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "miraca"
+        },
+        kernelOptions: {
+            name: "miraca",
+            path: "./usecases/UC4/book"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'miraca'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-comments">General Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure">Directory structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure-assessment">Exposure Assessment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-characterisation">Hazard characterisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combined-exposure-and-hazard-dataset">Combined exposure and hazard dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vulnerability-assessment">Vulnerability Assessment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#risk-assessment">Risk Assessment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#single-hazard-risk-assessment-floods">Single-hazard risk assessment (floods)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-hazard-risk-assessment-earthquakes-and-floods">Multi-Hazard Risk Assessment (Earthquakes and Floods)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By MIRACA
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
