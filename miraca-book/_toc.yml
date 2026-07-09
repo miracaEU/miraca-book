@@ -39,7 +39,7 @@ parts:
       - title: Use Case 4 - Landslides & Earthquake in Greece
         file: usecases/UC4/book/E_E+L_ESRM20+Elsus_new
       - title: Use Case 5 - Flooding and Landslides in Slovenia
-        file: usecases/UC5/Use_Case_5_v1
+        file: usecases/UC5/book/Use_Case_5_v1
 
   - caption: Technical Background
     chapters:
