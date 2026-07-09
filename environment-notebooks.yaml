@@ -12,6 +12,7 @@ dependencies:
   - scipy
   - shapely>=2.0
   - rasterio
+  - rasterstats
   - rioxarray
   - networkx
   - osmnx
@@ -48,4 +49,5 @@ dependencies:
       - -e ./miraca-book/background/RoadFlowModelling
       - -e ./miraca-book/background/CBAmodelling
       - -e ./miraca-book/usecases/UC1
+      - -e ./miraca-book/usecases/UC5
       
