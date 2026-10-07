@@ -54,7 +54,7 @@ conda env create -f environment-notebooks.yaml
 
 Next, activate the newly created environment `miraca-book`:
 ```bash
-conda activate miraca-book
+conda activate miraca
 ```
 
 
