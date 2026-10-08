@@ -37,7 +37,7 @@ parts:
       - title: Use Case 3 - Flooding in Zuid-Holland
         file: usecases/UC3/book/Use_Case_3
       - title: Use Case 4 - Flooding & Earthquakes in Greece
-        file: usecases/UC4/book/F_E+F_ERSM20+JRC_new
+        file: usecases/UC4/book/Use Case 4 Notebook
       - title: Use Case 5 - Flooding & Landslides in Slovenia
         file: usecases/UC5/book/Use_Case_5_v1
 
