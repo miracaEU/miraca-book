@@ -1,13 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Use Case 5 - Flooding and landslides in Slovenia &#8212; MIRACA Technical Workbench</title>
   
   
@@ -16,60 +16,56 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'usecases/UC5/book/Use_Case_5_v1';</script>
-    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Exposure database" href="../../../background/Exposure_Miraca/book/intro.html" />
-    <link rel="prev" title="Use Case 4 - Adaptation to Societal Risk of Hydrological Hazards (Floods &amp; Earthquakes) through Schools and Hospitals in Greece - JRC Flood Model" href="../../UC4/book/F_E%2BF_ERSM20%2BJRC_new.html" />
+    <link rel="prev" title="Use Case 4 - Adaptation to Societal Risk of Hydrological Hazards (Floods &amp; Earthquakes) through Schools and Hospitals in Greece" href="../../UC4/book/Use%20Case%204%20Notebook.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,8 +81,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -94,6 +101,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -101,8 +109,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -118,8 +126,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -149,17 +156,21 @@
     
     
     <img src="../../../_static/logo.png" class="logo__image only-light" alt="MIRACA Technical Workbench - Home"/>
-    <img src="../../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="MIRACA Technical Workbench - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="MIRACA Technical Workbench - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -191,7 +202,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../UC1/book/TENT_corridors_disruption_analysis.html">Use Case 1 - Flooding and Windstorms in the TEN-T corridor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../UC2/book/Use_Case_2.html">Use Case 2 - Wildfires in Catalonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../UC3/book/Use_Case_3.html">Use Case 3 - Flooding in Zuid-Holland</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../UC4/book/F_E%2BF_ERSM20%2BJRC_new.html">Use Case 4 - Flooding &amp; Earthquakes in Greece</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC4/book/Use%20Case%204%20Notebook.html">Use Case 4 - Flooding &amp; Earthquakes in Greece</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Use Case 5 - Flooding &amp; Landslides in Slovenia</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Background</span></p>
@@ -229,14 +240,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -380,16 +386,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -436,11 +450,11 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="use-case-5-flooding-and-landslides-in-slovenia">
-<h1>Use Case 5 - Flooding and landslides in Slovenia<a class="headerlink" href="#use-case-5-flooding-and-landslides-in-slovenia" title="Link to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="use-case-5-flooding-and-landslides-in-slovenia">
+<h1>Use Case 5 - Flooding and landslides in Slovenia<a class="headerlink" href="#use-case-5-flooding-and-landslides-in-slovenia" title="Permalink to this heading">#</a></h1>
 <p>This notebook evaluates the vulnerability of Slovenia’s electricity transmission system to both single and compound natural hazards. It allows to simulate historical floods in the upper, middle, and lower Sava River regions, a simultaneous three‑region worst‑case flood, a single‑point‑of‑failure landslide, and a combined flood‑and‑landslide scenario. Both hazards can result from extreme rainfall, which is projected to intensify in the future, and present risk conditions typical for Slovenia.</p>
-<section id="introduction">
-<h2>1. Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<div class="section" id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>In this UC5 simulation, we assess the impacts of severe flooding along the Sava River and associated landslides on Slovenia’s electricity transmission system, considering both hazards individually as well as their combined effects. The spatial extents of the hazards are based on historical events; however, the simulated intensities are intentionally more extreme to represent plausible future conditions under a changing climate. Floods and landslides are both frequently triggered by prolonged or intense precipitation, and their co-occurrence can lead to compound impacts that significantly increase system vulnerability.</p>
 <div class="cell tag_hide-input docutils container">
 <details class="admonition hide above-input">
@@ -473,10 +487,10 @@
 </div>
 </details>
 </div>
-</section>
-<section id="hazard-characterisation-flooding">
-<h2>2. Hazard Characterisation: Flooding<a class="headerlink" href="#hazard-characterisation-flooding" title="Link to this heading">#</a></h2>
-<p>Based on historical evidence and recent analyses, the Sava River in Slovenia has shown a pattern of flooding that varies by region and season. A detailed analysis of historical floods along the Sava River in Slovenia can be found in the paper titled “ Analysis of floods on the Sava River in the historical record” by Mira Kobold (2024). It documents the largest floods in the upper, middle, and lower courses of the river, including:</p>
+</div>
+<div class="section" id="hazard-characterisation-flooding">
+<h2>2. Hazard Characterisation: Flooding<a class="headerlink" href="#hazard-characterisation-flooding" title="Permalink to this heading">#</a></h2>
+<p>Based on historical evidence and recent analyses, the Sava River in Slovenia has shown a pattern of flooding that varies by region and season. A detailed analysis of historical floods along the Sava River in Slovenia can be found in the paper titled ” Analysis of floods on the Sava River in the historical record” by Mira Kobold (2024). It documents the largest floods in the upper, middle, and lower courses of the river, including:</p>
 <ul class="simple">
 <li><p>30 October 1926 in Radovljica (upper Sava corridor)</p></li>
 <li><p>4 August 2023 in Litija (middle Sava corridor)</p></li>
@@ -494,8 +508,8 @@
 <img alt="../../../_images/a7c647c078ea59b8198f64d9164af8902e4b8634f1ce234735d90552ac063d3f.png" src="../../../_images/a7c647c078ea59b8198f64d9164af8902e4b8634f1ce234735d90552ac063d3f.png" />
 </div>
 </div>
-<section id="import-complete-uc5-pandapower-network">
-<h3>Import complete UC5 pandapower network<a class="headerlink" href="#import-complete-uc5-pandapower-network" title="Link to this heading">#</a></h3>
+<div class="section" id="import-complete-uc5-pandapower-network">
+<h3>Import complete UC5 pandapower network<a class="headerlink" href="#import-complete-uc5-pandapower-network" title="Permalink to this heading">#</a></h3>
 <p>The Slovenian electricity transmission grid is loaded from a compressed pickle file that contains the complete pandapower model. This file integrates ENTSO‑E‑based network topology, OSM‑derived geometries, LAU‑level regional updates, spatially distributed national consumption data, and the economic and temporal profiles of power plants including regulation strategies and energy storage integration consolidated into one unified dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -529,9 +543,9 @@
 </div>
 </div>
 </div>
-</section>
-<section id="import-load-profiles">
-<h3>Import load profiles<a class="headerlink" href="#import-load-profiles" title="Link to this heading">#</a></h3>
+</div>
+<div class="section" id="import-load-profiles">
+<h3>Import load profiles<a class="headerlink" href="#import-load-profiles" title="Permalink to this heading">#</a></h3>
 <p>The load profiles for Slovenia are imported from a compressed pickle file, derived from the original dataset used in the EU‑wide model. The load mapping to locations of demand is performed using the KdTree Nearest Neighbour Search with additional focus on prioritizing load mapping to 110kV level.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -551,9 +565,9 @@ End time: 2020-08-08 00:00:00
 </div>
 </div>
 </div>
-</section>
-<section id="run-flood-impact-simulation">
-<h3>Run flood impact simulation<a class="headerlink" href="#run-flood-impact-simulation" title="Link to this heading">#</a></h3>
+</div>
+<div class="section" id="run-flood-impact-simulation">
+<h3>Run flood impact simulation<a class="headerlink" href="#run-flood-impact-simulation" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run predefined_simulation </span>
@@ -577,9 +591,9 @@ Index([9, 39, 48, 77, 78, 79], dtype=&#39;int64&#39;)
 <img alt="../../../_images/3009223d64f149e50f85044ebe96f14abd7dd8db7a4fa8193cff6ad31f5703ee.png" src="../../../_images/3009223d64f149e50f85044ebe96f14abd7dd8db7a4fa8193cff6ad31f5703ee.png" />
 </div>
 </div>
-</section>
-<section id="case-study-results">
-<h3>Case Study Results<a class="headerlink" href="#case-study-results" title="Link to this heading">#</a></h3>
+</div>
+<div class="section" id="case-study-results">
+<h3>Case Study Results<a class="headerlink" href="#case-study-results" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">case_study_results</span><span class="p">(</span><span class="n">simulation_type</span><span class="p">)</span>
@@ -596,9 +610,9 @@ Index([9, 39, 48, 77, 78, 79], dtype=&#39;int64&#39;)
 </div>
 </div>
 </div>
-</section>
-<section id="network-and-asset-level-risk-assessment">
-<h3>Network and Asset-level risk assessment<a class="headerlink" href="#network-and-asset-level-risk-assessment" title="Link to this heading">#</a></h3>
+</div>
+<div class="section" id="network-and-asset-level-risk-assessment">
+<h3>Network and Asset-level risk assessment<a class="headerlink" href="#network-and-asset-level-risk-assessment" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">disconnected_elements</span><span class="p">(</span><span class="n">net</span><span class="p">)</span>
@@ -616,9 +630,9 @@ Index([9, 39, 48, 77, 78, 79], dtype=&#39;int64&#39;)
 </div>
 </div>
 </div>
-</section>
-<section id="systemic-risk-assessment">
-<h3>Systemic-risk assessment<a class="headerlink" href="#systemic-risk-assessment" title="Link to this heading">#</a></h3>
+</div>
+<div class="section" id="systemic-risk-assessment">
+<h3>Systemic-risk assessment<a class="headerlink" href="#systemic-risk-assessment" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">disruption_diagnostics</span><span class="p">(</span><span class="n">net</span><span class="p">)</span>
@@ -635,10 +649,10 @@ Index([9, 39, 48, 77, 78, 79], dtype=&#39;int64&#39;)
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="multi-hazard-risk-assessment-landslides">
-<h2>3. Multi Hazard Risk Assessment: Landslides<a class="headerlink" href="#multi-hazard-risk-assessment-landslides" title="Link to this heading">#</a></h2>
+</div>
+</div>
+<div class="section" id="multi-hazard-risk-assessment-landslides">
+<h2>3. Multi Hazard Risk Assessment: Landslides<a class="headerlink" href="#multi-hazard-risk-assessment-landslides" title="Permalink to this heading">#</a></h2>
 <p>The floods in Slovenia in 2023 were caused by severe rainfall that also triggered numerous landslides in different parts of the country.
 While these caused no additional major outages of the power grid, this may happen in the future as rainfall becomes more intense under climate change.
 In the example below we showcase how an additional failure of a substation would affect the system.</p>
@@ -722,9 +736,9 @@ In the example below we showcase how an additional failure of a substation would
 </div>
 </div>
 </div>
-</section>
-<section id="compound-hazard-flooding-and-landslides">
-<h2>4. Compound hazard: Flooding and Landslides<a class="headerlink" href="#compound-hazard-flooding-and-landslides" title="Link to this heading">#</a></h2>
+</div>
+<div class="section" id="compound-hazard-flooding-and-landslides">
+<h2>4. Compound hazard: Flooding and Landslides<a class="headerlink" href="#compound-hazard-flooding-and-landslides" title="Permalink to this heading">#</a></h2>
 <p>This last example shows the compound effect of both flooding and landslide events in the network system.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -808,8 +822,8 @@ Index([9, 39, 48, 77, 78, 79], dtype=&#39;int64&#39;)
 </div>
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -842,12 +856,12 @@ Index([9, 39, 48, 77, 78, 79], dtype=&#39;int64&#39;)
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../UC4/book/F_E%2BF_ERSM20%2BJRC_new.html"
+       href="../../UC4/book/Use%20Case%204%20Notebook.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Use Case 4 - Adaptation to Societal Risk of Hydrological Hazards (Floods &amp; Earthquakes) through Schools and Hospitals in Greece - JRC Flood Model</p>
+        <p class="prev-next-title">Use Case 4 - Adaptation to Societal Risk of Hydrological Hazards (Floods &amp; Earthquakes) through Schools and Hospitals in Greece</p>
       </div>
     </a>
     <a class="right-next"
@@ -866,8 +880,7 @@ Index([9, 39, 48, 77, 78, 79], dtype=&#39;int64&#39;)
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -936,8 +949,8 @@ By MIRACA
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -1,13 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Use Case 2 - Wildfires in Catalonia, Spain &#8212; MIRACA Technical Workbench</title>
   
   
@@ -16,60 +16,56 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'usecases/UC2/book/Use_Case_2';</script>
-    <link rel="icon" href="../../../_static/favicon.ico"/>
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="author" title="About these documents" href="../../../about.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Use Case 3 - Flooding in Zuid-Holland" href="../../UC3/book/Use_Case_3.html" />
-    <link rel="prev" title="Adaptation to Flood and Windstorm Impacts on the Trans-European Transport Network (TEN-T)" href="../../UC1/book/TENT_corridors_disruption_analysis.html" />
+    <link rel="prev" title="Use Case 1 - Adaptation to Flood and Windstorm on the Trans-European Transport Network (TEN-T)" href="../../UC1/book/TENT_corridors_disruption_analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -85,8 +81,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -94,6 +101,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -101,8 +109,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -118,8 +126,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -149,17 +156,21 @@
     
     
     <img src="../../../_static/logo.png" class="logo__image only-light" alt="MIRACA Technical Workbench - Home"/>
-    <img src="../../../_static/logo.png" class="logo__image only-dark pst-js-only" alt="MIRACA Technical Workbench - Home"/>
+    <script>document.write(`<img src="../../../_static/logo.png" class="logo__image only-dark" alt="MIRACA Technical Workbench - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -191,7 +202,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../UC1/book/TENT_corridors_disruption_analysis.html">Use Case 1 - Flooding and Windstorms in the TEN-T corridor</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Use Case 2 - Wildfires in Catalonia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../UC3/book/Use_Case_3.html">Use Case 3 - Flooding in Zuid-Holland</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../UC4/book/F_E%2BF_ERSM20%2BJRC_new.html">Use Case 4 - Flooding &amp; Earthquakes in Greece</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../UC4/book/Use%20Case%204%20Notebook.html">Use Case 4 - Flooding &amp; Earthquakes in Greece</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../UC5/book/Use_Case_5_v1.html">Use Case 5 - Flooding &amp; Landslides in Slovenia</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical Background</span></p>
@@ -229,14 +240,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -380,16 +386,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -413,20 +427,25 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-fires-characterisation">2. Historical Fires Characterisation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-of-all-historical-fires-in-catalonia-between-1985-and-2023">2.1. Map of all historical fires in Catalonia between 1985 and 2023</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-evolution-of-fires">2.2. Annual Evolution of Fires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seasonality-of-fires">2.3. Seasonality of Fires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure">2. Directory structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-characterisation">3. Hazard characterisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-fires-characterisation">3.1 Historical Fires Characterisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#map-of-all-historical-fires-in-catalonia-between-1985-and-2023">Map of all historical fires in Catalonia between 1985 and 2023</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-evolution-of-fires">Annual Evolution of Fires</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seasonality-of-fires">Seasonality of Fires</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-level-fire-correlations-with-meteo-variables">3. Macro-level Fire Correlations with Meteo Variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fire-event-level-mereo-variables-for-different-fire-events">4. Fire-event level: Mereo variables for different fire events</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#influence-of-biophysical-variables-in-fires">5. Influence of Biophysical Variables in Fires</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biomass">5.1. Biomass</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elevation">5.2. Elevation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-level-fire-correlations-with-meteo-variables">3.2 Macro-level Fire Correlations with Meteo Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fire-event-level-mereo-variables-for-different-fire-events">3.3 Fire-event level: Mereo variables for different fire events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#influence-of-biophysical-variables-in-fires">3.4. Influence of Biophysical Variables in Fires</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biomass">Biomass</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elevation">Elevation</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure-assessment">4. Exposure Assessment</a></li>
 </ul>
             </nav>
         </div>
@@ -438,10 +457,10 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="use-case-2-wildfires-in-catalonia-spain">
-<h1>Use Case 2 - Wildfires in Catalonia, Spain<a class="headerlink" href="#use-case-2-wildfires-in-catalonia-spain" title="Link to this heading">#</a></h1>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+  <div class="tex2jax_ignore mathjax_ignore section" id="use-case-2-wildfires-in-catalonia-spain">
+<h1>Use Case 2 - Wildfires in Catalonia, Spain<a class="headerlink" href="#use-case-2-wildfires-in-catalonia-spain" title="Permalink to this heading">#</a></h1>
+<div class="section" id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>Wildfires are complex, dynamic phenomena driven by an intricate mix of long-term climate trends, daily weather extremes, and localised landscape features. The purpose of this notebook is to explore how these <strong>meteorological</strong> and <strong>biophysical</strong> variables interact to dictate <strong>wildfire behaviour, size, and frequency</strong>. Focusing on the region of Catalonia, Spain, this analysis integrates several layers of data to build a complete picture of fire events:</p>
 <ul class="simple">
 <li><p>Historical Fire Catalogs from 1986 to 2023</p></li>
@@ -483,6 +502,54 @@
 </div>
 </details>
 </div>
+</div>
+<div class="section" id="directory-structure">
+<h2>2. Directory structure<a class="headerlink" href="#directory-structure" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up configuration</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">get_development_config</span><span class="p">()</span> <span class="c1">#get_config() gets parameters directly from config.py in root, development config uses sample data</span>
+<span class="n">setup_dev_directories</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">remove_cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">HAZARD_EXTRACTION_METHOD</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;analysis_config&#39;</span><span class="p">][</span><span class="s1">&#39;hazard_extraction_method&#39;</span><span class="p">]</span>
+
+<span class="c1"># Configure simulation parameters from config</span>
+<span class="n">simulation_params</span> <span class="o">=</span> <span class="n">get_simulation_params</span><span class="p">(</span><span class="n">config</span><span class="p">)</span> 
+<span class="n">accessibility_model</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">simulation_params</span><span class="p">[</span><span class="s1">&#39;accessibility_model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">accessibility_model</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Simulation configuration:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">simulation_params</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;config&#39;</span><span class="p">:</span>  <span class="c1"># Don&#39;t print the entire config</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Directory structure:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Interim: </span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;interim_dir&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Output: </span><span class="si">{</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;output_dir&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  Cache will be organized by hazard directory: </span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;hazard_dir&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">config</span><span class="p">[</span><span class="s1">&#39;simulation_config&#39;</span><span class="p">][</span><span class="s1">&#39;major_timestep&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="n">config</span><span class="p">[</span><span class="s1">&#39;simulation_config&#39;</span><span class="p">][</span><span class="s1">&#39;verbose&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">max_days</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">caches</span> <span class="o">=</span> <span class="n">load_simulation_caches</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;interim_dir&#39;</span><span class="p">],</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;hazard_dir&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loaded caches: </span><span class="si">{</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">caches</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">caches</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="ow">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="kc">None</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">root_dir</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;root_dir&#39;</span><span class="p">])</span>
+<span class="n">study_area_path</span> <span class="o">=</span> <span class="n">root_dir</span> <span class="o">/</span> <span class="s1">&#39;data&#39;</span> <span class="o">/</span> <span class="s1">&#39;utilities&#39;</span> <span class="o">/</span> <span class="s1">&#39;stedin_area.geojson&#39;</span>
+<span class="n">land_use_path</span> <span class="o">=</span> <span class="n">root_dir</span> <span class="o">/</span> <span class="s1">&#39;data&#39;</span> <span class="o">/</span> <span class="s1">&#39;land_use&#39;</span> <span class="o">/</span> <span class="s1">&#39;CBS_Publicatiebestand_BBG2017_v1_sample.gpkg&#39;</span>
+<span class="n">population_data_path</span> <span class="o">=</span> <span class="n">root_dir</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;population&quot;</span> <span class="o">/</span> <span class="s2">&quot;cbs_vk100_2024_v1_sample.gpkg&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;WARNING! Values of lost load should be calculated with country-wide VOLL rates, not sample data!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Cache path for asset_to_lu (the complete pre-computed lookup)</span>
+<span class="n">asset_to_lu_cache_path</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;interim_dir&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">land_use_path</span><span class="o">.</span><span class="n">stem</span><span class="si">}</span><span class="s2">_asset_to_lu.pkl&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="hazard-characterisation">
+<h2>3. Hazard characterisation<a class="headerlink" href="#hazard-characterisation" title="Permalink to this heading">#</a></h2>
 <p>We load the historical wildfire catalog for Catalonia (1986–2023) sourced from the <strong>Institut Cartogràfic i Geològic de Catalunya (ICGC)</strong>. For every unique fire (<code class="docutils literal notranslate"><span class="pre">fire_id</span></code>), each row provides:</p>
 <ul class="simple">
 <li><p>Spatial Data: The fire’s perimeter (geometry) and the coordinates of its centroid.</p></li>
@@ -614,11 +681,10 @@ Running this cell fetches data directly from the Zenodo research repository. Dep
 <li><p>[variable]_clim: The climatological baseline. This is the expected, historical average for that specific day of the year, calculated using the 1981–2000 reference period.</p></li>
 <li><p>[variable]_anomaly: The deviation from the norm (usually calculated as Observed - Climatology). Positive temperature anomalies or negative precipitation anomalies often correlate with higher fire danger.</p></li>
 </ul>
-</section>
-<section id="historical-fires-characterisation">
-<h2>2. Historical Fires Characterisation<a class="headerlink" href="#historical-fires-characterisation" title="Link to this heading">#</a></h2>
-<section id="map-of-all-historical-fires-in-catalonia-between-1985-and-2023">
-<h3>2.1. Map of all historical fires in Catalonia between 1985 and 2023<a class="headerlink" href="#map-of-all-historical-fires-in-catalonia-between-1985-and-2023" title="Link to this heading">#</a></h3>
+<div class="section" id="historical-fires-characterisation">
+<h3>3.1 Historical Fires Characterisation<a class="headerlink" href="#historical-fires-characterisation" title="Permalink to this heading">#</a></h3>
+<div class="section" id="map-of-all-historical-fires-in-catalonia-between-1985-and-2023">
+<h4>Map of all historical fires in Catalonia between 1985 and 2023<a class="headerlink" href="#map-of-all-historical-fires-in-catalonia-between-1985-and-2023" title="Permalink to this heading">#</a></h4>
 <p>We explore the historical wildfires dataset by geographical distribution, pattern and size.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -674,9 +740,9 @@ Running this cell fetches data directly from the Zenodo research repository. Dep
 <img alt="../../../_images/caac41c930ef8569ed6887ebf951fca79428afe687c118592bc25bac01e5c125.png" src="../../../_images/caac41c930ef8569ed6887ebf951fca79428afe687c118592bc25bac01e5c125.png" />
 </div>
 </div>
-</section>
-<section id="annual-evolution-of-fires">
-<h3>2.2. Annual Evolution of Fires<a class="headerlink" href="#annual-evolution-of-fires" title="Link to this heading">#</a></h3>
+</div>
+<div class="section" id="annual-evolution-of-fires">
+<h4>Annual Evolution of Fires<a class="headerlink" href="#annual-evolution-of-fires" title="Permalink to this heading">#</a></h4>
 <p>To analyse the temporal evolution of wildfire characteristics in Catalonia, four variables are studied:</p>
 <ul class="simple">
 <li><p>Total of area burned by the fires (in hectares)</p></li>
@@ -775,9 +841,9 @@ Running this cell fetches data directly from the Zenodo research repository. Dep
 <img alt="../../../_images/6f901a3890b5ad4a76315d32d79ec6f7fcd1802185960871388952f4a714aeb2.png" src="../../../_images/6f901a3890b5ad4a76315d32d79ec6f7fcd1802185960871388952f4a714aeb2.png" />
 </div>
 </div>
-</section>
-<section id="seasonality-of-fires">
-<h3>2.3. Seasonality of Fires<a class="headerlink" href="#seasonality-of-fires" title="Link to this heading">#</a></h3>
+</div>
+<div class="section" id="seasonality-of-fires">
+<h4>Seasonality of Fires<a class="headerlink" href="#seasonality-of-fires" title="Permalink to this heading">#</a></h4>
 <p>We can see a distinct seasonality to wildfires in Catalonia, as the vast majority —and particularly the largest, most devastating ones— are heavily concentrated in the warm and dry summer months.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -838,10 +904,10 @@ Running this cell fetches data directly from the Zenodo research repository. Dep
 <img alt="../../../_images/91157faec861bd46441805d40375ab114fc8be7aeccea36709f7d7a347af3360.png" src="../../../_images/91157faec861bd46441805d40375ab114fc8be7aeccea36709f7d7a347af3360.png" />
 </div>
 </div>
-</section>
-</section>
-<section id="macro-level-fire-correlations-with-meteo-variables">
-<h2>3. Macro-level Fire Correlations with Meteo Variables<a class="headerlink" href="#macro-level-fire-correlations-with-meteo-variables" title="Link to this heading">#</a></h2>
+</div>
+</div>
+<div class="section" id="macro-level-fire-correlations-with-meteo-variables">
+<h3>3.2 Macro-level Fire Correlations with Meteo Variables<a class="headerlink" href="#macro-level-fire-correlations-with-meteo-variables" title="Permalink to this heading">#</a></h3>
 <p>To analyze the correlation between fire events and meteorological conditions, the dataset is split at the year 1996, marking the implementation of improved fire management policies after the 1994 events.</p>
 <p>Comparing the correlation values between both periods reveals that average meteorological conditions are no longer as strict a predictor of the total burned area, thanks to the current management policies for fire control. While drought indicators show the strongest correlation in both eras, the influence of the lagged SPEI-12 notably strengthened after 1996. Its positive correlation suggests a “pre-conditioning” effect: wetter conditions in the preceding year promote increased vegetation growth, which subsequently dries out and acts as abundant fuel for future fires.</p>
 <p>Furthermore, when comparing FWI against fire metrics, it is notable that the frequency and size of larger fires no longer mirror the overarching meteorological conditions.</p>
@@ -1016,9 +1082,9 @@ Running this cell fetches data directly from the Zenodo research repository. Dep
 <img alt="../../../_images/6b6b6b43fd97b182426522feac96e38ceeb39e79ba19c5e98e99f0ab94409fa8.png" src="../../../_images/6b6b6b43fd97b182426522feac96e38ceeb39e79ba19c5e98e99f0ab94409fa8.png" />
 </div>
 </div>
-</section>
-<section id="fire-event-level-mereo-variables-for-different-fire-events">
-<h2>4. Fire-event level: Mereo variables for different fire events<a class="headerlink" href="#fire-event-level-mereo-variables-for-different-fire-events" title="Link to this heading">#</a></h2>
+</div>
+<div class="section" id="fire-event-level-mereo-variables-for-different-fire-events">
+<h3>3.3 Fire-event level: Mereo variables for different fire events<a class="headerlink" href="#fire-event-level-mereo-variables-for-different-fire-events" title="Permalink to this heading">#</a></h3>
 <p>Next, we analyze the specific meteorological conditions observed on the exact days of the fire events. While fire spread is naturally more likely to occur under conditions of low relative humidity, high VPD, and an elevated FWI, our correlation analysis reveals a counterintuitive result: the FWI recorded at the time of the event is not a strong predictor of the final fire extent. This confirms that while high FWI values flag dangerous weather, they alone are insufficient to predict the ultimate size and severity of a wildfire.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1167,23 +1233,54 @@ Running this cell fetches data directly from the Zenodo research repository. Dep
 <div class="cell_output docutils container">
 </div>
 </div>
-</section>
-<section id="influence-of-biophysical-variables-in-fires">
-<h2>5. Influence of Biophysical Variables in Fires<a class="headerlink" href="#influence-of-biophysical-variables-in-fires" title="Link to this heading">#</a></h2>
+</div>
+<div class="section" id="influence-of-biophysical-variables-in-fires">
+<h3>3.4. Influence of Biophysical Variables in Fires<a class="headerlink" href="#influence-of-biophysical-variables-in-fires" title="Permalink to this heading">#</a></h3>
 <p>Because meteorological variables alone cannot fully explain fire behavior, we must also consider the physical landscape. In this section, historical fire perimeters are plotted alongside key biophysical variables, including pre-fire biomass (fuel load), land cover, and topography. Below, we examine two specific case studies where the final extent of the fire is dictated by the complex interaction between these local terrain features and extreme weather conditions.</p>
-<section id="biomass">
-<h3>5.1. Biomass<a class="headerlink" href="#biomass" title="Link to this heading">#</a></h3>
+<div class="section" id="biomass">
+<h4>Biomass<a class="headerlink" href="#biomass" title="Permalink to this heading">#</a></h4>
 <p>Biomass naturally acts as the primary fuel source for wildfires, directly driving their intensity and spread. In this case study, the perimeter of the burn scar aligns almost perfectly with areas of high biomass volume recorded in 1985. Combined with severe, prolonged drought conditions (indicated by intensely low SPEI-3 and SPEI-12 values), this dense fuel load created the ideal environment for a massive fire event.</p>
 <p><img alt="Example 1" src="../../../_images/example1.png" /></p>
-</section>
-<section id="elevation">
-<h3>5.2. Elevation<a class="headerlink" href="#elevation" title="Link to this heading">#</a></h3>
+</div>
+<div class="section" id="elevation">
+<h4>Elevation<a class="headerlink" href="#elevation" title="Permalink to this heading">#</a></h4>
 <p>In this example, topography acted as a critical physical barrier. A sharp increase in elevation prevented the fire from spreading further north, despite a large volume of available biomass in that direction. Additionally, the burned area is situated on a south-facing slope (aspect). In the Northern Hemisphere, these slopes receive maximum solar radiation, which aggressively dries out the vegetation. Combined with three months of severe drought (low SPEI-3) and a very high FWI value, the area was highly volatile and sustained an intense fire event.</p>
 <p><img alt="Example 2" src="../../../_images/example2.png" /></p>
 <p>The ultimate goal of this analysis is to inform a predictive wildfire model. We have demonstrated that final fire extent is a complex product of extreme weather anomalies, accumulated drought, fuel density, and topographical barriers.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
+<div class="section" id="exposure-assessment">
+<h2>4. Exposure Assessment<a class="headerlink" href="#exposure-assessment" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The roadway network is obtained from OpenStreet Maps through the</p></li>
+<li><p>The railway network is obtained directly from Generalitat de Catalunya, the catalan government, which is available and downloadable from the.</p></li>
+</ul>
+<p>To facilitat running the Notebook, both exposure datasets are available in the Zenodo page of the Use Case XX, downloadable</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## RAILWAY NETWORK from the</span>
+
+<span class="n">railway_fn</span> <span class="o">=</span> <span class="s2">&quot;./data/XT_GRAF_CATALEG_FERRO.shp&quot;</span>
+<span class="n">gdf_railway</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">railway_fn</span><span class="p">)</span>
+
+
+
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Railway Network in Catalonia&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="n">fontname</span><span class="o">=</span><span class="s2">&quot;Arial&quot;</span><span class="p">,</span><span class="n">fontweight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">,</span> <span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span><span class="p">)</span>
+<span class="n">catalonia_boundaries</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">rail_hipermapa_plot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s2">&quot;OPERADOR&quot;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cx</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">cx</span><span class="o">.</span><span class="n">providers</span><span class="o">.</span><span class="n">CartoDB</span><span class="o">.</span><span class="n">Positron</span> <span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="c1"># Move legend outside</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">set_bbox_to_anchor</span><span class="p">((</span><span class="mf">1.02</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">set_loc</span><span class="p">(</span><span class="s2">&quot;upper left&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1221,7 +1318,7 @@ Running this cell fetches data directly from the Zenodo research repository. Dep
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Adaptation to Flood and Windstorm Impacts on the Trans-European Transport Network (TEN-T)</p>
+        <p class="prev-next-title">Use Case 1 - Adaptation to Flood and Windstorm on the Trans-European Transport Network (TEN-T)</p>
       </div>
     </a>
     <a class="right-next"
@@ -1240,8 +1337,7 @@ Running this cell fetches data directly from the Zenodo research repository. Dep
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1250,20 +1346,25 @@ Running this cell fetches data directly from the Zenodo research repository. Dep
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-fires-characterisation">2. Historical Fires Characterisation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#map-of-all-historical-fires-in-catalonia-between-1985-and-2023">2.1. Map of all historical fires in Catalonia between 1985 and 2023</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-evolution-of-fires">2.2. Annual Evolution of Fires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seasonality-of-fires">2.3. Seasonality of Fires</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1. Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure">2. Directory structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazard-characterisation">3. Hazard characterisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#historical-fires-characterisation">3.1 Historical Fires Characterisation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#map-of-all-historical-fires-in-catalonia-between-1985-and-2023">Map of all historical fires in Catalonia between 1985 and 2023</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#annual-evolution-of-fires">Annual Evolution of Fires</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seasonality-of-fires">Seasonality of Fires</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-level-fire-correlations-with-meteo-variables">3. Macro-level Fire Correlations with Meteo Variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fire-event-level-mereo-variables-for-different-fire-events">4. Fire-event level: Mereo variables for different fire events</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#influence-of-biophysical-variables-in-fires">5. Influence of Biophysical Variables in Fires</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biomass">5.1. Biomass</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elevation">5.2. Elevation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-level-fire-correlations-with-meteo-variables">3.2 Macro-level Fire Correlations with Meteo Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fire-event-level-mereo-variables-for-different-fire-events">3.3 Fire-event level: Mereo variables for different fire events</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#influence-of-biophysical-variables-in-fires">3.4. Influence of Biophysical Variables in Fires</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#biomass">Biomass</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elevation">Elevation</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure-assessment">4. Exposure Assessment</a></li>
 </ul>
   </nav></div>
 
@@ -1312,8 +1413,8 @@ By MIRACA
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
